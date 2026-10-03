@@ -1,0 +1,11 @@
+{
+  "@@locale": "en",
+  "appTitle": "Kidoraplay",
+  "@appTitle": { "description": "App name" },
+  "sectionNumbers": "Numbers",
+  "sectionAbc": "ABC",
+  "sectionAnimals": "Animals",
+  "sectionBirds": "Birds",
+  "back": "Back",
+  "@back": { "description": "Semantics label for the big back button" }
+}
