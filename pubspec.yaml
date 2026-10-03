@@ -26,6 +26,23 @@ flutter:
   uses-material-design: true
   generate: true
 
+  assets:
+    - assets/content/
+    - assets/images/sections/
+    - assets/images/numbers/
+    - assets/images/abc/
+    - assets/images/animals/
+    - assets/images/birds/
+    - assets/audio/en/
+    - assets/audio/en/kido/
+    - assets/audio/en/sections/
+    - assets/audio/hi/
+    - assets/audio/hi/kido/
+    - assets/audio/hi/sections/
+    - assets/audio/letters/
+    - assets/audio/animals/
+    - assets/audio/birds/
+
   fonts:
     - family: Baloo2
       fonts:

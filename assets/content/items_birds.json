@@ -1,0 +1,182 @@
+[
+  {
+    "id": "crow",
+    "section": "birds",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Crow",
+    "word_hi": "कौआ",
+    "image": "assets/images/birds/crow.webp",
+    "voice_en": "assets/audio/en/crow.m4a",
+    "voice_hi": "assets/audio/hi/crow.m4a",
+    "sound": "assets/audio/birds/crow.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "parrot",
+    "section": "birds",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Parrot",
+    "word_hi": "तोता",
+    "image": "assets/images/birds/parrot.webp",
+    "voice_en": "assets/audio/en/parrot.m4a",
+    "voice_hi": "assets/audio/hi/parrot.m4a",
+    "sound": "assets/audio/birds/parrot.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "peacock",
+    "section": "birds",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Peacock",
+    "word_hi": "मोर",
+    "image": "assets/images/birds/peacock.webp",
+    "voice_en": "assets/audio/en/peacock.m4a",
+    "voice_hi": "assets/audio/hi/peacock.m4a",
+    "sound": "assets/audio/birds/peacock.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "sparrow",
+    "section": "birds",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Sparrow",
+    "word_hi": "गौरैया",
+    "image": "assets/images/birds/sparrow.webp",
+    "voice_en": "assets/audio/en/sparrow.m4a",
+    "voice_hi": "assets/audio/hi/sparrow.m4a",
+    "sound": "assets/audio/birds/sparrow.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "pigeon",
+    "section": "birds",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Pigeon",
+    "word_hi": "कबूतर",
+    "image": "assets/images/birds/pigeon.webp",
+    "voice_en": "assets/audio/en/pigeon.m4a",
+    "voice_hi": "assets/audio/hi/pigeon.m4a",
+    "sound": "assets/audio/birds/pigeon.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "duck",
+    "section": "birds",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Duck",
+    "word_hi": "बत्तख",
+    "image": "assets/images/birds/duck.webp",
+    "voice_en": "assets/audio/en/duck.m4a",
+    "voice_hi": "assets/audio/hi/duck.m4a",
+    "sound": "assets/audio/birds/duck.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "hen",
+    "section": "birds",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Hen",
+    "word_hi": "मुर्गी",
+    "image": "assets/images/birds/hen.webp",
+    "voice_en": "assets/audio/en/hen.m4a",
+    "voice_hi": "assets/audio/hi/hen.m4a",
+    "sound": "assets/audio/birds/hen.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "owl",
+    "section": "birds",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Owl",
+    "word_hi": "उल्लू",
+    "image": "assets/images/birds/owl.webp",
+    "voice_en": "assets/audio/en/owl.m4a",
+    "voice_hi": "assets/audio/hi/owl.m4a",
+    "sound": "assets/audio/birds/owl.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "eagle",
+    "section": "birds",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Eagle",
+    "word_hi": "चील",
+    "image": "assets/images/birds/eagle.webp",
+    "voice_en": "assets/audio/en/eagle.m4a",
+    "voice_hi": "assets/audio/hi/eagle.m4a",
+    "sound": "assets/audio/birds/eagle.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "koel",
+    "section": "birds",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Koel",
+    "word_hi": "कोयल",
+    "image": "assets/images/birds/koel.webp",
+    "voice_en": "assets/audio/en/koel.m4a",
+    "voice_hi": "assets/audio/hi/koel.m4a",
+    "sound": "assets/audio/birds/koel.m4a",
+    "rive_reaction": null
+  }
+]

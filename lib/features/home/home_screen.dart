@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../content/models/section.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_tokens.dart';
 import '../../core/theme/section_theme.dart';

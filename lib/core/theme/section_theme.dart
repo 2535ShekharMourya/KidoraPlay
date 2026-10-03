@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../content/models/section.dart';
 import 'app_colors.dart';
-
-/// Phase 1 learning sections.
-enum SectionId { numbers, abc, animals, birds }
 
 /// Per-section colour theme.
 @immutable

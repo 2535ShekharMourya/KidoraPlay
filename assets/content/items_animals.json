@@ -1,0 +1,182 @@
+[
+  {
+    "id": "cow",
+    "section": "animals",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Cow",
+    "word_hi": "गाय",
+    "image": "assets/images/animals/cow.webp",
+    "voice_en": "assets/audio/en/cow.m4a",
+    "voice_hi": "assets/audio/hi/cow.m4a",
+    "sound": "assets/audio/animals/cow.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "dog",
+    "section": "animals",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Dog",
+    "word_hi": "कुत्ता",
+    "image": "assets/images/animals/dog.webp",
+    "voice_en": "assets/audio/en/dog.m4a",
+    "voice_hi": "assets/audio/hi/dog.m4a",
+    "sound": "assets/audio/animals/dog.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "cat",
+    "section": "animals",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Cat",
+    "word_hi": "बिल्ली",
+    "image": "assets/images/animals/cat.webp",
+    "voice_en": "assets/audio/en/cat.m4a",
+    "voice_hi": "assets/audio/hi/cat.m4a",
+    "sound": "assets/audio/animals/cat.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "lion",
+    "section": "animals",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Lion",
+    "word_hi": "शेर",
+    "image": "assets/images/animals/lion.webp",
+    "voice_en": "assets/audio/en/lion.m4a",
+    "voice_hi": "assets/audio/hi/lion.m4a",
+    "sound": "assets/audio/animals/lion.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "tiger",
+    "section": "animals",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Tiger",
+    "word_hi": "बाघ",
+    "image": "assets/images/animals/tiger.webp",
+    "voice_en": "assets/audio/en/tiger.m4a",
+    "voice_hi": "assets/audio/hi/tiger.m4a",
+    "sound": "assets/audio/animals/tiger.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "elephant",
+    "section": "animals",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Elephant",
+    "word_hi": "हाथी",
+    "image": "assets/images/animals/elephant.webp",
+    "voice_en": "assets/audio/en/elephant.m4a",
+    "voice_hi": "assets/audio/hi/elephant.m4a",
+    "sound": "assets/audio/animals/elephant.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "monkey",
+    "section": "animals",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Monkey",
+    "word_hi": "बंदर",
+    "image": "assets/images/animals/monkey.webp",
+    "voice_en": "assets/audio/en/monkey.m4a",
+    "voice_hi": "assets/audio/hi/monkey.m4a",
+    "sound": "assets/audio/animals/monkey.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "horse",
+    "section": "animals",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Horse",
+    "word_hi": "घोड़ा",
+    "image": "assets/images/animals/horse.webp",
+    "voice_en": "assets/audio/en/horse.m4a",
+    "voice_hi": "assets/audio/hi/horse.m4a",
+    "sound": "assets/audio/animals/horse.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "goat",
+    "section": "animals",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Goat",
+    "word_hi": "बकरी",
+    "image": "assets/images/animals/goat.webp",
+    "voice_en": "assets/audio/en/goat.m4a",
+    "voice_hi": "assets/audio/hi/goat.m4a",
+    "sound": "assets/audio/animals/goat.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "sheep",
+    "section": "animals",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Sheep",
+    "word_hi": "भेड़",
+    "image": "assets/images/animals/sheep.webp",
+    "voice_en": "assets/audio/en/sheep.m4a",
+    "voice_hi": "assets/audio/hi/sheep.m4a",
+    "sound": "assets/audio/animals/sheep.m4a",
+    "rive_reaction": null
+  }
+]

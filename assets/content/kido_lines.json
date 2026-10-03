@@ -1,0 +1,46 @@
+{
+  "welcome_first": {
+    "en": [{ "text": "Hi! I'm Kido! Let's learn!", "audio": ["assets/audio/en/kido/welcome_first.m4a"] }],
+    "hi": [{ "text": "नमस्ते! मैं किडो हूँ! चलो सीखें!", "audio": ["assets/audio/hi/kido/welcome_first.m4a"] }]
+  },
+  "welcome_back": {
+    "en": [{ "text": "Hi again!", "audio": ["assets/audio/en/kido/welcome_back.m4a"] }],
+    "hi": [{ "text": "फिर से नमस्ते!", "audio": ["assets/audio/hi/kido/welcome_back.m4a"] }]
+  },
+  "hint_tap": {
+    "en": [{ "text": "Tap the {item}!", "audio": ["assets/audio/en/kido/hint_tap.m4a", "{item}"] }],
+    "hi": [{ "text": "{item} को छुओ!", "audio": ["{item}", "assets/audio/hi/kido/hint_tap.m4a"] }]
+  },
+  "spell_together": {
+    "en": [{ "text": "Let's spell it together!", "audio": ["assets/audio/en/kido/spell_together.m4a"] }],
+    "hi": [{ "text": "चलो साथ में स्पेलिंग करें!", "audio": ["assets/audio/hi/kido/spell_together.m4a"] }]
+  },
+  "praise": {
+    "en": [
+      { "text": "Well done!", "audio": ["assets/audio/en/kido/praise_1.m4a"] },
+      { "text": "Super!", "audio": ["assets/audio/en/kido/praise_2.m4a"] },
+      { "text": "Wow!", "audio": ["assets/audio/en/kido/praise_3.m4a"] },
+      { "text": "Great job!", "audio": ["assets/audio/en/kido/praise_4.m4a"] },
+      { "text": "Amazing!", "audio": ["assets/audio/en/kido/praise_5.m4a"] }
+    ],
+    "hi": [
+      { "text": "शाबाश!", "audio": ["assets/audio/hi/kido/praise_1.m4a"] },
+      { "text": "बहुत बढ़िया!", "audio": ["assets/audio/hi/kido/praise_2.m4a"] },
+      { "text": "वाह!", "audio": ["assets/audio/hi/kido/praise_3.m4a"] },
+      { "text": "बहुत अच्छे!", "audio": ["assets/audio/hi/kido/praise_4.m4a"] },
+      { "text": "कमाल है!", "audio": ["assets/audio/hi/kido/praise_5.m4a"] }
+    ]
+  },
+  "try_again": {
+    "en": [{ "text": "Oops! Try again!", "audio": ["assets/audio/en/kido/try_again.m4a"] }],
+    "hi": [{ "text": "ओह! फिर से कोशिश करो!", "audio": ["assets/audio/hi/kido/try_again.m4a"] }]
+  },
+  "section_done": {
+    "en": [{ "text": "You learned {n} {section}!", "audio": ["assets/audio/en/kido/you_learned.m4a", "{n}", "{section}"] }],
+    "hi": [{ "text": "तुमने {n} {section} सीखे!", "audio": ["assets/audio/hi/kido/tumne.m4a", "{n}", "{section}", "assets/audio/hi/kido/seekhe.m4a"] }]
+  },
+  "goodbye": {
+    "en": [{ "text": "Bye bye! See you soon!", "audio": ["assets/audio/en/kido/goodbye.m4a"] }],
+    "hi": [{ "text": "बाय बाय! फिर मिलेंगे!", "audio": ["assets/audio/hi/kido/goodbye.m4a"] }]
+  }
+}

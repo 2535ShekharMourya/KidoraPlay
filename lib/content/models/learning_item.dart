@@ -1,0 +1,98 @@
+import 'package:flutter/foundation.dart';
+
+import '../spelling.dart';
+import 'json_reader.dart';
+import 'level.dart';
+import 'section.dart';
+
+/// One learnable thing: a number, a letter word, an animal, a bird...
+@immutable
+class LearningItem {
+  const LearningItem({
+    required this.id,
+    required this.section,
+    required this.levels,
+    required this.wordEn,
+    required this.wordHi,
+    required this.image,
+    required this.voiceEn,
+    required this.voiceHi,
+    this.letter,
+    this.number,
+    this.sound,
+    this.riveReaction,
+  });
+
+  factory LearningItem.fromJson(Object? json, {String file = 'items'}) {
+    final ctx = '$file item "${JsonReader(json, file).optString('id')}"';
+    final r = JsonReader(json, ctx);
+    return LearningItem(
+      id: r.string('id'),
+      section: parseEnum(SectionId.values, r.string('section'), ctx),
+      levels: List.unmodifiable(
+        r.stringList('levels').map((l) => parseEnum(Level.values, l, ctx)),
+      ),
+      letter: r.optString('letter'),
+      number: r.optInt('number'),
+      wordEn: r.string('word_en'),
+      wordHi: r.string('word_hi'),
+      image: r.string('image'),
+      voiceEn: r.string('voice_en'),
+      voiceHi: r.string('voice_hi'),
+      sound: r.optString('sound'),
+      riveReaction: r.optString('rive_reaction'),
+    );
+  }
+
+  /// Unique lowercase snake_case id; matches asset file names.
+  final String id;
+  final SectionId section;
+  final List<Level> levels;
+
+  /// ABC items only, e.g. "A".
+  final String? letter;
+
+  /// Numbers items only, 1–100.
+  final int? number;
+  final String wordEn;
+  final String wordHi;
+  final String image;
+  final String voiceEn;
+  final String voiceHi;
+
+  /// Real-world sound (animals, birds, vehicles).
+  final String? sound;
+
+  /// Rive state-machine input for the picture's reaction, if any.
+  final String? riveReaction;
+
+  /// Letter tiles for spelling mode, always derived from [wordEn].
+  List<SpellingTile> get spelling => spellingOf(wordEn);
+
+  bool isForLevel(Level level) => levels.contains(level);
+
+  String word(ContentLanguage lang) => switch (lang) {
+        ContentLanguage.en => wordEn,
+        ContentLanguage.hi => wordHi,
+      };
+
+  String voice(ContentLanguage lang) => switch (lang) {
+        ContentLanguage.en => voiceEn,
+        ContentLanguage.hi => voiceHi,
+      };
+
+  Map<String, Object?> toJson() => {
+        'id': id,
+        'section': section.name,
+        'levels': [for (final l in levels) l.name],
+        'letter': letter,
+        'number': number,
+        'word_en': wordEn,
+        'word_hi': wordHi,
+        'image': image,
+        'voice_en': voiceEn,
+        'voice_hi': voiceHi,
+        'sound': sound,
+        'rive_reaction': riveReaction,
+      };
+}

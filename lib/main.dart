@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'app.dart';
+import 'content/repository/content_repository.dart';
 import 'core/storage/local_store.dart';
 
 Future<void> main() async {
@@ -31,10 +32,22 @@ Future<void> main() async {
   await SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
 
   final store = await LocalStore.open();
+  final container = ProviderContainer(
+    overrides: [localStoreProvider.overrideWithValue(store)],
+  );
+
+  // Preload content. In debug builds a content mistake stops startup with a
+  // list of every problem; in release we log and let screens fall back.
+  try {
+    await container.read(contentCatalogProvider.future);
+  } catch (e, s) {
+    if (kDebugMode) rethrow;
+    debugPrint('Content failed to load: $e\n$s');
+  }
 
   runApp(
-    ProviderScope(
-      overrides: [localStoreProvider.overrideWithValue(store)],
+    UncontrolledProviderScope(
+      container: container,
       child: const KidoraApp(),
     ),
   );

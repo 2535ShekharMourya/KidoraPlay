@@ -1,0 +1,182 @@
+[
+  {
+    "id": "one",
+    "section": "numbers",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 1,
+    "word_en": "One",
+    "word_hi": "एक",
+    "image": "assets/images/numbers/one.webp",
+    "voice_en": "assets/audio/en/one.m4a",
+    "voice_hi": "assets/audio/hi/one.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "two",
+    "section": "numbers",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 2,
+    "word_en": "Two",
+    "word_hi": "दो",
+    "image": "assets/images/numbers/two.webp",
+    "voice_en": "assets/audio/en/two.m4a",
+    "voice_hi": "assets/audio/hi/two.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "three",
+    "section": "numbers",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 3,
+    "word_en": "Three",
+    "word_hi": "तीन",
+    "image": "assets/images/numbers/three.webp",
+    "voice_en": "assets/audio/en/three.m4a",
+    "voice_hi": "assets/audio/hi/three.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "four",
+    "section": "numbers",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 4,
+    "word_en": "Four",
+    "word_hi": "चार",
+    "image": "assets/images/numbers/four.webp",
+    "voice_en": "assets/audio/en/four.m4a",
+    "voice_hi": "assets/audio/hi/four.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "five",
+    "section": "numbers",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 5,
+    "word_en": "Five",
+    "word_hi": "पाँच",
+    "image": "assets/images/numbers/five.webp",
+    "voice_en": "assets/audio/en/five.m4a",
+    "voice_hi": "assets/audio/hi/five.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "six",
+    "section": "numbers",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 6,
+    "word_en": "Six",
+    "word_hi": "छह",
+    "image": "assets/images/numbers/six.webp",
+    "voice_en": "assets/audio/en/six.m4a",
+    "voice_hi": "assets/audio/hi/six.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "seven",
+    "section": "numbers",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 7,
+    "word_en": "Seven",
+    "word_hi": "सात",
+    "image": "assets/images/numbers/seven.webp",
+    "voice_en": "assets/audio/en/seven.m4a",
+    "voice_hi": "assets/audio/hi/seven.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "eight",
+    "section": "numbers",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 8,
+    "word_en": "Eight",
+    "word_hi": "आठ",
+    "image": "assets/images/numbers/eight.webp",
+    "voice_en": "assets/audio/en/eight.m4a",
+    "voice_hi": "assets/audio/hi/eight.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "nine",
+    "section": "numbers",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 9,
+    "word_en": "Nine",
+    "word_hi": "नौ",
+    "image": "assets/images/numbers/nine.webp",
+    "voice_en": "assets/audio/en/nine.m4a",
+    "voice_hi": "assets/audio/hi/nine.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "ten",
+    "section": "numbers",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 10,
+    "word_en": "Ten",
+    "word_hi": "दस",
+    "image": "assets/images/numbers/ten.webp",
+    "voice_en": "assets/audio/en/ten.m4a",
+    "voice_hi": "assets/audio/hi/ten.m4a",
+    "sound": null,
+    "rive_reaction": null
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "id": "a_apple",
+    "section": "abc",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": "A",
+    "number": null,
+    "word_en": "Apple",
+    "word_hi": "सेब",
+    "image": "assets/images/abc/a_apple.webp",
+    "voice_en": "assets/audio/en/a_apple.m4a",
+    "voice_hi": "assets/audio/hi/a_apple.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "b_ball",
+    "section": "abc",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": "B",
+    "number": null,
+    "word_en": "Ball",
+    "word_hi": "गेंद",
+    "image": "assets/images/abc/b_ball.webp",
+    "voice_en": "assets/audio/en/b_ball.m4a",
+    "voice_hi": "assets/audio/hi/b_ball.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "c_cat",
+    "section": "abc",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": "C",
+    "number": null,
+    "word_en": "Cat",
+    "word_hi": "बिल्ली",
+    "image": "assets/images/abc/c_cat.webp",
+    "voice_en": "assets/audio/en/c_cat.m4a",
+    "voice_hi": "assets/audio/hi/c_cat.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "d_dog",
+    "section": "abc",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": "D",
+    "number": null,
+    "word_en": "Dog",
+    "word_hi": "कुत्ता",
+    "image": "assets/images/abc/d_dog.webp",
+    "voice_en": "assets/audio/en/d_dog.m4a",
+    "voice_hi": "assets/audio/hi/d_dog.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "e_egg",
+    "section": "abc",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": "E",
+    "number": null,
+    "word_en": "Egg",
+    "word_hi": "अंडा",
+    "image": "assets/images/abc/e_egg.webp",
+    "voice_en": "assets/audio/en/e_egg.m4a",
+    "voice_hi": "assets/audio/hi/e_egg.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "f_fish",
+    "section": "abc",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": "F",
+    "number": null,
+    "word_en": "Fish",
+    "word_hi": "मछली",
+    "image": "assets/images/abc/f_fish.webp",
+    "voice_en": "assets/audio/en/f_fish.m4a",
+    "voice_hi": "assets/audio/hi/f_fish.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "g_grapes",
+    "section": "abc",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": "G",
+    "number": null,
+    "word_en": "Grapes",
+    "word_hi": "अंगूर",
+    "image": "assets/images/abc/g_grapes.webp",
+    "voice_en": "assets/audio/en/g_grapes.m4a",
+    "voice_hi": "assets/audio/hi/g_grapes.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "h_hat",
+    "section": "abc",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": "H",
+    "number": null,
+    "word_en": "Hat",
+    "word_hi": "टोपी",
+    "image": "assets/images/abc/h_hat.webp",
+    "voice_en": "assets/audio/en/h_hat.m4a",
+    "voice_hi": "assets/audio/hi/h_hat.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "i_ice_cream",
+    "section": "abc",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": "I",
+    "number": null,
+    "word_en": "Ice Cream",
+    "word_hi": "आइसक्रीम",
+    "image": "assets/images/abc/i_ice_cream.webp",
+    "voice_en": "assets/audio/en/i_ice_cream.m4a",
+    "voice_hi": "assets/audio/hi/i_ice_cream.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "j_jug",
+    "section": "abc",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": "J",
+    "number": null,
+    "word_en": "Jug",
+    "word_hi": "जग",
+    "image": "assets/images/abc/j_jug.webp",
+    "voice_en": "assets/audio/en/j_jug.m4a",
+    "voice_hi": "assets/audio/hi/j_jug.m4a",
+    "sound": null,
+    "rive_reaction": null
+  }
+]
