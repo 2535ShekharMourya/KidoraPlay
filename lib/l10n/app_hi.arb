@@ -9,5 +9,6 @@
   "next": "आगे",
   "previous": "पीछे",
   "numberRow": "{from} से {to}",
-  "placeValue": "{tens} दहाई और {ones} इकाई"
+  "placeValue": "{tens} दहाई और {ones} इकाई",
+  "stickerBook": "स्टिकर बुक"
 }

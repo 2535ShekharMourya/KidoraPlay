@@ -12,21 +12,21 @@ class SectionTheme {
   final Color accent;
 
   static SectionTheme of(SectionId id) => switch (id) {
-        SectionId.numbers => const SectionTheme(
-            background: AppColors.numbersBg,
-            accent: AppColors.numbersAccent,
-          ),
-        SectionId.abc => const SectionTheme(
-            background: AppColors.abcBg,
-            accent: AppColors.abcAccent,
-          ),
-        SectionId.animals => const SectionTheme(
-            background: AppColors.animalsBg,
-            accent: AppColors.animalsAccent,
-          ),
-        SectionId.birds => const SectionTheme(
-            background: AppColors.birdsBg,
-            accent: AppColors.birdsAccent,
-          ),
-      };
+    SectionId.numbers => const SectionTheme(
+      background: AppColors.numbersBg,
+      accent: AppColors.numbersAccent,
+    ),
+    SectionId.abc => const SectionTheme(
+      background: AppColors.abcBg,
+      accent: AppColors.abcAccent,
+    ),
+    SectionId.animals => const SectionTheme(
+      background: AppColors.animalsBg,
+      accent: AppColors.animalsAccent,
+    ),
+    SectionId.birds => const SectionTheme(
+      background: AppColors.birdsBg,
+      accent: AppColors.birdsAccent,
+    ),
+  };
 }

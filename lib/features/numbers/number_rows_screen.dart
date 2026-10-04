@@ -56,8 +56,8 @@ class _NumberRowsScreenState extends ConsumerState<NumberRowsScreen> {
                   builder: (context, constraints) {
                     const cols = AppLayout.gridColumns;
                     const gap = AppSpacing.tapGap;
-                    final width = (constraints.maxWidth - gap * (cols - 1)) /
-                        cols;
+                    final width =
+                        (constraints.maxWidth - gap * (cols - 1)) / cols;
                     final height = (constraints.maxHeight - gap) / 2;
                     return Center(
                       child: Wrap(
@@ -94,10 +94,7 @@ class _NumberRowsScreenState extends ConsumerState<NumberRowsScreen> {
                   },
                 ),
               ),
-              const Align(
-                alignment: Alignment.topLeft,
-                child: BigBackButton(),
-              ),
+              const Align(alignment: Alignment.topLeft, child: BigBackButton()),
               const KidoCorner(),
             ],
           ),
@@ -115,9 +112,7 @@ class _RowTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final style = Theme.of(context)
-        .textTheme
-        .headlineMedium
+    final style = Theme.of(context).textTheme.headlineMedium
         ?.copyWith(color: AppColors.white, height: 1);
     return Container(
       decoration: BoxDecoration(

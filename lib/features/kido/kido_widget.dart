@@ -31,8 +31,9 @@ class _KidoWidgetState extends ConsumerState<KidoWidget>
     vsync: this,
     duration: AppDurations.kidoTalk,
   );
-  late final ValueNotifier<bool> _speaking =
-      ref.read(audioServiceProvider).speaking;
+  late final ValueNotifier<bool> _speaking = ref
+      .read(audioServiceProvider)
+      .speaking;
 
   @override
   void initState() {

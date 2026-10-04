@@ -64,5 +64,6 @@ class KidoController extends Notifier<KidoState> {
   }
 }
 
-final kidoControllerProvider =
-    NotifierProvider<KidoController, KidoState>(KidoController.new);
+final kidoControllerProvider = NotifierProvider<KidoController, KidoState>(
+  KidoController.new,
+);

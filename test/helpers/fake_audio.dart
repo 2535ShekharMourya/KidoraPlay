@@ -102,7 +102,6 @@ class FakeAudio {
   AudioChannels get channels => (voice: voice, sfx: sfx, music: music);
 
   List<String> get sfxNames => [
-        for (final a in sfx.played)
-          Sfx.values.firstWhere((s) => s.asset == a).name,
-      ];
+    for (final a in sfx.played) Sfx.values.firstWhere((s) => s.asset == a).name,
+  ];
 }

@@ -87,36 +87,36 @@ class LearningItem {
   bool isForLevel(Level level) => levels.contains(level);
 
   String word(ContentLanguage lang) => switch (lang) {
-        ContentLanguage.en => wordEn,
-        ContentLanguage.hi => wordHi,
-      };
+    ContentLanguage.en => wordEn,
+    ContentLanguage.hi => wordHi,
+  };
 
   String voice(ContentLanguage lang) => switch (lang) {
-        ContentLanguage.en => voiceEn,
-        ContentLanguage.hi => voiceHi,
-      };
+    ContentLanguage.en => voiceEn,
+    ContentLanguage.hi => voiceHi,
+  };
 
   String? factVoice(ContentLanguage lang) => switch (lang) {
-        ContentLanguage.en => voiceFactEn,
-        ContentLanguage.hi => voiceFactHi,
-      };
+    ContentLanguage.en => voiceFactEn,
+    ContentLanguage.hi => voiceFactHi,
+  };
 
   Map<String, Object?> toJson() => {
-        'id': id,
-        'section': section.name,
-        'levels': [for (final l in levels) l.name],
-        'letter': letter,
-        'number': number,
-        'word_en': wordEn,
-        'word_hi': wordHi,
-        'image': image,
-        'voice_en': voiceEn,
-        'voice_hi': voiceHi,
-        'sound': sound,
-        'fact_en': factEn,
-        'fact_hi': factHi,
-        'voice_fact_en': voiceFactEn,
-        'voice_fact_hi': voiceFactHi,
-        'rive_reaction': riveReaction,
-      };
+    'id': id,
+    'section': section.name,
+    'levels': [for (final l in levels) l.name],
+    'letter': letter,
+    'number': number,
+    'word_en': wordEn,
+    'word_hi': wordHi,
+    'image': image,
+    'voice_en': voiceEn,
+    'voice_hi': voiceHi,
+    'sound': sound,
+    'fact_en': factEn,
+    'fact_hi': factHi,
+    'voice_fact_en': voiceFactEn,
+    'voice_fact_hi': voiceFactHi,
+    'rive_reaction': riveReaction,
+  };
 }

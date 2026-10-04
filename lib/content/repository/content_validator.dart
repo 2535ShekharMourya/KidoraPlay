@@ -12,7 +12,8 @@ class ContentValidationException implements Exception {
   final List<String> errors;
 
   @override
-  String toString() => 'Content validation failed with ${errors.length} '
+  String toString() =>
+      'Content validation failed with ${errors.length} '
       'error(s):\n${errors.map((e) => '  - $e').join('\n')}';
 }
 
@@ -169,9 +170,7 @@ List<String> _validateItem(
       if (n == null || n < 1 || n > 100) {
         errors.add('$where: "number" must be 1–100');
       } else if (item.wordEn != numberNameEn(n)) {
-        errors.add(
-          '$where: "word_en" should be "${numberNameEn(n)}" for $n',
-        );
+        errors.add('$where: "word_en" should be "${numberNameEn(n)}" for $n');
       }
     case SectionId.abc:
       final letter = item.letter;

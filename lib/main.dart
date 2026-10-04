@@ -8,6 +8,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'app.dart';
 import 'content/repository/content_repository.dart';
 import 'core/audio/audio_service.dart';
+import 'core/licences.dart';
 import 'core/storage/local_store.dart';
 
 Future<void> main() async {
@@ -25,6 +26,8 @@ Future<void> main() async {
   if (kReleaseMode) {
     ErrorWidget.builder = (_) => const SizedBox.shrink();
   }
+
+  registerContentLicences();
 
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.landscapeLeft,
@@ -51,9 +54,6 @@ Future<void> main() async {
   unawaited(container.read(audioServiceProvider).preloadSfx());
 
   runApp(
-    UncontrolledProviderScope(
-      container: container,
-      child: const KidoraApp(),
-    ),
+    UncontrolledProviderScope(container: container, child: const KidoraApp()),
   );
 }

@@ -42,4 +42,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String placeValue(int tens, int ones) {
     return '$tens tens and $ones ones';
   }
+
+  @override
+  String get stickerBook => 'Sticker book';
 }

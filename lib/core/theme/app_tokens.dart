@@ -82,6 +82,8 @@ abstract final class AppDurations {
 
   /// Count along up to this number on number cards (longer gets tiring).
   static const countAlongMax = 10;
+  static const stickerFlight = Duration(milliseconds: 900);
+  static const celebration = Duration(milliseconds: 3500);
 }
 
 /// Curve tokens.

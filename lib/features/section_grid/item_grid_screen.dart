@@ -69,14 +69,11 @@ class _ItemGridScreenState extends ConsumerState<ItemGridScreen> {
                   key: ValueKey(page),
                   items: pageItems,
                   accent: theme.accent,
-                  onTap: (item) => context
-                      .go(AppRoutes.learn(widget.scope, item.id)),
+                  onTap: (item) =>
+                      context.go(AppRoutes.learn(widget.scope, item.id)),
                 ),
               ),
-              const Align(
-                alignment: Alignment.topLeft,
-                child: BigBackButton(),
-              ),
+              const Align(alignment: Alignment.topLeft, child: BigBackButton()),
               const KidoCorner(),
               if (page > 0)
                 Align(

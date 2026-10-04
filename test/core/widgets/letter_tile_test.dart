@@ -43,18 +43,19 @@ void main() {
     expect(find.byType(BouncyButton), findsNWidgets(9));
   });
 
-  testWidgets('highlighted tile grows and fills with the accent',
-      (tester) async {
+  testWidgets('highlighted tile grows and fills with the accent', (
+    tester,
+  ) async {
     Future<void> pump({required bool highlighted}) => pumpApp(
-          tester,
-          Center(
-            child: LetterTile(
-              tile: const SpellingTile('P'),
-              accent: AppColors.abcAccent,
-              highlighted: highlighted,
-            ),
-          ),
-        );
+      tester,
+      Center(
+        child: LetterTile(
+          tile: const SpellingTile('P'),
+          accent: AppColors.abcAccent,
+          highlighted: highlighted,
+        ),
+      ),
+    );
 
     await pump(highlighted: false);
     expect(tester.widget<AnimatedScale>(find.byType(AnimatedScale)).scale, 1);
@@ -65,9 +66,11 @@ void main() {
       tester.widget<AnimatedScale>(find.byType(AnimatedScale)).scale,
       AppScale.highlighted,
     );
-    final box = tester
-        .widget<AnimatedContainer>(find.byType(AnimatedContainer))
-        .decoration! as BoxDecoration;
+    final box =
+        tester
+                .widget<AnimatedContainer>(find.byType(AnimatedContainer))
+                .decoration!
+            as BoxDecoration;
     expect(box.color, AppColors.abcAccent);
   });
 }

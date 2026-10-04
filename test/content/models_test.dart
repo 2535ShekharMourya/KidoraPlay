@@ -5,23 +5,23 @@ import 'package:kidoraplay/content/models/level.dart';
 import 'package:kidoraplay/content/models/section.dart';
 
 Map<String, Object?> appleJson() => {
-      'id': 'a_apple',
-      'section': 'abc',
-      'levels': ['nursery', 'lkg'],
-      'letter': 'A',
-      'number': null,
-      'word_en': 'Apple',
-      'word_hi': 'सेब',
-      'image': 'assets/images/abc/a_apple.webp',
-      'voice_en': 'assets/audio/en/a_apple.m4a',
-      'voice_hi': 'assets/audio/hi/a_apple.m4a',
-      'sound': null,
-      'fact_en': 'An apple is red and yummy!',
-      'fact_hi': 'सेब लाल और मीठा होता है!',
-      'voice_fact_en': 'assets/audio/en/a_apple_fact.m4a',
-      'voice_fact_hi': 'assets/audio/hi/a_apple_fact.m4a',
-      'rive_reaction': null,
-    };
+  'id': 'a_apple',
+  'section': 'abc',
+  'levels': ['nursery', 'lkg'],
+  'letter': 'A',
+  'number': null,
+  'word_en': 'Apple',
+  'word_hi': 'सेब',
+  'image': 'assets/images/abc/a_apple.webp',
+  'voice_en': 'assets/audio/en/a_apple.m4a',
+  'voice_hi': 'assets/audio/hi/a_apple.m4a',
+  'sound': null,
+  'fact_en': 'An apple is red and yummy!',
+  'fact_hi': 'सेब लाल और मीठा होता है!',
+  'voice_fact_en': 'assets/audio/en/a_apple_fact.m4a',
+  'voice_fact_hi': 'assets/audio/hi/a_apple_fact.m4a',
+  'rive_reaction': null,
+};
 
 void main() {
   group('LearningItem', () {
@@ -41,24 +41,26 @@ void main() {
       expect(LearningItem.fromJson(json).toJson(), json);
     });
 
-    test('wrong field type gives a clear error naming file, item and field',
-        () {
-      final json = appleJson()..['word_en'] = 42;
-      expect(
-        () => LearningItem.fromJson(json, file: 'items_abc.json'),
-        throwsA(
-          isA<FormatException>().having(
-            (e) => e.message,
-            'message',
-            allOf(
-              contains('items_abc.json'),
-              contains('a_apple'),
-              contains('word_en'),
+    test(
+      'wrong field type gives a clear error naming file, item and field',
+      () {
+        final json = appleJson()..['word_en'] = 42;
+        expect(
+          () => LearningItem.fromJson(json, file: 'items_abc.json'),
+          throwsA(
+            isA<FormatException>().having(
+              (e) => e.message,
+              'message',
+              allOf(
+                contains('items_abc.json'),
+                contains('a_apple'),
+                contains('word_en'),
+              ),
             ),
           ),
-        ),
-      );
-    });
+        );
+      },
+    );
 
     test('unknown level is rejected', () {
       final json = appleJson()..['levels'] = ['playgroup'];

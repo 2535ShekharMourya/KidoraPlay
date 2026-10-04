@@ -27,18 +27,14 @@ class LetterTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textStyle = Theme.of(context).textTheme.displayLarge!.copyWith(
-          fontSize: size * 0.6,
-          height: 1.1,
-        );
+    final textStyle = Theme.of(context).textTheme.displayLarge!
+        .copyWith(fontSize: size * 0.6, height: 1.1);
 
     if (!tile.isVoiced) {
       return SizedBox(
         width: size * 0.4,
         height: size,
-        child: Center(
-          child: Text(tile.char.trim(), style: textStyle),
-        ),
+        child: Center(child: Text(tile.char.trim(), style: textStyle)),
       );
     }
 

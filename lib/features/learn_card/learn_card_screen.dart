@@ -23,6 +23,8 @@ import '../kido/hint_timer.dart';
 import '../kido/kido_controller.dart';
 import '../kido/kido_widget.dart';
 import '../numbers/place_value_view.dart';
+import '../progress/progress_controller.dart';
+import '../progress/sticker_widgets.dart';
 import '../section_grid/section_items.dart';
 import 'learn_card_controller.dart';
 import 'spelling_strip.dart';
@@ -43,6 +45,8 @@ class LearnCardScreen extends ConsumerStatefulWidget {
 class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
   final _burst = BurstController();
   final _pictureKey = GlobalKey();
+  final _jarKey = GlobalKey();
+  int _celebrationKey = 0;
   List<GlobalKey> _tileKeys = const [];
 
   LearnCardController get _controller =>
@@ -52,6 +56,7 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
   @override
   void initState() {
     super.initState();
+    _controller.attach(widget.scope);
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (mounted) _controller.start();
     });
@@ -69,6 +74,23 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
     return box.localToGlobal(box.size.center(Offset.zero));
   }
 
+  Rect? _rectOf(GlobalKey key) {
+    final box = key.currentContext?.findRenderObject() as RenderBox?;
+    if (box == null || !box.hasSize || !box.attached) return null;
+    return box.localToGlobal(Offset.zero) & box.size;
+  }
+
+  void _flySticker() {
+    final item = ref
+        .read(scopeItemsProvider(widget.scope))
+        .where((i) => i.id == widget.itemId)
+        .firstOrNull;
+    final from = _rectOf(_pictureKey);
+    final to = _rectOf(_jarKey);
+    if (item == null || from == null || to == null) return;
+    flySticker(context, image: item.image, from: from, to: to);
+  }
+
   GlobalKey? _tileKey(int? index) =>
       index != null && index < _tileKeys.length ? _tileKeys[index] : null;
 
@@ -82,6 +104,14 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
       _burst.fire();
       _kido.act(KidoAction.clap);
       return;
+    }
+    if (next.completions > (prev?.completions ?? 0)) {
+      setState(() => _celebrationKey++);
+      _kido.act(KidoAction.trumpet);
+      return;
+    }
+    if (next.stickers > (prev?.stickers ?? 0)) {
+      _flySticker();
     }
     if (next.cheers > (prev?.cheers ?? 0)) {
       _kido.act(KidoAction.trumpet);
@@ -260,7 +290,32 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
                       ),
                     ),
                   ),
+                Align(
+                  alignment: Alignment.topRight,
+                  child: Padding(
+                    padding: const EdgeInsets.all(AppSpacing.md),
+                    child: IgnorePointer(
+                      child: KeyedSubtree(
+                        key: _jarKey,
+                        child: StickerJar(
+                          count: ref
+                              .watch(
+                                sectionProgressProvider(widget.scope.section),
+                              )
+                              .learned,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
                 const KidoCorner(),
+                if (_celebrationKey > 0)
+                  Positioned.fill(
+                    child: CelebrationOverlay(
+                      key: ValueKey(_celebrationKey),
+                      image: item.image,
+                    ),
+                  ),
               ],
             ),
           ),

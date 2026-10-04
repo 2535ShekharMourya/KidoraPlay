@@ -196,7 +196,8 @@ class _BackgroundPainter extends CustomPainter {
     for (var i = 0; i < 8; i++) {
       final seed = i * 0.173;
       final progress = (t * (1 + (i % 3) * 0.4) + seed) % 1;
-      final x = size.width * ((seed * 5.1) % 1) +
+      final x =
+          size.width * ((seed * 5.1) % 1) +
           math.sin(progress * 3 * math.pi) * 30;
       final y = size.height * (progress * 1.2 - 0.1);
       final leaf = size.shortestSide * 0.035;
@@ -205,11 +206,7 @@ class _BackgroundPainter extends CustomPainter {
         ..translate(x, y)
         ..rotate(math.sin(progress * 4 * math.pi) * 0.8)
         ..drawOval(
-          Rect.fromCenter(
-            center: Offset.zero,
-            width: leaf * 2,
-            height: leaf,
-          ),
+          Rect.fromCenter(center: Offset.zero, width: leaf * 2, height: leaf),
           Paint()..color = i.isEven ? AppColors.leaf : AppColors.leafLight,
         )
         ..restore();

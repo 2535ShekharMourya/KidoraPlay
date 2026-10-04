@@ -93,17 +93,24 @@ void main() {
   });
 
   group('KidoVoice', () {
-    test('fills {item} with the item word, in each language order', () async {
+    test('bilingual mode: Kido talks in Hindi, filling {item}', () async {
       final c = await containerWith(
         store: LocalStore.inMemory({SettingsKeys.language: 'both'}),
       );
       final cow = catalog.itemById('cow')!;
       expect(c.read(kidoVoiceProvider).clipsFor(KidoEvent.hintTap, item: cow), [
-        'assets/audio/en/kido/hint_tap.m4a', // "Here it is! Tap the" cow
-        'assets/audio/en/cow.m4a',
         'assets/audio/hi/kido/yeh_raha.m4a', // "यह रहा!" गाय "को छुओ!"
         'assets/audio/hi/cow.m4a',
         'assets/audio/hi/kido/ko_chhuo.m4a',
+      ]);
+    });
+
+    test('English mode fills {item} in English', () async {
+      final c = await containerWith();
+      final cow = catalog.itemById('cow')!;
+      expect(c.read(kidoVoiceProvider).clipsFor(KidoEvent.hintTap, item: cow), [
+        'assets/audio/en/kido/hint_tap.m4a', // "Here it is! Tap the" cow
+        'assets/audio/en/cow.m4a',
       ]);
     });
 

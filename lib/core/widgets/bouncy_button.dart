@@ -53,13 +53,17 @@ class _BouncyButtonState extends ConsumerState<BouncyButton>
   );
   late final Animation<double> _scale = TweenSequence<double>([
     TweenSequenceItem(
-      tween: Tween(begin: AppScale.pressed, end: AppScale.tapPeak)
-          .chain(CurveTween(curve: Curves.easeOut)),
+      tween: Tween(
+        begin: AppScale.pressed,
+        end: AppScale.tapPeak,
+      ).chain(CurveTween(curve: Curves.easeOut)),
       weight: 30,
     ),
     TweenSequenceItem(
-      tween: Tween(begin: AppScale.tapPeak, end: 1.0)
-          .chain(CurveTween(curve: AppCurves.tapSettle)),
+      tween: Tween(
+        begin: AppScale.tapPeak,
+        end: 1.0,
+      ).chain(CurveTween(curve: AppCurves.tapSettle)),
       weight: 70,
     ),
   ]).animate(_bounce);

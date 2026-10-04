@@ -12,14 +12,11 @@ void main() {
     test('every letter is voiced with its shared letter recording', () {
       final tiles = spellingOf('Cat');
       expect(tiles.every((t) => t.isVoiced), isTrue);
-      expect(
-        tiles.map((t) => t.audioAsset),
-        [
-          'assets/audio/letters/c.m4a',
-          'assets/audio/letters/a.m4a',
-          'assets/audio/letters/t.m4a',
-        ],
-      );
+      expect(tiles.map((t) => t.audioAsset), [
+        'assets/audio/letters/c.m4a',
+        'assets/audio/letters/a.m4a',
+        'assets/audio/letters/t.m4a',
+      ]);
     });
 
     test('hyphens are shown but silent', () {
@@ -32,7 +29,17 @@ void main() {
     });
 
     test('spaces are shown but silent, repeated spaces collapse', () {
-      expect(chars('  Ice   Cream '), ['I', 'C', 'E', ' ', 'C', 'R', 'E', 'A', 'M']);
+      expect(chars('  Ice   Cream '), [
+        'I',
+        'C',
+        'E',
+        ' ',
+        'C',
+        'R',
+        'E',
+        'A',
+        'M',
+      ]);
       expect(spellingOf('Ice Cream')[3].isVoiced, isFalse);
     });
 
@@ -41,8 +48,10 @@ void main() {
     });
 
     test('result is unmodifiable', () {
-      expect(() => spellingOf('Hen').add(const SpellingTile('X')),
-          throwsUnsupportedError,);
+      expect(
+        () => spellingOf('Hen').add(const SpellingTile('X')),
+        throwsUnsupportedError,
+      );
     });
   });
 }

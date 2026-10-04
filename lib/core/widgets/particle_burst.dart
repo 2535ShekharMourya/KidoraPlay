@@ -51,9 +51,9 @@ class _ParticleBurstState extends State<ParticleBurst>
   List<_Particle> _particles = const [];
 
   Duration get _duration => switch (widget.style) {
-        BurstStyle.sparkle => AppDurations.sparkle,
-        BurstStyle.confetti => AppDurations.confetti,
-      };
+    BurstStyle.sparkle => AppDurations.sparkle,
+    BurstStyle.confetti => AppDurations.confetti,
+  };
 
   @override
   void initState() {
@@ -93,7 +93,8 @@ class _ParticleBurstState extends State<ParticleBurst>
     switch (widget.style) {
       case BurstStyle.sparkle:
         return List.generate(AppParticles.sparkle, (i) {
-          final angle = (i / AppParticles.sparkle) * 2 * math.pi +
+          final angle =
+              (i / AppParticles.sparkle) * 2 * math.pi +
               _random.nextDouble() * 0.4;
           return _Particle(
             angle: angle,
@@ -184,9 +185,7 @@ class _BurstPainter extends CustomPainter {
         ? size.center(Offset.zero)
         : Offset(size.width / 2, size.height);
     // Distance scale: sparkle stays near the item, confetti fills the screen.
-    final reach = sparkle
-        ? size.shortestSide * 0.9
-        : size.height * 1.3;
+    final reach = sparkle ? size.shortestSide * 0.9 : size.height * 1.3;
     final gravity = sparkle ? reach * 0.4 : reach * 1.1;
     final eased = Curves.easeOutCubic.transform(t);
     final opacity = t < 0.7 ? 1.0 : (1 - (t - 0.7) / 0.3);
@@ -225,7 +224,9 @@ class _BurstPainter extends CustomPainter {
       final r = i.isEven ? outer : inner;
       final a = -math.pi / 2 + i * math.pi / 5;
       final point = Offset(math.cos(a) * r, math.sin(a) * r);
-      i == 0 ? path.moveTo(point.dx, point.dy) : path.lineTo(point.dx, point.dy);
+      i == 0
+          ? path.moveTo(point.dx, point.dy)
+          : path.lineTo(point.dx, point.dy);
     }
     return path..close();
   }

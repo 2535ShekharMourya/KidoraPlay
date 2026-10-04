@@ -43,8 +43,9 @@ void main() {
     return audio;
   }
 
-  testWidgets('Numbers: home → rows → 21–30 → Twenty-one → back',
-      (tester) async {
+  testWidgets('Numbers: home → rows → 21–30 → Twenty-one → back', (
+    tester,
+  ) async {
     final audio = await startApp(tester);
 
     await tester.tap(find.text('Numbers'));

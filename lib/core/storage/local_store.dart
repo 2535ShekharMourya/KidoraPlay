@@ -4,11 +4,12 @@ import 'package:shared_preferences/shared_preferences.dart';
 /// Key-value store for all app state. Everything stays on the device;
 /// nothing here ever leaves it.
 class LocalStore {
-  LocalStore(SharedPreferencesWithCache prefs) : _backend = _PrefsBackend(prefs);
+  LocalStore(SharedPreferencesWithCache prefs)
+    : _backend = _PrefsBackend(prefs);
 
   /// In-memory store for tests and previews.
   LocalStore.inMemory([Map<String, Object> initial = const {}])
-      : _backend = _MemoryBackend({...initial});
+    : _backend = _MemoryBackend({...initial});
 
   final _Backend _backend;
 
@@ -28,6 +29,12 @@ class LocalStore {
   String? getString(String key) => _backend.get(key) as String?;
 
   Future<void> setString(String key, String value) => _backend.set(key, value);
+
+  List<String> getStringList(String key) =>
+      (_backend.get(key) as List<Object?>?)?.cast<String>() ?? const [];
+
+  Future<void> setStringList(String key, List<String> value) =>
+      _backend.set(key, List<String>.unmodifiable(value));
 }
 
 abstract interface class _Backend {
@@ -45,12 +52,13 @@ class _PrefsBackend implements _Backend {
 
   @override
   Future<void> set(String key, Object value) => switch (value) {
-        final bool v => _prefs.setBool(key, v),
-        final String v => _prefs.setString(key, v),
-        final int v => _prefs.setInt(key, v),
-        final double v => _prefs.setDouble(key, v),
-        _ => throw ArgumentError.value(value, key, 'unsupported type'),
-      };
+    final bool v => _prefs.setBool(key, v),
+    final String v => _prefs.setString(key, v),
+    final int v => _prefs.setInt(key, v),
+    final double v => _prefs.setDouble(key, v),
+    final List<String> v => _prefs.setStringList(key, v),
+    _ => throw ArgumentError.value(value, key, 'unsupported type'),
+  };
 }
 
 class _MemoryBackend implements _Backend {

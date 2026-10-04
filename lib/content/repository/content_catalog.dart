@@ -12,11 +12,11 @@ class ContentCatalog {
     required List<Section> sections,
     required Map<SectionId, List<LearningItem>> items,
     required this.kidoLines,
-  })  : sections = List<Section>.unmodifiable(sections),
-        _items = Map<SectionId, List<LearningItem>>.unmodifiable({
-          for (final e in items.entries)
-            e.key: List<LearningItem>.unmodifiable(e.value),
-        });
+  }) : sections = List<Section>.unmodifiable(sections),
+       _items = Map<SectionId, List<LearningItem>>.unmodifiable({
+         for (final e in items.entries)
+           e.key: List<LearningItem>.unmodifiable(e.value),
+       });
 
   final List<Section> sections;
   final Map<SectionId, List<LearningItem>> _items;
@@ -32,14 +32,19 @@ class ContentCatalog {
   }
 
   /// Sections shown for [level], in `sections.json` order.
-  List<Section> sectionsFor(Level level) =>
-      [for (final s in sections) if (s.levels.contains(level)) s];
+  List<Section> sectionsFor(Level level) => [
+    for (final s in sections)
+      if (s.levels.contains(level)) s,
+  ];
 
   /// Items of [section], optionally filtered to [level].
   List<LearningItem> itemsFor(SectionId section, {Level? level}) {
     final items = _items[section] ?? const [];
     if (level == null) return items;
-    return [for (final i in items) if (i.isForLevel(level)) i];
+    return [
+      for (final i in items)
+        if (i.isForLevel(level)) i,
+    ];
   }
 
   LearningItem? itemById(String id) {

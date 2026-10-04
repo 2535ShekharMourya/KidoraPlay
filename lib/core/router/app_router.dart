@@ -6,6 +6,7 @@ import '../../content/models/section.dart';
 import '../../features/home/home_screen.dart';
 import '../../features/learn_card/learn_card_screen.dart';
 import '../../features/numbers/number_rows_screen.dart';
+import '../../features/progress/sticker_book_screen.dart';
 import '../../features/section_grid/item_grid_screen.dart';
 import '../../features/section_grid/section_items.dart';
 import '../../features/splash/splash_screen.dart';
@@ -16,15 +17,16 @@ import '../theme/app_tokens.dart';
 abstract final class AppRoutes {
   static const splash = '/';
   static const home = '/home';
+  static const stickers = '/home/stickers';
 
   static String section(SectionId id) => '$home/section/${id.name}';
 
-  static String numberRow(int row) =>
-      '${section(SectionId.numbers)}/row/$row';
+  static String numberRow(int row) => '${section(SectionId.numbers)}/row/$row';
 
   static String learn(ItemScope scope, String itemId) {
-    final base =
-        scope.row == null ? section(scope.section) : numberRow(scope.row!);
+    final base = scope.row == null
+        ? section(scope.section)
+        : numberRow(scope.row!);
     return '$base/learn/$itemId';
   }
 }
@@ -46,7 +48,10 @@ CustomTransitionPage<void> _playfulPage(GoRouterState state, Widget child) =>
       reverseTransitionDuration: AppDurations.pageTransition,
       transitionsBuilder: (context, animation, secondary, child) {
         if (MediaQuery.disableAnimationsOf(context)) return child;
-        final curved = CurvedAnimation(parent: animation, curve: AppCurves.page);
+        final curved = CurvedAnimation(
+          parent: animation,
+          curve: AppCurves.page,
+        );
         return FadeTransition(
           opacity: curved,
           child: ScaleTransition(
@@ -58,15 +63,15 @@ CustomTransitionPage<void> _playfulPage(GoRouterState state, Widget child) =>
     );
 
 GoRoute _learnRoute({required int? Function(GoRouterState) row}) => GoRoute(
-      path: 'learn/:itemId',
-      pageBuilder: (context, state) => _playfulPage(
-        state,
-        LearnCardScreen(
-          scope: (section: _sectionOf(state)!, row: row(state)),
-          itemId: state.pathParameters['itemId']!,
-        ),
-      ),
-    );
+  path: 'learn/:itemId',
+  pageBuilder: (context, state) => _playfulPage(
+    state,
+    LearnCardScreen(
+      scope: (section: _sectionOf(state)!, row: row(state)),
+      itemId: state.pathParameters['itemId']!,
+    ),
+  ),
+);
 
 final appRouterProvider = Provider<GoRouter>((ref) {
   final router = GoRouter(
@@ -81,6 +86,11 @@ final appRouterProvider = Provider<GoRouter>((ref) {
         pageBuilder: (context, state) =>
             _playfulPage(state, const HomeScreen()),
         routes: [
+          GoRoute(
+            path: 'stickers',
+            pageBuilder: (context, state) =>
+                _playfulPage(state, const StickerBookScreen()),
+          ),
           GoRoute(
             path: 'section/:sectionId',
             // Unknown sections (e.g. a stale link) go home.
@@ -100,9 +110,9 @@ final appRouterProvider = Provider<GoRouter>((ref) {
                 path: 'row/:row',
                 redirect: (context, state) =>
                     _sectionOf(state) != SectionId.numbers ||
-                            _rowOf(state) == null
-                        ? AppRoutes.home
-                        : null,
+                        _rowOf(state) == null
+                    ? AppRoutes.home
+                    : null,
                 pageBuilder: (context, state) => _playfulPage(
                   state,
                   ItemGridScreen(

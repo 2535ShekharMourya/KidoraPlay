@@ -70,17 +70,17 @@ class JustAudioMusicPlayer implements MusicPlayer {
 /// Mixes with other audio so a tap sound never pauses Kido's voice.
 class AudioplayersSfxPlayer implements SfxPlayer {
   AudioplayersSfxPlayer()
-      : _cache = ap.AudioCache(prefix: ''),
-        _context = ap.AudioContextConfig(
-          focus: ap.AudioContextConfigFocus.mixWithOthers,
-        ).build();
+    : _cache = ap.AudioCache(prefix: ''),
+      _context = ap.AudioContextConfig(
+        focus: ap.AudioContextConfigFocus.mixWithOthers,
+      ).build();
 
   final ap.AudioCache _cache;
   final ap.AudioContext _context;
   final _pools = <String, Future<ap.AudioPool>>{};
 
-  Future<ap.AudioPool> _pool(String asset) => _pools[asset] ??=
-      ap.AudioPool.create(
+  Future<ap.AudioPool> _pool(String asset) =>
+      _pools[asset] ??= ap.AudioPool.create(
         source: ap.AssetSource(asset),
         audioCache: _cache,
         audioContext: _context,

@@ -51,10 +51,13 @@ void main() {
 
     test('sequence reports each segment before it plays', () async {
       final segments = <int>[];
-      final ok = await service.playVoiceSequence(
-        ['A', 'P', 'P', 'L', 'E'],
-        onSegment: segments.add,
-      );
+      final ok = await service.playVoiceSequence([
+        'A',
+        'P',
+        'P',
+        'L',
+        'E',
+      ], onSegment: segments.add);
       expect(ok, isTrue);
       expect(segments, [0, 1, 2, 3, 4]);
       expect(audio.voice.played, ['A', 'P', 'P', 'L', 'E']);

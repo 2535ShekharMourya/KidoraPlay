@@ -22,8 +22,10 @@ class _PopInState extends State<PopIn> with SingleTickerProviderStateMixin {
     vsync: this,
     duration: AppDurations.popIn,
   );
-  late final Animation<double> _scale =
-      CurvedAnimation(parent: _anim, curve: AppCurves.popIn);
+  late final Animation<double> _scale = CurvedAnimation(
+    parent: _anim,
+    curve: AppCurves.popIn,
+  );
   Timer? _delay;
 
   @override

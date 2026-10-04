@@ -20,6 +20,9 @@ import '../kido/kido_controller.dart';
 import '../kido/kido_memory.dart';
 import '../kido/kido_voice.dart';
 import '../kido/kido_widget.dart';
+import '../progress/progress_controller.dart';
+import '../progress/sticker_book_screen.dart';
+import '../progress/sticker_widgets.dart';
 
 /// Section menu. Kido waves hello (a full welcome the very first time, a
 /// short one after that, once per session). Tapping a tile says the
@@ -78,12 +81,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           child: Stack(
             children: [
               Padding(
-                // The left column is Kido's; tiles never sit under him.
-                padding: const EdgeInsets.only(
-                  left: AppLayout.sideZone,
-                  right: AppSpacing.xl,
-                  top: AppSpacing.xxl,
-                  bottom: AppSpacing.xxl,
+                // The left column is Kido's and the right one holds the
+                // sticker book; tiles never sit under either.
+                padding: const EdgeInsets.symmetric(
+                  horizontal: AppLayout.sideZone,
+                  vertical: AppSpacing.xxl,
                 ),
                 child: Row(
                   children: [
@@ -108,6 +110,19 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   ],
                 ),
               ),
+              Align(
+                alignment: Alignment.topRight,
+                child: Padding(
+                  padding: const EdgeInsets.all(AppSpacing.md),
+                  child: BouncyButton(
+                    semanticLabel: l10n.stickerBook,
+                    onPressed: () => context.go(AppRoutes.stickers),
+                    child: StickerJar(
+                      count: ref.watch(progressProvider).learned.length,
+                    ),
+                  ),
+                ),
+              ),
               const KidoCorner(),
             ],
           ),
@@ -117,7 +132,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   }
 }
 
-class _SectionTile extends StatelessWidget {
+class _SectionTile extends ConsumerWidget {
   const _SectionTile({
     required this.id,
     required this.label,
@@ -131,8 +146,9 @@ class _SectionTile extends StatelessWidget {
   final VoidCallback onPressed;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final theme = SectionTheme.of(id);
+    final progress = ref.watch(sectionProgressProvider(id));
     return BouncyButton(
       semanticLabel: label,
       onPressed: onPressed,
@@ -161,6 +177,8 @@ class _SectionTile extends StatelessWidget {
                     ?.copyWith(color: AppColors.white),
               ),
             ),
+            const SizedBox(height: AppSpacing.xs),
+            StarCountBadge(learned: progress.learned, total: progress.total),
           ],
         ),
       ),

@@ -8,23 +8,20 @@ import 'package:kidoraplay/core/widgets/particle_burst.dart';
 import '../../helpers/pump_app.dart';
 
 Finder burstPaint() => find.descendant(
-      of: find.byType(ParticleBurst),
-      matching: find.byType(CustomPaint),
-    );
+  of: find.byType(ParticleBurst),
+  matching: find.byType(CustomPaint),
+);
 
 void main() {
   for (final style in BurstStyle.values) {
-    testWidgets('${style.name}: fire shows particles, then clears',
-        (tester) async {
+    testWidgets('${style.name}: fire shows particles, then clears', (
+      tester,
+    ) async {
       final controller = BurstController();
       addTearDown(controller.dispose);
       await pumpApp(
         tester,
-        ParticleBurst(
-          controller: controller,
-          style: style,
-          random: Random(1),
-        ),
+        ParticleBurst(controller: controller, style: style, random: Random(1)),
       );
       expect(burstPaint(), findsNothing);
 

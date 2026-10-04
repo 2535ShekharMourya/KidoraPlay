@@ -24,10 +24,9 @@ class BigBackButton extends StatelessWidget {
         semanticLabel: AppLocalizations.of(context).back,
         sparkle: false,
         sfx: Sfx.whoosh,
-        onPressed: onPressed ??
-            () => context.canPop()
-                ? context.pop()
-                : context.go(AppRoutes.home),
+        onPressed:
+            onPressed ??
+            () => context.canPop() ? context.pop() : context.go(AppRoutes.home),
         child: Container(
           width: AppSpacing.minTapTarget,
           height: AppSpacing.minTapTarget,

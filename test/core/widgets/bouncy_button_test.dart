@@ -9,12 +9,12 @@ import '../../helpers/fake_audio.dart';
 import '../../helpers/pump_app.dart';
 
 Widget button({VoidCallback? onPressed}) => Center(
-      child: BouncyButton(
-        semanticLabel: 'Cow',
-        onPressed: onPressed,
-        child: const SizedBox(width: 40, height: 40),
-      ),
-    );
+  child: BouncyButton(
+    semanticLabel: 'Cow',
+    onPressed: onPressed,
+    child: const SizedBox(width: 40, height: 40),
+  ),
+);
 
 double currentScale(WidgetTester tester) => tester
     .widget<Transform>(
@@ -40,8 +40,7 @@ void main() {
     await tester.pumpAndSettle();
   });
 
-  testWidgets('tap plays the pop sound once, even when mashed',
-      (tester) async {
+  testWidgets('tap plays the pop sound once, even when mashed', (tester) async {
     final audio = FakeAudio();
     await pumpApp(tester, button(onPressed: () {}), audio: audio);
     await tester.tap(find.byType(BouncyButton));

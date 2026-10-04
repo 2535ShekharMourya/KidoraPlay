@@ -28,15 +28,14 @@ class PlaceValueView extends StatelessWidget {
       required Widget picture,
       required String digit,
       required Color color,
-    }) =>
-        Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            picture,
-            const SizedBox(height: AppSpacing.xs),
-            Text(digit, style: digitStyle?.copyWith(color: color)),
-          ],
-        );
+    }) => Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        picture,
+        const SizedBox(height: AppSpacing.xs),
+        Text(digit, style: digitStyle?.copyWith(color: color)),
+      ],
+    );
 
     return Semantics(
       label: AppLocalizations.of(context).placeValue(tens, ones),

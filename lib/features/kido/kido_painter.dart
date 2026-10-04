@@ -44,8 +44,8 @@ class KidoPainter extends CustomPainter {
     if (!reduceMotion) {
       lift -= switch (action) {
         KidoAction.clap => (math.sin(p * 2 * math.pi).abs()) * 0.10 * h,
-        KidoAction.surprised || KidoAction.trumpet =>
-          math.sin(p * math.pi) * 0.12 * h,
+        KidoAction.surprised ||
+        KidoAction.trumpet => math.sin(p * math.pi) * 0.12 * h,
         _ => 0,
       };
     }
@@ -73,8 +73,8 @@ class KidoPainter extends CustomPainter {
     final neck = Offset(w * 0.55, h * 0.55 + lift);
     final tilt = switch (action) {
       KidoAction.think => -0.14,
-      KidoAction.look || KidoAction.point =>
-        aim == null ? 0.0 : (aim.clamp(-0.6, 0.6)) * 0.25,
+      KidoAction.look ||
+      KidoAction.point => aim == null ? 0.0 : (aim.clamp(-0.6, 0.6)) * 0.25,
       _ => 0.0,
     };
     canvas
@@ -216,24 +216,24 @@ class KidoPainter extends CustomPainter {
     // Each trunk pose is two segments: (angle, length) in units of h.
     final (a1, l1, a2, l2) = switch (action) {
       KidoAction.point || KidoAction.look when aim != null => (
-          aim,
-          action == KidoAction.point ? 0.2 : 0.14,
-          aim - 0.25,
-          action == KidoAction.point ? 0.14 : 0.08,
-        ),
+        aim,
+        action == KidoAction.point ? 0.2 : 0.14,
+        aim - 0.25,
+        action == KidoAction.point ? 0.14 : 0.08,
+      ),
       KidoAction.spellTap => (
-          (aim ?? 0.9),
-          0.16 + 0.08 * math.sin(p * math.pi),
-          (aim ?? 0.9) + 0.3,
-          0.1,
-        ),
+        (aim ?? 0.9),
+        0.16 + 0.08 * math.sin(p * math.pi),
+        (aim ?? 0.9) + 0.3,
+        0.1,
+      ),
       KidoAction.trumpet => (-1.2, 0.2, -1.9, 0.1),
       KidoAction.wave => (
-          math.sin(p * 4 * math.pi) * 0.7 - 0.2,
-          0.18,
-          math.sin(p * 4 * math.pi) * 0.7 - 0.9,
-          0.1,
-        ),
+        math.sin(p * 4 * math.pi) * 0.7 - 0.2,
+        0.18,
+        math.sin(p * 4 * math.pi) * 0.7 - 0.9,
+        0.1,
+      ),
       _ => (1.15, 0.18, 2.6, 0.08), // relaxed curl
     };
     final mid = base + Offset(math.cos(a1), math.sin(a1)) * h * l1;

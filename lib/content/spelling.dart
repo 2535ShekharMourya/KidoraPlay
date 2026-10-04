@@ -19,8 +19,7 @@ class SpellingTile {
   String? get audioAsset => isVoiced ? letterAudioAsset(char) : null;
 
   @override
-  bool operator ==(Object other) =>
-      other is SpellingTile && other.char == char;
+  bool operator ==(Object other) => other is SpellingTile && other.char == char;
 
   @override
   int get hashCode => char.hashCode;

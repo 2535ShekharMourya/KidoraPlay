@@ -11,7 +11,8 @@ import '../../content/repository/content_repository.dart';
 import '../../core/audio/audio_service.dart';
 import '../../core/settings/app_settings.dart';
 
-/// Speaks Kido's lines from `kido_lines.json` in the selected language(s).
+/// Speaks Kido's lines from `kido_lines.json` in his talk language
+/// (Hindi in bilingual mode), unless [languages] is given.
 ///
 /// Placeholders in a line's audio are filled with real recordings:
 /// `{item}` → the item's word, `{letter}` → a letter clip, `{n}` → the
@@ -19,7 +20,7 @@ import '../../core/settings/app_settings.dart';
 /// random, never the same one twice in a row.
 class KidoVoice {
   KidoVoice(this._ref, {math.Random? random})
-      : _random = random ?? math.Random();
+    : _random = random ?? math.Random();
 
   final Ref _ref;
   final math.Random _random;
@@ -28,6 +29,7 @@ class KidoVoice {
   /// Builds the clip list for [event]. Exposed for tests.
   List<String> clipsFor(
     String event, {
+    List<ContentLanguage>? languages,
     LearningItem? item,
     String? itemAudio,
     String? letterAudio,
@@ -36,9 +38,10 @@ class KidoVoice {
   }) {
     final catalog = _ref.read(contentCatalogProvider).value;
     if (catalog == null) return const [];
-    final languages = _ref.read(settingsProvider).language.languages;
+    final langs =
+        languages ?? _ref.read(settingsProvider).language.talkLanguages;
     return [
-      for (final lang in languages)
+      for (final lang in langs)
         ..._clipsForLanguage(
           catalog,
           event,
@@ -55,6 +58,7 @@ class KidoVoice {
   /// Says [event]. Returns true if it played to the end.
   Future<bool> say(
     String event, {
+    List<ContentLanguage>? languages,
     LearningItem? item,
     String? itemAudio,
     String? letterAudio,
@@ -64,6 +68,7 @@ class KidoVoice {
   }) async {
     final clips = clipsFor(
       event,
+      languages: languages,
       item: item,
       itemAudio: itemAudio,
       letterAudio: letterAudio,
@@ -91,19 +96,16 @@ class KidoVoice {
     final line = variants[_pick('$event/${lang.name}', variants.length)];
 
     String? resolve(String placeholder) => switch (placeholder) {
-          '{item}' => itemAudio ?? item?.voice(lang),
-          '{letter}' => letterAudio,
-          '{n}' => n == null ? null : _numberItem(catalog, n)?.voice(lang),
-          '{section}' => section?.voice(lang),
-          _ => null,
-        };
+      '{item}' => itemAudio ?? item?.voice(lang),
+      '{letter}' => letterAudio,
+      '{n}' => n == null ? null : _numberItem(catalog, n)?.voice(lang),
+      '{section}' => section?.voice(lang),
+      _ => null,
+    };
 
     return [
       for (final segment in line.audio)
-        if (!KidoLine.isPlaceholder(segment))
-          segment
-        else
-          ?resolve(segment),
+        if (!KidoLine.isPlaceholder(segment)) segment else ?resolve(segment),
     ];
   }
 

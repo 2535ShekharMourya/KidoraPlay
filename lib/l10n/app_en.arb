@@ -19,5 +19,6 @@
   "@placeValue": {
     "description": "Semantics label for the place-value picture",
     "placeholders": { "tens": { "type": "int" }, "ones": { "type": "int" } }
-  }
+  },
+  "stickerBook": "Sticker book"
 }

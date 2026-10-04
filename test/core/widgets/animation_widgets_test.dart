@@ -44,8 +44,9 @@ void main() {
   });
 
   group('IdleFloat', () {
-    testWidgets('moves gently, and not at all with reduced motion',
-        (tester) async {
+    testWidgets('moves gently, and not at all with reduced motion', (
+      tester,
+    ) async {
       await pumpApp(tester, const Center(child: IdleFloat(child: Text('a'))));
       final start = tester.getCenter(find.text('a'));
       await tester.pump(AppDurations.idleFloat ~/ 4);
@@ -69,26 +70,28 @@ void main() {
 
   group('SectionBackground', () {
     for (final section in [null, ...SectionId.values]) {
-      testWidgets('paints ${section?.name ?? 'home'} and keeps child tappable',
-          (tester) async {
-        var taps = 0;
-        await pumpApp(
-          tester,
-          SectionBackground(
-            section: section,
-            child: Center(
-              child: ElevatedButton(
-                onPressed: () => taps++,
-                child: const Text('go'),
+      testWidgets(
+        'paints ${section?.name ?? 'home'} and keeps child tappable',
+        (tester) async {
+          var taps = 0;
+          await pumpApp(
+            tester,
+            SectionBackground(
+              section: section,
+              child: Center(
+                child: ElevatedButton(
+                  onPressed: () => taps++,
+                  child: const Text('go'),
+                ),
               ),
             ),
-          ),
-        );
-        await tester.pump(AppDurations.backgroundLoop ~/ 3);
-        await tester.tap(find.text('go'));
-        expect(taps, 1);
-        expect(tester.takeException(), isNull);
-      });
+          );
+          await tester.pump(AppDurations.backgroundLoop ~/ 3);
+          await tester.tap(find.text('go'));
+          expect(taps, 1);
+          expect(tester.takeException(), isNull);
+        },
+      );
     }
 
     testWidgets('reduced motion: background is static', (tester) async {

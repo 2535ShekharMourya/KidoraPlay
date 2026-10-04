@@ -10,11 +10,19 @@ enum LanguageMode {
   hi,
   both;
 
+  /// Language Kido uses for his own talk ("Look!", praise). In "both"
+  /// mode he talks in Hindi and only the words being learned come in both
+  /// languages, which keeps lessons short for small children.
+  List<ContentLanguage> get talkLanguages => switch (this) {
+    LanguageMode.en => const [ContentLanguage.en],
+    LanguageMode.hi || LanguageMode.both => const [ContentLanguage.hi],
+  };
+
   List<ContentLanguage> get languages => switch (this) {
-        LanguageMode.en => const [ContentLanguage.en],
-        LanguageMode.hi => const [ContentLanguage.hi],
-        LanguageMode.both => const [ContentLanguage.en, ContentLanguage.hi],
-      };
+    LanguageMode.en => const [ContentLanguage.en],
+    LanguageMode.hi => const [ContentLanguage.hi],
+    LanguageMode.both => const [ContentLanguage.en, ContentLanguage.hi],
+  };
 }
 
 abstract final class SettingsKeys {
@@ -54,14 +62,13 @@ class AppSettings {
     bool? vibrationEnabled,
     LanguageMode? language,
     Level? level,
-  }) =>
-      AppSettings(
-        soundEnabled: soundEnabled ?? this.soundEnabled,
-        musicEnabled: musicEnabled ?? this.musicEnabled,
-        vibrationEnabled: vibrationEnabled ?? this.vibrationEnabled,
-        language: language ?? this.language,
-        level: level ?? this.level,
-      );
+  }) => AppSettings(
+    soundEnabled: soundEnabled ?? this.soundEnabled,
+    musicEnabled: musicEnabled ?? this.musicEnabled,
+    vibrationEnabled: vibrationEnabled ?? this.vibrationEnabled,
+    language: language ?? this.language,
+    level: level ?? this.level,
+  );
 
   @override
   bool operator ==(Object other) =>
@@ -73,8 +80,13 @@ class AppSettings {
       other.level == level;
 
   @override
-  int get hashCode =>
-      Object.hash(soundEnabled, musicEnabled, vibrationEnabled, language, level);
+  int get hashCode => Object.hash(
+    soundEnabled,
+    musicEnabled,
+    vibrationEnabled,
+    language,
+    level,
+  );
 }
 
 class SettingsNotifier extends Notifier<AppSettings> {
@@ -87,12 +99,17 @@ class SettingsNotifier extends Notifier<AppSettings> {
     return AppSettings(
       soundEnabled: store.getBool(SettingsKeys.sound, fallback: d.soundEnabled),
       musicEnabled: store.getBool(SettingsKeys.music, fallback: d.musicEnabled),
-      vibrationEnabled:
-          store.getBool(SettingsKeys.vibration, fallback: d.vibrationEnabled),
-      language: LanguageMode.values.asNameMap()[
-              store.getString(SettingsKeys.language)] ??
+      vibrationEnabled: store.getBool(
+        SettingsKeys.vibration,
+        fallback: d.vibrationEnabled,
+      ),
+      language:
+          LanguageMode.values.asNameMap()[store.getString(
+            SettingsKeys.language,
+          )] ??
           d.language,
-      level: Level.values.asNameMap()[store.getString(SettingsKeys.level)] ??
+      level:
+          Level.values.asNameMap()[store.getString(SettingsKeys.level)] ??
           d.level,
     );
   }
@@ -123,5 +140,6 @@ class SettingsNotifier extends Notifier<AppSettings> {
   }
 }
 
-final settingsProvider =
-    NotifierProvider<SettingsNotifier, AppSettings>(SettingsNotifier.new);
+final settingsProvider = NotifierProvider<SettingsNotifier, AppSettings>(
+  SettingsNotifier.new,
+);

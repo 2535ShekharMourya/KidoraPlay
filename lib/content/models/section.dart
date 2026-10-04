@@ -50,23 +50,23 @@ class Section {
   final String voiceHi;
 
   String title(ContentLanguage lang) => switch (lang) {
-        ContentLanguage.en => titleEn,
-        ContentLanguage.hi => titleHi,
-      };
+    ContentLanguage.en => titleEn,
+    ContentLanguage.hi => titleHi,
+  };
 
   String voice(ContentLanguage lang) => switch (lang) {
-        ContentLanguage.en => voiceEn,
-        ContentLanguage.hi => voiceHi,
-      };
+    ContentLanguage.en => voiceEn,
+    ContentLanguage.hi => voiceHi,
+  };
 
   Map<String, Object?> toJson() => {
-        'id': id.name,
-        'title_en': titleEn,
-        'title_hi': titleHi,
-        'levels': [for (final l in levels) l.name],
-        'items': itemsFile,
-        'image': image,
-        'voice_en': voiceEn,
-        'voice_hi': voiceHi,
-      };
+    'id': id.name,
+    'title_en': titleEn,
+    'title_hi': titleHi,
+    'levels': [for (final l in levels) l.name],
+    'items': itemsFile,
+    'image': image,
+    'voice_en': voiceEn,
+    'voice_hi': voiceHi,
+  };
 }

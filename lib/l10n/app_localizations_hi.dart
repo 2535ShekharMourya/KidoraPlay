@@ -42,4 +42,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String placeValue(int tens, int ones) {
     return '$tens दहाई और $ones इकाई';
   }
+
+  @override
+  String get stickerBook => 'स्टिकर बुक';
 }

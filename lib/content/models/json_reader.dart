@@ -2,9 +2,9 @@
 /// and field, so content mistakes are easy to find.
 class JsonReader {
   JsonReader(Object? json, this.context)
-      : _json = json is Map<String, dynamic>
-            ? json
-            : throw FormatException('$context: expected a JSON object');
+    : _json = json is Map<String, dynamic>
+          ? json
+          : throw FormatException('$context: expected a JSON object');
 
   final Map<String, dynamic> _json;
   final String context;

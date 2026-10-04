@@ -14,7 +14,8 @@ void main() {
   }
 
   test('defaults: sound on, music off, vibration on, both languages', () {
-    final settings = containerWith(LocalStore.inMemory()).read(settingsProvider);
+    final settings = containerWith(LocalStore.inMemory())
+        .read(settingsProvider);
     expect(settings, const AppSettings());
     expect(settings.soundEnabled, isTrue);
     expect(settings.musicEnabled, isFalse);
@@ -44,14 +45,16 @@ void main() {
 
   test('unknown stored language falls back to the default', () {
     final store = LocalStore.inMemory({SettingsKeys.language: 'fr'});
-    expect(containerWith(store).read(settingsProvider).language,
-        LanguageMode.both,);
+    expect(
+      containerWith(store).read(settingsProvider).language,
+      LanguageMode.both,
+    );
   });
 
   test('"both" speaks English then Hindi', () {
-    expect(
-      LanguageMode.both.languages,
-      [ContentLanguage.en, ContentLanguage.hi],
-    );
+    expect(LanguageMode.both.languages, [
+      ContentLanguage.en,
+      ContentLanguage.hi,
+    ]);
   });
 }

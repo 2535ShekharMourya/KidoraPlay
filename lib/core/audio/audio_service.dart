@@ -167,8 +167,7 @@ class AudioService {
   }
 
   Future<void> _syncMusic() async {
-    final want =
-        _settings.soundEnabled && _settings.musicEnabled && !_paused;
+    final want = _settings.soundEnabled && _settings.musicEnabled && !_paused;
     if (want && !_musicPlaying) {
       _musicPlaying = true;
       await _safe(
@@ -246,11 +245,7 @@ final audioChannelsProvider = Provider<AudioChannels>(
   ),
 );
 
-typedef AudioChannels = ({
-  VoicePlayer voice,
-  SfxPlayer sfx,
-  MusicPlayer music,
-});
+typedef AudioChannels = ({VoicePlayer voice, SfxPlayer sfx, MusicPlayer music});
 
 /// The app-wide audio service. Follows settings changes and goes silent
 /// while the app is in the background.

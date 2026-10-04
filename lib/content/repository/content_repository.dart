@@ -24,12 +24,10 @@ class ContentRepository {
   final bool _validate;
   Future<ContentCatalog>? _cache;
 
-  Future<ContentCatalog> load() => _cache ??= _load().catchError(
-        (Object e) {
-          _cache = null; // Allow a retry after a failure.
-          throw e;
-        },
-      );
+  Future<ContentCatalog> load() => _cache ??= _load().catchError((Object e) {
+    _cache = null; // Allow a retry after a failure.
+    throw e;
+  });
 
   Future<ContentCatalog> _load() async {
     final sectionsJson = await _readJson(_sectionsFile);
@@ -58,8 +56,10 @@ class ContentRepository {
 
     if (_validate) {
       final manifest = await AssetManifest.loadFromAssetBundle(_bundle);
-      final errors =
-          validateContent(catalog, assets: manifest.listAssets().toSet());
+      final errors = validateContent(
+        catalog,
+        assets: manifest.listAssets().toSet(),
+      );
       if (errors.isNotEmpty) throw ContentValidationException(errors);
     }
     return catalog;

@@ -54,20 +54,19 @@ void main() {
     expect(size.width, AppSpacing.minTapTarget);
   });
 
-  testWidgets('long words shrink to fit but stay above the minimum',
-      (tester) async {
+  testWidgets('long words shrink to fit but stay above the minimum', (
+    tester,
+  ) async {
     await pumpStrip(tester, 'Seventy-seven');
     final size = tester.getSize(find.byType(LetterTile).first);
     expect(size.width, lessThan(AppSpacing.minTapTarget));
-    expect(
-      size.width,
-      greaterThanOrEqualTo(AppSpacing.minLetterTile - 0.01),
-    );
+    expect(size.width, greaterThanOrEqualTo(AppSpacing.minLetterTile - 0.01));
     expect(tester.takeException(), isNull);
   });
 
-  testWidgets('hidden tiles are invisible and cannot be tapped',
-      (tester) async {
+  testWidgets('hidden tiles are invisible and cannot be tapped', (
+    tester,
+  ) async {
     final tapped = <int>[];
     await pumpStrip(tester, 'Hen', revealed: 1, onTap: tapped.add);
     expect(scaleOfTile(tester, 0), 1);

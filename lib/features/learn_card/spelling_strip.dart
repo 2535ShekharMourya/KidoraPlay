@@ -50,7 +50,7 @@ class SpellingStrip extends StatelessWidget {
         );
         final fit =
             (constraints.maxWidth - gap * math.max(0, tiles.length - 1)) /
-                math.max(1, units);
+            math.max(1, units);
         final size = math.min(
           fit.clamp(AppSpacing.minLetterTile, AppSpacing.minTapTarget),
           constraints.maxHeight,
@@ -68,8 +68,9 @@ class SpellingStrip extends StatelessWidget {
                     ignoring: i >= revealed,
                     child: AnimatedScale(
                       scale: i < revealed ? 1 : 0,
-                      duration:
-                          reduceMotion ? Duration.zero : AppDurations.popIn,
+                      duration: reduceMotion
+                          ? Duration.zero
+                          : AppDurations.popIn,
                       curve: AppCurves.popIn,
                       child: Beckon(
                         key: tileKeys?[i],

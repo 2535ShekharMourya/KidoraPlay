@@ -157,6 +157,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{tens} tens and {ones} ones'**
   String placeValue(int tens, int ones);
+
+  /// No description provided for @stickerBook.
+  ///
+  /// In en, this message translates to:
+  /// **'Sticker book'**
+  String get stickerBook;
 }
 
 class _AppLocalizationsDelegate

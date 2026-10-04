@@ -54,8 +54,10 @@ void main() {
     });
 
     test('filters sections and items by level', () async {
-      final catalog =
-          await ContentRepository(bundle: rootBundle, validate: false).load();
+      final catalog = await ContentRepository(
+        bundle: rootBundle,
+        validate: false,
+      ).load();
       expect(catalog.sectionsFor(Level.nursery), hasLength(4));
       expect(
         catalog.itemsFor(SectionId.numbers, level: Level.nursery),

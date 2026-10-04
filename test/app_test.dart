@@ -44,12 +44,15 @@ void main() {
     TestWidgetsFlutterBinding.ensureInitialized();
     // Load the real bundled content once, outside the widget tests' fake
     // clock.
-    catalog =
-        await ContentRepository(bundle: rootBundle, validate: false).load();
+    catalog = await ContentRepository(
+      bundle: rootBundle,
+      validate: false,
+    ).load();
   });
 
-  testWidgets('starts on splash, then shows home with 4 sections',
-      (tester) async {
+  testWidgets('starts on splash, then shows home with 4 sections', (
+    tester,
+  ) async {
     await pumpToHome(tester);
     expect(find.byType(HomeScreen), findsOneWidget);
     for (final label in sections) {
@@ -57,8 +60,9 @@ void main() {
     }
   });
 
-  testWidgets('section tiles meet the 96 dp minimum tap target',
-      (tester) async {
+  testWidgets('section tiles meet the 96 dp minimum tap target', (
+    tester,
+  ) async {
     await pumpToHome(tester);
     for (final label in sections) {
       final tile = find.ancestor(
@@ -79,8 +83,9 @@ void main() {
     await tester.pump(AppDurations.tapBounce);
   });
 
-  testWidgets('tapping a section tile pops and says the section name',
-      (tester) async {
+  testWidgets('tapping a section tile pops and says the section name', (
+    tester,
+  ) async {
     final audio = FakeAudio();
     await pumpToHome(tester, audio: audio, catalog: catalog);
     await tester.tap(find.text('Birds'));

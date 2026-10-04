@@ -15,6 +15,8 @@ import '../../core/theme/app_tokens.dart';
 import '../kido/hint_timer.dart';
 import '../kido/kido_memory.dart';
 import '../kido/kido_voice.dart';
+import '../progress/progress_controller.dart';
+import '../section_grid/section_items.dart';
 
 /// Where the learn card is in "I do, we do, you do".
 enum LessonPhase {
@@ -46,6 +48,8 @@ class LearnCardState {
     this.celebrations = 0,
     this.counted = 0,
     this.cheers = 0,
+    this.stickers = 0,
+    this.completions = 0,
   });
 
   final LessonPhase phase;
@@ -74,6 +78,12 @@ class LearnCardState {
   /// Increments on small cheers (after "say it with me").
   final int cheers;
 
+  /// Increments when the child earns a new sticker for this item.
+  final int stickers;
+
+  /// Increments when this item completes its set (row or section).
+  final int completions;
+
   bool get playing => phase == LessonPhase.iDo;
 
   LearnCardState copyWith({
@@ -88,18 +98,21 @@ class LearnCardState {
     int? celebrations,
     int? counted,
     int? cheers,
-  }) =>
-      LearnCardState(
-        phase: phase ?? this.phase,
-        highlighted: clearHighlight ? null : highlighted ?? this.highlighted,
-        revealed: revealed ?? this.revealed,
-        reacting: reacting ?? this.reacting,
-        weDoTarget: clearWeDoTarget ? null : weDoTarget ?? this.weDoTarget,
-        hint: hint ?? this.hint,
-        celebrations: celebrations ?? this.celebrations,
-        counted: counted ?? this.counted,
-        cheers: cheers ?? this.cheers,
-      );
+    int? stickers,
+    int? completions,
+  }) => LearnCardState(
+    phase: phase ?? this.phase,
+    highlighted: clearHighlight ? null : highlighted ?? this.highlighted,
+    revealed: revealed ?? this.revealed,
+    reacting: reacting ?? this.reacting,
+    weDoTarget: clearWeDoTarget ? null : weDoTarget ?? this.weDoTarget,
+    hint: hint ?? this.hint,
+    celebrations: celebrations ?? this.celebrations,
+    counted: counted ?? this.counted,
+    cheers: cheers ?? this.cheers,
+    stickers: stickers ?? this.stickers,
+    completions: completions ?? this.completions,
+  );
 }
 
 /// Runs one learn card the way young children learn best: short, warm,
@@ -122,6 +135,9 @@ class LearnCardController extends Notifier<LearnCardState> {
 
   final String itemId;
   int _run = 0;
+
+  /// The set this card belongs to, for stickers and set completion.
+  ItemScope? _scope;
   bool _disposed = false;
   late final HintTimer _hints = HintTimer(onLevel: _onHint);
 
@@ -144,6 +160,9 @@ class LearnCardController extends Notifier<LearnCardState> {
   }
 
   bool _alive(int run) => !_disposed && ref.mounted && run == _run;
+
+  /// Tells the card which set (section or numbers row) it is shown in.
+  void attach(ItemScope scope) => _scope = scope;
 
   /// Opens the card: full guidance on the first visit to a section.
   Future<void> start() async {
@@ -177,12 +196,19 @@ class LearnCardController extends Notifier<LearnCardState> {
 
     // Name it.
     if (item.section == SectionId.abc && item.letter != null) {
+      // "A for Apple" in English (the letters are the goal), then the
+      // Hindi word when bilingual.
       await _kidoSay(
         KidoEvent.letterFor,
         run,
+        languages: const [ContentLanguage.en],
         item: item,
         letterAudio: tiles.first.audioAsset,
       );
+      if (!_alive(run)) return;
+      if (_languages.contains(ContentLanguage.hi)) {
+        await _speak([item.voiceHi], run);
+      }
     } else {
       await _speak(words, run);
     }
@@ -208,8 +234,10 @@ class LearnCardController extends Notifier<LearnCardState> {
     }
 
     // Know something about it.
+    // The fact in Kido's talk language only (Hindi when bilingual).
     final facts = [
-      for (final l in _languages) ?item.factVoice(l),
+      for (final l in ref.read(settingsProvider).language.talkLanguages)
+        ?item.factVoice(l),
     ];
     if (facts.isNotEmpty) {
       await _speak(facts, run);
@@ -333,7 +361,35 @@ class LearnCardController extends Notifier<LearnCardState> {
       hint: HintLevel.none,
       celebrations: state.celebrations + 1,
     );
+
+    final item = _item;
+    final scope =
+        _scope ?? (item == null ? null : (section: item.section, row: null));
+    var completed = false;
+    if (item != null && scope != null) {
+      final result = await ref
+          .read(progressProvider.notifier)
+          .markLearned(item, scope);
+      if (!_alive(run)) return;
+      completed = result.completedScope;
+      state = state.copyWith(
+        stickers: state.stickers + (result.newSticker ? 1 : 0),
+      );
+    }
+
     await _kidoSay(KidoEvent.praise, run);
+    if (!_alive(run) || !completed || scope == null) return;
+
+    // Finished the whole set: big celebration.
+    state = state.copyWith(completions: state.completions + 1);
+    _audio.playSfx(Sfx.sparkle);
+    final catalog = ref.read(contentCatalogProvider).value;
+    await _kidoSay(
+      KidoEvent.sectionDone,
+      run,
+      n: ref.read(scopeItemsProvider(scope)).length,
+      section: catalog?.section(scope.section),
+    );
   }
 
   /// Any tap anywhere on the screen: hints go away and the clock restarts.
@@ -359,23 +415,21 @@ class LearnCardController extends Notifier<LearnCardState> {
   }
 
   List<String> _words(LearningItem item) => [
-        for (final l in _languages) item.voice(l),
-      ];
+    for (final l in _languages) item.voice(l),
+  ];
 
   static List<int> _voicedIndexes(LearningItem item) => [
-        for (final (i, t) in item.spelling.indexed)
-          if (t.isVoiced) i,
-      ];
+    for (final (i, t) in item.spelling.indexed)
+      if (t.isVoiced) i,
+  ];
 
   /// "Let's count!" then 1, 2, 3 … [n] in the first selected language, with
   /// the count shown on screen.
   Future<void> _countTo(int n, int run) async {
     await _kidoSay(KidoEvent.letsCount, run);
     if (!_alive(run)) return;
-    final numbers = ref
-            .read(contentCatalogProvider)
-            .value
-            ?.itemsFor(SectionId.numbers) ??
+    final numbers =
+        ref.read(contentCatalogProvider).value?.itemsFor(SectionId.numbers) ??
         const <LearningItem>[];
     final lang = _languages.first;
     final clips = [
@@ -417,16 +471,24 @@ class LearnCardController extends Notifier<LearnCardState> {
   Future<void> _kidoSay(
     String event,
     int run, {
+    List<ContentLanguage>? languages,
     LearningItem? item,
     String? itemAudio,
     String? letterAudio,
+    int? n,
+    Section? section,
   }) async {
     if (!_alive(run)) return;
-    final ok = await ref.read(kidoVoiceProvider).say(
+    final ok = await ref
+        .read(kidoVoiceProvider)
+        .say(
           event,
+          languages: languages,
           item: item,
           itemAudio: itemAudio,
           letterAudio: letterAudio,
+          n: n,
+          section: section,
           owner: this,
         );
     if (!ok && _alive(run)) {
@@ -437,5 +499,5 @@ class LearnCardController extends Notifier<LearnCardState> {
 
 final learnCardControllerProvider = NotifierProvider.autoDispose
     .family<LearnCardController, LearnCardState, String>(
-  LearnCardController.new,
-);
+      LearnCardController.new,
+    );

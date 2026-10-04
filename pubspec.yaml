@@ -46,6 +46,9 @@ flutter:
     - assets/audio/birds/
     - assets/audio/sfx/
     - assets/audio/music/
+    - assets/audio/ATTRIBUTION.md
+    - assets/images/NOTICE-noto-emoji.txt
+    - assets/fonts/OFL.txt
 
   fonts:
     - family: Baloo2

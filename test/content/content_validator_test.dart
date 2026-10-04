@@ -17,44 +17,43 @@ LearningItem item({
   int? number,
   String? sound = 'default',
   String? image,
-}) =>
-    LearningItem(
-      id: id,
-      section: section,
-      levels: levels,
-      wordEn: wordEn,
-      wordHi: wordHi,
-      letter: letter,
-      number: number,
-      image: image ?? 'assets/images/${section.name}/$id.webp',
-      voiceEn: 'assets/audio/en/$id.m4a',
-      voiceHi: 'assets/audio/hi/$id.m4a',
-      sound: sound == 'default' ? 'assets/audio/${section.name}/$id.m4a' : sound,
-    );
+}) => LearningItem(
+  id: id,
+  section: section,
+  levels: levels,
+  wordEn: wordEn,
+  wordHi: wordHi,
+  letter: letter,
+  number: number,
+  image: image ?? 'assets/images/${section.name}/$id.webp',
+  voiceEn: 'assets/audio/en/$id.m4a',
+  voiceHi: 'assets/audio/hi/$id.m4a',
+  sound: sound == 'default' ? 'assets/audio/${section.name}/$id.m4a' : sound,
+);
 
 Section section(SectionId id) => Section(
-      id: id,
-      titleEn: id.name,
-      titleHi: id.name,
-      levels: const [Level.nursery],
-      itemsFile: 'assets/content/items_${id.name}.json',
-      image: 'assets/images/sections/${id.name}.webp',
-      voiceEn: 'assets/audio/en/sections/${id.name}.m4a',
-      voiceHi: 'assets/audio/hi/sections/${id.name}.m4a',
-    );
+  id: id,
+  titleEn: id.name,
+  titleHi: id.name,
+  levels: const [Level.nursery],
+  itemsFile: 'assets/content/items_${id.name}.json',
+  image: 'assets/images/sections/${id.name}.webp',
+  voiceEn: 'assets/audio/en/sections/${id.name}.m4a',
+  voiceHi: 'assets/audio/hi/sections/${id.name}.m4a',
+);
 
 KidoLines completeLines() => KidoLines({
-      for (final e in KidoEvent.all)
-        e: {
-          for (final lang in ContentLanguage.values)
-            lang: [
-              KidoLine(
-                text: '$e {item}',
-                audio: ['assets/audio/${lang.name}/kido/$e.m4a', '{item}'],
-              ),
-            ],
-        },
-    });
+  for (final e in KidoEvent.all)
+    e: {
+      for (final lang in ContentLanguage.values)
+        lang: [
+          KidoLine(
+            text: '$e {item}',
+            audio: ['assets/audio/${lang.name}/kido/$e.m4a', '{item}'],
+          ),
+        ],
+    },
+});
 
 ContentCatalog catalog(List<LearningItem> items, {KidoLines? lines}) {
   final bySection = <SectionId, List<LearningItem>>{};
@@ -70,19 +69,19 @@ ContentCatalog catalog(List<LearningItem> items, {KidoLines? lines}) {
 
 /// Every asset the catalog references, so it validates cleanly.
 Set<String> assetsOf(ContentCatalog c) => {
-      for (final s in c.sections) ...[s.image, s.voiceEn, s.voiceHi],
-      for (final i in c.allItems) ...[
-        i.image,
-        i.voiceEn,
-        i.voiceHi,
-        if (i.sound != null) i.sound!,
-        for (final t in i.spelling)
-          if (t.audioAsset != null) t.audioAsset!,
-      ],
-      for (final e in KidoEvent.all)
-        for (final lang in ContentLanguage.values)
-          for (final l in c.kidoLines.variants(e, lang)) ...l.audioFiles,
-    };
+  for (final s in c.sections) ...[s.image, s.voiceEn, s.voiceHi],
+  for (final i in c.allItems) ...[
+    i.image,
+    i.voiceEn,
+    i.voiceHi,
+    if (i.sound != null) i.sound!,
+    for (final t in i.spelling)
+      if (t.audioAsset != null) t.audioAsset!,
+  ],
+  for (final e in KidoEvent.all)
+    for (final lang in ContentLanguage.values)
+      for (final l in c.kidoLines.variants(e, lang)) ...l.audioFiles,
+};
 
 List<String> validate(ContentCatalog c, {Set<String>? assets}) =>
     validateContent(c, assets: assets ?? assetsOf(c));
@@ -127,17 +126,16 @@ void main() {
     final assets = assetsOf(c)..remove('assets/audio/hi/cow.m4a');
     expect(
       validate(c, assets: assets),
-      contains('item "cow": "voice_hi" file not found: assets/audio/hi/cow.m4a'),
+      contains(
+        'item "cow": "voice_hi" file not found: assets/audio/hi/cow.m4a',
+      ),
     );
   });
 
   test('missing letter audio is reported', () {
     final c = catalog([item()]);
     final assets = assetsOf(c)..remove(letterAudioAsset('W'));
-    expect(
-      validate(c, assets: assets).single,
-      contains('letter W audio'),
-    );
+    expect(validate(c, assets: assets).single, contains('letter W audio'));
   });
 
   test('empty fields are reported', () {

@@ -28,17 +28,16 @@ List<Override> testOverrides({
   LocalStore? store,
   FakeAudio? audio,
   ContentCatalog? catalog,
-}) =>
-    [
-      // English-only unless a test chooses a language, so expected clip
-      // lists stay short.
-      localStoreProvider.overrideWithValue(
-        store ?? LocalStore.inMemory({SettingsKeys.language: 'en'}),
-      ),
-      audioChannelsProvider.overrideWithValue((audio ?? FakeAudio()).channels),
-      if (catalog != null)
-        contentCatalogProvider.overrideWith((ref) async => catalog),
-    ];
+}) => [
+  // English-only unless a test chooses a language, so expected clip
+  // lists stay short.
+  localStoreProvider.overrideWithValue(
+    store ?? LocalStore.inMemory({SettingsKeys.language: 'en'}),
+  ),
+  audioChannelsProvider.overrideWithValue((audio ?? FakeAudio()).channels),
+  if (catalog != null)
+    contentCatalogProvider.overrideWith((ref) async => catalog),
+];
 
 /// Loads the real bundled content. Call from `setUpAll`, outside the
 /// widget tests' fake clock.
@@ -54,12 +53,13 @@ Future<void> pumpApp(
   Widget child, {
   LocalStore? store,
   FakeAudio? audio,
+  ContentCatalog? catalog,
   bool reduceMotion = false,
 }) async {
   useLandscapePhone(tester);
   await tester.pumpWidget(
     ProviderScope(
-      overrides: testOverrides(store: store, audio: audio),
+      overrides: testOverrides(store: store, audio: audio, catalog: catalog),
       child: MaterialApp(
         theme: AppTheme.light(),
         localizationsDelegates: const [
@@ -70,7 +70,8 @@ Future<void> pumpApp(
         ],
         supportedLocales: AppLocalizations.supportedLocales,
         builder: (context, child) => MediaQuery(
-          data: MediaQuery.of(context).copyWith(disableAnimations: reduceMotion),
+          data: MediaQuery.of(context)
+              .copyWith(disableAnimations: reduceMotion),
           child: child!,
         ),
         home: Scaffold(body: child),
@@ -92,8 +93,10 @@ List<String> recordHaptics(WidgetTester tester) {
     },
   );
   addTearDown(
-    () => tester.binding.defaultBinaryMessenger
-        .setMockMethodCallHandler(SystemChannels.platform, null),
+    () => tester.binding.defaultBinaryMessenger.setMockMethodCallHandler(
+      SystemChannels.platform,
+      null,
+    ),
   );
   return calls;
 }
