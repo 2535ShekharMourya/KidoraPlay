@@ -22,6 +22,7 @@ abstract final class SettingsKeys {
   static const music = 'settings.music_enabled';
   static const vibration = 'settings.vibration_enabled';
   static const language = 'settings.language';
+  static const level = 'settings.level';
 }
 
 /// Parent-controlled settings, stored on the device only.
@@ -33,6 +34,9 @@ class AppSettings {
     this.musicEnabled = false,
     this.vibrationEnabled = true,
     this.language = LanguageMode.en,
+    // Shows 1–100 and all Phase 1 sections; parents change it in the
+    // Parent Area.
+    this.level = Level.lkg,
   });
 
   final bool soundEnabled;
@@ -40,17 +44,22 @@ class AppSettings {
   final bool vibrationEnabled;
   final LanguageMode language;
 
+  /// Preschool class; filters which sections and items appear.
+  final Level level;
+
   AppSettings copyWith({
     bool? soundEnabled,
     bool? musicEnabled,
     bool? vibrationEnabled,
     LanguageMode? language,
+    Level? level,
   }) =>
       AppSettings(
         soundEnabled: soundEnabled ?? this.soundEnabled,
         musicEnabled: musicEnabled ?? this.musicEnabled,
         vibrationEnabled: vibrationEnabled ?? this.vibrationEnabled,
         language: language ?? this.language,
+        level: level ?? this.level,
       );
 
   @override
@@ -59,11 +68,12 @@ class AppSettings {
       other.soundEnabled == soundEnabled &&
       other.musicEnabled == musicEnabled &&
       other.vibrationEnabled == vibrationEnabled &&
-      other.language == language;
+      other.language == language &&
+      other.level == level;
 
   @override
   int get hashCode =>
-      Object.hash(soundEnabled, musicEnabled, vibrationEnabled, language);
+      Object.hash(soundEnabled, musicEnabled, vibrationEnabled, language, level);
 }
 
 class SettingsNotifier extends Notifier<AppSettings> {
@@ -81,6 +91,8 @@ class SettingsNotifier extends Notifier<AppSettings> {
       language: LanguageMode.values.asNameMap()[
               store.getString(SettingsKeys.language)] ??
           d.language,
+      level: Level.values.asNameMap()[store.getString(SettingsKeys.level)] ??
+          d.level,
     );
   }
 
@@ -102,6 +114,11 @@ class SettingsNotifier extends Notifier<AppSettings> {
   Future<void> setLanguage(LanguageMode value) async {
     state = state.copyWith(language: value);
     await _store.setString(SettingsKeys.language, value.name);
+  }
+
+  Future<void> setLevel(Level value) async {
+    state = state.copyWith(level: value);
+    await _store.setString(SettingsKeys.level, value.name);
   }
 }
 

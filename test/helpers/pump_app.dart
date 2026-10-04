@@ -4,6 +4,8 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/misc.dart' show Override;
 import 'package:flutter_test/flutter_test.dart';
+import 'package:kidoraplay/content/repository/content_catalog.dart';
+import 'package:kidoraplay/content/repository/content_repository.dart';
 import 'package:kidoraplay/core/audio/audio_service.dart';
 import 'package:kidoraplay/core/storage/local_store.dart';
 import 'package:kidoraplay/core/theme/app_theme.dart';
@@ -19,12 +21,26 @@ void useLandscapePhone(WidgetTester tester) {
   addTearDown(tester.view.reset);
 }
 
-/// Provider overrides every widget test needs: in-memory storage and fake
-/// audio channels.
-List<Override> testOverrides({LocalStore? store, FakeAudio? audio}) => [
+/// Provider overrides every widget test needs: in-memory storage, fake
+/// audio channels and (optionally) preloaded content.
+List<Override> testOverrides({
+  LocalStore? store,
+  FakeAudio? audio,
+  ContentCatalog? catalog,
+}) =>
+    [
       localStoreProvider.overrideWithValue(store ?? LocalStore.inMemory()),
       audioChannelsProvider.overrideWithValue((audio ?? FakeAudio()).channels),
+      if (catalog != null)
+        contentCatalogProvider.overrideWith((ref) async => catalog),
     ];
+
+/// Loads the real bundled content. Call from `setUpAll`, outside the
+/// widget tests' fake clock.
+Future<ContentCatalog> loadTestCatalog() {
+  TestWidgetsFlutterBinding.ensureInitialized();
+  return ContentRepository(bundle: rootBundle, validate: false).load();
+}
 
 /// Pumps [child] inside the app's theme, localizations and a ProviderScope
 /// with an in-memory [LocalStore] and fake audio.

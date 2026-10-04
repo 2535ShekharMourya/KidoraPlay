@@ -133,6 +133,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Back'**
   String get back;
+
+  /// No description provided for @next.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get next;
+
+  /// No description provided for @previous.
+  ///
+  /// In en, this message translates to:
+  /// **'Previous'**
+  String get previous;
+
+  /// Semantics label for a row of numbers, e.g. 1 to 10
+  ///
+  /// In en, this message translates to:
+  /// **'{from} to {to}'**
+  String numberRow(int from, int to);
+
+  /// Semantics label for the place-value picture
+  ///
+  /// In en, this message translates to:
+  /// **'{tens} tens and {ones} ones'**
+  String placeValue(int tens, int ones);
 }
 
 class _AppLocalizationsDelegate

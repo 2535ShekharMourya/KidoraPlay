@@ -26,4 +26,20 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get back => 'वापस';
+
+  @override
+  String get next => 'आगे';
+
+  @override
+  String get previous => 'पीछे';
+
+  @override
+  String numberRow(int from, int to) {
+    return '$from से $to';
+  }
+
+  @override
+  String placeValue(int tens, int ones) {
+    return '$tens दहाई और $ones इकाई';
+  }
 }

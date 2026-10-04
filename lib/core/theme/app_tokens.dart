@@ -14,6 +14,23 @@ abstract final class AppSpacing {
 
   /// Minimum gap between tappable targets.
   static const tapGap = 16.0;
+
+  /// Smallest spelling tile, used only when a long word (e.g.
+  /// "Seventy-seven") cannot fit at [minTapTarget].
+  static const minLetterTile = 44.0;
+}
+
+/// Screen layout zones (landscape).
+abstract final class AppLayout {
+  /// Left and right columns kept free for the back/arrow buttons. The
+  /// bottom of the left column is Kido's spot, so content never sits under
+  /// him.
+  static const sideZone = AppSpacing.minTapTarget + AppSpacing.md * 2;
+
+  /// Items per page in a section grid (5 × 2). Paging uses big arrow
+  /// buttons because child screens never scroll or swipe.
+  static const gridColumns = 5;
+  static const gridRows = 2;
 }
 
 /// Corner radius tokens.
@@ -45,6 +62,10 @@ abstract final class AppDurations {
   static const pageTransition = Duration(milliseconds: 350);
   static const splash = Duration(milliseconds: 1800);
   static const adBreak = Duration(milliseconds: 2500);
+
+  /// Per-letter rhythm when there is no sound (muted or missing audio).
+  static const silentSegment = Duration(milliseconds: 450);
+  static const wiggle = Duration(milliseconds: 180);
 }
 
 /// Curve tokens.

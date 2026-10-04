@@ -29,7 +29,8 @@ void main() {
       final catalog = await repo.load();
 
       expect(catalog.sections.map((s) => s.id), SectionId.values);
-      for (final id in SectionId.values) {
+      expect(catalog.itemsFor(SectionId.numbers), hasLength(100));
+      for (final id in [SectionId.abc, SectionId.animals, SectionId.birds]) {
         expect(catalog.itemsFor(id), hasLength(10), reason: id.name);
       }
       expect(catalog.itemById('peacock')?.wordHi, 'मोर');
@@ -56,6 +57,10 @@ void main() {
       final catalog =
           await ContentRepository(bundle: rootBundle, validate: false).load();
       expect(catalog.sectionsFor(Level.nursery), hasLength(4));
+      expect(
+        catalog.itemsFor(SectionId.numbers, level: Level.nursery),
+        hasLength(20),
+      );
       expect(
         catalog.itemsFor(SectionId.animals, level: Level.lkg),
         hasLength(10),

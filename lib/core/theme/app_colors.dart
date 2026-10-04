@@ -20,6 +20,9 @@ abstract final class AppColors {
   static const celebrate = Color(0xFFFFC93C);
   static const glow = Color(0xFFFFF3A8);
 
+  // Place-value view: ones dots (tens use the section accent)
+  static const placeOnes = Color(0xFFFF5D8F);
+
   // Confetti / sparkle palette
   static const confetti = [
     Color(0xFFFF5D8F),

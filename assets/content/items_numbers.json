@@ -178,5 +178,1545 @@
     "voice_hi": "assets/audio/hi/ten.m4a",
     "sound": null,
     "rive_reaction": null
+  },
+  {
+    "id": "eleven",
+    "section": "numbers",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 11,
+    "word_en": "Eleven",
+    "word_hi": "ग्यारह",
+    "image": "assets/images/numbers/eleven.webp",
+    "voice_en": "assets/audio/en/eleven.m4a",
+    "voice_hi": "assets/audio/hi/eleven.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "twelve",
+    "section": "numbers",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 12,
+    "word_en": "Twelve",
+    "word_hi": "बारह",
+    "image": "assets/images/numbers/twelve.webp",
+    "voice_en": "assets/audio/en/twelve.m4a",
+    "voice_hi": "assets/audio/hi/twelve.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "thirteen",
+    "section": "numbers",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 13,
+    "word_en": "Thirteen",
+    "word_hi": "तेरह",
+    "image": "assets/images/numbers/thirteen.webp",
+    "voice_en": "assets/audio/en/thirteen.m4a",
+    "voice_hi": "assets/audio/hi/thirteen.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "fourteen",
+    "section": "numbers",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 14,
+    "word_en": "Fourteen",
+    "word_hi": "चौदह",
+    "image": "assets/images/numbers/fourteen.webp",
+    "voice_en": "assets/audio/en/fourteen.m4a",
+    "voice_hi": "assets/audio/hi/fourteen.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "fifteen",
+    "section": "numbers",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 15,
+    "word_en": "Fifteen",
+    "word_hi": "पंद्रह",
+    "image": "assets/images/numbers/fifteen.webp",
+    "voice_en": "assets/audio/en/fifteen.m4a",
+    "voice_hi": "assets/audio/hi/fifteen.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "sixteen",
+    "section": "numbers",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 16,
+    "word_en": "Sixteen",
+    "word_hi": "सोलह",
+    "image": "assets/images/numbers/sixteen.webp",
+    "voice_en": "assets/audio/en/sixteen.m4a",
+    "voice_hi": "assets/audio/hi/sixteen.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "seventeen",
+    "section": "numbers",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 17,
+    "word_en": "Seventeen",
+    "word_hi": "सत्रह",
+    "image": "assets/images/numbers/seventeen.webp",
+    "voice_en": "assets/audio/en/seventeen.m4a",
+    "voice_hi": "assets/audio/hi/seventeen.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "eighteen",
+    "section": "numbers",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 18,
+    "word_en": "Eighteen",
+    "word_hi": "अठारह",
+    "image": "assets/images/numbers/eighteen.webp",
+    "voice_en": "assets/audio/en/eighteen.m4a",
+    "voice_hi": "assets/audio/hi/eighteen.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "nineteen",
+    "section": "numbers",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 19,
+    "word_en": "Nineteen",
+    "word_hi": "उन्नीस",
+    "image": "assets/images/numbers/nineteen.webp",
+    "voice_en": "assets/audio/en/nineteen.m4a",
+    "voice_hi": "assets/audio/hi/nineteen.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "twenty",
+    "section": "numbers",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 20,
+    "word_en": "Twenty",
+    "word_hi": "बीस",
+    "image": "assets/images/numbers/twenty.webp",
+    "voice_en": "assets/audio/en/twenty.m4a",
+    "voice_hi": "assets/audio/hi/twenty.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "twenty_one",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 21,
+    "word_en": "Twenty-one",
+    "word_hi": "इक्कीस",
+    "image": "assets/images/numbers/twenty_one.webp",
+    "voice_en": "assets/audio/en/twenty_one.m4a",
+    "voice_hi": "assets/audio/hi/twenty_one.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "twenty_two",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 22,
+    "word_en": "Twenty-two",
+    "word_hi": "बाईस",
+    "image": "assets/images/numbers/twenty_two.webp",
+    "voice_en": "assets/audio/en/twenty_two.m4a",
+    "voice_hi": "assets/audio/hi/twenty_two.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "twenty_three",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 23,
+    "word_en": "Twenty-three",
+    "word_hi": "तेईस",
+    "image": "assets/images/numbers/twenty_three.webp",
+    "voice_en": "assets/audio/en/twenty_three.m4a",
+    "voice_hi": "assets/audio/hi/twenty_three.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "twenty_four",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 24,
+    "word_en": "Twenty-four",
+    "word_hi": "चौबीस",
+    "image": "assets/images/numbers/twenty_four.webp",
+    "voice_en": "assets/audio/en/twenty_four.m4a",
+    "voice_hi": "assets/audio/hi/twenty_four.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "twenty_five",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 25,
+    "word_en": "Twenty-five",
+    "word_hi": "पच्चीस",
+    "image": "assets/images/numbers/twenty_five.webp",
+    "voice_en": "assets/audio/en/twenty_five.m4a",
+    "voice_hi": "assets/audio/hi/twenty_five.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "twenty_six",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 26,
+    "word_en": "Twenty-six",
+    "word_hi": "छब्बीस",
+    "image": "assets/images/numbers/twenty_six.webp",
+    "voice_en": "assets/audio/en/twenty_six.m4a",
+    "voice_hi": "assets/audio/hi/twenty_six.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "twenty_seven",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 27,
+    "word_en": "Twenty-seven",
+    "word_hi": "सत्ताईस",
+    "image": "assets/images/numbers/twenty_seven.webp",
+    "voice_en": "assets/audio/en/twenty_seven.m4a",
+    "voice_hi": "assets/audio/hi/twenty_seven.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "twenty_eight",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 28,
+    "word_en": "Twenty-eight",
+    "word_hi": "अट्ठाईस",
+    "image": "assets/images/numbers/twenty_eight.webp",
+    "voice_en": "assets/audio/en/twenty_eight.m4a",
+    "voice_hi": "assets/audio/hi/twenty_eight.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "twenty_nine",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 29,
+    "word_en": "Twenty-nine",
+    "word_hi": "उनतीस",
+    "image": "assets/images/numbers/twenty_nine.webp",
+    "voice_en": "assets/audio/en/twenty_nine.m4a",
+    "voice_hi": "assets/audio/hi/twenty_nine.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "thirty",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 30,
+    "word_en": "Thirty",
+    "word_hi": "तीस",
+    "image": "assets/images/numbers/thirty.webp",
+    "voice_en": "assets/audio/en/thirty.m4a",
+    "voice_hi": "assets/audio/hi/thirty.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "thirty_one",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 31,
+    "word_en": "Thirty-one",
+    "word_hi": "इकतीस",
+    "image": "assets/images/numbers/thirty_one.webp",
+    "voice_en": "assets/audio/en/thirty_one.m4a",
+    "voice_hi": "assets/audio/hi/thirty_one.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "thirty_two",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 32,
+    "word_en": "Thirty-two",
+    "word_hi": "बत्तीस",
+    "image": "assets/images/numbers/thirty_two.webp",
+    "voice_en": "assets/audio/en/thirty_two.m4a",
+    "voice_hi": "assets/audio/hi/thirty_two.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "thirty_three",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 33,
+    "word_en": "Thirty-three",
+    "word_hi": "तैंतीस",
+    "image": "assets/images/numbers/thirty_three.webp",
+    "voice_en": "assets/audio/en/thirty_three.m4a",
+    "voice_hi": "assets/audio/hi/thirty_three.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "thirty_four",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 34,
+    "word_en": "Thirty-four",
+    "word_hi": "चौंतीस",
+    "image": "assets/images/numbers/thirty_four.webp",
+    "voice_en": "assets/audio/en/thirty_four.m4a",
+    "voice_hi": "assets/audio/hi/thirty_four.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "thirty_five",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 35,
+    "word_en": "Thirty-five",
+    "word_hi": "पैंतीस",
+    "image": "assets/images/numbers/thirty_five.webp",
+    "voice_en": "assets/audio/en/thirty_five.m4a",
+    "voice_hi": "assets/audio/hi/thirty_five.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "thirty_six",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 36,
+    "word_en": "Thirty-six",
+    "word_hi": "छत्तीस",
+    "image": "assets/images/numbers/thirty_six.webp",
+    "voice_en": "assets/audio/en/thirty_six.m4a",
+    "voice_hi": "assets/audio/hi/thirty_six.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "thirty_seven",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 37,
+    "word_en": "Thirty-seven",
+    "word_hi": "सैंतीस",
+    "image": "assets/images/numbers/thirty_seven.webp",
+    "voice_en": "assets/audio/en/thirty_seven.m4a",
+    "voice_hi": "assets/audio/hi/thirty_seven.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "thirty_eight",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 38,
+    "word_en": "Thirty-eight",
+    "word_hi": "अड़तीस",
+    "image": "assets/images/numbers/thirty_eight.webp",
+    "voice_en": "assets/audio/en/thirty_eight.m4a",
+    "voice_hi": "assets/audio/hi/thirty_eight.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "thirty_nine",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 39,
+    "word_en": "Thirty-nine",
+    "word_hi": "उनतालीस",
+    "image": "assets/images/numbers/thirty_nine.webp",
+    "voice_en": "assets/audio/en/thirty_nine.m4a",
+    "voice_hi": "assets/audio/hi/thirty_nine.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "forty",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 40,
+    "word_en": "Forty",
+    "word_hi": "चालीस",
+    "image": "assets/images/numbers/forty.webp",
+    "voice_en": "assets/audio/en/forty.m4a",
+    "voice_hi": "assets/audio/hi/forty.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "forty_one",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 41,
+    "word_en": "Forty-one",
+    "word_hi": "इकतालीस",
+    "image": "assets/images/numbers/forty_one.webp",
+    "voice_en": "assets/audio/en/forty_one.m4a",
+    "voice_hi": "assets/audio/hi/forty_one.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "forty_two",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 42,
+    "word_en": "Forty-two",
+    "word_hi": "बयालीस",
+    "image": "assets/images/numbers/forty_two.webp",
+    "voice_en": "assets/audio/en/forty_two.m4a",
+    "voice_hi": "assets/audio/hi/forty_two.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "forty_three",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 43,
+    "word_en": "Forty-three",
+    "word_hi": "तैंतालीस",
+    "image": "assets/images/numbers/forty_three.webp",
+    "voice_en": "assets/audio/en/forty_three.m4a",
+    "voice_hi": "assets/audio/hi/forty_three.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "forty_four",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 44,
+    "word_en": "Forty-four",
+    "word_hi": "चवालीस",
+    "image": "assets/images/numbers/forty_four.webp",
+    "voice_en": "assets/audio/en/forty_four.m4a",
+    "voice_hi": "assets/audio/hi/forty_four.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "forty_five",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 45,
+    "word_en": "Forty-five",
+    "word_hi": "पैंतालीस",
+    "image": "assets/images/numbers/forty_five.webp",
+    "voice_en": "assets/audio/en/forty_five.m4a",
+    "voice_hi": "assets/audio/hi/forty_five.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "forty_six",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 46,
+    "word_en": "Forty-six",
+    "word_hi": "छियालीस",
+    "image": "assets/images/numbers/forty_six.webp",
+    "voice_en": "assets/audio/en/forty_six.m4a",
+    "voice_hi": "assets/audio/hi/forty_six.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "forty_seven",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 47,
+    "word_en": "Forty-seven",
+    "word_hi": "सैंतालीस",
+    "image": "assets/images/numbers/forty_seven.webp",
+    "voice_en": "assets/audio/en/forty_seven.m4a",
+    "voice_hi": "assets/audio/hi/forty_seven.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "forty_eight",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 48,
+    "word_en": "Forty-eight",
+    "word_hi": "अड़तालीस",
+    "image": "assets/images/numbers/forty_eight.webp",
+    "voice_en": "assets/audio/en/forty_eight.m4a",
+    "voice_hi": "assets/audio/hi/forty_eight.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "forty_nine",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 49,
+    "word_en": "Forty-nine",
+    "word_hi": "उनचास",
+    "image": "assets/images/numbers/forty_nine.webp",
+    "voice_en": "assets/audio/en/forty_nine.m4a",
+    "voice_hi": "assets/audio/hi/forty_nine.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "fifty",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 50,
+    "word_en": "Fifty",
+    "word_hi": "पचास",
+    "image": "assets/images/numbers/fifty.webp",
+    "voice_en": "assets/audio/en/fifty.m4a",
+    "voice_hi": "assets/audio/hi/fifty.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "fifty_one",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 51,
+    "word_en": "Fifty-one",
+    "word_hi": "इक्यावन",
+    "image": "assets/images/numbers/fifty_one.webp",
+    "voice_en": "assets/audio/en/fifty_one.m4a",
+    "voice_hi": "assets/audio/hi/fifty_one.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "fifty_two",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 52,
+    "word_en": "Fifty-two",
+    "word_hi": "बावन",
+    "image": "assets/images/numbers/fifty_two.webp",
+    "voice_en": "assets/audio/en/fifty_two.m4a",
+    "voice_hi": "assets/audio/hi/fifty_two.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "fifty_three",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 53,
+    "word_en": "Fifty-three",
+    "word_hi": "तिरपन",
+    "image": "assets/images/numbers/fifty_three.webp",
+    "voice_en": "assets/audio/en/fifty_three.m4a",
+    "voice_hi": "assets/audio/hi/fifty_three.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "fifty_four",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 54,
+    "word_en": "Fifty-four",
+    "word_hi": "चौवन",
+    "image": "assets/images/numbers/fifty_four.webp",
+    "voice_en": "assets/audio/en/fifty_four.m4a",
+    "voice_hi": "assets/audio/hi/fifty_four.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "fifty_five",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 55,
+    "word_en": "Fifty-five",
+    "word_hi": "पचपन",
+    "image": "assets/images/numbers/fifty_five.webp",
+    "voice_en": "assets/audio/en/fifty_five.m4a",
+    "voice_hi": "assets/audio/hi/fifty_five.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "fifty_six",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 56,
+    "word_en": "Fifty-six",
+    "word_hi": "छप्पन",
+    "image": "assets/images/numbers/fifty_six.webp",
+    "voice_en": "assets/audio/en/fifty_six.m4a",
+    "voice_hi": "assets/audio/hi/fifty_six.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "fifty_seven",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 57,
+    "word_en": "Fifty-seven",
+    "word_hi": "सत्तावन",
+    "image": "assets/images/numbers/fifty_seven.webp",
+    "voice_en": "assets/audio/en/fifty_seven.m4a",
+    "voice_hi": "assets/audio/hi/fifty_seven.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "fifty_eight",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 58,
+    "word_en": "Fifty-eight",
+    "word_hi": "अट्ठावन",
+    "image": "assets/images/numbers/fifty_eight.webp",
+    "voice_en": "assets/audio/en/fifty_eight.m4a",
+    "voice_hi": "assets/audio/hi/fifty_eight.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "fifty_nine",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 59,
+    "word_en": "Fifty-nine",
+    "word_hi": "उनसठ",
+    "image": "assets/images/numbers/fifty_nine.webp",
+    "voice_en": "assets/audio/en/fifty_nine.m4a",
+    "voice_hi": "assets/audio/hi/fifty_nine.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "sixty",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 60,
+    "word_en": "Sixty",
+    "word_hi": "साठ",
+    "image": "assets/images/numbers/sixty.webp",
+    "voice_en": "assets/audio/en/sixty.m4a",
+    "voice_hi": "assets/audio/hi/sixty.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "sixty_one",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 61,
+    "word_en": "Sixty-one",
+    "word_hi": "इकसठ",
+    "image": "assets/images/numbers/sixty_one.webp",
+    "voice_en": "assets/audio/en/sixty_one.m4a",
+    "voice_hi": "assets/audio/hi/sixty_one.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "sixty_two",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 62,
+    "word_en": "Sixty-two",
+    "word_hi": "बासठ",
+    "image": "assets/images/numbers/sixty_two.webp",
+    "voice_en": "assets/audio/en/sixty_two.m4a",
+    "voice_hi": "assets/audio/hi/sixty_two.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "sixty_three",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 63,
+    "word_en": "Sixty-three",
+    "word_hi": "तिरसठ",
+    "image": "assets/images/numbers/sixty_three.webp",
+    "voice_en": "assets/audio/en/sixty_three.m4a",
+    "voice_hi": "assets/audio/hi/sixty_three.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "sixty_four",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 64,
+    "word_en": "Sixty-four",
+    "word_hi": "चौंसठ",
+    "image": "assets/images/numbers/sixty_four.webp",
+    "voice_en": "assets/audio/en/sixty_four.m4a",
+    "voice_hi": "assets/audio/hi/sixty_four.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "sixty_five",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 65,
+    "word_en": "Sixty-five",
+    "word_hi": "पैंसठ",
+    "image": "assets/images/numbers/sixty_five.webp",
+    "voice_en": "assets/audio/en/sixty_five.m4a",
+    "voice_hi": "assets/audio/hi/sixty_five.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "sixty_six",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 66,
+    "word_en": "Sixty-six",
+    "word_hi": "छियासठ",
+    "image": "assets/images/numbers/sixty_six.webp",
+    "voice_en": "assets/audio/en/sixty_six.m4a",
+    "voice_hi": "assets/audio/hi/sixty_six.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "sixty_seven",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 67,
+    "word_en": "Sixty-seven",
+    "word_hi": "सड़सठ",
+    "image": "assets/images/numbers/sixty_seven.webp",
+    "voice_en": "assets/audio/en/sixty_seven.m4a",
+    "voice_hi": "assets/audio/hi/sixty_seven.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "sixty_eight",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 68,
+    "word_en": "Sixty-eight",
+    "word_hi": "अड़सठ",
+    "image": "assets/images/numbers/sixty_eight.webp",
+    "voice_en": "assets/audio/en/sixty_eight.m4a",
+    "voice_hi": "assets/audio/hi/sixty_eight.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "sixty_nine",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 69,
+    "word_en": "Sixty-nine",
+    "word_hi": "उनहत्तर",
+    "image": "assets/images/numbers/sixty_nine.webp",
+    "voice_en": "assets/audio/en/sixty_nine.m4a",
+    "voice_hi": "assets/audio/hi/sixty_nine.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "seventy",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 70,
+    "word_en": "Seventy",
+    "word_hi": "सत्तर",
+    "image": "assets/images/numbers/seventy.webp",
+    "voice_en": "assets/audio/en/seventy.m4a",
+    "voice_hi": "assets/audio/hi/seventy.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "seventy_one",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 71,
+    "word_en": "Seventy-one",
+    "word_hi": "इकहत्तर",
+    "image": "assets/images/numbers/seventy_one.webp",
+    "voice_en": "assets/audio/en/seventy_one.m4a",
+    "voice_hi": "assets/audio/hi/seventy_one.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "seventy_two",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 72,
+    "word_en": "Seventy-two",
+    "word_hi": "बहत्तर",
+    "image": "assets/images/numbers/seventy_two.webp",
+    "voice_en": "assets/audio/en/seventy_two.m4a",
+    "voice_hi": "assets/audio/hi/seventy_two.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "seventy_three",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 73,
+    "word_en": "Seventy-three",
+    "word_hi": "तिहत्तर",
+    "image": "assets/images/numbers/seventy_three.webp",
+    "voice_en": "assets/audio/en/seventy_three.m4a",
+    "voice_hi": "assets/audio/hi/seventy_three.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "seventy_four",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 74,
+    "word_en": "Seventy-four",
+    "word_hi": "चौहत्तर",
+    "image": "assets/images/numbers/seventy_four.webp",
+    "voice_en": "assets/audio/en/seventy_four.m4a",
+    "voice_hi": "assets/audio/hi/seventy_four.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "seventy_five",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 75,
+    "word_en": "Seventy-five",
+    "word_hi": "पचहत्तर",
+    "image": "assets/images/numbers/seventy_five.webp",
+    "voice_en": "assets/audio/en/seventy_five.m4a",
+    "voice_hi": "assets/audio/hi/seventy_five.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "seventy_six",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 76,
+    "word_en": "Seventy-six",
+    "word_hi": "छिहत्तर",
+    "image": "assets/images/numbers/seventy_six.webp",
+    "voice_en": "assets/audio/en/seventy_six.m4a",
+    "voice_hi": "assets/audio/hi/seventy_six.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "seventy_seven",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 77,
+    "word_en": "Seventy-seven",
+    "word_hi": "सतहत्तर",
+    "image": "assets/images/numbers/seventy_seven.webp",
+    "voice_en": "assets/audio/en/seventy_seven.m4a",
+    "voice_hi": "assets/audio/hi/seventy_seven.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "seventy_eight",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 78,
+    "word_en": "Seventy-eight",
+    "word_hi": "अठहत्तर",
+    "image": "assets/images/numbers/seventy_eight.webp",
+    "voice_en": "assets/audio/en/seventy_eight.m4a",
+    "voice_hi": "assets/audio/hi/seventy_eight.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "seventy_nine",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 79,
+    "word_en": "Seventy-nine",
+    "word_hi": "उन्यासी",
+    "image": "assets/images/numbers/seventy_nine.webp",
+    "voice_en": "assets/audio/en/seventy_nine.m4a",
+    "voice_hi": "assets/audio/hi/seventy_nine.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "eighty",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 80,
+    "word_en": "Eighty",
+    "word_hi": "अस्सी",
+    "image": "assets/images/numbers/eighty.webp",
+    "voice_en": "assets/audio/en/eighty.m4a",
+    "voice_hi": "assets/audio/hi/eighty.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "eighty_one",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 81,
+    "word_en": "Eighty-one",
+    "word_hi": "इक्यासी",
+    "image": "assets/images/numbers/eighty_one.webp",
+    "voice_en": "assets/audio/en/eighty_one.m4a",
+    "voice_hi": "assets/audio/hi/eighty_one.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "eighty_two",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 82,
+    "word_en": "Eighty-two",
+    "word_hi": "बयासी",
+    "image": "assets/images/numbers/eighty_two.webp",
+    "voice_en": "assets/audio/en/eighty_two.m4a",
+    "voice_hi": "assets/audio/hi/eighty_two.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "eighty_three",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 83,
+    "word_en": "Eighty-three",
+    "word_hi": "तिरासी",
+    "image": "assets/images/numbers/eighty_three.webp",
+    "voice_en": "assets/audio/en/eighty_three.m4a",
+    "voice_hi": "assets/audio/hi/eighty_three.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "eighty_four",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 84,
+    "word_en": "Eighty-four",
+    "word_hi": "चौरासी",
+    "image": "assets/images/numbers/eighty_four.webp",
+    "voice_en": "assets/audio/en/eighty_four.m4a",
+    "voice_hi": "assets/audio/hi/eighty_four.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "eighty_five",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 85,
+    "word_en": "Eighty-five",
+    "word_hi": "पचासी",
+    "image": "assets/images/numbers/eighty_five.webp",
+    "voice_en": "assets/audio/en/eighty_five.m4a",
+    "voice_hi": "assets/audio/hi/eighty_five.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "eighty_six",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 86,
+    "word_en": "Eighty-six",
+    "word_hi": "छियासी",
+    "image": "assets/images/numbers/eighty_six.webp",
+    "voice_en": "assets/audio/en/eighty_six.m4a",
+    "voice_hi": "assets/audio/hi/eighty_six.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "eighty_seven",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 87,
+    "word_en": "Eighty-seven",
+    "word_hi": "सत्तासी",
+    "image": "assets/images/numbers/eighty_seven.webp",
+    "voice_en": "assets/audio/en/eighty_seven.m4a",
+    "voice_hi": "assets/audio/hi/eighty_seven.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "eighty_eight",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 88,
+    "word_en": "Eighty-eight",
+    "word_hi": "अट्ठासी",
+    "image": "assets/images/numbers/eighty_eight.webp",
+    "voice_en": "assets/audio/en/eighty_eight.m4a",
+    "voice_hi": "assets/audio/hi/eighty_eight.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "eighty_nine",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 89,
+    "word_en": "Eighty-nine",
+    "word_hi": "नवासी",
+    "image": "assets/images/numbers/eighty_nine.webp",
+    "voice_en": "assets/audio/en/eighty_nine.m4a",
+    "voice_hi": "assets/audio/hi/eighty_nine.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "ninety",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 90,
+    "word_en": "Ninety",
+    "word_hi": "नब्बे",
+    "image": "assets/images/numbers/ninety.webp",
+    "voice_en": "assets/audio/en/ninety.m4a",
+    "voice_hi": "assets/audio/hi/ninety.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "ninety_one",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 91,
+    "word_en": "Ninety-one",
+    "word_hi": "इक्यानवे",
+    "image": "assets/images/numbers/ninety_one.webp",
+    "voice_en": "assets/audio/en/ninety_one.m4a",
+    "voice_hi": "assets/audio/hi/ninety_one.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "ninety_two",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 92,
+    "word_en": "Ninety-two",
+    "word_hi": "बानवे",
+    "image": "assets/images/numbers/ninety_two.webp",
+    "voice_en": "assets/audio/en/ninety_two.m4a",
+    "voice_hi": "assets/audio/hi/ninety_two.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "ninety_three",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 93,
+    "word_en": "Ninety-three",
+    "word_hi": "तिरानवे",
+    "image": "assets/images/numbers/ninety_three.webp",
+    "voice_en": "assets/audio/en/ninety_three.m4a",
+    "voice_hi": "assets/audio/hi/ninety_three.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "ninety_four",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 94,
+    "word_en": "Ninety-four",
+    "word_hi": "चौरानवे",
+    "image": "assets/images/numbers/ninety_four.webp",
+    "voice_en": "assets/audio/en/ninety_four.m4a",
+    "voice_hi": "assets/audio/hi/ninety_four.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "ninety_five",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 95,
+    "word_en": "Ninety-five",
+    "word_hi": "पंचानवे",
+    "image": "assets/images/numbers/ninety_five.webp",
+    "voice_en": "assets/audio/en/ninety_five.m4a",
+    "voice_hi": "assets/audio/hi/ninety_five.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "ninety_six",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 96,
+    "word_en": "Ninety-six",
+    "word_hi": "छियानवे",
+    "image": "assets/images/numbers/ninety_six.webp",
+    "voice_en": "assets/audio/en/ninety_six.m4a",
+    "voice_hi": "assets/audio/hi/ninety_six.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "ninety_seven",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 97,
+    "word_en": "Ninety-seven",
+    "word_hi": "सत्तानवे",
+    "image": "assets/images/numbers/ninety_seven.webp",
+    "voice_en": "assets/audio/en/ninety_seven.m4a",
+    "voice_hi": "assets/audio/hi/ninety_seven.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "ninety_eight",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 98,
+    "word_en": "Ninety-eight",
+    "word_hi": "अट्ठानवे",
+    "image": "assets/images/numbers/ninety_eight.webp",
+    "voice_en": "assets/audio/en/ninety_eight.m4a",
+    "voice_hi": "assets/audio/hi/ninety_eight.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "ninety_nine",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 99,
+    "word_en": "Ninety-nine",
+    "word_hi": "निन्यानवे",
+    "image": "assets/images/numbers/ninety_nine.webp",
+    "voice_en": "assets/audio/en/ninety_nine.m4a",
+    "voice_hi": "assets/audio/hi/ninety_nine.m4a",
+    "sound": null,
+    "rive_reaction": null
+  },
+  {
+    "id": "one_hundred",
+    "section": "numbers",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": 100,
+    "word_en": "One Hundred",
+    "word_hi": "सौ",
+    "image": "assets/images/numbers/one_hundred.webp",
+    "voice_en": "assets/audio/en/one_hundred.m4a",
+    "voice_hi": "assets/audio/hi/one_hundred.m4a",
+    "sound": null,
+    "rive_reaction": null
   }
 ]

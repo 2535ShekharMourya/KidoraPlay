@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../content/models/section.dart';
 import '../../content/repository/content_repository.dart';
 import '../../core/audio/audio_service.dart';
+import '../../core/router/app_router.dart';
 import '../../core/settings/app_settings.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_tokens.dart';
@@ -14,8 +16,7 @@ import '../../core/widgets/pop_in.dart';
 import '../../core/widgets/section_background.dart';
 import '../../l10n/app_localizations.dart';
 
-/// Section menu. Tapping a tile says the section name; navigation arrives
-/// in step 5.
+/// Section menu. Tapping a tile says the section name and opens it.
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
 
@@ -30,13 +31,15 @@ class HomeScreen extends ConsumerWidget {
     };
     final catalog = ref.watch(contentCatalogProvider).value;
 
-    void sayName(SectionId id) {
+    void open(SectionId id) {
       final section = catalog?.section(id);
-      if (section == null) return;
-      final languages = ref.read(settingsProvider).language.languages;
-      ref
-          .read(audioServiceProvider)
-          .playVoiceSequence([for (final l in languages) section.voice(l)]);
+      if (section != null) {
+        final languages = ref.read(settingsProvider).language.languages;
+        ref
+            .read(audioServiceProvider)
+            .playVoiceSequence([for (final l in languages) section.voice(l)]);
+      }
+      context.go(AppRoutes.section(id));
     }
 
     return Scaffold(
@@ -60,7 +63,7 @@ class HomeScreen extends ConsumerWidget {
                           child: _SectionTile(
                             id: id,
                             label: labels[id]!,
-                            onPressed: () => sayName(id),
+                            onPressed: () => open(id),
                           ),
                         ),
                       ),

@@ -7,5 +7,17 @@
   "sectionAnimals": "Animals",
   "sectionBirds": "Birds",
   "back": "Back",
-  "@back": { "description": "Semantics label for the big back button" }
+  "@back": { "description": "Semantics label for the big back button" },
+  "next": "Next",
+  "previous": "Previous",
+  "numberRow": "{from} to {to}",
+  "@numberRow": {
+    "description": "Semantics label for a row of numbers, e.g. 1 to 10",
+    "placeholders": { "from": { "type": "int" }, "to": { "type": "int" } }
+  },
+  "placeValue": "{tens} tens and {ones} ones",
+  "@placeValue": {
+    "description": "Semantics label for the place-value picture",
+    "placeholders": { "tens": { "type": "int" }, "ones": { "type": "int" } }
+  }
 }

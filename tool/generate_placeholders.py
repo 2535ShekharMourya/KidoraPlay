@@ -56,7 +56,10 @@ def collect():
         for it in load(Path(section["items"]).name):
             sec = it["section"]
             if sec == "numbers":
-                lines, dots = [str(it["number"])], it["number"]
+                # Counting dots up to 20; bigger numbers use the in-app
+                # place-value view instead.
+                n = it["number"]
+                lines, dots = [str(n)], n if n <= 20 else 0
             elif sec == "abc":
                 lines, dots = [f'{it["letter"]} {it["letter"].lower()}',
                                it["word_en"]], 0
@@ -105,15 +108,16 @@ def make_image(path, section, lines, dots):
         d.text(((size - w) / 2, y), line, font=font, fill=INK)
         y += 190 if i == 0 else 80
     if dots:
-        per_row = 5
-        r = 18
+        per_row = 5 if dots <= 10 else 10
+        step = 56 if dots <= 10 else 42
+        r = 18 if dots <= 10 else 14
         rows = (dots + per_row - 1) // per_row
         top = 360 if rows == 1 else 330
         for k in range(dots):
             row, col = divmod(k, per_row)
             count = min(per_row, dots - row * per_row)
-            x0 = size / 2 - (count * 56) / 2 + col * 56 + 10
-            y0 = top + row * 56
+            x0 = size / 2 - (count * step) / 2 + col * step + (step - 2 * r) / 2
+            y0 = top + row * step
             d.ellipse([x0, y0, x0 + 2 * r, y0 + 2 * r], fill=accent)
     out = ROOT / path
     out.parent.mkdir(parents=True, exist_ok=True)

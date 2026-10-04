@@ -26,4 +26,20 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get back => 'Back';
+
+  @override
+  String get next => 'Next';
+
+  @override
+  String get previous => 'Previous';
+
+  @override
+  String numberRow(int from, int to) {
+    return '$from to $to';
+  }
+
+  @override
+  String placeValue(int tens, int ones) {
+    return '$tens tens and $ones ones';
+  }
 }

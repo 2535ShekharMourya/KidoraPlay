@@ -5,5 +5,9 @@
   "sectionAbc": "एबीसी",
   "sectionAnimals": "जानवर",
   "sectionBirds": "पक्षी",
-  "back": "वापस"
+  "back": "वापस",
+  "next": "आगे",
+  "previous": "पीछे",
+  "numberRow": "{from} से {to}",
+  "placeValue": "{tens} दहाई और {ones} इकाई"
 }

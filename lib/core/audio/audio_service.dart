@@ -68,17 +68,22 @@ class AudioService {
   ///
   /// Returns true if the whole sequence played; false if it was interrupted,
   /// debounced, muted or failed.
+  ///
+  /// [debounce] guards against tap mashing; scripted lessons turn it off so
+  /// a word can be said twice in a row.
   Future<bool> playVoiceSequence(
     List<String> assets, {
     void Function(int index)? onSegment,
     Duration gap = Duration.zero,
+    bool debounce = true,
   }) async {
     if (assets.isEmpty || !_settings.soundEnabled || _paused) return false;
 
     // Toddler mashing: ignore an identical request within the debounce time.
     final key = assets.join('|');
     final now = _clock();
-    if (key == _lastVoiceKey &&
+    if (debounce &&
+        key == _lastVoiceKey &&
         _lastVoiceAt != null &&
         now.difference(_lastVoiceAt!) < AppDurations.tapDebounce) {
       return false;

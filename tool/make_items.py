@@ -32,13 +32,49 @@ def item(section, id_, word_en, word_hi, *, letter=None, number=None,
     }
 
 
+ONES = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
+        "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen",
+        "Sixteen", "Seventeen", "Eighteen", "Nineteen"]
+TENS = ["", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy",
+        "Eighty", "Ninety"]
+
+# Hindi number names 1–100 (index 0 unused). Please have a native speaker
+# review spellings before release.
+HINDI_NUMBERS = """
+- एक दो तीन चार पाँच छह सात आठ नौ दस
+ग्यारह बारह तेरह चौदह पंद्रह सोलह सत्रह अठारह उन्नीस बीस
+इक्कीस बाईस तेईस चौबीस पच्चीस छब्बीस सत्ताईस अट्ठाईस उनतीस तीस
+इकतीस बत्तीस तैंतीस चौंतीस पैंतीस छत्तीस सैंतीस अड़तीस उनतालीस चालीस
+इकतालीस बयालीस तैंतालीस चवालीस पैंतालीस छियालीस सैंतालीस अड़तालीस उनचास पचास
+इक्यावन बावन तिरपन चौवन पचपन छप्पन सत्तावन अट्ठावन उनसठ साठ
+इकसठ बासठ तिरसठ चौंसठ पैंसठ छियासठ सड़सठ अड़सठ उनहत्तर सत्तर
+इकहत्तर बहत्तर तिहत्तर चौहत्तर पचहत्तर छिहत्तर सतहत्तर अठहत्तर उन्यासी अस्सी
+इक्यासी बयासी तिरासी चौरासी पचासी छियासी सत्तासी अट्ठासी नवासी नब्बे
+इक्यानवे बानवे तिरानवे चौरानवे पंचानवे छियानवे सत्तानवे अट्ठानवे निन्यानवे सौ
+""".split()
+
+
+def number_name_en(n):
+    """Must match lib/content/number_names.dart."""
+    if n == 100:
+        return "One Hundred"
+    if n < 20:
+        return ONES[n]
+    tens, ones = divmod(n, 10)
+    return TENS[tens] if ones == 0 else f"{TENS[tens]}-{ONES[ones].lower()}"
+
+
+def number_id(n):
+    return number_name_en(n).lower().replace("-", "_").replace(" ", "_")
+
+
+# Curriculum: Nursery learns 1–20; LKG and UKG learn 1–100.
 NUMBERS = [
-    (1, "one", "One", "एक"), (2, "two", "Two", "दो"),
-    (3, "three", "Three", "तीन"), (4, "four", "Four", "चार"),
-    (5, "five", "Five", "पाँच"), (6, "six", "Six", "छह"),
-    (7, "seven", "Seven", "सात"), (8, "eight", "Eight", "आठ"),
-    (9, "nine", "Nine", "नौ"), (10, "ten", "Ten", "दस"),
+    (n, number_id(n), number_name_en(n), HINDI_NUMBERS[n],
+     ALL_LEVELS if n <= 20 else ["lkg", "ukg"])
+    for n in range(1, 101)
 ]
+assert len(HINDI_NUMBERS) == 101, len(HINDI_NUMBERS)
 
 ABC = [
     ("A", "a_apple", "Apple", "सेब"), ("B", "b_ball", "Ball", "गेंद"),
@@ -77,7 +113,8 @@ def write(name, items):
 def main():
     CONTENT.mkdir(parents=True, exist_ok=True)
     write("items_numbers.json",
-          [item("numbers", i, en, hi, number=n) for n, i, en, hi in NUMBERS])
+          [item("numbers", i, en, hi, number=n, levels=lv)
+           for n, i, en, hi, lv in NUMBERS])
     write("items_abc.json",
           [item("abc", i, en, hi, letter=l) for l, i, en, hi in ABC])
     write("items_animals.json",
