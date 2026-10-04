@@ -7,6 +7,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'app.dart';
 import 'content/repository/content_repository.dart';
+import 'core/audio/audio_service.dart';
 import 'core/storage/local_store.dart';
 
 Future<void> main() async {
@@ -44,6 +45,10 @@ Future<void> main() async {
     if (kDebugMode) rethrow;
     debugPrint('Content failed to load: $e\n$s');
   }
+
+  // Start audio (applies settings, starts music if enabled) and load SFX
+  // into memory without blocking the first frame.
+  unawaited(container.read(audioServiceProvider).preloadSfx());
 
   runApp(
     UncontrolledProviderScope(

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:kidoraplay/core/haptics/haptics.dart';
+import 'package:kidoraplay/core/settings/app_settings.dart';
 import 'package:kidoraplay/core/storage/local_store.dart';
 import 'package:kidoraplay/core/theme/app_tokens.dart';
 import 'package:kidoraplay/core/widgets/bouncy_button.dart';
 
+import '../../helpers/fake_audio.dart';
 import '../../helpers/pump_app.dart';
 
 Widget button({VoidCallback? onPressed}) => Center(
@@ -39,6 +40,18 @@ void main() {
     await tester.pumpAndSettle();
   });
 
+  testWidgets('tap plays the pop sound once, even when mashed',
+      (tester) async {
+    final audio = FakeAudio();
+    await pumpApp(tester, button(onPressed: () {}), audio: audio);
+    await tester.tap(find.byType(BouncyButton));
+    await tester.pump(const Duration(milliseconds: 50));
+    await tester.tap(find.byType(BouncyButton));
+    await tester.pump();
+    expect(audio.sfxNames, ['pop']);
+    await tester.pumpAndSettle();
+  });
+
   testWidgets('rapid repeated taps within 250 ms are ignored', (tester) async {
     var taps = 0;
     await pumpApp(tester, button(onPressed: () => taps++));
@@ -62,7 +75,7 @@ void main() {
     await pumpApp(
       tester,
       button(onPressed: () {}),
-      store: LocalStore.inMemory({vibrationEnabledKey: false}),
+      store: LocalStore.inMemory({SettingsKeys.vibration: false}),
     );
     await tester.tap(find.byType(BouncyButton));
     expect(haptics, isEmpty);

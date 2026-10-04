@@ -1,10 +1,7 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../storage/local_store.dart';
-
-/// Parent setting; toggled in the Parent Area (step 8).
-const vibrationEnabledKey = 'settings.vibration_enabled';
+import '../settings/app_settings.dart';
 
 /// Light haptic feedback for child taps, respecting the vibration setting.
 class Haptics {
@@ -17,7 +14,6 @@ class Haptics {
   }
 }
 
-final hapticsProvider = Provider<Haptics>((ref) {
-  final store = ref.watch(localStoreProvider);
-  return Haptics(() => store.getBool(vibrationEnabledKey, fallback: true));
-});
+final hapticsProvider = Provider<Haptics>(
+  (ref) => Haptics(() => ref.read(settingsProvider).vibrationEnabled),
+);

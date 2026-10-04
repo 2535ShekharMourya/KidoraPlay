@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../l10n/app_localizations.dart';
+import '../audio/audio_service.dart';
 import '../router/app_router.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_tokens.dart';
@@ -22,6 +23,7 @@ class BigBackButton extends StatelessWidget {
       child: BouncyButton(
         semanticLabel: AppLocalizations.of(context).back,
         sparkle: false,
+        sfx: Sfx.whoosh,
         onPressed: onPressed ??
             () => context.canPop()
                 ? context.pop()

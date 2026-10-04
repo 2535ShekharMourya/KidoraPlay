@@ -51,6 +51,8 @@ class LetterTile extends StatelessWidget {
         semanticLabel: tile.char,
         onPressed: onTap,
         sparkle: false,
+        // The letter's own voice clip is the tap sound.
+        sfx: null,
         minSize: size,
         child: AnimatedContainer(
           duration: reduceMotion ? Duration.zero : AppDurations.highlight,

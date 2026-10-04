@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../audio/audio_service.dart';
 import '../haptics/haptics.dart';
 import '../theme/app_tokens.dart';
 import 'particle_burst.dart';
@@ -10,7 +11,8 @@ import 'particle_burst.dart';
 /// The one tappable building block for child screens.
 ///
 /// Every tap gets instant feedback: squash on press, spring bounce
-/// (1.0 → 1.15 → 1.0) on release, a light haptic, and optionally a sparkle.
+/// (1.0 → 1.15 → 1.0) on release, a sound, a light haptic, and optionally a
+/// sparkle.
 /// Repeated taps within [AppDurations.tapDebounce] are ignored so toddler
 /// mashing doesn't trigger the action again and again.
 ///
@@ -21,6 +23,7 @@ class BouncyButton extends ConsumerStatefulWidget {
     required this.semanticLabel,
     required this.onPressed,
     this.sparkle = true,
+    this.sfx = Sfx.pop,
     this.minSize = AppSpacing.minTapTarget,
     super.key,
   });
@@ -33,6 +36,9 @@ class BouncyButton extends ConsumerStatefulWidget {
   /// Null disables the button (no feedback at all).
   final VoidCallback? onPressed;
   final bool sparkle;
+
+  /// Tap sound; null when the tap plays a voice clip instead.
+  final Sfx? sfx;
   final double minSize;
 
   @override
@@ -79,6 +85,9 @@ class _BouncyButtonState extends ConsumerState<BouncyButton>
     if (_cooldown?.isActive ?? false) return;
     _cooldown = Timer(AppDurations.tapDebounce, () {});
 
+    if (widget.sfx case final sfx?) {
+      ref.read(audioServiceProvider).playSfx(sfx);
+    }
     ref.read(hapticsProvider).tap();
     if (!MediaQuery.disableAnimationsOf(context)) {
       _bounce.forward(from: 0);

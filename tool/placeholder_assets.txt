@@ -157,6 +157,13 @@ assets/audio/letters/w.m4a
 assets/audio/letters/x.m4a
 assets/audio/letters/y.m4a
 assets/audio/letters/z.m4a
+assets/audio/music/home_loop.m4a
+assets/audio/sfx/cheer.m4a
+assets/audio/sfx/oops.m4a
+assets/audio/sfx/pop.m4a
+assets/audio/sfx/sparkle.m4a
+assets/audio/sfx/tap.m4a
+assets/audio/sfx/whoosh.m4a
 assets/images/abc/a_apple.webp
 assets/images/abc/b_ball.webp
 assets/images/abc/c_cat.webp

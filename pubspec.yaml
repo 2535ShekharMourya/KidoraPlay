@@ -8,6 +8,7 @@ environment:
   sdk: ^3.13.0
 
 dependencies:
+  audioplayers: ^6.8.1
   flutter:
     sdk: flutter
   flutter_localizations:
@@ -15,6 +16,7 @@ dependencies:
   flutter_riverpod: ^3.4.3
   go_router: ^18.0.2
   intl: any
+  just_audio: ^0.10.6
   shared_preferences: ^2.5.5
 
 dev_dependencies:
@@ -42,6 +44,8 @@ flutter:
     - assets/audio/letters/
     - assets/audio/animals/
     - assets/audio/birds/
+    - assets/audio/sfx/
+    - assets/audio/music/
 
   fonts:
     - family: Baloo2

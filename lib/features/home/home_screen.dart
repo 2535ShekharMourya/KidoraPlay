@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../content/models/section.dart';
+import '../../content/repository/content_repository.dart';
+import '../../core/audio/audio_service.dart';
+import '../../core/settings/app_settings.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_tokens.dart';
 import '../../core/theme/section_theme.dart';
@@ -10,12 +14,13 @@ import '../../core/widgets/pop_in.dart';
 import '../../core/widgets/section_background.dart';
 import '../../l10n/app_localizations.dart';
 
-/// Section menu. Tiles bounce and sparkle; navigation arrives in step 5.
-class HomeScreen extends StatelessWidget {
+/// Section menu. Tapping a tile says the section name; navigation arrives
+/// in step 5.
+class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context);
     final labels = {
       SectionId.numbers: l10n.sectionNumbers,
@@ -23,6 +28,16 @@ class HomeScreen extends StatelessWidget {
       SectionId.animals: l10n.sectionAnimals,
       SectionId.birds: l10n.sectionBirds,
     };
+    final catalog = ref.watch(contentCatalogProvider).value;
+
+    void sayName(SectionId id) {
+      final section = catalog?.section(id);
+      if (section == null) return;
+      final languages = ref.read(settingsProvider).language.languages;
+      ref
+          .read(audioServiceProvider)
+          .playVoiceSequence([for (final l in languages) section.voice(l)]);
+    }
 
     return Scaffold(
       body: SectionBackground(
@@ -42,7 +57,11 @@ class HomeScreen extends StatelessWidget {
                         index: i,
                         child: IdleFloat(
                           phase: i / SectionId.values.length,
-                          child: _SectionTile(id: id, label: labels[id]!),
+                          child: _SectionTile(
+                            id: id,
+                            label: labels[id]!,
+                            onPressed: () => sayName(id),
+                          ),
                         ),
                       ),
                     ),
@@ -57,17 +76,22 @@ class HomeScreen extends StatelessWidget {
 }
 
 class _SectionTile extends StatelessWidget {
-  const _SectionTile({required this.id, required this.label});
+  const _SectionTile({
+    required this.id,
+    required this.label,
+    required this.onPressed,
+  });
 
   final SectionId id;
   final String label;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
     final theme = SectionTheme.of(id);
     return BouncyButton(
       semanticLabel: label,
-      onPressed: () {},
+      onPressed: onPressed,
       child: Container(
         decoration: BoxDecoration(
           color: theme.accent,

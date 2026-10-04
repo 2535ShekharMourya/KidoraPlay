@@ -5,7 +5,6 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
-import 'package:kidoraplay/core/storage/local_store.dart';
 import 'package:kidoraplay/core/theme/app_tokens.dart';
 import 'package:kidoraplay/core/widgets/big_back_button.dart';
 import 'package:kidoraplay/l10n/app_localizations.dart';
@@ -30,9 +29,7 @@ void main() {
 
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
-          localStoreProvider.overrideWithValue(LocalStore.inMemory()),
-        ],
+        overrides: testOverrides(),
         child: MaterialApp.router(
           routerConfig: router,
           localizationsDelegates: const [
