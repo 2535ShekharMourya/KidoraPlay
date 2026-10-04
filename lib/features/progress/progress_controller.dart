@@ -49,6 +49,12 @@ class ProgressNotifier extends Notifier<ProgressState> {
     return (newSticker: newSticker, completedScope: completedScope);
   }
 
+  /// Parent Area: start over (removes every sticker).
+  Future<void> reset() async {
+    state = const ProgressState({});
+    await _store.setStringList(_key, const []);
+  }
+
   static bool _complete(List<LearningItem> items, Set<String> learned) =>
       items.every((i) => learned.contains(i.id));
 }

@@ -1,24 +1,86 @@
 {
   "@@locale": "en",
   "appTitle": "Kidoraplay",
-  "@appTitle": { "description": "App name" },
+  "@appTitle": {
+    "description": "App name"
+  },
   "sectionNumbers": "Numbers",
   "sectionAbc": "ABC",
   "sectionAnimals": "Animals",
   "sectionBirds": "Birds",
   "back": "Back",
-  "@back": { "description": "Semantics label for the big back button" },
+  "@back": {
+    "description": "Semantics label for the big back button"
+  },
   "next": "Next",
   "previous": "Previous",
   "numberRow": "{from} to {to}",
   "@numberRow": {
     "description": "Semantics label for a row of numbers, e.g. 1 to 10",
-    "placeholders": { "from": { "type": "int" }, "to": { "type": "int" } }
+    "placeholders": {
+      "from": {
+        "type": "int"
+      },
+      "to": {
+        "type": "int"
+      }
+    }
   },
   "placeValue": "{tens} tens and {ones} ones",
   "@placeValue": {
     "description": "Semantics label for the place-value picture",
-    "placeholders": { "tens": { "type": "int" }, "ones": { "type": "int" } }
+    "placeholders": {
+      "tens": {
+        "type": "int"
+      },
+      "ones": {
+        "type": "int"
+      }
+    }
   },
-  "stickerBook": "Sticker book"
+  "stickerBook": "Sticker book",
+  "parentArea": "Parents",
+  "parentGateTitle": "Grown-ups only",
+  "gateHold": "Press and hold the button for 3 seconds",
+  "gateHoldButton": "Hold",
+  "gateTapNumber": "Tap the number {word}",
+  "@gateTapNumber": {
+    "placeholders": {
+      "word": {
+        "type": "String"
+      }
+    }
+  },
+  "gateNumberWords": "one,two,three,four,five,six,seven,eight,nine",
+  "@gateNumberWords": {
+    "description": "Number words 1 to 9, comma separated, for the parent gate"
+  },
+  "gateTryAgain": "Not quite. Here is a new one.",
+  "cancel": "Cancel",
+  "settingsClass": "Class",
+  "levelNursery": "Nursery",
+  "levelLkg": "LKG",
+  "levelUkg": "UKG",
+  "settingsLanguage": "Kido speaks",
+  "langEnglish": "English",
+  "langHindi": "हिंदी",
+  "langBoth": "English + हिंदी",
+  "settingsSound": "Sound",
+  "settingsMusic": "Background music",
+  "settingsVibration": "Vibration",
+  "progressTitle": "Progress",
+  "progressStickers": "{count} stickers collected",
+  "@progressStickers": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "resetProgress": "Reset progress",
+  "resetConfirm": "Start over? All stickers will be removed.",
+  "reset": "Reset",
+  "privacyNote": "Kidoraplay collects no personal data. Everything stays on this device.",
+  "licences": "Licences and credits",
+  "aboutTitle": "About"
 }

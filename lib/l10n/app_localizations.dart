@@ -163,6 +163,168 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Sticker book'**
   String get stickerBook;
+
+  /// No description provided for @parentArea.
+  ///
+  /// In en, this message translates to:
+  /// **'Parents'**
+  String get parentArea;
+
+  /// No description provided for @parentGateTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Grown-ups only'**
+  String get parentGateTitle;
+
+  /// No description provided for @gateHold.
+  ///
+  /// In en, this message translates to:
+  /// **'Press and hold the button for 3 seconds'**
+  String get gateHold;
+
+  /// No description provided for @gateHoldButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Hold'**
+  String get gateHoldButton;
+
+  /// No description provided for @gateTapNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap the number {word}'**
+  String gateTapNumber(String word);
+
+  /// Number words 1 to 9, comma separated, for the parent gate
+  ///
+  /// In en, this message translates to:
+  /// **'one,two,three,four,five,six,seven,eight,nine'**
+  String get gateNumberWords;
+
+  /// No description provided for @gateTryAgain.
+  ///
+  /// In en, this message translates to:
+  /// **'Not quite. Here is a new one.'**
+  String get gateTryAgain;
+
+  /// No description provided for @cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// No description provided for @settingsClass.
+  ///
+  /// In en, this message translates to:
+  /// **'Class'**
+  String get settingsClass;
+
+  /// No description provided for @levelNursery.
+  ///
+  /// In en, this message translates to:
+  /// **'Nursery'**
+  String get levelNursery;
+
+  /// No description provided for @levelLkg.
+  ///
+  /// In en, this message translates to:
+  /// **'LKG'**
+  String get levelLkg;
+
+  /// No description provided for @levelUkg.
+  ///
+  /// In en, this message translates to:
+  /// **'UKG'**
+  String get levelUkg;
+
+  /// No description provided for @settingsLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Kido speaks'**
+  String get settingsLanguage;
+
+  /// No description provided for @langEnglish.
+  ///
+  /// In en, this message translates to:
+  /// **'English'**
+  String get langEnglish;
+
+  /// No description provided for @langHindi.
+  ///
+  /// In en, this message translates to:
+  /// **'हिंदी'**
+  String get langHindi;
+
+  /// No description provided for @langBoth.
+  ///
+  /// In en, this message translates to:
+  /// **'English + हिंदी'**
+  String get langBoth;
+
+  /// No description provided for @settingsSound.
+  ///
+  /// In en, this message translates to:
+  /// **'Sound'**
+  String get settingsSound;
+
+  /// No description provided for @settingsMusic.
+  ///
+  /// In en, this message translates to:
+  /// **'Background music'**
+  String get settingsMusic;
+
+  /// No description provided for @settingsVibration.
+  ///
+  /// In en, this message translates to:
+  /// **'Vibration'**
+  String get settingsVibration;
+
+  /// No description provided for @progressTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Progress'**
+  String get progressTitle;
+
+  /// No description provided for @progressStickers.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} stickers collected'**
+  String progressStickers(int count);
+
+  /// No description provided for @resetProgress.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset progress'**
+  String get resetProgress;
+
+  /// No description provided for @resetConfirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Start over? All stickers will be removed.'**
+  String get resetConfirm;
+
+  /// No description provided for @reset.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset'**
+  String get reset;
+
+  /// No description provided for @privacyNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Kidoraplay collects no personal data. Everything stays on this device.'**
+  String get privacyNote;
+
+  /// No description provided for @licences.
+  ///
+  /// In en, this message translates to:
+  /// **'Licences and credits'**
+  String get licences;
+
+  /// No description provided for @aboutTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'About'**
+  String get aboutTitle;
 }
 
 class _AppLocalizationsDelegate

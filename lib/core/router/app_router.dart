@@ -6,6 +6,7 @@ import '../../content/models/section.dart';
 import '../../features/home/home_screen.dart';
 import '../../features/learn_card/learn_card_screen.dart';
 import '../../features/numbers/number_rows_screen.dart';
+import '../../features/parent/parent_area_screen.dart';
 import '../../features/progress/sticker_book_screen.dart';
 import '../../features/section_grid/item_grid_screen.dart';
 import '../../features/section_grid/section_items.dart';
@@ -18,6 +19,7 @@ abstract final class AppRoutes {
   static const splash = '/';
   static const home = '/home';
   static const stickers = '/home/stickers';
+  static const parent = '/home/parent';
 
   static String section(SectionId id) => '$home/section/${id.name}';
 
@@ -86,6 +88,11 @@ final appRouterProvider = Provider<GoRouter>((ref) {
         pageBuilder: (context, state) =>
             _playfulPage(state, const HomeScreen()),
         routes: [
+          GoRoute(
+            path: 'parent',
+            pageBuilder: (context, state) =>
+                _playfulPage(state, const ParentAreaScreen()),
+          ),
           GoRoute(
             path: 'stickers',
             pageBuilder: (context, state) =>

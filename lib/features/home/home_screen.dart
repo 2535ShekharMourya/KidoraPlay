@@ -110,6 +110,24 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   ],
                 ),
               ),
+              // Grown-ups' corner: small and plain on purpose; the parent
+              // gate behind it keeps children out.
+              Align(
+                alignment: Alignment.topLeft,
+                child: Padding(
+                  padding: const EdgeInsets.all(AppSpacing.md),
+                  child: Semantics(
+                    button: true,
+                    label: l10n.parentArea,
+                    excludeSemantics: true,
+                    child: IconButton.filledTonal(
+                      iconSize: AppSpacing.xl,
+                      onPressed: () => context.go(AppRoutes.parent),
+                      icon: const Icon(Icons.lock_rounded),
+                    ),
+                  ),
+                ),
+              ),
               Align(
                 alignment: Alignment.topRight,
                 child: Padding(
