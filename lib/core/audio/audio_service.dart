@@ -50,6 +50,10 @@ class AudioService {
 
   int _voiceToken = 0;
   bool _voiceActive = false;
+  Object? _voiceOwner;
+
+  /// True while a voice clip is playing (drives Kido's talking mouth).
+  final speaking = ValueNotifier<bool>(false);
   String? _lastVoiceKey;
   DateTime? _lastVoiceAt;
   bool _musicPlaying = false;
@@ -60,7 +64,8 @@ class AudioService {
   // ---------------------------------------------------------------- voice
 
   /// Plays one voice clip. Returns true if it played to the end.
-  Future<bool> playVoice(String asset) => playVoiceSequence([asset]);
+  Future<bool> playVoice(String asset, {Object? owner}) =>
+      playVoiceSequence([asset], owner: owner);
 
   /// Plays clips back to back (spelling letters, stitched Kido lines).
   /// [onSegment] is called with each index just before it plays, e.g. to
@@ -71,11 +76,15 @@ class AudioService {
   ///
   /// [debounce] guards against tap mashing; scripted lessons turn it off so
   /// a word can be said twice in a row.
+  ///
+  /// [owner] tags the playback so [stopVoice] from a closing screen only
+  /// stops its own voice, never the next screen's.
   Future<bool> playVoiceSequence(
     List<String> assets, {
     void Function(int index)? onSegment,
     Duration gap = Duration.zero,
     bool debounce = true,
+    Object? owner,
   }) async {
     if (assets.isEmpty || !_settings.soundEnabled || _paused) return false;
 
@@ -95,8 +104,8 @@ class AudioService {
     if (_voiceActive) await _safe(_voice.stop, 'stop voice');
     if (token != _voiceToken) return false;
 
-    _voiceActive = true;
-    _setDucked(true);
+    _setVoiceActive(true);
+    _voiceOwner = owner;
     try {
       for (var i = 0; i < assets.length; i++) {
         if (token != _voiceToken) return false;
@@ -112,18 +121,27 @@ class AudioService {
       return false;
     } finally {
       if (token == _voiceToken) {
-        _voiceActive = false;
-        _setDucked(false);
+        _setVoiceActive(false);
+        _voiceOwner = null;
       }
     }
   }
 
-  Future<void> stopVoice() async {
+  /// Stops the current voice. With [owner], only stops playback started by
+  /// that owner.
+  Future<void> stopVoice({Object? owner}) async {
+    if (owner != null && !identical(owner, _voiceOwner)) return;
     _voiceToken++;
+    _voiceOwner = null;
     if (!_voiceActive) return;
-    _voiceActive = false;
-    _setDucked(false);
+    _setVoiceActive(false);
     await _safe(_voice.stop, 'stop voice');
+  }
+
+  void _setVoiceActive(bool active) {
+    _voiceActive = active;
+    speaking.value = active;
+    _setDucked(active);
   }
 
   // ---------------------------------------------------------------- sfx
@@ -191,6 +209,7 @@ class AudioService {
 
   Future<void> dispose() async {
     _voiceToken++;
+    speaking.dispose();
     await Future.wait([
       _safe(_voice.dispose, 'dispose voice'),
       _safe(_sfx.dispose, 'dispose sfx'),

@@ -30,9 +30,9 @@ void main() {
 
       expect(catalog.sections.map((s) => s.id), SectionId.values);
       expect(catalog.itemsFor(SectionId.numbers), hasLength(100));
-      for (final id in [SectionId.abc, SectionId.animals, SectionId.birds]) {
-        expect(catalog.itemsFor(id), hasLength(10), reason: id.name);
-      }
+      expect(catalog.itemsFor(SectionId.abc), hasLength(26));
+      expect(catalog.itemsFor(SectionId.animals), hasLength(15));
+      expect(catalog.itemsFor(SectionId.birds), hasLength(10));
       expect(catalog.itemById('peacock')?.wordHi, 'मोर');
       expect(catalog.itemById('seven')?.number, 7);
       for (final event in KidoEvent.all) {
@@ -63,7 +63,7 @@ void main() {
       );
       expect(
         catalog.itemsFor(SectionId.animals, level: Level.lkg),
-        hasLength(10),
+        hasLength(15),
       );
     });
   });

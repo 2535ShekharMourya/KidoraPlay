@@ -1,3 +1,4 @@
+import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
@@ -49,7 +50,7 @@ void main() {
     await tester.tap(find.text('Numbers'));
     await settle(tester);
     expect(find.byType(NumberRowsScreen), findsOneWidget);
-    expect(audio.voice.played, ['assets/audio/en/sections/numbers.m4a']);
+    expect(audio.voice.played.last, 'assets/audio/en/sections/numbers.m4a');
 
     await tester.tap(find.bySemanticsLabel('21 to 30'));
     await settle(tester);
@@ -101,7 +102,13 @@ void main() {
     );
     await settle(tester);
     expect(audio.voice.played.length, greaterThan(firstRun));
-    expect(audio.voice.played.last, 'assets/audio/en/lion.m4a');
+    expect(
+      audio.voice.played.sublist(firstRun),
+      contains('assets/audio/en/kido/look.m4a'),
+    );
+    // Close the app so lesson and hint timers end with it.
+    await tester.pumpWidget(const SizedBox());
+    await tester.pump(const Duration(seconds: 5));
   });
 
   testWidgets('unknown section link goes home', (tester) async {

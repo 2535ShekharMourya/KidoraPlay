@@ -81,6 +81,31 @@ void main() {
       expect(await service.playVoice('ok.m4a'), isTrue);
     });
 
+    test('a closing screen only stops its own voice', () async {
+      final oldScreen = Object();
+      final newScreen = Object();
+      audio.voice.holdPlayback = true;
+      final playing = service.playVoice('ball.m4a', owner: newScreen);
+      await pumpEventQueue();
+
+      await service.stopVoice(owner: oldScreen); // not the owner: ignored
+      expect(service.isSpeaking, isTrue);
+      expect(audio.voice.stops, 0);
+
+      await service.stopVoice(owner: newScreen);
+      expect(await playing, isFalse);
+    });
+
+    test('speaking notifier follows playback', () async {
+      audio.voice.holdPlayback = true;
+      final playing = service.playVoice('a.m4a');
+      await pumpEventQueue();
+      expect(service.speaking.value, isTrue);
+      audio.voice.finishCurrent();
+      await playing;
+      expect(service.speaking.value, isFalse);
+    });
+
     test('stopVoice interrupts', () async {
       audio.voice.holdPlayback = true;
       final playing = service.playVoice('long.m4a');

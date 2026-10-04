@@ -13,7 +13,10 @@ abstract final class AppColors {
 
   // Kido
   static const kidoGrey = Color(0xFF9FB4D1);
+  static const kidoGreyDark = Color(0xFF7F95B5);
   static const kidoPink = Color(0xFFFFB3C7);
+  static const kidoEye = Color(0xFF2E2A47);
+  static const kidoShadow = Color(0x22000000);
 
   // Feedback
   static const success = Color(0xFF4CC38A);

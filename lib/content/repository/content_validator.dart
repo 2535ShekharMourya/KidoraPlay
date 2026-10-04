@@ -61,6 +61,8 @@ List<String> validateContent(
       requireAsset(where, 'voice_en', item.voiceEn);
       requireAsset(where, 'voice_hi', item.voiceHi);
       requireAsset(where, 'sound', item.sound);
+      requireAsset(where, 'voice_fact_en', item.voiceFactEn);
+      requireAsset(where, 'voice_fact_hi', item.voiceFactHi);
       for (final tile in item.spelling) {
         if (tile.audioAsset case final audio?) {
           requireAsset(where, 'letter ${tile.char} audio', audio);
@@ -125,6 +127,26 @@ List<String> _validateItem(
       '$where: "word_en" may only contain letters, single spaces and '
       'hyphens (it is used for spelling): "${item.wordEn}"',
     );
+  }
+  final hasFact = [
+    item.factEn,
+    item.factHi,
+    item.voiceFactEn,
+    item.voiceFactHi,
+  ].where((f) => f != null && f.trim().isNotEmpty).length;
+  if (hasFact != 0 && hasFact != 4) {
+    errors.add(
+      '$where: a fact needs fact_en, fact_hi, voice_fact_en and '
+      'voice_fact_hi together',
+    );
+  }
+  for (final (field, path) in [
+    ('voice_fact_en', item.voiceFactEn),
+    ('voice_fact_hi', item.voiceFactHi),
+  ]) {
+    if (path != null && !path.split('/').last.startsWith('${item.id}_fact')) {
+      errors.add('$where: "$field" file name must be ${item.id}_fact');
+    }
   }
   if (!item.image.endsWith('.webp')) {
     errors.add('$where: "image" must be a .webp file');

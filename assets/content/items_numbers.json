@@ -15,6 +15,10 @@
     "voice_en": "assets/audio/en/one.m4a",
     "voice_hi": "assets/audio/hi/one.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -33,6 +37,10 @@
     "voice_en": "assets/audio/en/two.m4a",
     "voice_hi": "assets/audio/hi/two.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -51,6 +59,10 @@
     "voice_en": "assets/audio/en/three.m4a",
     "voice_hi": "assets/audio/hi/three.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -69,6 +81,10 @@
     "voice_en": "assets/audio/en/four.m4a",
     "voice_hi": "assets/audio/hi/four.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -87,6 +103,10 @@
     "voice_en": "assets/audio/en/five.m4a",
     "voice_hi": "assets/audio/hi/five.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -105,6 +125,10 @@
     "voice_en": "assets/audio/en/six.m4a",
     "voice_hi": "assets/audio/hi/six.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -123,6 +147,10 @@
     "voice_en": "assets/audio/en/seven.m4a",
     "voice_hi": "assets/audio/hi/seven.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -141,6 +169,10 @@
     "voice_en": "assets/audio/en/eight.m4a",
     "voice_hi": "assets/audio/hi/eight.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -159,6 +191,10 @@
     "voice_en": "assets/audio/en/nine.m4a",
     "voice_hi": "assets/audio/hi/nine.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -177,6 +213,10 @@
     "voice_en": "assets/audio/en/ten.m4a",
     "voice_hi": "assets/audio/hi/ten.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -195,6 +235,10 @@
     "voice_en": "assets/audio/en/eleven.m4a",
     "voice_hi": "assets/audio/hi/eleven.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -213,6 +257,10 @@
     "voice_en": "assets/audio/en/twelve.m4a",
     "voice_hi": "assets/audio/hi/twelve.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -231,6 +279,10 @@
     "voice_en": "assets/audio/en/thirteen.m4a",
     "voice_hi": "assets/audio/hi/thirteen.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -249,6 +301,10 @@
     "voice_en": "assets/audio/en/fourteen.m4a",
     "voice_hi": "assets/audio/hi/fourteen.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -267,6 +323,10 @@
     "voice_en": "assets/audio/en/fifteen.m4a",
     "voice_hi": "assets/audio/hi/fifteen.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -285,6 +345,10 @@
     "voice_en": "assets/audio/en/sixteen.m4a",
     "voice_hi": "assets/audio/hi/sixteen.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -303,6 +367,10 @@
     "voice_en": "assets/audio/en/seventeen.m4a",
     "voice_hi": "assets/audio/hi/seventeen.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -321,6 +389,10 @@
     "voice_en": "assets/audio/en/eighteen.m4a",
     "voice_hi": "assets/audio/hi/eighteen.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -339,6 +411,10 @@
     "voice_en": "assets/audio/en/nineteen.m4a",
     "voice_hi": "assets/audio/hi/nineteen.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -357,6 +433,10 @@
     "voice_en": "assets/audio/en/twenty.m4a",
     "voice_hi": "assets/audio/hi/twenty.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -374,6 +454,10 @@
     "voice_en": "assets/audio/en/twenty_one.m4a",
     "voice_hi": "assets/audio/hi/twenty_one.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -391,6 +475,10 @@
     "voice_en": "assets/audio/en/twenty_two.m4a",
     "voice_hi": "assets/audio/hi/twenty_two.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -408,6 +496,10 @@
     "voice_en": "assets/audio/en/twenty_three.m4a",
     "voice_hi": "assets/audio/hi/twenty_three.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -425,6 +517,10 @@
     "voice_en": "assets/audio/en/twenty_four.m4a",
     "voice_hi": "assets/audio/hi/twenty_four.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -442,6 +538,10 @@
     "voice_en": "assets/audio/en/twenty_five.m4a",
     "voice_hi": "assets/audio/hi/twenty_five.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -459,6 +559,10 @@
     "voice_en": "assets/audio/en/twenty_six.m4a",
     "voice_hi": "assets/audio/hi/twenty_six.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -476,6 +580,10 @@
     "voice_en": "assets/audio/en/twenty_seven.m4a",
     "voice_hi": "assets/audio/hi/twenty_seven.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -493,6 +601,10 @@
     "voice_en": "assets/audio/en/twenty_eight.m4a",
     "voice_hi": "assets/audio/hi/twenty_eight.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -510,6 +622,10 @@
     "voice_en": "assets/audio/en/twenty_nine.m4a",
     "voice_hi": "assets/audio/hi/twenty_nine.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -527,6 +643,10 @@
     "voice_en": "assets/audio/en/thirty.m4a",
     "voice_hi": "assets/audio/hi/thirty.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -544,6 +664,10 @@
     "voice_en": "assets/audio/en/thirty_one.m4a",
     "voice_hi": "assets/audio/hi/thirty_one.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -561,6 +685,10 @@
     "voice_en": "assets/audio/en/thirty_two.m4a",
     "voice_hi": "assets/audio/hi/thirty_two.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -578,6 +706,10 @@
     "voice_en": "assets/audio/en/thirty_three.m4a",
     "voice_hi": "assets/audio/hi/thirty_three.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -595,6 +727,10 @@
     "voice_en": "assets/audio/en/thirty_four.m4a",
     "voice_hi": "assets/audio/hi/thirty_four.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -612,6 +748,10 @@
     "voice_en": "assets/audio/en/thirty_five.m4a",
     "voice_hi": "assets/audio/hi/thirty_five.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -629,6 +769,10 @@
     "voice_en": "assets/audio/en/thirty_six.m4a",
     "voice_hi": "assets/audio/hi/thirty_six.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -646,6 +790,10 @@
     "voice_en": "assets/audio/en/thirty_seven.m4a",
     "voice_hi": "assets/audio/hi/thirty_seven.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -663,6 +811,10 @@
     "voice_en": "assets/audio/en/thirty_eight.m4a",
     "voice_hi": "assets/audio/hi/thirty_eight.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -680,6 +832,10 @@
     "voice_en": "assets/audio/en/thirty_nine.m4a",
     "voice_hi": "assets/audio/hi/thirty_nine.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -697,6 +853,10 @@
     "voice_en": "assets/audio/en/forty.m4a",
     "voice_hi": "assets/audio/hi/forty.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -714,6 +874,10 @@
     "voice_en": "assets/audio/en/forty_one.m4a",
     "voice_hi": "assets/audio/hi/forty_one.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -731,6 +895,10 @@
     "voice_en": "assets/audio/en/forty_two.m4a",
     "voice_hi": "assets/audio/hi/forty_two.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -748,6 +916,10 @@
     "voice_en": "assets/audio/en/forty_three.m4a",
     "voice_hi": "assets/audio/hi/forty_three.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -765,6 +937,10 @@
     "voice_en": "assets/audio/en/forty_four.m4a",
     "voice_hi": "assets/audio/hi/forty_four.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -782,6 +958,10 @@
     "voice_en": "assets/audio/en/forty_five.m4a",
     "voice_hi": "assets/audio/hi/forty_five.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -799,6 +979,10 @@
     "voice_en": "assets/audio/en/forty_six.m4a",
     "voice_hi": "assets/audio/hi/forty_six.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -816,6 +1000,10 @@
     "voice_en": "assets/audio/en/forty_seven.m4a",
     "voice_hi": "assets/audio/hi/forty_seven.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -833,6 +1021,10 @@
     "voice_en": "assets/audio/en/forty_eight.m4a",
     "voice_hi": "assets/audio/hi/forty_eight.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -850,6 +1042,10 @@
     "voice_en": "assets/audio/en/forty_nine.m4a",
     "voice_hi": "assets/audio/hi/forty_nine.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -867,6 +1063,10 @@
     "voice_en": "assets/audio/en/fifty.m4a",
     "voice_hi": "assets/audio/hi/fifty.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -884,6 +1084,10 @@
     "voice_en": "assets/audio/en/fifty_one.m4a",
     "voice_hi": "assets/audio/hi/fifty_one.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -901,6 +1105,10 @@
     "voice_en": "assets/audio/en/fifty_two.m4a",
     "voice_hi": "assets/audio/hi/fifty_two.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -918,6 +1126,10 @@
     "voice_en": "assets/audio/en/fifty_three.m4a",
     "voice_hi": "assets/audio/hi/fifty_three.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -935,6 +1147,10 @@
     "voice_en": "assets/audio/en/fifty_four.m4a",
     "voice_hi": "assets/audio/hi/fifty_four.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -952,6 +1168,10 @@
     "voice_en": "assets/audio/en/fifty_five.m4a",
     "voice_hi": "assets/audio/hi/fifty_five.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -969,6 +1189,10 @@
     "voice_en": "assets/audio/en/fifty_six.m4a",
     "voice_hi": "assets/audio/hi/fifty_six.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -986,6 +1210,10 @@
     "voice_en": "assets/audio/en/fifty_seven.m4a",
     "voice_hi": "assets/audio/hi/fifty_seven.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1003,6 +1231,10 @@
     "voice_en": "assets/audio/en/fifty_eight.m4a",
     "voice_hi": "assets/audio/hi/fifty_eight.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1020,6 +1252,10 @@
     "voice_en": "assets/audio/en/fifty_nine.m4a",
     "voice_hi": "assets/audio/hi/fifty_nine.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1037,6 +1273,10 @@
     "voice_en": "assets/audio/en/sixty.m4a",
     "voice_hi": "assets/audio/hi/sixty.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1054,6 +1294,10 @@
     "voice_en": "assets/audio/en/sixty_one.m4a",
     "voice_hi": "assets/audio/hi/sixty_one.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1071,6 +1315,10 @@
     "voice_en": "assets/audio/en/sixty_two.m4a",
     "voice_hi": "assets/audio/hi/sixty_two.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1088,6 +1336,10 @@
     "voice_en": "assets/audio/en/sixty_three.m4a",
     "voice_hi": "assets/audio/hi/sixty_three.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1105,6 +1357,10 @@
     "voice_en": "assets/audio/en/sixty_four.m4a",
     "voice_hi": "assets/audio/hi/sixty_four.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1122,6 +1378,10 @@
     "voice_en": "assets/audio/en/sixty_five.m4a",
     "voice_hi": "assets/audio/hi/sixty_five.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1139,6 +1399,10 @@
     "voice_en": "assets/audio/en/sixty_six.m4a",
     "voice_hi": "assets/audio/hi/sixty_six.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1156,6 +1420,10 @@
     "voice_en": "assets/audio/en/sixty_seven.m4a",
     "voice_hi": "assets/audio/hi/sixty_seven.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1173,6 +1441,10 @@
     "voice_en": "assets/audio/en/sixty_eight.m4a",
     "voice_hi": "assets/audio/hi/sixty_eight.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1190,6 +1462,10 @@
     "voice_en": "assets/audio/en/sixty_nine.m4a",
     "voice_hi": "assets/audio/hi/sixty_nine.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1207,6 +1483,10 @@
     "voice_en": "assets/audio/en/seventy.m4a",
     "voice_hi": "assets/audio/hi/seventy.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1224,6 +1504,10 @@
     "voice_en": "assets/audio/en/seventy_one.m4a",
     "voice_hi": "assets/audio/hi/seventy_one.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1241,6 +1525,10 @@
     "voice_en": "assets/audio/en/seventy_two.m4a",
     "voice_hi": "assets/audio/hi/seventy_two.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1258,6 +1546,10 @@
     "voice_en": "assets/audio/en/seventy_three.m4a",
     "voice_hi": "assets/audio/hi/seventy_three.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1275,6 +1567,10 @@
     "voice_en": "assets/audio/en/seventy_four.m4a",
     "voice_hi": "assets/audio/hi/seventy_four.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1292,6 +1588,10 @@
     "voice_en": "assets/audio/en/seventy_five.m4a",
     "voice_hi": "assets/audio/hi/seventy_five.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1309,6 +1609,10 @@
     "voice_en": "assets/audio/en/seventy_six.m4a",
     "voice_hi": "assets/audio/hi/seventy_six.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1326,6 +1630,10 @@
     "voice_en": "assets/audio/en/seventy_seven.m4a",
     "voice_hi": "assets/audio/hi/seventy_seven.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1343,6 +1651,10 @@
     "voice_en": "assets/audio/en/seventy_eight.m4a",
     "voice_hi": "assets/audio/hi/seventy_eight.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1360,6 +1672,10 @@
     "voice_en": "assets/audio/en/seventy_nine.m4a",
     "voice_hi": "assets/audio/hi/seventy_nine.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1377,6 +1693,10 @@
     "voice_en": "assets/audio/en/eighty.m4a",
     "voice_hi": "assets/audio/hi/eighty.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1394,6 +1714,10 @@
     "voice_en": "assets/audio/en/eighty_one.m4a",
     "voice_hi": "assets/audio/hi/eighty_one.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1411,6 +1735,10 @@
     "voice_en": "assets/audio/en/eighty_two.m4a",
     "voice_hi": "assets/audio/hi/eighty_two.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1428,6 +1756,10 @@
     "voice_en": "assets/audio/en/eighty_three.m4a",
     "voice_hi": "assets/audio/hi/eighty_three.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1445,6 +1777,10 @@
     "voice_en": "assets/audio/en/eighty_four.m4a",
     "voice_hi": "assets/audio/hi/eighty_four.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1462,6 +1798,10 @@
     "voice_en": "assets/audio/en/eighty_five.m4a",
     "voice_hi": "assets/audio/hi/eighty_five.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1479,6 +1819,10 @@
     "voice_en": "assets/audio/en/eighty_six.m4a",
     "voice_hi": "assets/audio/hi/eighty_six.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1496,6 +1840,10 @@
     "voice_en": "assets/audio/en/eighty_seven.m4a",
     "voice_hi": "assets/audio/hi/eighty_seven.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1513,6 +1861,10 @@
     "voice_en": "assets/audio/en/eighty_eight.m4a",
     "voice_hi": "assets/audio/hi/eighty_eight.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1530,6 +1882,10 @@
     "voice_en": "assets/audio/en/eighty_nine.m4a",
     "voice_hi": "assets/audio/hi/eighty_nine.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1547,6 +1903,10 @@
     "voice_en": "assets/audio/en/ninety.m4a",
     "voice_hi": "assets/audio/hi/ninety.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1564,6 +1924,10 @@
     "voice_en": "assets/audio/en/ninety_one.m4a",
     "voice_hi": "assets/audio/hi/ninety_one.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1581,6 +1945,10 @@
     "voice_en": "assets/audio/en/ninety_two.m4a",
     "voice_hi": "assets/audio/hi/ninety_two.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1598,6 +1966,10 @@
     "voice_en": "assets/audio/en/ninety_three.m4a",
     "voice_hi": "assets/audio/hi/ninety_three.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1615,6 +1987,10 @@
     "voice_en": "assets/audio/en/ninety_four.m4a",
     "voice_hi": "assets/audio/hi/ninety_four.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1632,6 +2008,10 @@
     "voice_en": "assets/audio/en/ninety_five.m4a",
     "voice_hi": "assets/audio/hi/ninety_five.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1649,6 +2029,10 @@
     "voice_en": "assets/audio/en/ninety_six.m4a",
     "voice_hi": "assets/audio/hi/ninety_six.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1666,6 +2050,10 @@
     "voice_en": "assets/audio/en/ninety_seven.m4a",
     "voice_hi": "assets/audio/hi/ninety_seven.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1683,6 +2071,10 @@
     "voice_en": "assets/audio/en/ninety_eight.m4a",
     "voice_hi": "assets/audio/hi/ninety_eight.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1700,6 +2092,10 @@
     "voice_en": "assets/audio/en/ninety_nine.m4a",
     "voice_hi": "assets/audio/hi/ninety_nine.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   },
   {
@@ -1717,6 +2113,10 @@
     "voice_en": "assets/audio/en/one_hundred.m4a",
     "voice_hi": "assets/audio/hi/one_hundred.m4a",
     "sound": null,
+    "fact_en": null,
+    "fact_hi": null,
+    "voice_fact_en": null,
+    "voice_fact_hi": null,
     "rive_reaction": null
   }
 ]

@@ -7,6 +7,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:kidoraplay/content/repository/content_catalog.dart';
 import 'package:kidoraplay/content/repository/content_repository.dart';
 import 'package:kidoraplay/core/audio/audio_service.dart';
+import 'package:kidoraplay/core/settings/app_settings.dart';
 import 'package:kidoraplay/core/storage/local_store.dart';
 import 'package:kidoraplay/core/theme/app_theme.dart';
 import 'package:kidoraplay/l10n/app_localizations.dart';
@@ -29,7 +30,11 @@ List<Override> testOverrides({
   ContentCatalog? catalog,
 }) =>
     [
-      localStoreProvider.overrideWithValue(store ?? LocalStore.inMemory()),
+      // English-only unless a test chooses a language, so expected clip
+      // lists stay short.
+      localStoreProvider.overrideWithValue(
+        store ?? LocalStore.inMemory({SettingsKeys.language: 'en'}),
+      ),
       audioChannelsProvider.overrideWithValue((audio ?? FakeAudio()).channels),
       if (catalog != null)
         contentCatalogProvider.overrideWith((ref) async => catalog),

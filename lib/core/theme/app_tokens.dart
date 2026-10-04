@@ -31,6 +31,12 @@ abstract final class AppLayout {
   /// buttons because child screens never scroll or swipe.
   static const gridColumns = 5;
   static const gridRows = 2;
+
+  /// Kido's height as a share of screen height (spec: 18–22%).
+  static const kidoHeightFraction = 0.2;
+
+  /// Kido's width / height.
+  static const kidoAspect = 1.2;
 }
 
 /// Corner radius tokens.
@@ -66,6 +72,16 @@ abstract final class AppDurations {
   /// Per-letter rhythm when there is no sound (muted or missing audio).
   static const silentSegment = Duration(milliseconds: 450);
   static const wiggle = Duration(milliseconds: 180);
+  static const kidoIdle = Duration(milliseconds: 2600);
+  static const kidoTalk = Duration(milliseconds: 240);
+  static const kidoHold = Duration(milliseconds: 450);
+  static const beckon = Duration(milliseconds: 700);
+
+  /// Quiet gap after "Say it with me… Apple!" for the child to repeat.
+  static const echoPause = Duration(milliseconds: 1600);
+
+  /// Count along up to this number on number cards (longer gets tiring).
+  static const countAlongMax = 10;
 }
 
 /// Curve tokens.

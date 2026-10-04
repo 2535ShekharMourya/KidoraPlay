@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../content/spelling.dart';
 import '../../core/theme/app_tokens.dart';
+import '../../core/widgets/beckon.dart';
 import '../../core/widgets/letter_tile.dart';
 
 /// A row of letter tiles that appear one by one and light up as each
@@ -15,6 +16,9 @@ class SpellingStrip extends StatelessWidget {
     required this.highlighted,
     required this.accent,
     required this.onTapLetter,
+    this.beckonIndex,
+    this.strongBeckon = false,
+    this.tileKeys,
     super.key,
   });
 
@@ -23,6 +27,13 @@ class SpellingStrip extends StatelessWidget {
   final int? highlighted;
   final Color accent;
   final void Function(int index) onTapLetter;
+
+  /// Tile calling for a tap ("we do"), glowing; bouncing when [strongBeckon].
+  final int? beckonIndex;
+  final bool strongBeckon;
+
+  /// Optional keys so Kido can find each tile on screen.
+  final List<GlobalKey>? tileKeys;
 
   /// Silent tiles (hyphen, space) are narrower than letters.
   static const _silentWidth = 0.4;
@@ -60,12 +71,18 @@ class SpellingStrip extends StatelessWidget {
                       duration:
                           reduceMotion ? Duration.zero : AppDurations.popIn,
                       curve: AppCurves.popIn,
-                      child: LetterTile(
-                        tile: tile,
-                        accent: accent,
-                        size: size,
-                        highlighted: highlighted == i,
-                        onTap: () => onTapLetter(i),
+                      child: Beckon(
+                        key: tileKeys?[i],
+                        active: beckonIndex == i,
+                        strong: strongBeckon,
+                        radius: AppRadii.md,
+                        child: LetterTile(
+                          tile: tile,
+                          accent: accent,
+                          size: size,
+                          highlighted: highlighted == i,
+                          onTap: () => onTapLetter(i),
+                        ),
                       ),
                     ),
                   ),

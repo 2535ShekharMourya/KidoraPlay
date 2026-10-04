@@ -15,6 +15,10 @@
     "voice_en": "assets/audio/en/crow.m4a",
     "voice_hi": "assets/audio/hi/crow.m4a",
     "sound": "assets/audio/birds/crow.m4a",
+    "fact_en": "A crow is black and clever!",
+    "fact_hi": "कौआ काला और चतुर होता है!",
+    "voice_fact_en": "assets/audio/en/crow_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/crow_fact.m4a",
     "rive_reaction": null
   },
   {
@@ -33,6 +37,10 @@
     "voice_en": "assets/audio/en/parrot.m4a",
     "voice_hi": "assets/audio/hi/parrot.m4a",
     "sound": "assets/audio/birds/parrot.m4a",
+    "fact_en": "A parrot is green and can talk!",
+    "fact_hi": "तोता हरा होता है और बोल सकता है!",
+    "voice_fact_en": "assets/audio/en/parrot_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/parrot_fact.m4a",
     "rive_reaction": null
   },
   {
@@ -51,6 +59,10 @@
     "voice_en": "assets/audio/en/peacock.m4a",
     "voice_hi": "assets/audio/hi/peacock.m4a",
     "sound": "assets/audio/birds/peacock.m4a",
+    "fact_en": "The peacock is India's national bird!",
+    "fact_hi": "मोर भारत का राष्ट्रीय पक्षी है!",
+    "voice_fact_en": "assets/audio/en/peacock_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/peacock_fact.m4a",
     "rive_reaction": null
   },
   {
@@ -69,6 +81,10 @@
     "voice_en": "assets/audio/en/sparrow.m4a",
     "voice_hi": "assets/audio/hi/sparrow.m4a",
     "sound": "assets/audio/birds/sparrow.m4a",
+    "fact_en": "A sparrow is a tiny brown bird.",
+    "fact_hi": "गौरैया छोटी सी भूरी चिड़िया है।",
+    "voice_fact_en": "assets/audio/en/sparrow_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/sparrow_fact.m4a",
     "rive_reaction": null
   },
   {
@@ -87,6 +103,10 @@
     "voice_en": "assets/audio/en/pigeon.m4a",
     "voice_hi": "assets/audio/hi/pigeon.m4a",
     "sound": "assets/audio/birds/pigeon.m4a",
+    "fact_en": "A pigeon says coo coo!",
+    "fact_hi": "कबूतर गुटर गूँ करता है!",
+    "voice_fact_en": "assets/audio/en/pigeon_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/pigeon_fact.m4a",
     "rive_reaction": null
   },
   {
@@ -105,6 +125,10 @@
     "voice_en": "assets/audio/en/duck.m4a",
     "voice_hi": "assets/audio/hi/duck.m4a",
     "sound": "assets/audio/birds/duck.m4a",
+    "fact_en": "A duck swims in the pond!",
+    "fact_hi": "बत्तख तालाब में तैरती है!",
+    "voice_fact_en": "assets/audio/en/duck_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/duck_fact.m4a",
     "rive_reaction": null
   },
   {
@@ -123,6 +147,10 @@
     "voice_en": "assets/audio/en/hen.m4a",
     "voice_hi": "assets/audio/hi/hen.m4a",
     "sound": "assets/audio/birds/hen.m4a",
+    "fact_en": "A hen lays eggs.",
+    "fact_hi": "मुर्गी अंडे देती है।",
+    "voice_fact_en": "assets/audio/en/hen_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hen_fact.m4a",
     "rive_reaction": null
   },
   {
@@ -141,6 +169,10 @@
     "voice_en": "assets/audio/en/owl.m4a",
     "voice_hi": "assets/audio/hi/owl.m4a",
     "sound": "assets/audio/birds/owl.m4a",
+    "fact_en": "An owl is awake at night!",
+    "fact_hi": "उल्लू रात को जागता है!",
+    "voice_fact_en": "assets/audio/en/owl_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/owl_fact.m4a",
     "rive_reaction": null
   },
   {
@@ -159,6 +191,10 @@
     "voice_en": "assets/audio/en/eagle.m4a",
     "voice_hi": "assets/audio/hi/eagle.m4a",
     "sound": "assets/audio/birds/eagle.m4a",
+    "fact_en": "An eagle flies very high!",
+    "fact_hi": "चील बहुत ऊँचा उड़ती है!",
+    "voice_fact_en": "assets/audio/en/eagle_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/eagle_fact.m4a",
     "rive_reaction": null
   },
   {
@@ -177,6 +213,10 @@
     "voice_en": "assets/audio/en/koel.m4a",
     "voice_hi": "assets/audio/hi/koel.m4a",
     "sound": "assets/audio/birds/koel.m4a",
+    "fact_en": "The koel sings a sweet song!",
+    "fact_hi": "कोयल मीठा गाना गाती है!",
+    "voice_fact_en": "assets/audio/en/koel_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/koel_fact.m4a",
     "rive_reaction": null
   }
 ]

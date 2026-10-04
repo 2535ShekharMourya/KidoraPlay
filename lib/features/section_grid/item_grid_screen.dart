@@ -15,6 +15,8 @@ import '../../core/widgets/idle_float.dart';
 import '../../core/widgets/item_picture.dart';
 import '../../core/widgets/pop_in.dart';
 import '../../core/widgets/section_background.dart';
+import '../kido/kido_memory.dart';
+import '../kido/kido_widget.dart';
 import 'section_items.dart';
 
 /// Reusable picture grid for any section (or one row of numbers).
@@ -31,6 +33,17 @@ class ItemGridScreen extends ConsumerStatefulWidget {
 class _ItemGridScreenState extends ConsumerState<ItemGridScreen> {
   static const _perPage = AppLayout.gridColumns * AppLayout.gridRows;
   int _page = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    // A row of numbers is inside the Numbers visit already.
+    if (widget.scope.row == null) {
+      WidgetsBinding.instance.addPostFrameCallback(
+        (_) => enterSection(ref, widget.scope.section),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -64,6 +77,7 @@ class _ItemGridScreenState extends ConsumerState<ItemGridScreen> {
                 alignment: Alignment.topLeft,
                 child: BigBackButton(),
               ),
+              const KidoCorner(),
               if (page > 0)
                 Align(
                   alignment: Alignment.centerLeft,

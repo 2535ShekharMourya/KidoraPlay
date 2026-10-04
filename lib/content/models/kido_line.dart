@@ -7,8 +7,33 @@ import 'level.dart';
 abstract final class KidoEvent {
   static const welcomeFirst = 'welcome_first';
   static const welcomeBack = 'welcome_back';
-  static const hintTap = 'hint_tap';
+  static const sectionIntro = 'section_intro';
+
+  /// "Look!": grabs attention before showing something new.
+  static const look = 'look';
+
+  /// "A for Apple!" (`{letter}`, `{item}`).
+  static const letterFor = 'letter_for';
+
+  /// "Listen to the cow!" before an animal sound.
+  static const listenSound = 'listen_sound';
+  static const letsCount = 'lets_count';
+
+  /// "Say it with me!": the child repeats the word (echo).
+  static const sayWithMe = 'say_with_me';
+
+  /// Short cheer after the child's turn.
+  static const yay = 'yay';
   static const spellTogether = 'spell_together';
+
+  /// "Tap A!" during "we do".
+  static const tapLetter = 'tap_letter';
+
+  /// "Where is the apple? Can you tap it?" ("you do").
+  static const findIt = 'find_it';
+
+  /// "Here it is! Tap the apple!" (idle hint).
+  static const hintTap = 'hint_tap';
   static const praise = 'praise';
   static const tryAgain = 'try_again';
   static const sectionDone = 'section_done';
@@ -17,8 +42,17 @@ abstract final class KidoEvent {
   static const all = [
     welcomeFirst,
     welcomeBack,
-    hintTap,
+    sectionIntro,
+    look,
+    letterFor,
+    listenSound,
+    letsCount,
+    sayWithMe,
+    yay,
     spellTogether,
+    tapLetter,
+    findIt,
+    hintTap,
     praise,
     tryAgain,
     sectionDone,

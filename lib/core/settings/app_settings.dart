@@ -33,7 +33,8 @@ class AppSettings {
     // Background music is off by default (gentler for 2–3-year-olds).
     this.musicEnabled = false,
     this.vibrationEnabled = true,
-    this.language = LanguageMode.en,
+    // Bilingual by default (English, then Hindi), for Indian homes.
+    this.language = LanguageMode.both,
     // Shows 1–100 and all Phase 1 sections; parents change it in the
     // Parent Area.
     this.level = Level.lkg,

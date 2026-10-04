@@ -20,6 +20,10 @@ class LearningItem {
     this.letter,
     this.number,
     this.sound,
+    this.factEn,
+    this.factHi,
+    this.voiceFactEn,
+    this.voiceFactHi,
     this.riveReaction,
   });
 
@@ -40,6 +44,10 @@ class LearningItem {
       voiceEn: r.string('voice_en'),
       voiceHi: r.string('voice_hi'),
       sound: r.optString('sound'),
+      factEn: r.optString('fact_en'),
+      factHi: r.optString('fact_hi'),
+      voiceFactEn: r.optString('voice_fact_en'),
+      voiceFactHi: r.optString('voice_fact_hi'),
       riveReaction: r.optString('rive_reaction'),
     );
   }
@@ -63,6 +71,13 @@ class LearningItem {
   /// Real-world sound (animals, birds, vehicles).
   final String? sound;
 
+  /// Short child-level fun fact ("The cow gives us milk!") and its
+  /// recordings. Optional.
+  final String? factEn;
+  final String? factHi;
+  final String? voiceFactEn;
+  final String? voiceFactHi;
+
   /// Rive state-machine input for the picture's reaction, if any.
   final String? riveReaction;
 
@@ -81,6 +96,11 @@ class LearningItem {
         ContentLanguage.hi => voiceHi,
       };
 
+  String? factVoice(ContentLanguage lang) => switch (lang) {
+        ContentLanguage.en => voiceFactEn,
+        ContentLanguage.hi => voiceFactHi,
+      };
+
   Map<String, Object?> toJson() => {
         'id': id,
         'section': section.name,
@@ -93,6 +113,10 @@ class LearningItem {
         'voice_en': voiceEn,
         'voice_hi': voiceHi,
         'sound': sound,
+        'fact_en': factEn,
+        'fact_hi': factHi,
+        'voice_fact_en': voiceFactEn,
+        'voice_fact_hi': voiceFactHi,
         'rive_reaction': riveReaction,
       };
 }

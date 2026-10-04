@@ -15,6 +15,10 @@
     "voice_en": "assets/audio/en/cow.m4a",
     "voice_hi": "assets/audio/hi/cow.m4a",
     "sound": "assets/audio/animals/cow.m4a",
+    "fact_en": "The cow gives us milk!",
+    "fact_hi": "गाय हमें दूध देती है!",
+    "voice_fact_en": "assets/audio/en/cow_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/cow_fact.m4a",
     "rive_reaction": null
   },
   {
@@ -33,6 +37,10 @@
     "voice_en": "assets/audio/en/dog.m4a",
     "voice_hi": "assets/audio/hi/dog.m4a",
     "sound": "assets/audio/animals/dog.m4a",
+    "fact_en": "A dog is a good friend!",
+    "fact_hi": "कुत्ता हमारा अच्छा दोस्त है!",
+    "voice_fact_en": "assets/audio/en/dog_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/dog_fact.m4a",
     "rive_reaction": null
   },
   {
@@ -51,6 +59,10 @@
     "voice_en": "assets/audio/en/cat.m4a",
     "voice_hi": "assets/audio/hi/cat.m4a",
     "sound": "assets/audio/animals/cat.m4a",
+    "fact_en": "A cat loves to drink milk!",
+    "fact_hi": "बिल्ली को दूध पीना पसंद है!",
+    "voice_fact_en": "assets/audio/en/cat_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/cat_fact.m4a",
     "rive_reaction": null
   },
   {
@@ -69,6 +81,10 @@
     "voice_en": "assets/audio/en/lion.m4a",
     "voice_hi": "assets/audio/hi/lion.m4a",
     "sound": "assets/audio/animals/lion.m4a",
+    "fact_en": "The lion is the king of the jungle!",
+    "fact_hi": "शेर जंगल का राजा है!",
+    "voice_fact_en": "assets/audio/en/lion_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/lion_fact.m4a",
     "rive_reaction": null
   },
   {
@@ -87,6 +103,10 @@
     "voice_en": "assets/audio/en/tiger.m4a",
     "voice_hi": "assets/audio/hi/tiger.m4a",
     "sound": "assets/audio/animals/tiger.m4a",
+    "fact_en": "The tiger has orange and black stripes!",
+    "fact_hi": "बाघ पर नारंगी और काली धारियाँ होती हैं!",
+    "voice_fact_en": "assets/audio/en/tiger_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/tiger_fact.m4a",
     "rive_reaction": null
   },
   {
@@ -105,6 +125,10 @@
     "voice_en": "assets/audio/en/elephant.m4a",
     "voice_hi": "assets/audio/hi/elephant.m4a",
     "sound": "assets/audio/animals/elephant.m4a",
+    "fact_en": "An elephant has a long trunk, just like me!",
+    "fact_hi": "हाथी की लंबी सूँड होती है, बिल्कुल मेरी तरह!",
+    "voice_fact_en": "assets/audio/en/elephant_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/elephant_fact.m4a",
     "rive_reaction": null
   },
   {
@@ -123,6 +147,10 @@
     "voice_en": "assets/audio/en/monkey.m4a",
     "voice_hi": "assets/audio/hi/monkey.m4a",
     "sound": "assets/audio/animals/monkey.m4a",
+    "fact_en": "A monkey loves bananas!",
+    "fact_hi": "बंदर को केला बहुत पसंद है!",
+    "voice_fact_en": "assets/audio/en/monkey_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/monkey_fact.m4a",
     "rive_reaction": null
   },
   {
@@ -141,6 +169,10 @@
     "voice_en": "assets/audio/en/horse.m4a",
     "voice_hi": "assets/audio/hi/horse.m4a",
     "sound": "assets/audio/animals/horse.m4a",
+    "fact_en": "A horse can run very fast!",
+    "fact_hi": "घोड़ा बहुत तेज़ दौड़ता है!",
+    "voice_fact_en": "assets/audio/en/horse_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/horse_fact.m4a",
     "rive_reaction": null
   },
   {
@@ -159,6 +191,10 @@
     "voice_en": "assets/audio/en/goat.m4a",
     "voice_hi": "assets/audio/hi/goat.m4a",
     "sound": "assets/audio/animals/goat.m4a",
+    "fact_en": "A goat likes to eat leaves.",
+    "fact_hi": "बकरी को पत्ते खाना पसंद है।",
+    "voice_fact_en": "assets/audio/en/goat_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/goat_fact.m4a",
     "rive_reaction": null
   },
   {
@@ -177,6 +213,120 @@
     "voice_en": "assets/audio/en/sheep.m4a",
     "voice_hi": "assets/audio/hi/sheep.m4a",
     "sound": "assets/audio/animals/sheep.m4a",
+    "fact_en": "A sheep has soft, woolly fur.",
+    "fact_hi": "भेड़ के बाल मुलायम ऊन जैसे होते हैं।",
+    "voice_fact_en": "assets/audio/en/sheep_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/sheep_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "camel",
+    "section": "animals",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Camel",
+    "word_hi": "ऊँट",
+    "image": "assets/images/animals/camel.webp",
+    "voice_en": "assets/audio/en/camel.m4a",
+    "voice_hi": "assets/audio/hi/camel.m4a",
+    "sound": "assets/audio/animals/camel.m4a",
+    "fact_en": "A camel walks in the desert.",
+    "fact_hi": "ऊँट रेगिस्तान में चलता है।",
+    "voice_fact_en": "assets/audio/en/camel_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/camel_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "deer",
+    "section": "animals",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Deer",
+    "word_hi": "हिरण",
+    "image": "assets/images/animals/deer.webp",
+    "voice_en": "assets/audio/en/deer.m4a",
+    "voice_hi": "assets/audio/hi/deer.m4a",
+    "sound": "assets/audio/animals/deer.m4a",
+    "fact_en": "A deer can jump very high!",
+    "fact_hi": "हिरण बहुत ऊँचा कूद सकता है!",
+    "voice_fact_en": "assets/audio/en/deer_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/deer_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "bear",
+    "section": "animals",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Bear",
+    "word_hi": "भालू",
+    "image": "assets/images/animals/bear.webp",
+    "voice_en": "assets/audio/en/bear.m4a",
+    "voice_hi": "assets/audio/hi/bear.m4a",
+    "sound": "assets/audio/animals/bear.m4a",
+    "fact_en": "A bear loves to eat honey!",
+    "fact_hi": "भालू को शहद खाना पसंद है!",
+    "voice_fact_en": "assets/audio/en/bear_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/bear_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "rabbit",
+    "section": "animals",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Rabbit",
+    "word_hi": "खरगोश",
+    "image": "assets/images/animals/rabbit.webp",
+    "voice_en": "assets/audio/en/rabbit.m4a",
+    "voice_hi": "assets/audio/hi/rabbit.m4a",
+    "sound": "assets/audio/animals/rabbit.m4a",
+    "fact_en": "A rabbit hops, hop hop hop!",
+    "fact_hi": "खरगोश फुदकता है, फुदक फुदक!",
+    "voice_fact_en": "assets/audio/en/rabbit_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/rabbit_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "squirrel",
+    "section": "animals",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Squirrel",
+    "word_hi": "गिलहरी",
+    "image": "assets/images/animals/squirrel.webp",
+    "voice_en": "assets/audio/en/squirrel.m4a",
+    "voice_hi": "assets/audio/hi/squirrel.m4a",
+    "sound": "assets/audio/animals/squirrel.m4a",
+    "fact_en": "A squirrel has a fluffy tail!",
+    "fact_hi": "गिलहरी की पूँछ झबरीली होती है!",
+    "voice_fact_en": "assets/audio/en/squirrel_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/squirrel_fact.m4a",
     "rive_reaction": null
   }
 ]

@@ -14,14 +14,43 @@ import '../../core/widgets/bouncy_button.dart';
 import '../../core/widgets/idle_float.dart';
 import '../../core/widgets/pop_in.dart';
 import '../../core/widgets/section_background.dart';
+import '../../content/models/kido_line.dart';
 import '../../l10n/app_localizations.dart';
+import '../kido/kido_controller.dart';
+import '../kido/kido_memory.dart';
+import '../kido/kido_voice.dart';
+import '../kido/kido_widget.dart';
 
-/// Section menu. Tapping a tile says the section name and opens it.
-class HomeScreen extends ConsumerWidget {
+/// Section menu. Kido waves hello (a full welcome the very first time, a
+/// short one after that, once per session). Tapping a tile says the
+/// section name and opens it.
+class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends ConsumerState<HomeScreen> {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) => _greet());
+  }
+
+  Future<void> _greet() async {
+    final memory = ref.read(kidoMemoryProvider);
+    if (!mounted || !memory.takeSessionGreeting()) return;
+    final first = !memory.welcomed;
+    ref.read(kidoControllerProvider.notifier).act(KidoAction.wave);
+    await ref
+        .read(kidoVoiceProvider)
+        .say(first ? KidoEvent.welcomeFirst : KidoEvent.welcomeBack);
+    if (first) await memory.markWelcomed();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
     final labels = {
       SectionId.numbers: l10n.sectionNumbers,
@@ -33,11 +62,12 @@ class HomeScreen extends ConsumerWidget {
 
     void open(SectionId id) {
       final section = catalog?.section(id);
-      if (section != null) {
+      // First visit: the section greets with "Let's learn …!" instead.
+      if (section != null && ref.read(kidoMemoryProvider).visited(id)) {
         final languages = ref.read(settingsProvider).language.languages;
-        ref
-            .read(audioServiceProvider)
-            .playVoiceSequence([for (final l in languages) section.voice(l)]);
+        ref.read(audioServiceProvider).playVoiceSequence([
+          for (final l in languages) section.voice(l),
+        ]);
       }
       context.go(AppRoutes.section(id));
     }
@@ -45,32 +75,41 @@ class HomeScreen extends ConsumerWidget {
     return Scaffold(
       body: SectionBackground(
         child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: AppSpacing.xl,
-              vertical: AppSpacing.xxl,
-            ),
-            child: Row(
-              children: [
-                for (final (i, id) in SectionId.values.indexed)
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(AppSpacing.tapGap / 2),
-                      child: PopIn(
-                        index: i,
-                        child: IdleFloat(
-                          phase: i / SectionId.values.length,
-                          child: _SectionTile(
-                            id: id,
-                            label: labels[id]!,
-                            onPressed: () => open(id),
+          child: Stack(
+            children: [
+              Padding(
+                // The left column is Kido's; tiles never sit under him.
+                padding: const EdgeInsets.only(
+                  left: AppLayout.sideZone,
+                  right: AppSpacing.xl,
+                  top: AppSpacing.xxl,
+                  bottom: AppSpacing.xxl,
+                ),
+                child: Row(
+                  children: [
+                    for (final (i, id) in SectionId.values.indexed)
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.all(AppSpacing.tapGap / 2),
+                          child: PopIn(
+                            index: i,
+                            child: IdleFloat(
+                              phase: i / SectionId.values.length,
+                              child: _SectionTile(
+                                id: id,
+                                label: labels[id]!,
+                                image: catalog?.section(id)?.image,
+                                onPressed: () => open(id),
+                              ),
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  ),
-              ],
-            ),
+                  ],
+                ),
+              ),
+              const KidoCorner(),
+            ],
           ),
         ),
       ),
@@ -82,11 +121,13 @@ class _SectionTile extends StatelessWidget {
   const _SectionTile({
     required this.id,
     required this.label,
+    required this.image,
     required this.onPressed,
   });
 
   final SectionId id;
   final String label;
+  final String? image;
   final VoidCallback onPressed;
 
   @override
@@ -101,19 +142,26 @@ class _SectionTile extends StatelessWidget {
           borderRadius: BorderRadius.circular(AppRadii.card),
           border: Border.all(color: AppColors.outline, width: AppStroke.thick),
         ),
-        alignment: Alignment.center,
-        child: FittedBox(
-          fit: BoxFit.scaleDown,
-          child: Padding(
-            padding: const EdgeInsets.all(AppSpacing.sm),
-            child: Text(
-              label,
-              style: Theme.of(context)
-                  .textTheme
-                  .headlineMedium
-                  ?.copyWith(color: AppColors.white),
+        padding: const EdgeInsets.all(AppSpacing.sm),
+        child: Column(
+          children: [
+            if (image != null)
+              Expanded(
+                child: Image.asset(
+                  image!,
+                  fit: BoxFit.contain,
+                  errorBuilder: (_, _, _) => const SizedBox.shrink(),
+                ),
+              ),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                label,
+                style: Theme.of(context).textTheme.headlineMedium
+                    ?.copyWith(color: AppColors.white),
+              ),
             ),
-          ),
+          ],
         ),
       ),
     );

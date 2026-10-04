@@ -13,15 +13,30 @@ import '../../core/widgets/idle_float.dart';
 import '../../core/widgets/pop_in.dart';
 import '../../core/widgets/section_background.dart';
 import '../../l10n/app_localizations.dart';
+import '../kido/kido_memory.dart';
+import '../kido/kido_widget.dart';
 import '../section_grid/section_items.dart';
 
 /// Numbers grouped in rows of ten: 1–10, 11–20 … 91–100. The child taps a
 /// row, then a number. Nursery sees only 1–20.
-class NumberRowsScreen extends ConsumerWidget {
+class NumberRowsScreen extends ConsumerStatefulWidget {
   const NumberRowsScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<NumberRowsScreen> createState() => _NumberRowsScreenState();
+}
+
+class _NumberRowsScreenState extends ConsumerState<NumberRowsScreen> {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback(
+      (_) => enterSection(ref, SectionId.numbers),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final rows = ref.watch(numberRowsProvider);
     final accent = SectionTheme.of(SectionId.numbers).accent;
     final l10n = AppLocalizations.of(context);
@@ -83,6 +98,7 @@ class NumberRowsScreen extends ConsumerWidget {
                 alignment: Alignment.topLeft,
                 child: BigBackButton(),
               ),
+              const KidoCorner(),
             ],
           ),
         ),

@@ -9,15 +9,26 @@ import 'audio_players.dart';
 class JustAudioVoicePlayer implements VoicePlayer {
   final _player = ja.AudioPlayer(handleInterruptions: false);
 
+  /// Grace time on top of a clip's length before we give up on it, so a
+  /// clip that never reports completion can't stall a lesson.
+  static const _grace = Duration(seconds: 2);
+  static const _unknownLength = Duration(seconds: 8);
+
   @override
   Future<void> play(String asset) async {
-    await _player.setAsset(asset);
+    final length = await _player.setAsset(asset) ?? _unknownLength;
     // play() only completes on pause/stop, so wait for completion or stop.
     final done = _player.processingStateStream.firstWhere(
       (s) => s == ja.ProcessingState.completed || s == ja.ProcessingState.idle,
     );
     unawaited(_player.play());
-    await done;
+    await done.timeout(
+      length + _grace,
+      onTimeout: () async {
+        await _player.stop();
+        throw TimeoutException('voice clip did not finish: $asset');
+      },
+    );
   }
 
   @override

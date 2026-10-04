@@ -86,7 +86,7 @@ void main() {
     await tester.tap(find.text('Birds'));
     await tester.pump();
     expect(audio.sfxNames, ['pop']);
-    expect(audio.voice.played, ['assets/audio/en/sections/birds.m4a']);
+    expect(audio.voice.played.last, 'assets/audio/en/sections/birds.m4a');
     await tester.pump(AppDurations.tapBounce);
   });
 }

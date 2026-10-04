@@ -16,6 +16,10 @@ Map<String, Object?> appleJson() => {
       'voice_en': 'assets/audio/en/a_apple.m4a',
       'voice_hi': 'assets/audio/hi/a_apple.m4a',
       'sound': null,
+      'fact_en': 'An apple is red and yummy!',
+      'fact_hi': 'सेब लाल और मीठा होता है!',
+      'voice_fact_en': 'assets/audio/en/a_apple_fact.m4a',
+      'voice_fact_hi': 'assets/audio/hi/a_apple_fact.m4a',
       'rive_reaction': null,
     };
 

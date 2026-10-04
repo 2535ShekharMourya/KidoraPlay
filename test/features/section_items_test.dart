@@ -53,6 +53,6 @@ void main() {
   test('a whole section keeps content order', () async {
     final c = await containerFor('ukg');
     final abc = c.read(scopeItemsProvider((section: SectionId.abc, row: null)));
-    expect(abc.map((i) => i.letter).join(), 'ABCDEFGHIJ');
+    expect(abc.map((i) => i.letter).join(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ');
   });
 }
