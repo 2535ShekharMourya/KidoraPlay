@@ -9,6 +9,7 @@ import 'app.dart';
 import 'content/repository/content_repository.dart';
 import 'core/audio/audio_service.dart';
 import 'core/licences.dart';
+import 'features/billing/billing_controller.dart';
 import 'core/storage/local_store.dart';
 
 Future<void> main() async {
@@ -52,6 +53,10 @@ Future<void> main() async {
   // Start audio (applies settings, starts music if enabled) and load SFX
   // into memory without blocking the first frame.
   unawaited(container.read(audioServiceProvider).preloadSfx());
+
+  // Premium is read from the device cache at once (ads depend on it);
+  // Google Play is asked in the background to confirm it.
+  unawaited(container.read(billingControllerProvider.notifier).refresh());
 
   runApp(
     UncontrolledProviderScope(container: container, child: const KidoraApp()),

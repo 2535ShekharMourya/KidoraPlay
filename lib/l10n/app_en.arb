@@ -82,5 +82,22 @@
   "reset": "Reset",
   "privacyNote": "Kidoraplay collects no personal data. Everything stays on this device.",
   "licences": "Licences and credits",
-  "aboutTitle": "About"
+  "aboutTitle": "About",
+  "plansTitle": "Kidoraplay Premium",
+  "plansEntry": "Premium",
+  "plansEntryFree": "Remove ads for your child",
+  "plansPitch": "Premium removes all ads, now and in future learning packs. One purchase covers this Google account.",
+  "planMonthly": "Monthly",
+  "planYearly": "Yearly",
+  "planLifetime": "Lifetime (one-time)",
+  "buy": "Buy",
+  "restorePurchase": "Restore purchase",
+  "premiumActive": "Premium is active. Thank you!",
+  "premiumThanks": "Thank you! Premium is now active.",
+  "restoreDone": "Your purchase has been restored.",
+  "restoreNone": "No previous purchase was found for this Google account.",
+  "purchaseFailed": "The purchase did not go through. You have not been charged.",
+  "purchasePending": "Waiting for the payment to finish…",
+  "storeUnavailable": "Google Play is not available right now. Please check your internet connection and try again.",
+  "subscriptionTerms": "Subscriptions renew automatically until cancelled. Cancel anytime in Google Play → Payments & subscriptions. The lifetime plan is a single payment."
 }

@@ -325,6 +325,108 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'About'**
   String get aboutTitle;
+
+  /// No description provided for @plansTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Kidoraplay Premium'**
+  String get plansTitle;
+
+  /// No description provided for @plansEntry.
+  ///
+  /// In en, this message translates to:
+  /// **'Premium'**
+  String get plansEntry;
+
+  /// No description provided for @plansEntryFree.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove ads for your child'**
+  String get plansEntryFree;
+
+  /// No description provided for @plansPitch.
+  ///
+  /// In en, this message translates to:
+  /// **'Premium removes all ads, now and in future learning packs. One purchase covers this Google account.'**
+  String get plansPitch;
+
+  /// No description provided for @planMonthly.
+  ///
+  /// In en, this message translates to:
+  /// **'Monthly'**
+  String get planMonthly;
+
+  /// No description provided for @planYearly.
+  ///
+  /// In en, this message translates to:
+  /// **'Yearly'**
+  String get planYearly;
+
+  /// No description provided for @planLifetime.
+  ///
+  /// In en, this message translates to:
+  /// **'Lifetime (one-time)'**
+  String get planLifetime;
+
+  /// No description provided for @buy.
+  ///
+  /// In en, this message translates to:
+  /// **'Buy'**
+  String get buy;
+
+  /// No description provided for @restorePurchase.
+  ///
+  /// In en, this message translates to:
+  /// **'Restore purchase'**
+  String get restorePurchase;
+
+  /// No description provided for @premiumActive.
+  ///
+  /// In en, this message translates to:
+  /// **'Premium is active. Thank you!'**
+  String get premiumActive;
+
+  /// No description provided for @premiumThanks.
+  ///
+  /// In en, this message translates to:
+  /// **'Thank you! Premium is now active.'**
+  String get premiumThanks;
+
+  /// No description provided for @restoreDone.
+  ///
+  /// In en, this message translates to:
+  /// **'Your purchase has been restored.'**
+  String get restoreDone;
+
+  /// No description provided for @restoreNone.
+  ///
+  /// In en, this message translates to:
+  /// **'No previous purchase was found for this Google account.'**
+  String get restoreNone;
+
+  /// No description provided for @purchaseFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'The purchase did not go through. You have not been charged.'**
+  String get purchaseFailed;
+
+  /// No description provided for @purchasePending.
+  ///
+  /// In en, this message translates to:
+  /// **'Waiting for the payment to finish…'**
+  String get purchasePending;
+
+  /// No description provided for @storeUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Google Play is not available right now. Please check your internet connection and try again.'**
+  String get storeUnavailable;
+
+  /// No description provided for @subscriptionTerms.
+  ///
+  /// In en, this message translates to:
+  /// **'Subscriptions renew automatically until cancelled. Cancel anytime in Google Play → Payments & subscriptions. The lifetime plan is a single payment.'**
+  String get subscriptionTerms;
 }
 
 class _AppLocalizationsDelegate

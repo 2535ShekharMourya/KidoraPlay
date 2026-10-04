@@ -10,6 +10,9 @@ void registerContentLicences() {
       'Animal and bird sounds (Wikimedia Commons)',
     ], await rootBundle.loadString('assets/audio/ATTRIBUTION.md'));
     yield LicenseEntryWithLineBreaks(const [
+      'Animal and bird photos (Wikimedia Commons)',
+    ], await rootBundle.loadString('assets/images/PHOTO_CREDITS.md'));
+    yield LicenseEntryWithLineBreaks(const [
       'Noto Emoji pictures',
     ], await rootBundle.loadString('assets/images/NOTICE-noto-emoji.txt'));
     yield LicenseEntryWithLineBreaks(const [

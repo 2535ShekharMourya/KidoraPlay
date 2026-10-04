@@ -131,4 +131,58 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get aboutTitle => 'जानकारी';
+
+  @override
+  String get plansTitle => 'किडोराप्ले प्रीमियम';
+
+  @override
+  String get plansEntry => 'प्रीमियम';
+
+  @override
+  String get plansEntryFree => 'अपने बच्चे के लिए विज्ञापन हटाएँ';
+
+  @override
+  String get plansPitch =>
+      'प्रीमियम सभी विज्ञापन हटा देता है, अभी और आने वाले सभी पाठों में भी। एक खरीद इस Google खाते के लिए काम करती है।';
+
+  @override
+  String get planMonthly => 'मासिक';
+
+  @override
+  String get planYearly => 'वार्षिक';
+
+  @override
+  String get planLifetime => 'आजीवन (एक बार)';
+
+  @override
+  String get buy => 'खरीदें';
+
+  @override
+  String get restorePurchase => 'खरीद वापस लाएँ';
+
+  @override
+  String get premiumActive => 'प्रीमियम चालू है। धन्यवाद!';
+
+  @override
+  String get premiumThanks => 'धन्यवाद! प्रीमियम अब चालू है।';
+
+  @override
+  String get restoreDone => 'आपकी खरीद वापस आ गई है।';
+
+  @override
+  String get restoreNone => 'इस Google खाते पर कोई पिछली खरीद नहीं मिली।';
+
+  @override
+  String get purchaseFailed => 'खरीद पूरी नहीं हुई। आपसे पैसे नहीं लिए गए।';
+
+  @override
+  String get purchasePending => 'भुगतान पूरा होने का इंतज़ार है…';
+
+  @override
+  String get storeUnavailable =>
+      'Google Play अभी उपलब्ध नहीं है। कृपया इंटरनेट जाँचें और फिर कोशिश करें।';
+
+  @override
+  String get subscriptionTerms =>
+      'सदस्यता रद्द करने तक अपने आप नवीनीकृत होती है। Google Play → भुगतान और सदस्यता में कभी भी रद्द करें। आजीवन प्लान एक बार का भुगतान है।';
 }

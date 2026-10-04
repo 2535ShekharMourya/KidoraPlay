@@ -8,6 +8,8 @@ import '../../core/settings/app_settings.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_tokens.dart';
 import '../../l10n/app_localizations.dart';
+import '../billing/billing_controller.dart';
+import '../billing/plans_screen.dart';
 import '../progress/progress_controller.dart';
 import 'parent_gate.dart';
 
@@ -58,6 +60,22 @@ class _ParentAreaScreenState extends ConsumerState<ParentAreaScreen> {
             vertical: AppSpacing.md,
           ),
           children: [
+            ListTile(
+              leading: const Icon(
+                Icons.workspace_premium_rounded,
+                color: AppColors.celebrate,
+              ),
+              title: Text(l10n.plansEntry),
+              subtitle: Text(
+                ref.watch(isPremiumProvider)
+                    ? l10n.premiumActive
+                    : l10n.plansEntryFree,
+              ),
+              trailing: const Icon(Icons.chevron_right_rounded),
+              onTap: () => Navigator.of(context).push(
+                MaterialPageRoute<void>(builder: (_) => const PlansScreen()),
+              ),
+            ),
             _Heading(l10n.settingsClass),
             SegmentedButton<Level>(
               segments: [

@@ -187,11 +187,15 @@ void main() {
       WidgetTester tester,
       Finder finder, {
       double delta = 120,
-    }) => tester.scrollUntilVisible(
-      finder,
-      delta,
-      scrollable: find.byType(Scrollable).first,
-    );
+    }) async {
+      await tester.scrollUntilVisible(
+        finder,
+        delta,
+        scrollable: find.byType(Scrollable).first,
+      );
+      await tester.ensureVisible(finder);
+      await tester.pumpAndSettle();
+    }
 
     testWidgets('starts locked behind the gate', (tester) async {
       await pumpApp(tester, const ParentAreaScreen(), catalog: catalog);

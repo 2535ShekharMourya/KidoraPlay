@@ -131,4 +131,60 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get aboutTitle => 'About';
+
+  @override
+  String get plansTitle => 'Kidoraplay Premium';
+
+  @override
+  String get plansEntry => 'Premium';
+
+  @override
+  String get plansEntryFree => 'Remove ads for your child';
+
+  @override
+  String get plansPitch =>
+      'Premium removes all ads, now and in future learning packs. One purchase covers this Google account.';
+
+  @override
+  String get planMonthly => 'Monthly';
+
+  @override
+  String get planYearly => 'Yearly';
+
+  @override
+  String get planLifetime => 'Lifetime (one-time)';
+
+  @override
+  String get buy => 'Buy';
+
+  @override
+  String get restorePurchase => 'Restore purchase';
+
+  @override
+  String get premiumActive => 'Premium is active. Thank you!';
+
+  @override
+  String get premiumThanks => 'Thank you! Premium is now active.';
+
+  @override
+  String get restoreDone => 'Your purchase has been restored.';
+
+  @override
+  String get restoreNone =>
+      'No previous purchase was found for this Google account.';
+
+  @override
+  String get purchaseFailed =>
+      'The purchase did not go through. You have not been charged.';
+
+  @override
+  String get purchasePending => 'Waiting for the payment to finish…';
+
+  @override
+  String get storeUnavailable =>
+      'Google Play is not available right now. Please check your internet connection and try again.';
+
+  @override
+  String get subscriptionTerms =>
+      'Subscriptions renew automatically until cancelled. Cancel anytime in Google Play → Payments & subscriptions. The lifetime plan is a single payment.';
 }

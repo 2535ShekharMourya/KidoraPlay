@@ -25,19 +25,23 @@ class ItemPicture extends StatelessWidget {
         borderRadius: BorderRadius.circular(AppRadii.card),
         border: Border.all(color: accent, width: AppStroke.thick),
       ),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(AppRadii.card - AppStroke.thick),
-        child: Image.asset(
-          image,
-          fit: BoxFit.contain,
-          gaplessPlayback: true,
-          errorBuilder: (context, error, stack) => Center(
-            child: FittedBox(
-              child: Padding(
-                padding: const EdgeInsets.all(AppSpacing.sm),
-                child: Text(
-                  fallbackText,
-                  style: Theme.of(context).textTheme.headlineMedium,
+      // Inset by the border width so photos never cover the frame.
+      child: Padding(
+        padding: const EdgeInsets.all(AppStroke.thick),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(AppRadii.card - AppStroke.thick),
+          child: Image.asset(
+            image,
+            fit: BoxFit.contain,
+            gaplessPlayback: true,
+            errorBuilder: (context, error, stack) => Center(
+              child: FittedBox(
+                child: Padding(
+                  padding: const EdgeInsets.all(AppSpacing.sm),
+                  child: Text(
+                    fallbackText,
+                    style: Theme.of(context).textTheme.headlineMedium,
+                  ),
                 ),
               ),
             ),
