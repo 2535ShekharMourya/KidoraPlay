@@ -3,6 +3,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../content/models/section.dart';
+import '../../features/games/games_screen.dart';
+import '../../features/games/quiz_models.dart';
+import '../../features/games/quiz_screen.dart';
 import '../../features/home/home_screen.dart';
 import '../../features/learn_card/learn_card_screen.dart';
 import '../../features/numbers/number_rows_screen.dart';
@@ -20,6 +23,9 @@ abstract final class AppRoutes {
   static const home = '/home';
   static const stickers = '/home/stickers';
   static const parent = '/home/parent';
+  static const games = '/home/games';
+
+  static String game(GameKind kind) => '$games/${kind.name}';
 
   static String section(SectionId id) => '$home/section/${id.name}';
 
@@ -88,6 +94,28 @@ final appRouterProvider = Provider<GoRouter>((ref) {
         pageBuilder: (context, state) =>
             _playfulPage(state, const HomeScreen()),
         routes: [
+          GoRoute(
+            path: 'games',
+            pageBuilder: (context, state) =>
+                _playfulPage(state, const GamesScreen()),
+            routes: [
+              GoRoute(
+                path: ':kind',
+                redirect: (context, state) =>
+                    GameKind.values.asNameMap()[state.pathParameters['kind']] ==
+                        null
+                    ? AppRoutes.games
+                    : null,
+                pageBuilder: (context, state) => _playfulPage(
+                  state,
+                  QuizScreen(
+                    kind: GameKind.values
+                        .asNameMap()[state.pathParameters['kind']]!,
+                  ),
+                ),
+              ),
+            ],
+          ),
           GoRoute(
             path: 'parent',
             pageBuilder: (context, state) =>

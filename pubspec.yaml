@@ -37,6 +37,7 @@ flutter:
     - assets/images/abc/
     - assets/images/animals/
     - assets/images/birds/
+    - assets/images/games/
     - assets/audio/en/
     - assets/audio/en/kido/
     - assets/audio/en/sections/

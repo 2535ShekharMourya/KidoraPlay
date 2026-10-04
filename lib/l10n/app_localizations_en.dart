@@ -187,4 +187,25 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get subscriptionTerms =>
       'Subscriptions renew automatically until cancelled. Cancel anytime in Google Play → Payments & subscriptions. The lifetime plan is a single payment.';
+
+  @override
+  String get games => 'Games';
+
+  @override
+  String get gameFindIt => 'Find it';
+
+  @override
+  String get gameWhoSays => 'Who says?';
+
+  @override
+  String get gameCount => 'Count';
+
+  @override
+  String get gameLetters => 'Letters';
+
+  @override
+  String get playAgain => 'Play again';
+
+  @override
+  String get hearAgain => 'Hear again';
 }

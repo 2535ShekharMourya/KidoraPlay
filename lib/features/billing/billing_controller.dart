@@ -100,9 +100,7 @@ class BillingController extends Notifier<BillingState> {
       final products = await _store.products(PremiumPlan.productIds);
       state = state.copyWith(
         available: true,
-        products: {
-          for (final p in products) ?PremiumPlan.byProductId(p.id): p,
-        },
+        products: {for (final p in products) ?PremiumPlan.byProductId(p.id): p},
       );
     } catch (e) {
       debugPrint('Billing load failed: $e');

@@ -427,6 +427,48 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Subscriptions renew automatically until cancelled. Cancel anytime in Google Play → Payments & subscriptions. The lifetime plan is a single payment.'**
   String get subscriptionTerms;
+
+  /// No description provided for @games.
+  ///
+  /// In en, this message translates to:
+  /// **'Games'**
+  String get games;
+
+  /// No description provided for @gameFindIt.
+  ///
+  /// In en, this message translates to:
+  /// **'Find it'**
+  String get gameFindIt;
+
+  /// No description provided for @gameWhoSays.
+  ///
+  /// In en, this message translates to:
+  /// **'Who says?'**
+  String get gameWhoSays;
+
+  /// No description provided for @gameCount.
+  ///
+  /// In en, this message translates to:
+  /// **'Count'**
+  String get gameCount;
+
+  /// No description provided for @gameLetters.
+  ///
+  /// In en, this message translates to:
+  /// **'Letters'**
+  String get gameLetters;
+
+  /// No description provided for @playAgain.
+  ///
+  /// In en, this message translates to:
+  /// **'Play again'**
+  String get playAgain;
+
+  /// No description provided for @hearAgain.
+  ///
+  /// In en, this message translates to:
+  /// **'Hear again'**
+  String get hearAgain;
 }
 
 class _AppLocalizationsDelegate

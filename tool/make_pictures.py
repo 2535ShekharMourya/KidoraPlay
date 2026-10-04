@@ -59,6 +59,10 @@ PICTURES = {
     # Section tiles
     "sections/numbers": ("1f522",), "sections/abc": ("1f524",),
     "sections/animals": ("1f981",), "sections/birds": ("1f99c",),
+    # Games
+    "games/games": ("1f9e9",), "games/find_it": ("1f50d",),
+    "games/who_says": ("1f442",), "games/count_it": ("1f9ee",),
+    "games/letters": ("1f524",),
 }
 STAR = "2b50"
 
@@ -172,16 +176,28 @@ def write_notice():
 
 
 def main():
+    # Real photographs (tool/make_photos.py) win over illustrations.
+    import sys
+    sys.path.insert(0, str(Path(__file__).parent))
+    from make_photos import ARTICLES as PHOTOS
+
     made = []
     for name in ("items_abc.json", "items_animals.json", "items_birds.json"):
         for it in json.loads((CONTENT / name).read_text(encoding="utf-8")):
+            if it["id"] in PHOTOS:
+                continue
             spec = PICTURES[it["id"]]
             img = (compose_abc(it["letter"], spec) if it["section"] == "abc"
                    else compose_plain(spec))
             made.append(save(img, it["image"]))
     for it in json.loads((CONTENT / "items_numbers.json").read_text("utf-8")):
         made.append(save(compose_number(it["number"]), it["image"]))
+    for game in ("games", "find_it", "who_says", "count_it", "letters"):
+        made.append(save(compose_plain(PICTURES[f"games/{game}"]),
+                         f"assets/images/games/{game}.webp"))
     for s in json.loads((CONTENT / "sections.json").read_text("utf-8")):
+        if f"sections/{s['id']}" in PHOTOS:
+            continue
         made.append(save(compose_plain(PICTURES[f"sections/{s['id']}"]),
                          s["image"]))
     write_notice()

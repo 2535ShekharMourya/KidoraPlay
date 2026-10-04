@@ -1,92 +1,540 @@
 {
   "welcome_first": {
-    "en": [{ "text": "Hello, friend! I am Kido, the little elephant. Let's play and learn together!", "audio": ["assets/audio/en/kido/welcome_first.m4a"] }],
-    "hi": [{ "text": "नमस्ते दोस्त! मैं हूँ किडो, छोटा सा हाथी। चलो साथ में खेलें और सीखें!", "audio": ["assets/audio/hi/kido/welcome_first.m4a"] }]
+    "en": [
+      {
+        "text": "Hello, friend! I am Kido, the little elephant. Let's play and learn together!",
+        "audio": [
+          "assets/audio/en/kido/welcome_first.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "नमस्ते दोस्त! मैं हूँ किडो, छोटा सा हाथी। चलो साथ में खेलें और सीखें!",
+        "audio": [
+          "assets/audio/hi/kido/welcome_first.m4a"
+        ]
+      }
+    ]
   },
   "welcome_back": {
-    "en": [{ "text": "Hello again, friend! Let's play!", "audio": ["assets/audio/en/kido/welcome_back.m4a"] }],
-    "hi": [{ "text": "फिर से नमस्ते, दोस्त! चलो खेलें!", "audio": ["assets/audio/hi/kido/welcome_back.m4a"] }]
+    "en": [
+      {
+        "text": "Hello again, friend! Let's play!",
+        "audio": [
+          "assets/audio/en/kido/welcome_back.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "फिर से नमस्ते, दोस्त! चलो खेलें!",
+        "audio": [
+          "assets/audio/hi/kido/welcome_back.m4a"
+        ]
+      }
+    ]
   },
   "section_intro": {
-    "en": [{ "text": "Let's learn {section}!", "audio": ["assets/audio/en/kido/lets_learn.m4a", "{section}"] }],
-    "hi": [{ "text": "चलो {section} सीखें!", "audio": ["assets/audio/hi/kido/chalo.m4a", "{section}", "assets/audio/hi/kido/seekhen.m4a"] }]
+    "en": [
+      {
+        "text": "Let's learn {section}!",
+        "audio": [
+          "assets/audio/en/kido/lets_learn.m4a",
+          "{section}"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "चलो {section} सीखें!",
+        "audio": [
+          "assets/audio/hi/kido/chalo.m4a",
+          "{section}",
+          "assets/audio/hi/kido/seekhen.m4a"
+        ]
+      }
+    ]
   },
   "look": {
-    "en": [{ "text": "Look!", "audio": ["assets/audio/en/kido/look.m4a"] }],
-    "hi": [{ "text": "देखो!", "audio": ["assets/audio/hi/kido/look.m4a"] }]
+    "en": [
+      {
+        "text": "Look!",
+        "audio": [
+          "assets/audio/en/kido/look.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "देखो!",
+        "audio": [
+          "assets/audio/hi/kido/look.m4a"
+        ]
+      }
+    ]
   },
   "letter_for": {
-    "en": [{ "text": "{letter} for {item}!", "audio": ["{letter}", "assets/audio/en/kido/for.m4a", "{item}"] }],
-    "hi": [{ "text": "{letter} से {item}!", "audio": ["{letter}", "assets/audio/hi/kido/se.m4a", "{item}"] }]
+    "en": [
+      {
+        "text": "{letter} for {item}!",
+        "audio": [
+          "{letter}",
+          "assets/audio/en/kido/for.m4a",
+          "{item}"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "{letter} से {item}!",
+        "audio": [
+          "{letter}",
+          "assets/audio/hi/kido/se.m4a",
+          "{item}"
+        ]
+      }
+    ]
   },
   "listen_sound": {
-    "en": [{ "text": "Listen to the {item}!", "audio": ["assets/audio/en/kido/listen_to_the.m4a", "{item}"] }],
-    "hi": [{ "text": "सुनो, {item} की आवाज़!", "audio": ["assets/audio/hi/kido/suno.m4a", "{item}", "assets/audio/hi/kido/ki_awaaz.m4a"] }]
+    "en": [
+      {
+        "text": "Listen to the {item}!",
+        "audio": [
+          "assets/audio/en/kido/listen_to_the.m4a",
+          "{item}"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "सुनो, {item} की आवाज़!",
+        "audio": [
+          "assets/audio/hi/kido/suno.m4a",
+          "{item}",
+          "assets/audio/hi/kido/ki_awaaz.m4a"
+        ]
+      }
+    ]
   },
   "lets_count": {
-    "en": [{ "text": "Let's count!", "audio": ["assets/audio/en/kido/lets_count.m4a"] }],
-    "hi": [{ "text": "चलो गिनती करें!", "audio": ["assets/audio/hi/kido/lets_count.m4a"] }]
+    "en": [
+      {
+        "text": "Let's count!",
+        "audio": [
+          "assets/audio/en/kido/lets_count.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "चलो गिनती करें!",
+        "audio": [
+          "assets/audio/hi/kido/lets_count.m4a"
+        ]
+      }
+    ]
   },
   "say_with_me": {
-    "en": [{ "text": "Say it with me!", "audio": ["assets/audio/en/kido/say_with_me.m4a"] }],
-    "hi": [{ "text": "मेरे साथ बोलो!", "audio": ["assets/audio/hi/kido/say_with_me.m4a"] }]
+    "en": [
+      {
+        "text": "Say it with me!",
+        "audio": [
+          "assets/audio/en/kido/say_with_me.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "मेरे साथ बोलो!",
+        "audio": [
+          "assets/audio/hi/kido/say_with_me.m4a"
+        ]
+      }
+    ]
   },
   "yay": {
     "en": [
-      { "text": "Yay!", "audio": ["assets/audio/en/kido/yay_1.m4a"] },
-      { "text": "Very good!", "audio": ["assets/audio/en/kido/yay_2.m4a"] },
-      { "text": "Lovely!", "audio": ["assets/audio/en/kido/yay_3.m4a"] }
+      {
+        "text": "Yay!",
+        "audio": [
+          "assets/audio/en/kido/yay_1.m4a"
+        ]
+      },
+      {
+        "text": "Very good!",
+        "audio": [
+          "assets/audio/en/kido/yay_2.m4a"
+        ]
+      },
+      {
+        "text": "Lovely!",
+        "audio": [
+          "assets/audio/en/kido/yay_3.m4a"
+        ]
+      }
     ],
     "hi": [
-      { "text": "वाह!", "audio": ["assets/audio/hi/kido/yay_1.m4a"] },
-      { "text": "बहुत अच्छे!", "audio": ["assets/audio/hi/kido/yay_2.m4a"] },
-      { "text": "बढ़िया!", "audio": ["assets/audio/hi/kido/yay_3.m4a"] }
+      {
+        "text": "वाह!",
+        "audio": [
+          "assets/audio/hi/kido/yay_1.m4a"
+        ]
+      },
+      {
+        "text": "बहुत अच्छे!",
+        "audio": [
+          "assets/audio/hi/kido/yay_2.m4a"
+        ]
+      },
+      {
+        "text": "बढ़िया!",
+        "audio": [
+          "assets/audio/hi/kido/yay_3.m4a"
+        ]
+      }
     ]
   },
   "spell_together": {
-    "en": [{ "text": "Now let's spell it together!", "audio": ["assets/audio/en/kido/spell_together.m4a"] }],
-    "hi": [{ "text": "अब चलो साथ में स्पेलिंग करें!", "audio": ["assets/audio/hi/kido/spell_together.m4a"] }]
+    "en": [
+      {
+        "text": "Now let's spell it together!",
+        "audio": [
+          "assets/audio/en/kido/spell_together.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "अब चलो साथ में स्पेलिंग करें!",
+        "audio": [
+          "assets/audio/hi/kido/spell_together.m4a"
+        ]
+      }
+    ]
   },
   "tap_letter": {
-    "en": [{ "text": "Tap {item}!", "audio": ["assets/audio/en/kido/tap.m4a", "{item}"] }],
-    "hi": [{ "text": "{item} को छुओ!", "audio": ["{item}", "assets/audio/hi/kido/ko_chhuo.m4a"] }]
+    "en": [
+      {
+        "text": "Tap {item}!",
+        "audio": [
+          "assets/audio/en/kido/tap.m4a",
+          "{item}"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "{item} को छुओ!",
+        "audio": [
+          "{item}",
+          "assets/audio/hi/kido/ko_chhuo.m4a"
+        ]
+      }
+    ]
   },
   "find_it": {
-    "en": [{ "text": "Where is the {item}? Can you tap it?", "audio": ["assets/audio/en/kido/where_is_the.m4a", "{item}", "assets/audio/en/kido/can_you_tap_it.m4a"] }],
-    "hi": [{ "text": "{item} कहाँ है? छू कर दिखाओ!", "audio": ["{item}", "assets/audio/hi/kido/kahan_hai.m4a"] }]
+    "en": [
+      {
+        "text": "Where is the {item}? Can you tap it?",
+        "audio": [
+          "assets/audio/en/kido/where_is_the.m4a",
+          "{item}",
+          "assets/audio/en/kido/can_you_tap_it.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "{item} कहाँ है? छू कर दिखाओ!",
+        "audio": [
+          "{item}",
+          "assets/audio/hi/kido/kahan_hai.m4a"
+        ]
+      }
+    ]
   },
   "hint_tap": {
-    "en": [{ "text": "Here it is! Tap the {item}!", "audio": ["assets/audio/en/kido/hint_tap.m4a", "{item}"] }],
-    "hi": [{ "text": "यह रहा! {item} को छुओ!", "audio": ["assets/audio/hi/kido/yeh_raha.m4a", "{item}", "assets/audio/hi/kido/ko_chhuo.m4a"] }]
+    "en": [
+      {
+        "text": "Here it is! Tap the {item}!",
+        "audio": [
+          "assets/audio/en/kido/hint_tap.m4a",
+          "{item}"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "यह रहा! {item} को छुओ!",
+        "audio": [
+          "assets/audio/hi/kido/yeh_raha.m4a",
+          "{item}",
+          "assets/audio/hi/kido/ko_chhuo.m4a"
+        ]
+      }
+    ]
   },
   "praise": {
     "en": [
-      { "text": "Yay! You did it!", "audio": ["assets/audio/en/kido/praise_1.m4a"] },
-      { "text": "Super star!", "audio": ["assets/audio/en/kido/praise_2.m4a"] },
-      { "text": "Wow! Well done!", "audio": ["assets/audio/en/kido/praise_3.m4a"] },
-      { "text": "High five!", "audio": ["assets/audio/en/kido/praise_4.m4a"] },
-      { "text": "You are so clever!", "audio": ["assets/audio/en/kido/praise_5.m4a"] },
-      { "text": "Great job, friend!", "audio": ["assets/audio/en/kido/praise_6.m4a"] }
+      {
+        "text": "Yay! You did it!",
+        "audio": [
+          "assets/audio/en/kido/praise_1.m4a"
+        ]
+      },
+      {
+        "text": "Super star!",
+        "audio": [
+          "assets/audio/en/kido/praise_2.m4a"
+        ]
+      },
+      {
+        "text": "Wow! Well done!",
+        "audio": [
+          "assets/audio/en/kido/praise_3.m4a"
+        ]
+      },
+      {
+        "text": "High five!",
+        "audio": [
+          "assets/audio/en/kido/praise_4.m4a"
+        ]
+      },
+      {
+        "text": "You are so clever!",
+        "audio": [
+          "assets/audio/en/kido/praise_5.m4a"
+        ]
+      },
+      {
+        "text": "Great job, friend!",
+        "audio": [
+          "assets/audio/en/kido/praise_6.m4a"
+        ]
+      }
     ],
     "hi": [
-      { "text": "शाबाश!", "audio": ["assets/audio/hi/kido/praise_1.m4a"] },
-      { "text": "वाह! बहुत बढ़िया!", "audio": ["assets/audio/hi/kido/praise_2.m4a"] },
-      { "text": "तुमने कर दिखाया!", "audio": ["assets/audio/hi/kido/praise_3.m4a"] },
-      { "text": "हाई फाइव!", "audio": ["assets/audio/hi/kido/praise_4.m4a"] },
-      { "text": "तुम तो बहुत होशियार हो!", "audio": ["assets/audio/hi/kido/praise_5.m4a"] },
-      { "text": "बहुत अच्छे, दोस्त!", "audio": ["assets/audio/hi/kido/praise_6.m4a"] }
+      {
+        "text": "शाबाश!",
+        "audio": [
+          "assets/audio/hi/kido/praise_1.m4a"
+        ]
+      },
+      {
+        "text": "वाह! बहुत बढ़िया!",
+        "audio": [
+          "assets/audio/hi/kido/praise_2.m4a"
+        ]
+      },
+      {
+        "text": "तुमने कर दिखाया!",
+        "audio": [
+          "assets/audio/hi/kido/praise_3.m4a"
+        ]
+      },
+      {
+        "text": "हाई फाइव!",
+        "audio": [
+          "assets/audio/hi/kido/praise_4.m4a"
+        ]
+      },
+      {
+        "text": "तुम तो बहुत होशियार हो!",
+        "audio": [
+          "assets/audio/hi/kido/praise_5.m4a"
+        ]
+      },
+      {
+        "text": "बहुत अच्छे, दोस्त!",
+        "audio": [
+          "assets/audio/hi/kido/praise_6.m4a"
+        ]
+      }
     ]
   },
   "try_again": {
-    "en": [{ "text": "Let's look again!", "audio": ["assets/audio/en/kido/try_again.m4a"] }],
-    "hi": [{ "text": "चलो फिर से देखें!", "audio": ["assets/audio/hi/kido/try_again.m4a"] }]
+    "en": [
+      {
+        "text": "Let's look again!",
+        "audio": [
+          "assets/audio/en/kido/try_again.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "चलो फिर से देखें!",
+        "audio": [
+          "assets/audio/hi/kido/try_again.m4a"
+        ]
+      }
+    ]
   },
   "section_done": {
-    "en": [{ "text": "You learned {n} {section}!", "audio": ["assets/audio/en/kido/you_learned.m4a", "{n}", "{section}"] }],
-    "hi": [{ "text": "तुमने {n} {section} सीखे!", "audio": ["assets/audio/hi/kido/tumne.m4a", "{n}", "{section}", "assets/audio/hi/kido/seekhe.m4a"] }]
+    "en": [
+      {
+        "text": "You learned {n} {section}!",
+        "audio": [
+          "assets/audio/en/kido/you_learned.m4a",
+          "{n}",
+          "{section}"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "तुमने {n} {section} सीखे!",
+        "audio": [
+          "assets/audio/hi/kido/tumne.m4a",
+          "{n}",
+          "{section}",
+          "assets/audio/hi/kido/seekhe.m4a"
+        ]
+      }
+    ]
   },
   "goodbye": {
-    "en": [{ "text": "Bye bye, friend! See you soon!", "audio": ["assets/audio/en/kido/goodbye.m4a"] }],
-    "hi": [{ "text": "बाय बाय दोस्त! फिर मिलेंगे!", "audio": ["assets/audio/hi/kido/goodbye.m4a"] }]
+    "en": [
+      {
+        "text": "Bye bye, friend! See you soon!",
+        "audio": [
+          "assets/audio/en/kido/goodbye.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "बाय बाय दोस्त! फिर मिलेंगे!",
+        "audio": [
+          "assets/audio/hi/kido/goodbye.m4a"
+        ]
+      }
+    ]
+  },
+  "lets_play": {
+    "en": [
+      {
+        "text": "Let's play a game!",
+        "audio": [
+          "assets/audio/en/kido/lets_play.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "चलो एक खेल खेलें!",
+        "audio": [
+          "assets/audio/hi/kido/lets_play.m4a"
+        ]
+      }
+    ]
+  },
+  "who_says": {
+    "en": [
+      {
+        "text": "Who says this? Listen!",
+        "audio": [
+          "assets/audio/en/kido/who_says.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "सुनो! यह किसकी आवाज़ है?",
+        "audio": [
+          "assets/audio/hi/kido/who_says.m4a"
+        ]
+      }
+    ]
+  },
+  "how_many": {
+    "en": [
+      {
+        "text": "How many? Let's count!",
+        "audio": [
+          "assets/audio/en/kido/how_many.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "कितने हैं? चलो गिनें!",
+        "audio": [
+          "assets/audio/hi/kido/how_many.m4a"
+        ]
+      }
+    ]
+  },
+  "find_letter": {
+    "en": [
+      {
+        "text": "Find the letter {letter}!",
+        "audio": [
+          "assets/audio/en/kido/find_the_letter.m4a",
+          "{letter}"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "{letter} अक्षर ढूँढो!",
+        "audio": [
+          "{letter}",
+          "assets/audio/hi/kido/akshar_dhoondho.m4a"
+        ]
+      }
+    ]
+  },
+  "thats_a": {
+    "en": [
+      {
+        "text": "That's {item}!",
+        "audio": [
+          "assets/audio/en/kido/thats.m4a",
+          "{item}"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "यह {item} है!",
+        "audio": [
+          "assets/audio/hi/kido/yeh.m4a",
+          "{item}",
+          "assets/audio/hi/kido/hai.m4a"
+        ]
+      }
+    ]
+  },
+  "game_done": {
+    "en": [
+      {
+        "text": "Hooray! You played so well!",
+        "audio": [
+          "assets/audio/en/kido/game_done_1.m4a"
+        ]
+      },
+      {
+        "text": "Yay! Game finished! Super star!",
+        "audio": [
+          "assets/audio/en/kido/game_done_2.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "हुर्रे! तुमने बहुत अच्छा खेला!",
+        "audio": [
+          "assets/audio/hi/kido/game_done_1.m4a"
+        ]
+      },
+      {
+        "text": "वाह! खेल पूरा हुआ! तुम सुपरस्टार हो!",
+        "audio": [
+          "assets/audio/hi/kido/game_done_2.m4a"
+        ]
+      }
+    ]
   }
 }

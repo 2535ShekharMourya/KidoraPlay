@@ -99,5 +99,12 @@
   "purchaseFailed": "The purchase did not go through. You have not been charged.",
   "purchasePending": "Waiting for the payment to finish…",
   "storeUnavailable": "Google Play is not available right now. Please check your internet connection and try again.",
-  "subscriptionTerms": "Subscriptions renew automatically until cancelled. Cancel anytime in Google Play → Payments & subscriptions. The lifetime plan is a single payment."
+  "subscriptionTerms": "Subscriptions renew automatically until cancelled. Cancel anytime in Google Play → Payments & subscriptions. The lifetime plan is a single payment.",
+  "games": "Games",
+  "gameFindIt": "Find it",
+  "gameWhoSays": "Who says?",
+  "gameCount": "Count",
+  "gameLetters": "Letters",
+  "playAgain": "Play again",
+  "hearAgain": "Hear again"
 }

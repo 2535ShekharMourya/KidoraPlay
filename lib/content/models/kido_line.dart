@@ -39,6 +39,16 @@ abstract final class KidoEvent {
   static const sectionDone = 'section_done';
   static const goodbye = 'goodbye';
 
+  // Games.
+  static const letsPlay = 'lets_play';
+  static const whoSays = 'who_says';
+  static const howMany = 'how_many';
+  static const findLetter = 'find_letter';
+
+  /// "That's a dog!": names a different choice, never "wrong".
+  static const thatsA = 'thats_a';
+  static const gameDone = 'game_done';
+
   static const all = [
     welcomeFirst,
     welcomeBack,
@@ -57,6 +67,12 @@ abstract final class KidoEvent {
     tryAgain,
     sectionDone,
     goodbye,
+    letsPlay,
+    whoSays,
+    howMany,
+    findLetter,
+    thatsA,
+    gameDone,
   ];
 }
 

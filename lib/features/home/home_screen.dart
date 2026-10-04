@@ -87,12 +87,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   horizontal: AppLayout.sideZone,
                   vertical: AppSpacing.xxl,
                 ),
+                // Gaps only between tiles: 5 × 96 dp + 4 × 16 dp fits.
                 child: Row(
+                  spacing: AppSpacing.tapGap,
                   children: [
                     for (final (i, id) in SectionId.values.indexed)
                       Expanded(
                         child: Padding(
-                          padding: const EdgeInsets.all(AppSpacing.tapGap / 2),
+                          padding: const EdgeInsets.symmetric(
+                            vertical: AppSpacing.tapGap / 2,
+                          ),
                           child: PopIn(
                             index: i,
                             child: IdleFloat(
@@ -107,6 +111,24 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                           ),
                         ),
                       ),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                          vertical: AppSpacing.tapGap / 2,
+                        ),
+                        child: PopIn(
+                          index: SectionId.values.length,
+                          child: IdleFloat(
+                            phase: 0.9,
+                            child: BouncyButton(
+                              semanticLabel: l10n.games,
+                              onPressed: () => context.go(AppRoutes.games),
+                              child: _GamesTile(label: l10n.games),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -145,6 +167,44 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class _GamesTile extends StatelessWidget {
+  const _GamesTile({required this.label});
+
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: AppColors.gamesAccent,
+        borderRadius: BorderRadius.circular(AppRadii.card),
+        border: Border.all(color: AppColors.outline, width: AppStroke.thick),
+      ),
+      padding: const EdgeInsets.all(AppSpacing.sm),
+      child: Column(
+        children: [
+          Expanded(
+            child: Image.asset(
+              'assets/images/games/games.webp',
+              fit: BoxFit.contain,
+            ),
+          ),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              label,
+              style: Theme.of(context).textTheme.headlineMedium
+                  ?.copyWith(color: AppColors.white),
+            ),
+          ),
+          // Keeps the label level with the section tiles' star badges.
+          const SizedBox(height: AppSpacing.xl),
+        ],
       ),
     );
   }

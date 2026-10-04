@@ -185,4 +185,25 @@ class AppLocalizationsHi extends AppLocalizations {
   @override
   String get subscriptionTerms =>
       'सदस्यता रद्द करने तक अपने आप नवीनीकृत होती है। Google Play → भुगतान और सदस्यता में कभी भी रद्द करें। आजीवन प्लान एक बार का भुगतान है।';
+
+  @override
+  String get games => 'खेल';
+
+  @override
+  String get gameFindIt => 'ढूँढो';
+
+  @override
+  String get gameWhoSays => 'किसकी आवाज़?';
+
+  @override
+  String get gameCount => 'गिनो';
+
+  @override
+  String get gameLetters => 'अक्षर';
+
+  @override
+  String get playAgain => 'फिर से खेलो';
+
+  @override
+  String get hearAgain => 'फिर से सुनो';
 }

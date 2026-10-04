@@ -84,6 +84,7 @@ abstract final class AppDurations {
   static const countAlongMax = 10;
   static const stickerFlight = Duration(milliseconds: 900);
   static const celebration = Duration(milliseconds: 3500);
+  static const quizNext = Duration(milliseconds: 600);
 }
 
 /// Curve tokens.

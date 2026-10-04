@@ -57,4 +57,6 @@ abstract final class AppColors {
   static const animalsAccent = Color(0xFF3DB24B);
   static const birdsBg = Color(0xFFFFE6D3);
   static const birdsAccent = Color(0xFFFF7A2F);
+  static const gamesBg = Color(0xFFF1E7FF);
+  static const gamesAccent = Color(0xFF9B5DE5);
 }
