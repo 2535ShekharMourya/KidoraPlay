@@ -208,4 +208,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get hearAgain => 'Hear again';
+
+  @override
+  String get sectionFruits => 'Fruits';
+
+  @override
+  String get sectionVegetables => 'Vegetables';
+
+  @override
+  String get sectionColours => 'Colours';
+
+  @override
+  String get sectionShapes => 'Shapes';
 }

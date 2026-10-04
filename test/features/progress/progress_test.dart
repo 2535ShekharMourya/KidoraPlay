@@ -6,6 +6,7 @@ import 'package:kidoraplay/content/repository/content_catalog.dart';
 import 'package:kidoraplay/content/repository/content_repository.dart';
 import 'package:kidoraplay/core/settings/app_settings.dart';
 import 'package:kidoraplay/core/storage/local_store.dart';
+import 'package:kidoraplay/core/widgets/big_back_button.dart';
 import 'package:kidoraplay/core/widgets/bouncy_button.dart';
 import 'package:kidoraplay/features/learn_card/learn_card_controller.dart';
 import 'package:kidoraplay/features/progress/progress_controller.dart';
@@ -162,13 +163,21 @@ void main() {
       await tester.pump(const Duration(milliseconds: 100));
     }
 
-    // Two of the 100 numbers are collected (default class: LKG).
+    // First the section choice; two of the 100 numbers are collected.
     expect(find.text('2/100'), findsWidgets);
+    await tester.tap(button('Numbers 2/100'));
+    for (var i = 0; i < 25; i++) {
+      await tester.pump(const Duration(milliseconds: 100));
+    }
     await tester.tap(button('Two'));
     await tester.pump();
     expect(audio.voice.played, ['assets/audio/en/two.m4a']);
 
-    // Switch to the ABC stickers.
+    // Back to the section choice, then the ABC stickers.
+    await tester.tap(find.byType(BigBackButton));
+    for (var i = 0; i < 25; i++) {
+      await tester.pump(const Duration(milliseconds: 100));
+    }
     await tester.tap(button('ABC 0/26'));
     for (var i = 0; i < 25; i++) {
       await tester.pump(const Duration(milliseconds: 100));

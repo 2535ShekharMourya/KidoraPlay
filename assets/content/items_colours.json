@@ -1,0 +1,222 @@
+[
+  {
+    "id": "colour_red",
+    "section": "colours",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Red",
+    "word_hi": "लाल",
+    "image": "assets/images/colours/colour_red.webp",
+    "voice_en": "assets/audio/en/colour_red.m4a",
+    "voice_hi": "assets/audio/hi/colour_red.m4a",
+    "sound": null,
+    "fact_en": "Apples are red!",
+    "fact_hi": "सेब लाल होता है!",
+    "voice_fact_en": "assets/audio/en/colour_red_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/colour_red_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "colour_blue",
+    "section": "colours",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Blue",
+    "word_hi": "नीला",
+    "image": "assets/images/colours/colour_blue.webp",
+    "voice_en": "assets/audio/en/colour_blue.m4a",
+    "voice_hi": "assets/audio/hi/colour_blue.m4a",
+    "sound": null,
+    "fact_en": "The sky is blue!",
+    "fact_hi": "आसमान नीला होता है!",
+    "voice_fact_en": "assets/audio/en/colour_blue_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/colour_blue_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "colour_yellow",
+    "section": "colours",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Yellow",
+    "word_hi": "पीला",
+    "image": "assets/images/colours/colour_yellow.webp",
+    "voice_en": "assets/audio/en/colour_yellow.m4a",
+    "voice_hi": "assets/audio/hi/colour_yellow.m4a",
+    "sound": null,
+    "fact_en": "Bananas are yellow!",
+    "fact_hi": "केला पीला होता है!",
+    "voice_fact_en": "assets/audio/en/colour_yellow_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/colour_yellow_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "colour_green",
+    "section": "colours",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Green",
+    "word_hi": "हरा",
+    "image": "assets/images/colours/colour_green.webp",
+    "voice_en": "assets/audio/en/colour_green.m4a",
+    "voice_hi": "assets/audio/hi/colour_green.m4a",
+    "sound": null,
+    "fact_en": "Leaves are green!",
+    "fact_hi": "पत्ते हरे होते हैं!",
+    "voice_fact_en": "assets/audio/en/colour_green_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/colour_green_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "colour_orange",
+    "section": "colours",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Orange",
+    "word_hi": "नारंगी",
+    "image": "assets/images/colours/colour_orange.webp",
+    "voice_en": "assets/audio/en/colour_orange.m4a",
+    "voice_hi": "assets/audio/hi/colour_orange.m4a",
+    "sound": null,
+    "fact_en": "Oranges are orange!",
+    "fact_hi": "संतरा नारंगी होता है!",
+    "voice_fact_en": "assets/audio/en/colour_orange_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/colour_orange_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "colour_pink",
+    "section": "colours",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Pink",
+    "word_hi": "गुलाबी",
+    "image": "assets/images/colours/colour_pink.webp",
+    "voice_en": "assets/audio/en/colour_pink.m4a",
+    "voice_hi": "assets/audio/hi/colour_pink.m4a",
+    "sound": null,
+    "fact_en": "Some flowers are pink!",
+    "fact_hi": "कुछ फूल गुलाबी होते हैं!",
+    "voice_fact_en": "assets/audio/en/colour_pink_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/colour_pink_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "colour_purple",
+    "section": "colours",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Purple",
+    "word_hi": "बैंगनी",
+    "image": "assets/images/colours/colour_purple.webp",
+    "voice_en": "assets/audio/en/colour_purple.m4a",
+    "voice_hi": "assets/audio/hi/colour_purple.m4a",
+    "sound": null,
+    "fact_en": "Some grapes are purple!",
+    "fact_hi": "कुछ अंगूर बैंगनी होते हैं!",
+    "voice_fact_en": "assets/audio/en/colour_purple_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/colour_purple_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "colour_brown",
+    "section": "colours",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Brown",
+    "word_hi": "भूरा",
+    "image": "assets/images/colours/colour_brown.webp",
+    "voice_en": "assets/audio/en/colour_brown.m4a",
+    "voice_hi": "assets/audio/hi/colour_brown.m4a",
+    "sound": null,
+    "fact_en": "A teddy bear is brown!",
+    "fact_hi": "टेडी बियर भूरा होता है!",
+    "voice_fact_en": "assets/audio/en/colour_brown_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/colour_brown_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "colour_black",
+    "section": "colours",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Black",
+    "word_hi": "काला",
+    "image": "assets/images/colours/colour_black.webp",
+    "voice_en": "assets/audio/en/colour_black.m4a",
+    "voice_hi": "assets/audio/hi/colour_black.m4a",
+    "sound": null,
+    "fact_en": "A crow is black!",
+    "fact_hi": "कौआ काला होता है!",
+    "voice_fact_en": "assets/audio/en/colour_black_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/colour_black_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "colour_white",
+    "section": "colours",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "White",
+    "word_hi": "सफ़ेद",
+    "image": "assets/images/colours/colour_white.webp",
+    "voice_en": "assets/audio/en/colour_white.m4a",
+    "voice_hi": "assets/audio/hi/colour_white.m4a",
+    "sound": null,
+    "fact_en": "Clouds are white!",
+    "fact_hi": "बादल सफ़ेद होते हैं!",
+    "voice_fact_en": "assets/audio/en/colour_white_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/colour_white_fact.m4a",
+    "rive_reaction": null
+  }
+]

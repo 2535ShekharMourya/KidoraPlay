@@ -106,5 +106,9 @@
   "gameCount": "Count",
   "gameLetters": "Letters",
   "playAgain": "Play again",
-  "hearAgain": "Hear again"
+  "hearAgain": "Hear again",
+  "sectionFruits": "Fruits",
+  "sectionVegetables": "Vegetables",
+  "sectionColours": "Colours",
+  "sectionShapes": "Shapes"
 }

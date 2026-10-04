@@ -118,6 +118,10 @@ List<QuizRound> buildQuiz(
       final items = [
         ...catalog.itemsFor(SectionId.animals, level: level),
         ...catalog.itemsFor(SectionId.birds, level: level),
+        if (kind == GameKind.findIt) ...[
+          ...catalog.itemsFor(SectionId.fruits, level: level),
+          ...catalog.itemsFor(SectionId.vegetables, level: level),
+        ],
       ].where((i) => kind == GameKind.findIt || i.sound != null).toList();
       final pool = items.map(pictureChoice).toList();
       final answers = [...pool]..shuffle(random);
@@ -146,6 +150,7 @@ List<QuizRound> buildQuiz(
           ),
       ];
       final subjects = [
+        ...catalog.itemsFor(SectionId.fruits),
         ...catalog.itemsFor(SectionId.animals),
         ...catalog.itemsFor(SectionId.birds),
       ]..shuffle(random);

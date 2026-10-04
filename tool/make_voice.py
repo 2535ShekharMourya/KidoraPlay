@@ -144,8 +144,12 @@ async def main():
         nonlocal done
         async with sem:
             mp3 = Path(tmp) / f"clip{i}.mp3"
-            await synthesise(lang, text, mp3)
-            await asyncio.to_thread(to_m4a, mp3, ROOT / path)
+            try:
+                await synthesise(lang, text, mp3)
+                await asyncio.to_thread(to_m4a, mp3, ROOT / path)
+            except Exception as e:  # keep going; rerun picks it up
+                print(f"  FAILED {path}: {type(e).__name__}", flush=True)
+                return
             manifest[path] = fingerprint(lang, text)
             placeholders.add(path)
             done += 1
@@ -153,7 +157,7 @@ async def main():
                 save_progress()
                 print(f"  {done}/{len(todo)}", flush=True)
 
-    with tempfile.TemporaryDirectory() as tmp:
+    with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as tmp:
         await asyncio.gather(*[
             one(tmp, i, path, lang, text)
             for i, (path, lang, text) in enumerate(todo)

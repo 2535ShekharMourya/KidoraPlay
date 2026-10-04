@@ -5,7 +5,16 @@ import 'level.dart';
 
 /// Learning sections. Phase 2/3 sections are added here and in
 /// `assets/content/sections.json`.
-enum SectionId { numbers, abc, animals, birds }
+enum SectionId {
+  numbers,
+  abc,
+  animals,
+  birds,
+  fruits,
+  vegetables,
+  colours,
+  shapes,
+}
 
 @immutable
 class Section {

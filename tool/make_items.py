@@ -206,6 +206,112 @@ BIRDS = [
      ("The koel sings a sweet song!", "कोयल मीठा गाना गाती है!")),
 ]
 
+
+# ---------------------------------------------------------------- Phase 2
+NURSERY_UP = ALL_LEVELS
+LKG_UP = ["lkg", "ukg"]
+
+# (id, English, Hindi, (fact EN, fact HI))
+FRUITS = [
+    ("apple", "Apple", "सेब",
+     ("Apples are red and crunchy!", "सेब लाल और कुरकुरा होता है!")),
+    ("banana", "Banana", "केला",
+     ("A banana is yellow and soft!", "केला पीला और नरम होता है!")),
+    ("mango", "Mango", "आम",
+     ("Mango is the king of fruits!", "आम फलों का राजा है!")),
+    ("orange", "Orange", "संतरा",
+     ("An orange is round and juicy!", "संतरा गोल और रसीला होता है!")),
+    ("grapes", "Grapes", "अंगूर",
+     ("Grapes grow in bunches!", "अंगूर गुच्छों में लगते हैं!")),
+    ("watermelon", "Watermelon", "तरबूज़",
+     ("A watermelon is green outside and red inside!",
+      "तरबूज़ बाहर से हरा और अंदर से लाल होता है!")),
+    ("papaya", "Papaya", "पपीता",
+     ("A papaya is orange inside!", "पपीता अंदर से नारंगी होता है!")),
+    ("pineapple", "Pineapple", "अनानास",
+     ("A pineapple has a spiky crown!", "अनानास के ऊपर काँटेदार ताज होता है!")),
+    ("guava", "Guava", "अमरूद",
+     ("A guava is green and sweet!", "अमरूद हरा और मीठा होता है!")),
+    ("pomegranate", "Pomegranate", "अनार",
+     ("A pomegranate is full of red seeds!", "अनार में लाल-लाल दाने होते हैं!")),
+    ("strawberry", "Strawberry", "स्ट्रॉबेरी",
+     ("A strawberry has tiny seeds outside!",
+      "स्ट्रॉबेरी के बाहर छोटे-छोटे बीज होते हैं!")),
+    ("coconut", "Coconut", "नारियल",
+     ("A coconut has sweet water inside!", "नारियल के अंदर मीठा पानी होता है!")),
+]
+
+VEGETABLES = [
+    ("potato", "Potato", "आलू",
+     ("Potatoes grow under the ground!", "आलू ज़मीन के नीचे उगता है!")),
+    ("tomato", "Tomato", "टमाटर",
+     ("A tomato is red and juicy!", "टमाटर लाल और रसीला होता है!")),
+    ("onion", "Onion", "प्याज़",
+     ("Cutting an onion can make us cry!", "प्याज़ काटने पर आँसू आ जाते हैं!")),
+    ("carrot", "Carrot", "गाजर",
+     ("Carrots are good for our eyes!", "गाजर आँखों के लिए अच्छी होती है!")),
+    ("cauliflower", "Cauliflower", "फूलगोभी",
+     ("A cauliflower is white like a cloud!", "फूलगोभी बादल जैसी सफ़ेद होती है!")),
+    ("cabbage", "Cabbage", "पत्तागोभी",
+     ("A cabbage has many leaves!", "पत्तागोभी में बहुत सारे पत्ते होते हैं!")),
+    ("brinjal", "Brinjal", "बैंगन",
+     ("A brinjal is purple!", "बैंगन बैंगनी रंग का होता है!")),
+    ("peas", "Peas", "मटर",
+     ("Peas hide inside a pod!", "मटर फली के अंदर छिपे होते हैं!")),
+    ("cucumber", "Cucumber", "खीरा",
+     ("A cucumber is cool and green!", "खीरा ठंडा और हरा होता है!")),
+    ("pumpkin", "Pumpkin", "कद्दू",
+     ("A pumpkin is big and orange!", "कद्दू बड़ा और नारंगी होता है!")),
+    ("spinach", "Spinach", "पालक",
+     ("Spinach makes us strong!", "पालक हमें ताक़तवर बनाता है!")),
+    ("lady_finger", "Lady Finger", "भिंडी",
+     ("Lady finger is long and green!", "भिंडी लंबी और हरी होती है!")),
+]
+
+# (id, English, Hindi, swatch RGB, example emoji, (fact EN, fact HI))
+COLOURS = [
+    ("colour_red", "Red", "लाल", (230, 57, 70), "1f34e",
+     ("Apples are red!", "सेब लाल होता है!")),
+    ("colour_blue", "Blue", "नीला", (46, 134, 222), "1fad0",
+     ("The sky is blue!", "आसमान नीला होता है!")),
+    ("colour_yellow", "Yellow", "पीला", (255, 209, 59), "1f34c",
+     ("Bananas are yellow!", "केला पीला होता है!")),
+    ("colour_green", "Green", "हरा", (62, 178, 75), "1f343",
+     ("Leaves are green!", "पत्ते हरे होते हैं!")),
+    ("colour_orange", "Orange", "नारंगी", (255, 138, 40), "1f34a",
+     ("Oranges are orange!", "संतरा नारंगी होता है!")),
+    ("colour_pink", "Pink", "गुलाबी", (255, 120, 180), "1f338",
+     ("Some flowers are pink!", "कुछ फूल गुलाबी होते हैं!")),
+    ("colour_purple", "Purple", "बैंगनी", (142, 68, 173), "1f347",
+     ("Some grapes are purple!", "कुछ अंगूर बैंगनी होते हैं!")),
+    ("colour_brown", "Brown", "भूरा", (141, 90, 60), "1f9f8",
+     ("A teddy bear is brown!", "टेडी बियर भूरा होता है!")),
+    ("colour_black", "Black", "काला", (40, 40, 48), "1f426_200d_2b1b",
+     ("A crow is black!", "कौआ काला होता है!")),
+    ("colour_white", "White", "सफ़ेद", (255, 255, 255), "2601",
+     ("Clouds are white!", "बादल सफ़ेद होते हैं!")),
+]
+
+# (id, English, Hindi, (fact EN, fact HI))
+SHAPES = [
+    ("circle", "Circle", "गोला",
+     ("A wheel is a circle!", "पहिया गोल होता है!")),
+    ("square", "Square", "वर्ग",
+     ("A square has four equal sides!", "वर्ग की चारों भुजाएँ बराबर होती हैं!")),
+    ("triangle", "Triangle", "त्रिभुज",
+     ("A triangle has three sides!", "त्रिभुज की तीन भुजाएँ होती हैं!")),
+    ("rectangle", "Rectangle", "आयत",
+     ("A door is a rectangle!", "दरवाज़ा आयत जैसा होता है!")),
+    ("star", "Star", "तारा",
+     ("Stars twinkle in the night sky!", "तारे रात के आसमान में टिमटिमाते हैं!")),
+    ("heart", "Heart", "दिल",
+     ("A heart means love!", "दिल का मतलब प्यार है!")),
+    ("oval", "Oval", "अंडाकार",
+     ("An egg is an oval!", "अंडा अंडाकार होता है!")),
+    ("diamond", "Diamond", "हीरा",
+     ("A kite looks like a diamond!", "पतंग हीरे जैसी दिखती है!")),
+]
+
 # What Kido says for each animal/bird sound until real recordings exist.
 SOUND_TEXT = {
     "cow": "Mooo! Mooo!", "dog": "Woof woof!", "cat": "Meow! Meow!",
@@ -244,6 +350,19 @@ def main():
     write("items_birds.json",
           [item("birds", i, en, hi, sound=True, fact=f)
            for i, en, hi, f in BIRDS])
+
+    write("items_fruits.json",
+          [item("fruits", i, en, hi, fact=f, levels=NURSERY_UP)
+           for i, en, hi, f in FRUITS])
+    write("items_vegetables.json",
+          [item("vegetables", i, en, hi, fact=f, levels=LKG_UP)
+           for i, en, hi, f in VEGETABLES])
+    write("items_colours.json",
+          [item("colours", i, en, hi, fact=f, levels=NURSERY_UP)
+           for i, en, hi, _rgb, _emoji, f in COLOURS])
+    write("items_shapes.json",
+          [item("shapes", i, en, hi, fact=f, levels=NURSERY_UP)
+           for i, en, hi, f in SHAPES])
 
 
 if __name__ == "__main__":

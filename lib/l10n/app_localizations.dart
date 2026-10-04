@@ -469,6 +469,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Hear again'**
   String get hearAgain;
+
+  /// No description provided for @sectionFruits.
+  ///
+  /// In en, this message translates to:
+  /// **'Fruits'**
+  String get sectionFruits;
+
+  /// No description provided for @sectionVegetables.
+  ///
+  /// In en, this message translates to:
+  /// **'Vegetables'**
+  String get sectionVegetables;
+
+  /// No description provided for @sectionColours.
+  ///
+  /// In en, this message translates to:
+  /// **'Colours'**
+  String get sectionColours;
+
+  /// No description provided for @sectionShapes.
+  ///
+  /// In en, this message translates to:
+  /// **'Shapes'**
+  String get sectionShapes;
 }
 
 class _AppLocalizationsDelegate

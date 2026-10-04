@@ -3,7 +3,11 @@
     "id": "numbers",
     "title_en": "Numbers",
     "title_hi": "गिनती",
-    "levels": ["nursery", "lkg", "ukg"],
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
     "items": "assets/content/items_numbers.json",
     "image": "assets/images/sections/numbers.webp",
     "voice_en": "assets/audio/en/sections/numbers.m4a",
@@ -13,7 +17,11 @@
     "id": "abc",
     "title_en": "ABC",
     "title_hi": "एबीसी",
-    "levels": ["nursery", "lkg", "ukg"],
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
     "items": "assets/content/items_abc.json",
     "image": "assets/images/sections/abc.webp",
     "voice_en": "assets/audio/en/sections/abc.m4a",
@@ -23,7 +31,11 @@
     "id": "animals",
     "title_en": "Animals",
     "title_hi": "जानवर",
-    "levels": ["nursery", "lkg", "ukg"],
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
     "items": "assets/content/items_animals.json",
     "image": "assets/images/sections/animals.webp",
     "voice_en": "assets/audio/en/sections/animals.m4a",
@@ -33,10 +45,69 @@
     "id": "birds",
     "title_en": "Birds",
     "title_hi": "पक्षी",
-    "levels": ["nursery", "lkg", "ukg"],
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
     "items": "assets/content/items_birds.json",
     "image": "assets/images/sections/birds.webp",
     "voice_en": "assets/audio/en/sections/birds.m4a",
     "voice_hi": "assets/audio/hi/sections/birds.m4a"
+  },
+  {
+    "id": "fruits",
+    "title_en": "Fruits",
+    "title_hi": "फल",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "items": "assets/content/items_fruits.json",
+    "image": "assets/images/sections/fruits.webp",
+    "voice_en": "assets/audio/en/sections/fruits.m4a",
+    "voice_hi": "assets/audio/hi/sections/fruits.m4a"
+  },
+  {
+    "id": "vegetables",
+    "title_en": "Vegetables",
+    "title_hi": "सब्ज़ियाँ",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "items": "assets/content/items_vegetables.json",
+    "image": "assets/images/sections/vegetables.webp",
+    "voice_en": "assets/audio/en/sections/vegetables.m4a",
+    "voice_hi": "assets/audio/hi/sections/vegetables.m4a"
+  },
+  {
+    "id": "colours",
+    "title_en": "Colours",
+    "title_hi": "रंग",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "items": "assets/content/items_colours.json",
+    "image": "assets/images/sections/colours.webp",
+    "voice_en": "assets/audio/en/sections/colours.m4a",
+    "voice_hi": "assets/audio/hi/sections/colours.m4a"
+  },
+  {
+    "id": "shapes",
+    "title_en": "Shapes",
+    "title_hi": "आकार",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "items": "assets/content/items_shapes.json",
+    "image": "assets/images/sections/shapes.webp",
+    "voice_en": "assets/audio/en/sections/shapes.m4a",
+    "voice_hi": "assets/audio/hi/sections/shapes.m4a"
   }
 ]

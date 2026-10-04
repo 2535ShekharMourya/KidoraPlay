@@ -12,7 +12,19 @@ import 'package:kidoraplay/features/splash/splash_screen.dart';
 import 'helpers/fake_audio.dart';
 import 'helpers/pump_app.dart';
 
-const sections = ['Numbers', 'ABC', 'Animals', 'Birds'];
+// The default class (LKG) sees every Phase 1 and 2 section.
+const sections = [
+  'Numbers',
+  'ABC',
+  'Animals',
+  'Birds',
+  'Fruits',
+  'Vegetables',
+  'Colours',
+  'Shapes',
+];
+
+late ContentCatalog _catalog;
 
 Future<void> pumpToHome(
   WidgetTester tester, {
@@ -22,11 +34,7 @@ Future<void> pumpToHome(
   useLandscapePhone(tester);
   await tester.pumpWidget(
     ProviderScope(
-      overrides: [
-        ...testOverrides(audio: audio),
-        if (catalog != null)
-          contentCatalogProvider.overrideWith((ref) async => catalog),
-      ],
+      overrides: [...testOverrides(audio: audio, catalog: catalog ?? _catalog)],
       child: const KidoraApp(),
     ),
   );
@@ -34,7 +42,9 @@ Future<void> pumpToHome(
   // Home has looping idle animations, so pump fixed time instead of settling.
   await tester.pump(AppDurations.splash);
   await tester.pump(AppDurations.pageTransition);
-  await tester.pump(AppDurations.popIn + AppDurations.staggerStep * 4);
+  for (var i = 0; i < 20; i++) {
+    await tester.pump(const Duration(milliseconds: 100));
+  }
 }
 
 void main() {
@@ -48,9 +58,10 @@ void main() {
       bundle: rootBundle,
       validate: false,
     ).load();
+    _catalog = catalog;
   });
 
-  testWidgets('starts on splash, then shows home with 4 sections', (
+  testWidgets('starts on splash, then shows home with every section', (
     tester,
   ) async {
     await pumpToHome(tester);

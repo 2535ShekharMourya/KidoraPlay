@@ -61,5 +61,9 @@
   "gameCount": "गिनो",
   "gameLetters": "अक्षर",
   "playAgain": "फिर से खेलो",
-  "hearAgain": "फिर से सुनो"
+  "hearAgain": "फिर से सुनो",
+  "sectionFruits": "फल",
+  "sectionVegetables": "सब्ज़ियाँ",
+  "sectionColours": "रंग",
+  "sectionShapes": "आकार"
 }

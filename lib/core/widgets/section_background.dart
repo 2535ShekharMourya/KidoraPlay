@@ -91,12 +91,15 @@ class _BackgroundPainter extends CustomPainter {
       case null:
       case SectionId.numbers:
         _clouds(canvas, size, t);
-      case SectionId.abc:
+      case SectionId.abc || SectionId.colours || SectionId.shapes:
         _sun(canvas, size, t, Offset(size.width * 0.9, size.height * 0.12));
         _bubbles(canvas, size, t);
-      case SectionId.animals:
+      case SectionId.animals || SectionId.vegetables:
         _hills(canvas, size);
         _leaves(canvas, size, t);
+      case SectionId.fruits:
+        _sun(canvas, size, t, Offset(size.width * 0.88, size.height * 0.14));
+        _clouds(canvas, size, t);
       case SectionId.birds:
         _sun(canvas, size, t, Offset(size.width * 0.82, size.height * 0.78));
         _clouds(canvas, size, t);

@@ -1,0 +1,254 @@
+[
+  {
+    "id": "potato",
+    "section": "vegetables",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Potato",
+    "word_hi": "आलू",
+    "image": "assets/images/vegetables/potato.webp",
+    "voice_en": "assets/audio/en/potato.m4a",
+    "voice_hi": "assets/audio/hi/potato.m4a",
+    "sound": null,
+    "fact_en": "Potatoes grow under the ground!",
+    "fact_hi": "आलू ज़मीन के नीचे उगता है!",
+    "voice_fact_en": "assets/audio/en/potato_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/potato_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "tomato",
+    "section": "vegetables",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Tomato",
+    "word_hi": "टमाटर",
+    "image": "assets/images/vegetables/tomato.webp",
+    "voice_en": "assets/audio/en/tomato.m4a",
+    "voice_hi": "assets/audio/hi/tomato.m4a",
+    "sound": null,
+    "fact_en": "A tomato is red and juicy!",
+    "fact_hi": "टमाटर लाल और रसीला होता है!",
+    "voice_fact_en": "assets/audio/en/tomato_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/tomato_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "onion",
+    "section": "vegetables",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Onion",
+    "word_hi": "प्याज़",
+    "image": "assets/images/vegetables/onion.webp",
+    "voice_en": "assets/audio/en/onion.m4a",
+    "voice_hi": "assets/audio/hi/onion.m4a",
+    "sound": null,
+    "fact_en": "Cutting an onion can make us cry!",
+    "fact_hi": "प्याज़ काटने पर आँसू आ जाते हैं!",
+    "voice_fact_en": "assets/audio/en/onion_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/onion_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "carrot",
+    "section": "vegetables",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Carrot",
+    "word_hi": "गाजर",
+    "image": "assets/images/vegetables/carrot.webp",
+    "voice_en": "assets/audio/en/carrot.m4a",
+    "voice_hi": "assets/audio/hi/carrot.m4a",
+    "sound": null,
+    "fact_en": "Carrots are good for our eyes!",
+    "fact_hi": "गाजर आँखों के लिए अच्छी होती है!",
+    "voice_fact_en": "assets/audio/en/carrot_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/carrot_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "cauliflower",
+    "section": "vegetables",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Cauliflower",
+    "word_hi": "फूलगोभी",
+    "image": "assets/images/vegetables/cauliflower.webp",
+    "voice_en": "assets/audio/en/cauliflower.m4a",
+    "voice_hi": "assets/audio/hi/cauliflower.m4a",
+    "sound": null,
+    "fact_en": "A cauliflower is white like a cloud!",
+    "fact_hi": "फूलगोभी बादल जैसी सफ़ेद होती है!",
+    "voice_fact_en": "assets/audio/en/cauliflower_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/cauliflower_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "cabbage",
+    "section": "vegetables",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Cabbage",
+    "word_hi": "पत्तागोभी",
+    "image": "assets/images/vegetables/cabbage.webp",
+    "voice_en": "assets/audio/en/cabbage.m4a",
+    "voice_hi": "assets/audio/hi/cabbage.m4a",
+    "sound": null,
+    "fact_en": "A cabbage has many leaves!",
+    "fact_hi": "पत्तागोभी में बहुत सारे पत्ते होते हैं!",
+    "voice_fact_en": "assets/audio/en/cabbage_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/cabbage_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "brinjal",
+    "section": "vegetables",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Brinjal",
+    "word_hi": "बैंगन",
+    "image": "assets/images/vegetables/brinjal.webp",
+    "voice_en": "assets/audio/en/brinjal.m4a",
+    "voice_hi": "assets/audio/hi/brinjal.m4a",
+    "sound": null,
+    "fact_en": "A brinjal is purple!",
+    "fact_hi": "बैंगन बैंगनी रंग का होता है!",
+    "voice_fact_en": "assets/audio/en/brinjal_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/brinjal_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "peas",
+    "section": "vegetables",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Peas",
+    "word_hi": "मटर",
+    "image": "assets/images/vegetables/peas.webp",
+    "voice_en": "assets/audio/en/peas.m4a",
+    "voice_hi": "assets/audio/hi/peas.m4a",
+    "sound": null,
+    "fact_en": "Peas hide inside a pod!",
+    "fact_hi": "मटर फली के अंदर छिपे होते हैं!",
+    "voice_fact_en": "assets/audio/en/peas_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/peas_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "cucumber",
+    "section": "vegetables",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Cucumber",
+    "word_hi": "खीरा",
+    "image": "assets/images/vegetables/cucumber.webp",
+    "voice_en": "assets/audio/en/cucumber.m4a",
+    "voice_hi": "assets/audio/hi/cucumber.m4a",
+    "sound": null,
+    "fact_en": "A cucumber is cool and green!",
+    "fact_hi": "खीरा ठंडा और हरा होता है!",
+    "voice_fact_en": "assets/audio/en/cucumber_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/cucumber_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "pumpkin",
+    "section": "vegetables",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Pumpkin",
+    "word_hi": "कद्दू",
+    "image": "assets/images/vegetables/pumpkin.webp",
+    "voice_en": "assets/audio/en/pumpkin.m4a",
+    "voice_hi": "assets/audio/hi/pumpkin.m4a",
+    "sound": null,
+    "fact_en": "A pumpkin is big and orange!",
+    "fact_hi": "कद्दू बड़ा और नारंगी होता है!",
+    "voice_fact_en": "assets/audio/en/pumpkin_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/pumpkin_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "spinach",
+    "section": "vegetables",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Spinach",
+    "word_hi": "पालक",
+    "image": "assets/images/vegetables/spinach.webp",
+    "voice_en": "assets/audio/en/spinach.m4a",
+    "voice_hi": "assets/audio/hi/spinach.m4a",
+    "sound": null,
+    "fact_en": "Spinach makes us strong!",
+    "fact_hi": "पालक हमें ताक़तवर बनाता है!",
+    "voice_fact_en": "assets/audio/en/spinach_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/spinach_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "lady_finger",
+    "section": "vegetables",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Lady Finger",
+    "word_hi": "भिंडी",
+    "image": "assets/images/vegetables/lady_finger.webp",
+    "voice_en": "assets/audio/en/lady_finger.m4a",
+    "voice_hi": "assets/audio/hi/lady_finger.m4a",
+    "sound": null,
+    "fact_en": "Lady finger is long and green!",
+    "fact_hi": "भिंडी लंबी और हरी होती है!",
+    "voice_fact_en": "assets/audio/en/lady_finger_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/lady_finger_fact.m4a",
+    "rive_reaction": null
+  }
+]

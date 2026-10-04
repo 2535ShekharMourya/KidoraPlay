@@ -46,8 +46,22 @@ ARTICLES = {
     "peacock": "Peafowl", "sparrow": "House sparrow",
     "pigeon": "Rock dove", "duck": "Mallard", "hen": "Chicken",
     "owl": "Barn owl", "eagle": "Golden eagle", "koel": "Asian koel",
+    # Fruits.
+    "apple": "File:Red Apple.jpg", "banana": "File:DFC 4184 Bunches of ripe bananas neatly arranged at a bustling market stall ready for shoppers.jpg", "mango": "Mango",
+    "orange": "Orange (fruit)", "grapes": "Grape",
+    "watermelon": "File:Red watermelon (Citrullus lanatus var. lanatus) in Thailand.jpg", "papaya": "File:Papaya cut half.jpg",
+    "pineapple": "Pineapple", "guava": "Guava",
+    "pomegranate": "Pomegranate", "strawberry": "Strawberry",
+    "coconut": "File:Coconuts - single and cracked open.jpg",
+    # Vegetables.
+    "potato": "Potato", "tomato": "Tomato", "onion": "Onion",
+    "carrot": "File:Carrots at Ljubljana Central Market.JPG", "cauliflower": "Cauliflower",
+    "cabbage": "File:Cabbage on farm.jpg", "brinjal": "Eggplant", "peas": "File:Green pea pod opened.jpg",
+    "cucumber": "Cucumber", "pumpkin": "Pumpkin", "spinach": "File:Fresh Spinach leaves.jpg",
+    "lady_finger": "Okra",
     # Section tiles.
     "sections/animals": "Lion", "sections/birds": "Peafowl",
+    "sections/fruits": "File:A basket of fruits.jpg", "sections/vegetables": "File:Vegetables at vegetable market, Havelock Island, Andamans.jpg",
 }
 
 
@@ -127,7 +141,8 @@ def square(img):
 
 def main():
     images = {}
-    for name in ("items_animals.json", "items_birds.json"):
+    for name in ("items_animals.json", "items_birds.json",
+                 "items_fruits.json", "items_vegetables.json"):
         for it in json.loads((CONTENT / name).read_text(encoding="utf-8")):
             images[it["id"]] = it["image"]
     for s in json.loads((CONTENT / "sections.json").read_text("utf-8")):
@@ -144,13 +159,14 @@ def main():
         img = ImageOps.exif_transpose(Image.open(src)).convert("RGB")
         img = square(img).resize((SIZE, SIZE), Image.LANCZOS)
         out = ROOT / images[key]
+        out.parent.mkdir(parents=True, exist_ok=True)
         img.save(out, "WEBP", quality=80, method=6)
         sheet.append(img)
         credits.append({**info, "id": key})
         print(f"{key:18} {info['licence']:16} {info['title'][:50]}")
 
     lines = ["# Photo credits", "",
-             "Animal and bird photographs from Wikimedia Commons, cropped and",
+             "Photographs from Wikimedia Commons, cropped and",
              "resized for Kidoraplay. Cropped versions of CC BY-SA photos are",
              "shared under the same licence.", ""]
     for c in credits:

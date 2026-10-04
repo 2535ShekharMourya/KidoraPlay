@@ -55,12 +55,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
-    final labels = {
-      SectionId.numbers: l10n.sectionNumbers,
-      SectionId.abc: l10n.sectionAbc,
-      SectionId.animals: l10n.sectionAnimals,
-      SectionId.birds: l10n.sectionBirds,
-    };
     final catalog = ref.watch(contentCatalogProvider).value;
 
     void open(SectionId id) {
@@ -82,54 +76,37 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             children: [
               Padding(
                 // The left column is Kido's and the right one holds the
-                // sticker book; tiles never sit under either.
+                // sticker book and games; tiles never sit under either.
                 padding: const EdgeInsets.symmetric(
                   horizontal: AppLayout.sideZone,
-                  vertical: AppSpacing.xxl,
+                  vertical: AppSpacing.md,
                 ),
-                // Gaps only between tiles: 5 × 96 dp + 4 × 16 dp fits.
-                child: Row(
-                  spacing: AppSpacing.tapGap,
-                  children: [
-                    for (final (i, id) in SectionId.values.indexed)
-                      Expanded(
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                            vertical: AppSpacing.tapGap / 2,
-                          ),
-                          child: PopIn(
-                            index: i,
-                            child: IdleFloat(
-                              phase: i / SectionId.values.length,
-                              child: _SectionTile(
-                                id: id,
-                                label: labels[id]!,
-                                image: catalog?.section(id)?.image,
-                                onPressed: () => open(id),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                          vertical: AppSpacing.tapGap / 2,
-                        ),
-                        child: PopIn(
-                          index: SectionId.values.length,
-                          child: IdleFloat(
-                            phase: 0.9,
-                            child: BouncyButton(
-                              semanticLabel: l10n.games,
-                              onPressed: () => context.go(AppRoutes.games),
-                              child: _GamesTile(label: l10n.games),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
+                child: _SectionGrid(
+                  sections: [
+                    for (final s
+                        in catalog?.sectionsFor(
+                              ref.watch(settingsProvider).level,
+                            ) ??
+                            const <Section>[])
+                      s.id,
                   ],
+                  labelOf: (id) => sectionLabel(l10n, id),
+                  imageOf: (id) => catalog?.section(id)?.image,
+                  onOpen: open,
+                ),
+              ),
+              Align(
+                alignment: Alignment.centerRight,
+                child: Padding(
+                  padding: const EdgeInsets.all(AppSpacing.md),
+                  child: PopIn(
+                    index: 6,
+                    child: BouncyButton(
+                      semanticLabel: l10n.games,
+                      onPressed: () => context.go(AppRoutes.games),
+                      child: const _GamesButton(),
+                    ),
+                  ),
                 ),
               ),
               // Grown-ups' corner: small and plain on purpose; the parent
@@ -172,40 +149,99 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   }
 }
 
-class _GamesTile extends StatelessWidget {
-  const _GamesTile({required this.label});
+/// Child-facing name of a section, in the app language.
+String sectionLabel(AppLocalizations l10n, SectionId id) => switch (id) {
+  SectionId.numbers => l10n.sectionNumbers,
+  SectionId.abc => l10n.sectionAbc,
+  SectionId.animals => l10n.sectionAnimals,
+  SectionId.birds => l10n.sectionBirds,
+  SectionId.fruits => l10n.sectionFruits,
+  SectionId.vegetables => l10n.sectionVegetables,
+  SectionId.colours => l10n.sectionColours,
+  SectionId.shapes => l10n.sectionShapes,
+};
 
-  final String label;
+/// Section tiles in two rows of up to five (5 × 96 dp + gaps fits the
+/// space between the side columns). Only the selected class's sections.
+class _SectionGrid extends StatelessWidget {
+  const _SectionGrid({
+    required this.sections,
+    required this.labelOf,
+    required this.imageOf,
+    required this.onOpen,
+  });
+
+  static const perRow = 5;
+
+  final List<SectionId> sections;
+  final String Function(SectionId) labelOf;
+  final String? Function(SectionId) imageOf;
+  final void Function(SectionId) onOpen;
+
+  @override
+  Widget build(BuildContext context) {
+    final rows = [
+      for (var i = 0; i < sections.length; i += perRow)
+        sections.sublist(i, (i + perRow).clamp(0, sections.length)),
+    ];
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        const gap = AppSpacing.tapGap;
+        final width = (constraints.maxWidth - gap * (perRow - 1)) / perRow;
+        final height = rows.isEmpty
+            ? 0.0
+            : (constraints.maxHeight - gap * (rows.length - 1)) / rows.length;
+        var index = 0;
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          spacing: gap,
+          children: [
+            for (final row in rows)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                spacing: gap,
+                children: [
+                  for (final id in row)
+                    SizedBox(
+                      width: width,
+                      height: height,
+                      child: PopIn(
+                        index: index++,
+                        child: IdleFloat(
+                          phase: (index * 0.37) % 1,
+                          child: _SectionTile(
+                            id: id,
+                            label: labelOf(id),
+                            image: imageOf(id),
+                            onPressed: () => onOpen(id),
+                          ),
+                        ),
+                      ),
+                    ),
+                ],
+              ),
+          ],
+        );
+      },
+    );
+  }
+}
+
+class _GamesButton extends StatelessWidget {
+  const _GamesButton();
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: AppSpacing.minTapTarget,
+      height: AppSpacing.minTapTarget,
+      padding: const EdgeInsets.all(AppSpacing.sm),
       decoration: BoxDecoration(
         color: AppColors.gamesAccent,
-        borderRadius: BorderRadius.circular(AppRadii.card),
+        shape: BoxShape.circle,
         border: Border.all(color: AppColors.outline, width: AppStroke.thick),
       ),
-      padding: const EdgeInsets.all(AppSpacing.sm),
-      child: Column(
-        children: [
-          Expanded(
-            child: Image.asset(
-              'assets/images/games/games.webp',
-              fit: BoxFit.contain,
-            ),
-          ),
-          FittedBox(
-            fit: BoxFit.scaleDown,
-            child: Text(
-              label,
-              style: Theme.of(context).textTheme.headlineMedium
-                  ?.copyWith(color: AppColors.white),
-            ),
-          ),
-          // Keeps the label level with the section tiles' star badges.
-          const SizedBox(height: AppSpacing.xl),
-        ],
-      ),
+      child: Image.asset('assets/images/games/games.webp'),
     );
   }
 }

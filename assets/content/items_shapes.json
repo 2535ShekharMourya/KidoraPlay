@@ -1,0 +1,178 @@
+[
+  {
+    "id": "circle",
+    "section": "shapes",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Circle",
+    "word_hi": "गोला",
+    "image": "assets/images/shapes/circle.webp",
+    "voice_en": "assets/audio/en/circle.m4a",
+    "voice_hi": "assets/audio/hi/circle.m4a",
+    "sound": null,
+    "fact_en": "A wheel is a circle!",
+    "fact_hi": "पहिया गोल होता है!",
+    "voice_fact_en": "assets/audio/en/circle_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/circle_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "square",
+    "section": "shapes",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Square",
+    "word_hi": "वर्ग",
+    "image": "assets/images/shapes/square.webp",
+    "voice_en": "assets/audio/en/square.m4a",
+    "voice_hi": "assets/audio/hi/square.m4a",
+    "sound": null,
+    "fact_en": "A square has four equal sides!",
+    "fact_hi": "वर्ग की चारों भुजाएँ बराबर होती हैं!",
+    "voice_fact_en": "assets/audio/en/square_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/square_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "triangle",
+    "section": "shapes",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Triangle",
+    "word_hi": "त्रिभुज",
+    "image": "assets/images/shapes/triangle.webp",
+    "voice_en": "assets/audio/en/triangle.m4a",
+    "voice_hi": "assets/audio/hi/triangle.m4a",
+    "sound": null,
+    "fact_en": "A triangle has three sides!",
+    "fact_hi": "त्रिभुज की तीन भुजाएँ होती हैं!",
+    "voice_fact_en": "assets/audio/en/triangle_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/triangle_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "rectangle",
+    "section": "shapes",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Rectangle",
+    "word_hi": "आयत",
+    "image": "assets/images/shapes/rectangle.webp",
+    "voice_en": "assets/audio/en/rectangle.m4a",
+    "voice_hi": "assets/audio/hi/rectangle.m4a",
+    "sound": null,
+    "fact_en": "A door is a rectangle!",
+    "fact_hi": "दरवाज़ा आयत जैसा होता है!",
+    "voice_fact_en": "assets/audio/en/rectangle_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/rectangle_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "star",
+    "section": "shapes",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Star",
+    "word_hi": "तारा",
+    "image": "assets/images/shapes/star.webp",
+    "voice_en": "assets/audio/en/star.m4a",
+    "voice_hi": "assets/audio/hi/star.m4a",
+    "sound": null,
+    "fact_en": "Stars twinkle in the night sky!",
+    "fact_hi": "तारे रात के आसमान में टिमटिमाते हैं!",
+    "voice_fact_en": "assets/audio/en/star_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/star_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "heart",
+    "section": "shapes",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Heart",
+    "word_hi": "दिल",
+    "image": "assets/images/shapes/heart.webp",
+    "voice_en": "assets/audio/en/heart.m4a",
+    "voice_hi": "assets/audio/hi/heart.m4a",
+    "sound": null,
+    "fact_en": "A heart means love!",
+    "fact_hi": "दिल का मतलब प्यार है!",
+    "voice_fact_en": "assets/audio/en/heart_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/heart_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "oval",
+    "section": "shapes",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Oval",
+    "word_hi": "अंडाकार",
+    "image": "assets/images/shapes/oval.webp",
+    "voice_en": "assets/audio/en/oval.m4a",
+    "voice_hi": "assets/audio/hi/oval.m4a",
+    "sound": null,
+    "fact_en": "An egg is an oval!",
+    "fact_hi": "अंडा अंडाकार होता है!",
+    "voice_fact_en": "assets/audio/en/oval_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/oval_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "diamond",
+    "section": "shapes",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Diamond",
+    "word_hi": "हीरा",
+    "image": "assets/images/shapes/diamond.webp",
+    "voice_en": "assets/audio/en/diamond.m4a",
+    "voice_hi": "assets/audio/hi/diamond.m4a",
+    "sound": null,
+    "fact_en": "A kite looks like a diamond!",
+    "fact_hi": "पतंग हीरे जैसी दिखती है!",
+    "voice_fact_en": "assets/audio/en/diamond_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/diamond_fact.m4a",
+    "rive_reaction": null
+  }
+]

@@ -17,6 +17,7 @@ until custom Kidoraplay art exists; replace files freely.
 
 import io
 import json
+import math
 import urllib.request
 from pathlib import Path
 
@@ -153,6 +154,88 @@ def compose_number(n):
     return out
 
 
+# ---------------------------------------------------------------- Phase 2
+SHAPE_COLOURS = {
+    "circle": (255, 99, 132), "square": (54, 162, 235),
+    "triangle": (255, 193, 7), "rectangle": (76, 175, 80),
+    "star": (255, 152, 0), "heart": (233, 30, 99),
+    "oval": (156, 39, 176), "diamond": (0, 188, 212),
+}
+OUTLINE = (59, 53, 97, 255)
+
+
+def shape_points(name, box):
+    """Polygon points for shapes drawn as polygons, inside box (l,t,r,b)."""
+    l, t, r, b = box
+    cx, cy = (l + r) / 2, (t + b) / 2
+    w, h = r - l, b - t
+    if name == "triangle":
+        return [(cx, t), (r, b), (l, b)]
+    if name == "diamond":
+        return [(cx, t), (r, cy), (cx, b), (l, cy)]
+    if name == "star":
+        pts = []
+        for i in range(10):
+            rad = (w / 2) if i % 2 == 0 else (w / 2) * 0.42
+            a = -math.pi / 2 + i * math.pi / 5
+            pts.append((cx + rad * math.cos(a), cy + 0.05 * h + rad * math.sin(a)))
+        return pts
+    if name == "heart":
+        pts = []
+        for i in range(120):
+            tt = i / 120 * 2 * math.pi
+            x = 16 * math.sin(tt) ** 3
+            y = -(13 * math.cos(tt) - 5 * math.cos(2 * tt)
+                  - 2 * math.cos(3 * tt) - math.cos(4 * tt))
+            pts.append((cx + x * w / 34, cy + y * h / 34))
+        return pts
+    return None
+
+
+def compose_shape(name):
+    # Draw large and downsample for smooth edges.
+    big = 1024
+    img = Image.new("RGBA", (big, big), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    fill = SHAPE_COLOURS[name] + (255,)
+    stroke = 28
+    m = 150
+    box = {
+        "rectangle": (m - 40, 300, big - m + 40, big - 300),
+        "oval": (90, 290, big - 90, big - 290),
+    }.get(name, (m, m, big - m, big - m))
+    if name in ("circle", "oval"):
+        d.ellipse(box, fill=fill, outline=OUTLINE, width=stroke)
+    elif name in ("square", "rectangle"):
+        d.rounded_rectangle(box, radius=40, fill=fill, outline=OUTLINE,
+                            width=stroke)
+    else:
+        pts = shape_points(name, box)
+        d.polygon(pts, fill=fill)
+        d.line(pts + [pts[0]], fill=OUTLINE, width=stroke, joint="curve")
+    return img.resize((SIZE, SIZE), Image.LANCZOS)
+
+
+def compose_colour(rgb, emoji_code):
+    out = canvas()
+    d = ImageDraw.Draw(out)
+    border = OUTLINE if rgb != (255, 255, 255) else (190, 190, 200, 255)
+    # A big paint blob of the colour, with the example object in front.
+    d.ellipse((40, 30, 400, 390), fill=rgb + (255,), outline=border, width=10)
+    obj = fit(emoji(emoji_code), 270)
+    out.alpha_composite(obj, (SIZE - obj.width - 20, SIZE - obj.height - 20))
+    return out
+
+
+def compose_shapes_tile():
+    out = canvas()
+    for name, (x, y) in {"circle": (20, 20), "triangle": (262, 20),
+                         "square": (20, 262), "star": (262, 262)}.items():
+        tile = compose_shape(name).resize((230, 230), Image.LANCZOS)
+        out.alpha_composite(tile, (x, y))
+    return out
+
+
 def save(img, rel):
     path = ROOT / rel
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -182,9 +265,10 @@ def main():
     from make_photos import ARTICLES as PHOTOS
 
     made = []
-    for name in ("items_abc.json", "items_animals.json", "items_birds.json"):
+    for name in ("items_abc.json", "items_animals.json", "items_birds.json",
+                 "items_fruits.json", "items_vegetables.json"):
         for it in json.loads((CONTENT / name).read_text(encoding="utf-8")):
-            if it["id"] in PHOTOS:
+            if it["id"] in PHOTOS or it["id"] not in PICTURES:
                 continue
             spec = PICTURES[it["id"]]
             img = (compose_abc(it["letter"], spec) if it["section"] == "abc"
@@ -192,11 +276,21 @@ def main():
             made.append(save(img, it["image"]))
     for it in json.loads((CONTENT / "items_numbers.json").read_text("utf-8")):
         made.append(save(compose_number(it["number"]), it["image"]))
+    sys.path.insert(0, str(Path(__file__).parent))
+    from make_items import COLOURS, SHAPES
+    for id_, _en, _hi, rgb, code, _fact in COLOURS:
+        made.append(save(compose_colour(rgb, code),
+                         f"assets/images/colours/{id_}.webp"))
+    for id_, *_ in SHAPES:
+        made.append(save(compose_shape(id_), f"assets/images/shapes/{id_}.webp"))
+    made.append(save(compose_plain(("1f3a8",)), "assets/images/sections/colours.webp"))
+    made.append(save(compose_shapes_tile(), "assets/images/sections/shapes.webp"))
     for game in ("games", "find_it", "who_says", "count_it", "letters"):
         made.append(save(compose_plain(PICTURES[f"games/{game}"]),
                          f"assets/images/games/{game}.webp"))
     for s in json.loads((CONTENT / "sections.json").read_text("utf-8")):
-        if f"sections/{s['id']}" in PHOTOS:
+        if (f"sections/{s['id']}" in PHOTOS
+                or f"sections/{s['id']}" not in PICTURES):
             continue
         made.append(save(compose_plain(PICTURES[f"sections/{s['id']}"]),
                          s["image"]))

@@ -206,4 +206,16 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get hearAgain => 'फिर से सुनो';
+
+  @override
+  String get sectionFruits => 'फल';
+
+  @override
+  String get sectionVegetables => 'सब्ज़ियाँ';
+
+  @override
+  String get sectionColours => 'रंग';
+
+  @override
+  String get sectionShapes => 'आकार';
 }

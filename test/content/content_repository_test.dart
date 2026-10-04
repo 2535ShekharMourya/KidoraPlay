@@ -33,6 +33,15 @@ void main() {
       expect(catalog.itemsFor(SectionId.abc), hasLength(26));
       expect(catalog.itemsFor(SectionId.animals), hasLength(15));
       expect(catalog.itemsFor(SectionId.birds), hasLength(10));
+      expect(catalog.itemsFor(SectionId.fruits), hasLength(12));
+      expect(catalog.itemsFor(SectionId.vegetables), hasLength(12));
+      expect(catalog.itemsFor(SectionId.colours), hasLength(10));
+      expect(catalog.itemsFor(SectionId.shapes), hasLength(8));
+      // Every item teaches a fun fact, except numbers.
+      for (final item in catalog.allItems) {
+        if (item.section == SectionId.numbers) continue;
+        expect(item.factEn, isNotNull, reason: item.id);
+      }
       expect(catalog.itemById('peacock')?.wordHi, 'मोर');
       expect(catalog.itemById('seven')?.number, 7);
       for (final event in KidoEvent.all) {
@@ -58,7 +67,15 @@ void main() {
         bundle: rootBundle,
         validate: false,
       ).load();
-      expect(catalog.sectionsFor(Level.nursery), hasLength(4));
+      // Vegetables start in LKG.
+      expect(
+        catalog.sectionsFor(Level.nursery).map((s) => s.id),
+        isNot(contains(SectionId.vegetables)),
+      );
+      expect(
+        catalog.sectionsFor(Level.ukg),
+        hasLength(SectionId.values.length),
+      );
       expect(
         catalog.itemsFor(SectionId.numbers, level: Level.nursery),
         hasLength(20),

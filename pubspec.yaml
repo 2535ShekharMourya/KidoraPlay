@@ -38,6 +38,10 @@ flutter:
     - assets/images/animals/
     - assets/images/birds/
     - assets/images/games/
+    - assets/images/shapes/
+    - assets/images/colours/
+    - assets/images/vegetables/
+    - assets/images/fruits/
     - assets/audio/en/
     - assets/audio/en/kido/
     - assets/audio/en/sections/

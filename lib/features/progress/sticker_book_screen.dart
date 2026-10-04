@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../content/models/learning_item.dart';
+import '../../content/repository/content_catalog.dart';
 import '../../content/models/section.dart';
 import '../../content/repository/content_repository.dart';
 import '../../core/audio/audio_service.dart';
@@ -32,7 +33,9 @@ class StickerBookScreen extends ConsumerStatefulWidget {
 
 class _StickerBookScreenState extends ConsumerState<StickerBookScreen> {
   static const _perPage = AppLayout.gridColumns * AppLayout.gridRows;
-  SectionId _section = SectionId.values.first;
+
+  /// Null: choosing a section. Otherwise: that section's stickers.
+  SectionId? _section;
   int _page = 0;
 
   void _say(LearningItem item) {
@@ -42,12 +45,65 @@ class _StickerBookScreenState extends ConsumerState<StickerBookScreen> {
     ]);
   }
 
+  /// Choose a section: tiles with each section's sticker count.
+  Widget _picker(ContentCatalog? catalog) {
+    final level = ref.watch(settingsProvider.select((s) => s.level));
+    final sections = catalog?.sectionsFor(level) ?? const <Section>[];
+    return Scaffold(
+      body: SectionBackground(
+        child: SafeArea(
+          child: Stack(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: AppLayout.sideZone,
+                  vertical: AppSpacing.md,
+                ),
+                child: Center(
+                  child: Wrap(
+                    alignment: WrapAlignment.center,
+                    spacing: AppSpacing.tapGap,
+                    runSpacing: AppSpacing.tapGap,
+                    children: [
+                      for (final (i, section) in sections.indexed)
+                        SizedBox(
+                          width: AppSpacing.minTapTarget,
+                          height: AppSpacing.minTapTarget * 1.3,
+                          child: PopIn(
+                            index: i,
+                            child: _SectionTab(
+                              id: section.id,
+                              image: section.image,
+                              label: section.titleEn,
+                              selected: false,
+                              onPressed: () => setState(() {
+                                _section = section.id;
+                                _page = 0;
+                              }),
+                            ),
+                          ),
+                        ),
+                    ],
+                  ),
+                ),
+              ),
+              const Align(alignment: Alignment.topLeft, child: BigBackButton()),
+              const KidoCorner(),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final catalog = ref.watch(contentCatalogProvider).value;
-    final items = ref.watch(scopeItemsProvider((section: _section, row: null)));
+    final selected = _section;
+    if (selected == null) return _picker(catalog);
+    final items = ref.watch(scopeItemsProvider((section: selected, row: null)));
     final progress = ref.watch(progressProvider);
-    final theme = SectionTheme.of(_section);
+    final theme = SectionTheme.of(selected);
     final pages = math.max(1, (items.length / _perPage).ceil());
     final page = _page.clamp(0, pages - 1);
     final pageItems = items.skip(page * _perPage).take(_perPage).toList();
@@ -70,22 +126,15 @@ class _StickerBookScreenState extends ConsumerState<StickerBookScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          for (final id in SectionId.values)
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: AppSpacing.sm,
-                              ),
-                              child: _SectionTab(
-                                id: id,
-                                image: catalog?.section(id)?.image,
-                                label: catalog?.section(id)?.titleEn ?? id.name,
-                                selected: id == _section,
-                                onPressed: () => setState(() {
-                                  _section = id;
-                                  _page = 0;
-                                }),
-                              ),
-                            ),
+                          _SectionTab(
+                            id: selected,
+                            image: catalog?.section(selected)?.image,
+                            label:
+                                catalog?.section(selected)?.titleEn ??
+                                selected.name,
+                            selected: true,
+                            onPressed: () {},
+                          ),
                         ],
                       ),
                     ),
@@ -130,7 +179,13 @@ class _StickerBookScreenState extends ConsumerState<StickerBookScreen> {
                   ],
                 ),
               ),
-              const Align(alignment: Alignment.topLeft, child: BigBackButton()),
+              Align(
+                alignment: Alignment.topLeft,
+                // Back goes to the section choice first.
+                child: BigBackButton(
+                  onPressed: () => setState(() => _section = null),
+                ),
+              ),
               if (page > 0)
                 Align(
                   alignment: Alignment.centerLeft,

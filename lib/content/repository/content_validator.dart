@@ -181,6 +181,11 @@ List<String> _validateItem(
       }
     case SectionId.animals || SectionId.birds:
       if (item.sound == null) errors.add('$where: "sound" is required');
+    case SectionId.fruits ||
+        SectionId.vegetables ||
+        SectionId.colours ||
+        SectionId.shapes:
+      break;
   }
 
   return errors;

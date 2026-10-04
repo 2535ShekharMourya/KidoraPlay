@@ -1,6 +1,6 @@
 # Photo credits
 
-Animal and bird photographs from Wikimedia Commons, cropped and
+Photographs from Wikimedia Commons, cropped and
 resized for Kidoraplay. Cropped versions of CC BY-SA photos are
 shared under the same licence.
 
@@ -29,5 +29,31 @@ shared under the same licence.
 - **owl**: "American_Barn_Owl_(Tyto_furcata_guatemalae),_Orange_Walk.jpg" by Charles J. Sharp, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), https://commons.wikimedia.org/wiki/File:American_Barn_Owl_(Tyto_furcata_guatemalae),_Orange_Walk.jpg
 - **eagle**: "015_Wild_Golden_Eagle_in_flight_at_Pfyn-Finges_(Switzerland)_Photo_by_Giles_Laurent.jpg" by Giles Laurent, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), https://commons.wikimedia.org/wiki/File:015_Wild_Golden_Eagle_in_flight_at_Pfyn-Finges_(Switzerland)_Photo_by_Giles_Laurent.jpg
 - **koel**: "Asian_koel.jpg" by Challiyan, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), https://commons.wikimedia.org/wiki/File:Asian_koel.jpg
+- **apple**: "Red Apple.jpg" by Abhijit Tembhekar from Mumbai, India, CC BY 2.0 (https://creativecommons.org/licenses/by/2.0), https://commons.wikimedia.org/wiki/File:Red_Apple.jpg
+- **banana**: "DFC 4184 Bunches of ripe bananas neatly arranged at a bustling market stall ready for shoppers.jpg" by PattayaPatrol, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), https://commons.wikimedia.org/wiki/File:DFC_4184_Bunches_of_ripe_bananas_neatly_arranged_at_a_bustling_market_stall_ready_for_shoppers.jpg
+- **mango**: "Mangos_-_single_and_halved.jpg" by Ivar Leidus, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), https://commons.wikimedia.org/wiki/File:Mangos_-_single_and_halved.jpg
+- **orange**: "Oranges_-_whole-halved-segment.jpg" by Ivar Leidus, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), https://commons.wikimedia.org/wiki/File:Oranges_-_whole-halved-segment.jpg
+- **grapes**: "Grapes,_Rostov-on-Don,_Russia.jpg" by Vyacheslav Argenberg, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0), https://commons.wikimedia.org/wiki/File:Grapes,_Rostov-on-Don,_Russia.jpg
+- **watermelon**: "Red watermelon (Citrullus lanatus var. lanatus) in Thailand.jpg" by Susan Slater, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), https://commons.wikimedia.org/wiki/File:Red_watermelon_(Citrullus_lanatus_var._lanatus)_in_Thailand.jpg
+- **papaya**: "Papaya cut half.jpg" by Maksym Kozlenko, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), https://commons.wikimedia.org/wiki/File:Papaya_cut_half.jpg
+- **pineapple**: "കൈതച്ചക്ക.jpg" by Suniltg at Malayalam Wikipedia, CC BY 3.0 (https://creativecommons.org/licenses/by/3.0), https://commons.wikimedia.org/wiki/File:%E0%B4%95%E0%B5%88%E0%B4%A4%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%95%E0%B5%8D%E0%B4%95.jpg
+- **guava**: "Guava_pink_fruit.jpg" by Ivar Leidus, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), https://commons.wikimedia.org/wiki/File:Guava_pink_fruit.jpg
+- **pomegranate**: "Pomegranate_Juice_(2019).jpg" by Augustus Binu : flickr, CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0), https://commons.wikimedia.org/wiki/File:Pomegranate_Juice_(2019).jpg
+- **strawberry**: "Garden_strawberry_(Fragaria_×_ananassa)_single2.jpg" by Ivar Leidus, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), https://commons.wikimedia.org/wiki/File:Garden_strawberry_(Fragaria_%C3%97_ananassa)_single2.jpg
+- **coconut**: "Coconuts - single and cracked open.jpg" by Ivar Leidus, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), https://commons.wikimedia.org/wiki/File:Coconuts_-_single_and_cracked_open.jpg
+- **potato**: "Patates.jpg" by Scott Bauer, USDA ARS, Public domain (public domain), https://commons.wikimedia.org/wiki/File:Patates.jpg
+- **tomato**: "Tomato_je.jpg" by Softeis, CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/), https://commons.wikimedia.org/wiki/File:Tomato_je.jpg
+- **onion**: "Mixed_onions.jpg" by Colin, CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0), https://commons.wikimedia.org/wiki/File:Mixed_onions.jpg
+- **carrot**: "Carrots at Ljubljana Central Market.JPG" by domdomegg, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0), https://commons.wikimedia.org/wiki/File:Carrots_at_Ljubljana_Central_Market.JPG
+- **cauliflower**: "Chou-fleur_02.jpg" by Coyau, CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0), https://commons.wikimedia.org/wiki/File:Chou-fleur_02.jpg
+- **cabbage**: "Cabbage on farm.jpg" by Yusuf Muhammed Thanni, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), https://commons.wikimedia.org/wiki/File:Cabbage_on_farm.jpg
+- **brinjal**: "Solanum_melongena_24_08_2012_(1).JPG" by Joydeep, CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0), https://commons.wikimedia.org/wiki/File:Solanum_melongena_24_08_2012_(1).JPG
+- **peas**: "Green pea pod opened.jpg" by Sokolikmawwer0, CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0), https://commons.wikimedia.org/wiki/File:Green_pea_pod_opened.jpg
+- **cucumber**: "ARS_cucumber.jpg" by Stephen Ausmus, USDA ARS, Public domain (public domain), https://commons.wikimedia.org/wiki/File:ARS_cucumber.jpg
+- **pumpkin**: "FrenchMarketPumpkinsB.jpg" by Infrogmation of New Orleans, CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0), https://commons.wikimedia.org/wiki/File:FrenchMarketPumpkinsB.jpg
+- **spinach**: "Fresh Spinach leaves.jpg" by Charipearl, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), https://commons.wikimedia.org/wiki/File:Fresh_Spinach_leaves.jpg
+- **lady_finger**: "Hong_Kong_Okra_Aug_25_2012.JPG" by Earth100, CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0), https://commons.wikimedia.org/wiki/File:Hong_Kong_Okra_Aug_25_2012.JPG
 - **sections/animals**: "020_The_lion_king_Snyggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg" by Giles Laurent, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), https://commons.wikimedia.org/wiki/File:020_The_lion_king_Snyggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg
 - **sections/birds**: "Peacock_Plumage.jpg" by Jatin Sindhu, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), https://commons.wikimedia.org/wiki/File:Peacock_Plumage.jpg
+- **sections/fruits**: "A basket of fruits.jpg" by Suyash Dwivedi, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), https://commons.wikimedia.org/wiki/File:A_basket_of_fruits.jpg
+- **sections/vegetables**: "Vegetables at vegetable market, Havelock Island, Andamans.jpg" by Vyacheslav Argenberg, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0), https://commons.wikimedia.org/wiki/File:Vegetables_at_vegetable_market,_Havelock_Island,_Andamans.jpg

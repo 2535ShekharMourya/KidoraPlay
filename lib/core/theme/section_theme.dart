@@ -28,5 +28,21 @@ class SectionTheme {
       background: AppColors.birdsBg,
       accent: AppColors.birdsAccent,
     ),
+    SectionId.fruits => const SectionTheme(
+      background: AppColors.fruitsBg,
+      accent: AppColors.fruitsAccent,
+    ),
+    SectionId.vegetables => const SectionTheme(
+      background: AppColors.vegetablesBg,
+      accent: AppColors.vegetablesAccent,
+    ),
+    SectionId.colours => const SectionTheme(
+      background: AppColors.coloursBg,
+      accent: AppColors.coloursAccent,
+    ),
+    SectionId.shapes => const SectionTheme(
+      background: AppColors.shapesBg,
+      accent: AppColors.shapesAccent,
+    ),
   };
 }
