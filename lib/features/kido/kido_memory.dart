@@ -42,6 +42,16 @@ class KidoMemory {
   }
 
   bool fullGuidance(SectionId id) => _fullGuidance[id] ?? !visited(id);
+
+  static const _discoveredKey = 'kido.discovered';
+
+  /// Has the child found out that tapping a picture reveals more? Until
+  /// then Kido explains it; afterwards he never repeats it.
+  bool get discovered => _store.getBool(_discoveredKey);
+
+  Future<void> markDiscovered() async {
+    if (!discovered) await _store.setBool(_discoveredKey, value: true);
+  }
 }
 
 final kidoMemoryProvider = Provider<KidoMemory>(

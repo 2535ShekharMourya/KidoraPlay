@@ -75,7 +75,7 @@ void main() {
   });
 
   testWidgets('ABC: next arrow moves to the next item', (tester) async {
-    await startApp(tester);
+    final audio = await startApp(tester);
     await tester.tap(find.text('ABC'));
     await settle(tester);
     await tester.tap(find.bySemanticsLabel('Apple'));
@@ -88,6 +88,10 @@ void main() {
     await settle(tester);
     expect(find.text('Ball'), findsOneWidget);
     expect(find.byType(ArrowButton), findsNWidgets(2));
+    // Regression: the next card starts its own lesson (it used to stay
+    // silent because the router reused the old card's screen).
+    expect(audio.voice.played, contains('assets/audio/en/b_ball_intro.m4a'));
+    expect(find.byType(StarMeter), findsOneWidget);
   });
 
   testWidgets('tapping the picture discovers its sound and earns a star', (

@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -68,9 +70,10 @@ class _NumberRowsScreenState extends ConsumerState<NumberRowsScreen> {
                           for (final (i, row) in rows.indexed)
                             SizedBox(
                               width: width,
+                              // Never min > max (small 16:9 phones).
                               height: height.clamp(
                                 AppSpacing.minTapTarget,
-                                width * 1.3,
+                                math.max(AppSpacing.minTapTarget, width * 1.3),
                               ),
                               child: PopIn(
                                 index: i,

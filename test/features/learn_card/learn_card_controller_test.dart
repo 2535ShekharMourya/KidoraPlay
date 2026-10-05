@@ -24,7 +24,17 @@ void main() {
   Future<void> setUpContainer({LocalStore? store}) async {
     audio = FakeAudio();
     container = ProviderContainer(
-      overrides: testOverrides(audio: audio, catalog: catalog, store: store),
+      // A child who already knows to tap pictures, unless a test says not.
+      overrides: testOverrides(
+        audio: audio,
+        catalog: catalog,
+        store:
+            store ??
+            LocalStore.inMemory({
+              SettingsKeys.language: 'en',
+              'kido.discovered': true,
+            }),
+      ),
     );
     addTearDown(container.dispose);
     await container.read(contentCatalogProvider.future);
@@ -77,7 +87,10 @@ void main() {
 
     test('"both" ABC: "A for Apple!" in English, then सेब', () async {
       await setUpContainer(
-        store: LocalStore.inMemory({SettingsKeys.language: 'both'}),
+        store: LocalStore.inMemory({
+          SettingsKeys.language: 'both',
+          'kido.discovered': true,
+        }),
       );
       await controller('a_apple').playLesson();
       expect(audio.voice.played, [
@@ -93,13 +106,19 @@ void main() {
       expect(stateOf('hi_anar').revealed, greaterThan(0));
     });
 
-    test('first visit: "Tap the picture, and see what happens!"', () async {
-      await setUpContainer();
-      await controller('cow').playLesson(fullGuidance: true);
+    test('"Tap the picture!" until the child has tapped once', () async {
+      await setUpContainer(
+        store: LocalStore.inMemory({SettingsKeys.language: 'en'}),
+      );
+      await controller('cow').playLesson();
       expect(audio.voice.played, [
         'assets/audio/en/cow.m4a',
         '$kido/tap_to_play.m4a',
       ]);
+      await controller('cow').tapPicture();
+      audio.voice.played.clear();
+      await controller('dog').playLesson();
+      expect(audio.voice.played, ['assets/audio/en/dog.m4a']);
     });
   });
 
@@ -185,7 +204,10 @@ void main() {
 
     test('"both": the fact once, in Hindi; no English Kido lines', () async {
       await setUpContainer(
-        store: LocalStore.inMemory({SettingsKeys.language: 'both'}),
+        store: LocalStore.inMemory({
+          SettingsKeys.language: 'both',
+          'kido.discovered': true,
+        }),
       );
       await controller('cow').playLesson();
       expect(audio.voice.played, [
@@ -328,7 +350,10 @@ void main() {
 
   testWidgets('with sound off everything still runs silently', (tester) async {
     await setUpContainer(
-      store: LocalStore.inMemory({SettingsKeys.sound: false}),
+      store: LocalStore.inMemory({
+        SettingsKeys.sound: false,
+        'kido.discovered': true,
+      }),
     );
     final lesson = controller('cow').playLesson();
     await tester.pump(const Duration(seconds: 5));

@@ -221,15 +221,8 @@ class LearnCardController extends Notifier<LearnCardState> {
   /// Tells the card which set (section or numbers row) it is shown in.
   void attach(ItemScope scope) => _scope = scope;
 
-  /// Opens the card. On the first visit to a section Kido also says "Tap
-  /// the picture, and see what happens!".
-  Future<void> start() async {
-    final item = _item;
-    if (item == null) return;
-    await playLesson(
-      fullGuidance: ref.read(kidoMemoryProvider).fullGuidance(item.section),
-    );
-  }
+  /// Opens the card.
+  Future<void> start() => playLesson();
 
   /// The things this item can reveal, in tap order.
   List<Discovery> discoveriesFor(LearningItem item) {
@@ -244,7 +237,7 @@ class LearnCardController extends Notifier<LearnCardState> {
   }
 
   /// Names the item, then hands over to the child.
-  Future<void> playLesson({bool fullGuidance = false}) async {
+  Future<void> playLesson() async {
     final item = _item;
     if (item == null) return;
     final run = ++_run;
@@ -265,7 +258,9 @@ class LearnCardController extends Notifier<LearnCardState> {
 
     await _sayName(item, run);
     if (!_alive(run)) return;
-    if (fullGuidance) {
+    // Until the child has tapped a picture once: "Tap the picture, and see
+    // what happens!". Never again after that (no nagging).
+    if (!ref.read(kidoMemoryProvider).discovered) {
       await _kidoSay(KidoEvent.tapToPlay, run);
       if (!_alive(run)) return;
     }
@@ -287,6 +282,7 @@ class LearnCardController extends Notifier<LearnCardState> {
     // Tapping during the name means "I'm ready!": go straight on.
     final run = ++_run;
     _hints.stop();
+    unawaited(ref.read(kidoMemoryProvider).markDiscovered());
     if (_steps.isEmpty) _steps = discoveriesFor(item);
     final step = _steps[_nextStep % _steps.length];
     _nextStep++;

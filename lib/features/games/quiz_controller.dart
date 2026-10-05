@@ -121,7 +121,13 @@ class QuizController extends Notifier<QuizState> {
       ref.read(settingsProvider).level,
       ref.read(quizRandomProvider),
     );
-    state = QuizState(rounds: rounds, games: state.games);
+    // Choices are live at once: an eager child can answer while Kido is
+    // still saying "Let's play!".
+    state = QuizState(
+      rounds: rounds,
+      games: state.games,
+      phase: QuizPhase.asking,
+    );
     await _say(KidoEvent.letsPlay, run);
     if (!_alive(run)) return;
     await _ask(run);
@@ -166,7 +172,12 @@ class QuizController extends Notifier<QuizState> {
   /// Child tapped a choice.
   Future<void> tap(QuizChoice choice) async {
     final round = state.round;
-    if (round == null || state.phase != QuizPhase.asking) return;
+    if (round == null) return;
+    if (state.phase != QuizPhase.asking) {
+      // Between rounds: still answer the tap with a happy pop.
+      if (state.phase == QuizPhase.correct) _audio.playSfx(Sfx.pop);
+      return;
+    }
     _hints.reset();
 
     if (choice != round.answer) {

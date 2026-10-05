@@ -80,6 +80,9 @@ GoRoute _learnRoute({required int? Function(GoRouterState) row}) => GoRoute(
   pageBuilder: (context, state) => _playfulPage(
     state,
     LearnCardScreen(
+      // A fresh screen per item: Next must start the new card's lesson
+      // (the router would otherwise reuse the old screen's state).
+      key: ValueKey('learn/${state.pathParameters['itemId']}'),
       scope: (section: _sectionOf(state)!, row: row(state)),
       itemId: state.pathParameters['itemId']!,
     ),
@@ -90,6 +93,7 @@ GoRoute _learnRoute({required int? Function(GoRouterState) row}) => GoRoute(
       pageBuilder: (context, state) => _playfulPage(
         state,
         TraceScreen(
+          key: ValueKey('trace/${state.pathParameters['itemId']}'),
           scope: (section: _sectionOf(state)!, row: row(state)),
           itemId: state.pathParameters['itemId']!,
         ),
@@ -126,6 +130,7 @@ final appRouterProvider = Provider<GoRouter>((ref) {
                 pageBuilder: (context, state) => _playfulPage(
                   state,
                   QuizScreen(
+                    key: ValueKey('game/${state.pathParameters['kind']}'),
                     kind: GameKind.values
                         .asNameMap()[state.pathParameters['kind']]!,
                   ),
@@ -154,7 +159,10 @@ final appRouterProvider = Provider<GoRouter>((ref) {
                 state,
                 section == SectionId.numbers
                     ? const NumberRowsScreen()
-                    : ItemGridScreen(scope: (section: section, row: null)),
+                    : ItemGridScreen(
+                        key: ValueKey('grid/${section.name}'),
+                        scope: (section: section, row: null),
+                      ),
               );
             },
             routes: [
@@ -168,6 +176,7 @@ final appRouterProvider = Provider<GoRouter>((ref) {
                 pageBuilder: (context, state) => _playfulPage(
                   state,
                   ItemGridScreen(
+                    key: ValueKey('row/${_rowOf(state)}'),
                     scope: (section: SectionId.numbers, row: _rowOf(state)),
                   ),
                 ),
