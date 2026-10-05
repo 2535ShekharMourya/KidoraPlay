@@ -197,7 +197,12 @@ List<String> _validateItem(
     case SectionId.fruits ||
         SectionId.vegetables ||
         SectionId.colours ||
-        SectionId.shapes:
+        SectionId.shapes ||
+        SectionId.body ||
+        SectionId.family ||
+        SectionId.days ||
+        SectionId.months ||
+        SectionId.opposites:
       break;
   }
 

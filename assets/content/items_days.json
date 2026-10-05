@@ -1,0 +1,149 @@
+[
+  {
+    "id": "day_monday",
+    "section": "days",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Monday",
+    "word_hi": "सोमवार",
+    "image": "assets/images/days/day_monday.webp",
+    "voice_en": "assets/audio/en/day_monday.m4a",
+    "voice_hi": "assets/audio/hi/day_monday.m4a",
+    "sound": null,
+    "fact_en": "Monday! A new week begins!",
+    "fact_hi": "सोमवार! नया हफ़्ता शुरू!",
+    "voice_fact_en": "assets/audio/en/day_monday_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/day_monday_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "day_tuesday",
+    "section": "days",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Tuesday",
+    "word_hi": "मंगलवार",
+    "image": "assets/images/days/day_tuesday.webp",
+    "voice_en": "assets/audio/en/day_tuesday.m4a",
+    "voice_hi": "assets/audio/hi/day_tuesday.m4a",
+    "sound": null,
+    "fact_en": "Tuesday comes after Monday!",
+    "fact_hi": "मंगलवार, सोमवार के बाद आता है!",
+    "voice_fact_en": "assets/audio/en/day_tuesday_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/day_tuesday_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "day_wednesday",
+    "section": "days",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Wednesday",
+    "word_hi": "बुधवार",
+    "image": "assets/images/days/day_wednesday.webp",
+    "voice_en": "assets/audio/en/day_wednesday.m4a",
+    "voice_hi": "assets/audio/hi/day_wednesday.m4a",
+    "sound": null,
+    "fact_en": "Wednesday is the middle of the week!",
+    "fact_hi": "बुधवार हफ़्ते के बीच में आता है!",
+    "voice_fact_en": "assets/audio/en/day_wednesday_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/day_wednesday_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "day_thursday",
+    "section": "days",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Thursday",
+    "word_hi": "गुरुवार",
+    "image": "assets/images/days/day_thursday.webp",
+    "voice_en": "assets/audio/en/day_thursday.m4a",
+    "voice_hi": "assets/audio/hi/day_thursday.m4a",
+    "sound": null,
+    "fact_en": "Thursday! Friday is coming soon!",
+    "fact_hi": "गुरुवार! जल्दी ही शुक्रवार आएगा!",
+    "voice_fact_en": "assets/audio/en/day_thursday_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/day_thursday_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "day_friday",
+    "section": "days",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Friday",
+    "word_hi": "शुक्रवार",
+    "image": "assets/images/days/day_friday.webp",
+    "voice_en": "assets/audio/en/day_friday.m4a",
+    "voice_hi": "assets/audio/hi/day_friday.m4a",
+    "sound": null,
+    "fact_en": "Friday! The holiday is near!",
+    "fact_hi": "शुक्रवार! छुट्टी पास है!",
+    "voice_fact_en": "assets/audio/en/day_friday_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/day_friday_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "day_saturday",
+    "section": "days",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Saturday",
+    "word_hi": "शनिवार",
+    "image": "assets/images/days/day_saturday.webp",
+    "voice_en": "assets/audio/en/day_saturday.m4a",
+    "voice_hi": "assets/audio/hi/day_saturday.m4a",
+    "sound": null,
+    "fact_en": "Saturday is a fun day!",
+    "fact_hi": "शनिवार मज़े का दिन है!",
+    "voice_fact_en": "assets/audio/en/day_saturday_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/day_saturday_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "day_sunday",
+    "section": "days",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Sunday",
+    "word_hi": "रविवार",
+    "image": "assets/images/days/day_sunday.webp",
+    "voice_en": "assets/audio/en/day_sunday.m4a",
+    "voice_hi": "assets/audio/hi/day_sunday.m4a",
+    "sound": null,
+    "fact_en": "Sunday is a holiday. Let's play!",
+    "fact_hi": "रविवार को छुट्टी होती है। चलो खेलें!",
+    "voice_fact_en": "assets/audio/en/day_sunday_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/day_sunday_fact.m4a",
+    "rive_reaction": null
+  }
+]

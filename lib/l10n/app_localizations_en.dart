@@ -235,4 +235,19 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get adBreak => 'Kido is taking a little break 🐘';
+
+  @override
+  String get sectionBody => 'Body';
+
+  @override
+  String get sectionFamily => 'Family';
+
+  @override
+  String get sectionDays => 'Days';
+
+  @override
+  String get sectionMonths => 'Months';
+
+  @override
+  String get sectionOpposites => 'Opposites';
 }

@@ -1,0 +1,322 @@
+[
+  {
+    "id": "opp_big",
+    "section": "opposites",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Big",
+    "word_hi": "बड़ा",
+    "image": "assets/images/opposites/opp_big.webp",
+    "voice_en": "assets/audio/en/opp_big.m4a",
+    "voice_hi": "assets/audio/hi/opp_big.m4a",
+    "sound": null,
+    "fact_en": "Big! The opposite is small.",
+    "fact_hi": "बड़ा! इसका उल्टा है छोटा।",
+    "voice_fact_en": "assets/audio/en/opp_big_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/opp_big_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "opp_small",
+    "section": "opposites",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Small",
+    "word_hi": "छोटा",
+    "image": "assets/images/opposites/opp_small.webp",
+    "voice_en": "assets/audio/en/opp_small.m4a",
+    "voice_hi": "assets/audio/hi/opp_small.m4a",
+    "sound": null,
+    "fact_en": "Small! The opposite is big.",
+    "fact_hi": "छोटा! इसका उल्टा है बड़ा।",
+    "voice_fact_en": "assets/audio/en/opp_small_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/opp_small_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "opp_hot",
+    "section": "opposites",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Hot",
+    "word_hi": "गरम",
+    "image": "assets/images/opposites/opp_hot.webp",
+    "voice_en": "assets/audio/en/opp_hot.m4a",
+    "voice_hi": "assets/audio/hi/opp_hot.m4a",
+    "sound": null,
+    "fact_en": "Hot! The opposite is cold.",
+    "fact_hi": "गरम! इसका उल्टा है ठंडा।",
+    "voice_fact_en": "assets/audio/en/opp_hot_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/opp_hot_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "opp_cold",
+    "section": "opposites",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Cold",
+    "word_hi": "ठंडा",
+    "image": "assets/images/opposites/opp_cold.webp",
+    "voice_en": "assets/audio/en/opp_cold.m4a",
+    "voice_hi": "assets/audio/hi/opp_cold.m4a",
+    "sound": null,
+    "fact_en": "Cold! The opposite is hot.",
+    "fact_hi": "ठंडा! इसका उल्टा है गरम।",
+    "voice_fact_en": "assets/audio/en/opp_cold_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/opp_cold_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "opp_up",
+    "section": "opposites",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Up",
+    "word_hi": "ऊपर",
+    "image": "assets/images/opposites/opp_up.webp",
+    "voice_en": "assets/audio/en/opp_up.m4a",
+    "voice_hi": "assets/audio/hi/opp_up.m4a",
+    "sound": null,
+    "fact_en": "Up! The opposite is down.",
+    "fact_hi": "ऊपर! इसका उल्टा है नीचे।",
+    "voice_fact_en": "assets/audio/en/opp_up_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/opp_up_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "opp_down",
+    "section": "opposites",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Down",
+    "word_hi": "नीचे",
+    "image": "assets/images/opposites/opp_down.webp",
+    "voice_en": "assets/audio/en/opp_down.m4a",
+    "voice_hi": "assets/audio/hi/opp_down.m4a",
+    "sound": null,
+    "fact_en": "Down! The opposite is up.",
+    "fact_hi": "नीचे! इसका उल्टा है ऊपर।",
+    "voice_fact_en": "assets/audio/en/opp_down_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/opp_down_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "opp_happy",
+    "section": "opposites",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Happy",
+    "word_hi": "खुश",
+    "image": "assets/images/opposites/opp_happy.webp",
+    "voice_en": "assets/audio/en/opp_happy.m4a",
+    "voice_hi": "assets/audio/hi/opp_happy.m4a",
+    "sound": null,
+    "fact_en": "Happy! The opposite is sad.",
+    "fact_hi": "खुश! इसका उल्टा है उदास।",
+    "voice_fact_en": "assets/audio/en/opp_happy_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/opp_happy_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "opp_sad",
+    "section": "opposites",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Sad",
+    "word_hi": "उदास",
+    "image": "assets/images/opposites/opp_sad.webp",
+    "voice_en": "assets/audio/en/opp_sad.m4a",
+    "voice_hi": "assets/audio/hi/opp_sad.m4a",
+    "sound": null,
+    "fact_en": "Sad! The opposite is happy.",
+    "fact_hi": "उदास! इसका उल्टा है खुश।",
+    "voice_fact_en": "assets/audio/en/opp_sad_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/opp_sad_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "opp_fast",
+    "section": "opposites",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Fast",
+    "word_hi": "तेज़",
+    "image": "assets/images/opposites/opp_fast.webp",
+    "voice_en": "assets/audio/en/opp_fast.m4a",
+    "voice_hi": "assets/audio/hi/opp_fast.m4a",
+    "sound": null,
+    "fact_en": "Fast! The opposite is slow.",
+    "fact_hi": "तेज़! इसका उल्टा है धीमा।",
+    "voice_fact_en": "assets/audio/en/opp_fast_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/opp_fast_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "opp_slow",
+    "section": "opposites",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Slow",
+    "word_hi": "धीमा",
+    "image": "assets/images/opposites/opp_slow.webp",
+    "voice_en": "assets/audio/en/opp_slow.m4a",
+    "voice_hi": "assets/audio/hi/opp_slow.m4a",
+    "sound": null,
+    "fact_en": "Slow! The opposite is fast.",
+    "fact_hi": "धीमा! इसका उल्टा है तेज़।",
+    "voice_fact_en": "assets/audio/en/opp_slow_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/opp_slow_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "opp_open",
+    "section": "opposites",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Open",
+    "word_hi": "खुला",
+    "image": "assets/images/opposites/opp_open.webp",
+    "voice_en": "assets/audio/en/opp_open.m4a",
+    "voice_hi": "assets/audio/hi/opp_open.m4a",
+    "sound": null,
+    "fact_en": "Open! The opposite is closed.",
+    "fact_hi": "खुला! इसका उल्टा है बंद।",
+    "voice_fact_en": "assets/audio/en/opp_open_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/opp_open_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "opp_closed",
+    "section": "opposites",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Closed",
+    "word_hi": "बंद",
+    "image": "assets/images/opposites/opp_closed.webp",
+    "voice_en": "assets/audio/en/opp_closed.m4a",
+    "voice_hi": "assets/audio/hi/opp_closed.m4a",
+    "sound": null,
+    "fact_en": "Closed! The opposite is open.",
+    "fact_hi": "बंद! इसका उल्टा है खुला।",
+    "voice_fact_en": "assets/audio/en/opp_closed_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/opp_closed_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "opp_day",
+    "section": "opposites",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Day",
+    "word_hi": "दिन",
+    "image": "assets/images/opposites/opp_day.webp",
+    "voice_en": "assets/audio/en/opp_day.m4a",
+    "voice_hi": "assets/audio/hi/opp_day.m4a",
+    "sound": null,
+    "fact_en": "Day! The opposite is night.",
+    "fact_hi": "दिन! इसका उल्टा है रात।",
+    "voice_fact_en": "assets/audio/en/opp_day_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/opp_day_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "opp_night",
+    "section": "opposites",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Night",
+    "word_hi": "रात",
+    "image": "assets/images/opposites/opp_night.webp",
+    "voice_en": "assets/audio/en/opp_night.m4a",
+    "voice_hi": "assets/audio/hi/opp_night.m4a",
+    "sound": null,
+    "fact_en": "Night! The opposite is day.",
+    "fact_hi": "रात! इसका उल्टा है दिन।",
+    "voice_fact_en": "assets/audio/en/opp_night_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/opp_night_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "opp_full",
+    "section": "opposites",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Full",
+    "word_hi": "भरा",
+    "image": "assets/images/opposites/opp_full.webp",
+    "voice_en": "assets/audio/en/opp_full.m4a",
+    "voice_hi": "assets/audio/hi/opp_full.m4a",
+    "sound": null,
+    "fact_en": "Full! The opposite is empty.",
+    "fact_hi": "भरा! इसका उल्टा है खाली।",
+    "voice_fact_en": "assets/audio/en/opp_full_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/opp_full_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "opp_empty",
+    "section": "opposites",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Empty",
+    "word_hi": "खाली",
+    "image": "assets/images/opposites/opp_empty.webp",
+    "voice_en": "assets/audio/en/opp_empty.m4a",
+    "voice_hi": "assets/audio/hi/opp_empty.m4a",
+    "sound": null,
+    "fact_en": "Empty! The opposite is full.",
+    "fact_hi": "खाली! इसका उल्टा है भरा।",
+    "voice_fact_en": "assets/audio/en/opp_empty_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/opp_empty_fact.m4a",
+    "rive_reaction": null
+  }
+]

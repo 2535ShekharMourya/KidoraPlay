@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -10,6 +12,7 @@ import '../../core/settings/app_settings.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_tokens.dart';
 import '../../core/theme/section_theme.dart';
+import '../../core/widgets/arrow_button.dart';
 import '../../core/widgets/bouncy_button.dart';
 import '../../core/widgets/idle_float.dart';
 import '../../core/widgets/pop_in.dart';
@@ -35,6 +38,11 @@ class HomeScreen extends ConsumerStatefulWidget {
 }
 
 class _HomeScreenState extends ConsumerState<HomeScreen> {
+  /// Sections per page: two rows of five, big enough for small fingers.
+  static const perPage = _SectionGrid.perRow * 2;
+
+  int _page = 0;
+
   @override
   void initState() {
     super.initState();
@@ -69,6 +77,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       context.go(AppRoutes.section(id));
     }
 
+    final sections = [
+      for (final s
+          in catalog?.sectionsFor(ref.watch(settingsProvider).level) ??
+              const <Section>[])
+        s.id,
+    ];
+    final pages = (sections.length / perPage).ceil().clamp(1, 99);
+    final page = _page.clamp(0, pages - 1);
+    final shown = sections.skip(page * perPage).take(perPage).toList();
+
     return Scaffold(
       body: SectionBackground(
         child: SafeArea(
@@ -82,14 +100,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   vertical: AppSpacing.md,
                 ),
                 child: _SectionGrid(
-                  sections: [
-                    for (final s
-                        in catalog?.sectionsFor(
-                              ref.watch(settingsProvider).level,
-                            ) ??
-                            const <Section>[])
-                      s.id,
-                  ],
+                  // A new page pops in afresh.
+                  key: ValueKey(page),
+                  sections: shown,
                   labelOf: (id) => sectionLabel(l10n, id),
                   imageOf: (id) => catalog?.section(id)?.image,
                   onOpen: open,
@@ -140,6 +153,34 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   ),
                 ),
               ),
+              // More sections on the next page (taps only, no swiping).
+              if (page < pages - 1)
+                Align(
+                  alignment: Alignment.bottomRight,
+                  child: Padding(
+                    padding: const EdgeInsets.all(AppSpacing.md),
+                    child: PopIn(
+                      index: 8,
+                      child: ArrowButton(
+                        direction: ArrowDirection.next,
+                        color: AppColors.numbersAccent,
+                        onPressed: () => setState(() => _page = page + 1),
+                      ),
+                    ),
+                  ),
+                ),
+              if (page > 0)
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                    padding: const EdgeInsets.all(AppSpacing.md),
+                    child: ArrowButton(
+                      direction: ArrowDirection.previous,
+                      color: AppColors.numbersAccent,
+                      onPressed: () => setState(() => _page = page - 1),
+                    ),
+                  ),
+                ),
               const KidoCorner(),
             ],
           ),
@@ -161,6 +202,11 @@ String sectionLabel(AppLocalizations l10n, SectionId id) => switch (id) {
   SectionId.colours => l10n.sectionColours,
   SectionId.shapes => l10n.sectionShapes,
   SectionId.vehicles => l10n.sectionVehicles,
+  SectionId.body => l10n.sectionBody,
+  SectionId.family => l10n.sectionFamily,
+  SectionId.days => l10n.sectionDays,
+  SectionId.months => l10n.sectionMonths,
+  SectionId.opposites => l10n.sectionOpposites,
 };
 
 /// Section tiles in two rows of up to five (5 × 96 dp + gaps fits the
@@ -171,9 +217,13 @@ class _SectionGrid extends StatelessWidget {
     required this.labelOf,
     required this.imageOf,
     required this.onOpen,
+    super.key,
   });
 
   static const perRow = 5;
+
+  /// Tiles keep their two-row size on a page with fewer sections.
+  static const minRows = 2;
 
   final List<SectionId> sections;
   final String Function(SectionId) labelOf;
@@ -190,9 +240,8 @@ class _SectionGrid extends StatelessWidget {
       builder: (context, constraints) {
         const gap = AppSpacing.tapGap;
         final width = (constraints.maxWidth - gap * (perRow - 1)) / perRow;
-        final height = rows.isEmpty
-            ? 0.0
-            : (constraints.maxHeight - gap * (rows.length - 1)) / rows.length;
+        final slots = math.max(rows.length, minRows);
+        final height = (constraints.maxHeight - gap * (slots - 1)) / slots;
         var index = 0;
         return Column(
           mainAxisAlignment: MainAxisAlignment.center,

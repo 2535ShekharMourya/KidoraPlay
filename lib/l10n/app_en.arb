@@ -115,5 +115,10 @@
   "sectionHindi": "Hindi",
   "traceIt": "Write it",
   "traceAgain": "Write again",
-  "adBreak": "Kido is taking a little break 🐘"
+  "adBreak": "Kido is taking a little break 🐘",
+  "sectionBody": "Body",
+  "sectionFamily": "Family",
+  "sectionDays": "Days",
+  "sectionMonths": "Months",
+  "sectionOpposites": "Opposites"
 }

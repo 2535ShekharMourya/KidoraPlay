@@ -136,5 +136,69 @@
     "image": "assets/images/sections/vehicles.webp",
     "voice_en": "assets/audio/en/sections/vehicles.m4a",
     "voice_hi": "assets/audio/hi/sections/vehicles.m4a"
+  },
+  {
+    "id": "body",
+    "title_en": "Body Parts",
+    "title_hi": "शरीर के अंग",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "items": "assets/content/items_body.json",
+    "image": "assets/images/sections/body.webp",
+    "voice_en": "assets/audio/en/sections/body.m4a",
+    "voice_hi": "assets/audio/hi/sections/body.m4a"
+  },
+  {
+    "id": "family",
+    "title_en": "Family",
+    "title_hi": "परिवार",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "items": "assets/content/items_family.json",
+    "image": "assets/images/sections/family.webp",
+    "voice_en": "assets/audio/en/sections/family.m4a",
+    "voice_hi": "assets/audio/hi/sections/family.m4a"
+  },
+  {
+    "id": "days",
+    "title_en": "Days of the Week",
+    "title_hi": "हफ़्ते के दिन",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "items": "assets/content/items_days.json",
+    "image": "assets/images/sections/days.webp",
+    "voice_en": "assets/audio/en/sections/days.m4a",
+    "voice_hi": "assets/audio/hi/sections/days.m4a"
+  },
+  {
+    "id": "months",
+    "title_en": "Months",
+    "title_hi": "महीने",
+    "levels": [
+      "ukg"
+    ],
+    "items": "assets/content/items_months.json",
+    "image": "assets/images/sections/months.webp",
+    "voice_en": "assets/audio/en/sections/months.m4a",
+    "voice_hi": "assets/audio/hi/sections/months.m4a"
+  },
+  {
+    "id": "opposites",
+    "title_en": "Opposites",
+    "title_hi": "उल्टे शब्द",
+    "levels": [
+      "ukg"
+    ],
+    "items": "assets/content/items_opposites.json",
+    "image": "assets/images/sections/opposites.webp",
+    "voice_en": "assets/audio/en/sections/opposites.m4a",
+    "voice_hi": "assets/audio/hi/sections/opposites.m4a"
   }
 ]

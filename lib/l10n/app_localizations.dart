@@ -523,6 +523,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Kido is taking a little break 🐘'**
   String get adBreak;
+
+  /// No description provided for @sectionBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Body'**
+  String get sectionBody;
+
+  /// No description provided for @sectionFamily.
+  ///
+  /// In en, this message translates to:
+  /// **'Family'**
+  String get sectionFamily;
+
+  /// No description provided for @sectionDays.
+  ///
+  /// In en, this message translates to:
+  /// **'Days'**
+  String get sectionDays;
+
+  /// No description provided for @sectionMonths.
+  ///
+  /// In en, this message translates to:
+  /// **'Months'**
+  String get sectionMonths;
+
+  /// No description provided for @sectionOpposites.
+  ///
+  /// In en, this message translates to:
+  /// **'Opposites'**
+  String get sectionOpposites;
 }
 
 class _AppLocalizationsDelegate

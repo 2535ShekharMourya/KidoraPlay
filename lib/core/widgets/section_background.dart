@@ -89,15 +89,20 @@ class _BackgroundPainter extends CustomPainter {
 
     switch (section) {
       case null:
-      case SectionId.numbers || SectionId.vehicles:
+      case SectionId.numbers ||
+          SectionId.vehicles ||
+          SectionId.days ||
+          SectionId.months:
         _clouds(canvas, size, t);
       case SectionId.abc ||
           SectionId.hindi ||
           SectionId.colours ||
-          SectionId.shapes:
+          SectionId.shapes ||
+          SectionId.body ||
+          SectionId.opposites:
         _sun(canvas, size, t, Offset(size.width * 0.9, size.height * 0.12));
         _bubbles(canvas, size, t);
-      case SectionId.animals || SectionId.vegetables:
+      case SectionId.animals || SectionId.vegetables || SectionId.family:
         _hills(canvas, size);
         _leaves(canvas, size, t);
       case SectionId.fruits:

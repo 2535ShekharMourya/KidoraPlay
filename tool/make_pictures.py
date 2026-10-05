@@ -262,6 +262,180 @@ def write_notice():
     )
 
 
+# ------------------------------------------------- general knowledge pictures
+
+def emoji_toned(code):
+    """A Noto emoji; skin-toned variants fall back to the default if the 3D
+    set doesn't have them."""
+    try:
+        return emoji(code)
+    except Exception:
+        base = code.split("_")[0]
+        if base == code:
+            raise
+        print(f"  no 3D art for {code}, using {base}")
+        return emoji(base)
+
+
+def compose_emoji(code, box=440):
+    out = canvas()
+    img = fit(emoji_toned(code), box)
+    out.alpha_composite(img, ((SIZE - img.width) // 2, (SIZE - img.height) // 2))
+    return out
+
+
+def compose_india_flag():
+    """Drawn, so it is always exact: saffron, white, green, navy chakra."""
+    out = canvas()
+    d = ImageDraw.Draw(out)
+    x0, y0, x1, y1 = 36, 116, 476, 410
+    h = (y1 - y0) / 3
+    d.rounded_rectangle((x0, y0, x1, y1), 18, fill=(255, 255, 255, 255),
+                        outline=OUTLINE, width=8)
+    d.rectangle((x0 + 4, y0 + 4, x1 - 4, y0 + h), fill=(255, 153, 51, 255))
+    d.rectangle((x0 + 4, y1 - h, x1 - 4, y1 - 4), fill=(19, 136, 8, 255))
+    cx, cy, r = (x0 + x1) / 2, (y0 + y1) / 2, h * 0.42
+    navy = (0, 0, 128, 255)
+    d.ellipse((cx - r, cy - r, cx + r, cy + r), outline=navy, width=5)
+    for i in range(24):
+        a = math.pi * 2 * i / 24
+        d.line((cx, cy, cx + r * math.cos(a), cy + r * math.sin(a)),
+               fill=navy, width=2)
+    d.rounded_rectangle((x0, y0, x1, y1), 18, outline=OUTLINE, width=8)
+    return out
+
+
+def compose_day(index, rgb):
+    """A bright week card: the day's short name, and seven dots with this
+    day's dot big (Monday first)."""
+    out = canvas()
+    d = ImageDraw.Draw(out)
+    d.rounded_rectangle((26, 40, 486, 472), 48, fill=rgb + (255,),
+                        outline=OUTLINE, width=10)
+    # Calendar rings.
+    for x in (150, 362):
+        d.rounded_rectangle((x - 16, 16, x + 16, 92), 14,
+                            fill=(255, 255, 255, 255), outline=OUTLINE, width=6)
+    name = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"][index]
+    f = font(170)
+    w = d.textlength(name, font=f)
+    d.text(((SIZE - w) / 2, 110), name, font=f, fill=(255, 255, 255, 255),
+           stroke_width=6, stroke_fill=OUTLINE)
+    step = 58
+    x0 = SIZE / 2 - step * 3
+    for i in range(7):
+        r = 25 if i == index else 13
+        x = x0 + i * step
+        d.ellipse((x - r, 400 - r, x + r, 400 + r),
+                  fill=(255, 255, 255, 255) if i == index else (255, 255, 255, 150),
+                  outline=OUTLINE if i == index else None,
+                  width=5 if i == index else 0)
+    return out
+
+
+def compose_glass(full):
+    out = canvas()
+    d = ImageDraw.Draw(out)
+    top, bottom = 70, 450
+    glass = [(130, top), (382, top), (350, bottom), (162, bottom)]
+    if full:
+        level = top + 40
+        t = (level - top) / (bottom - top)
+        lx0, lx1 = 130 + 32 * t, 382 - 32 * t
+        d.polygon([(lx0, level), (lx1, level), (350, bottom), (162, bottom)],
+                  fill=(84, 172, 255, 255))
+        d.ellipse((lx0, level - 14, lx1, level + 14), fill=(140, 200, 255, 255))
+    d.polygon(glass, fill=None, outline=OUTLINE, width=10)
+    d.line((150, top + 30, 172, bottom - 40), fill=(255, 255, 255, 200), width=10)
+    return out
+
+
+def compose_opposite(spec):
+    kind, _, code = spec.partition(":")
+    if not code:  # a plain emoji
+        return compose_emoji(kind)
+    if kind == "glass":
+        return compose_glass(code == "full")
+    out = canvas()
+    d = ImageDraw.Draw(out)
+    if kind in ("day", "night"):
+        sky = (135, 206, 250, 255) if kind == "day" else (25, 32, 72, 255)
+        d.ellipse((16, 16, 496, 496), fill=sky, outline=OUTLINE, width=10)
+        if kind == "night":
+            for x, y in ((120, 150), (370, 120), (330, 380), (150, 360), (250, 90)):
+                d.ellipse((x - 7, y - 7, x + 7, y + 7), fill=(255, 241, 150, 255))
+        img = fit(emoji(code), 290)
+        out.alpha_composite(img, ((SIZE - img.width) // 2, (SIZE - img.height) // 2))
+        return out
+    if kind in ("big", "small"):
+        img = fit(emoji(code), 470 if kind == "big" else 150)
+        out.alpha_composite(img, ((SIZE - img.width) // 2, (SIZE - img.height) // 2))
+        return out
+    # Up / down: the ground line shows where "down" is.
+    d.rounded_rectangle((30, 470, 482, 490), 10, fill=(143, 210, 124, 255))
+    img = fit(emoji(code), 230 if kind == "up" else 190)
+    y = 10 if kind == "up" else 470 - img.height
+    out.alpha_composite(img, ((SIZE - img.width) // 2, y))
+    arrow_y0, arrow_y1 = (440, 310) if kind == "up" else (90, 190)
+    d.line((SIZE / 2, arrow_y0, SIZE / 2, arrow_y1), fill=OUTLINE, width=14)
+    tip = arrow_y1 + (-30 if kind == "up" else 30)
+    d.polygon([(SIZE / 2 - 34, arrow_y1), (SIZE / 2 + 34, arrow_y1),
+               (SIZE / 2, tip)], fill=OUTLINE)
+    return out
+
+
+def compose_pair(left, right):
+    """Two pictures side by side (section tile for opposites)."""
+    out = canvas()
+    a = fit(emoji(left), 300)
+    b = fit(emoji(right), 150)
+    out.alpha_composite(a, (20, (SIZE - a.height) // 2))
+    out.alpha_composite(b, (SIZE - b.width - 30, SIZE - b.height - 90))
+    return out
+
+
+def compose_family():
+    """Mother, father and baby together (the emoji "family" sign is an
+    icon, not people)."""
+    out = canvas()
+    mum = fit(emoji("1f469_1f3fd"), 270)
+    dad = fit(emoji("1f468_1f3fd"), 270)
+    baby = fit(emoji("1f476_1f3fd"), 210)
+    out.alpha_composite(mum, (10, 40))
+    out.alpha_composite(dad, (SIZE - dad.width - 10, 40))
+    out.alpha_composite(baby, ((SIZE - baby.width) // 2, SIZE - baby.height - 10))
+    return out
+
+
+def general_knowledge():
+    from make_items import BODY, DAYS, FAMILY, MONTHS, OPPOSITES
+    made = []
+    for id_, _en, _hi, code, _f in BODY:
+        made.append(save(compose_emoji(code), f"assets/images/body/{id_}.webp"))
+    for id_, _en, _hi, code, _f in FAMILY:
+        img = compose_family() if code == "1f46a" else compose_emoji(code)
+        made.append(save(img, f"assets/images/family/{id_}.webp"))
+    for i, (id_, _en, _hi, rgb, _f) in enumerate(DAYS):
+        made.append(save(compose_day(i, rgb), f"assets/images/days/{id_}.webp"))
+    for id_, _en, _hi, code, _f in MONTHS:
+        img = compose_india_flag() if code == "1f1ee_1f1f3" else compose_emoji(code)
+        made.append(save(img, f"assets/images/months/{id_}.webp"))
+    for pair in OPPOSITES:
+        for id_, _en, _hi, spec in pair:
+            made.append(save(compose_opposite(spec),
+                             f"assets/images/opposites/{id_}.webp"))
+    tiles = {
+        "body": compose_emoji("1f440"),
+        "family": compose_family(),
+        "days": compose_day(0, (231, 76, 60)),
+        "months": compose_emoji("1f5d3"),
+        "opposites": compose_pair("1f418", "1f42d"),
+    }
+    for id_, img in tiles.items():
+        made.append(save(img, f"assets/images/sections/{id_}.webp"))
+    return made
+
+
 def main():
     # Real photographs (tool/make_photos.py) win over illustrations.
     import sys
@@ -317,6 +491,7 @@ def main():
             continue
         made.append(save(compose_plain(PICTURES[f"sections/{s['id']}"]),
                          s["image"]))
+    made += general_knowledge()
     write_notice()
 
     # These pictures are no longer placeholders.

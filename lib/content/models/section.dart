@@ -15,7 +15,12 @@ enum SectionId {
   vegetables,
   colours,
   shapes,
-  vehicles;
+  vehicles,
+  body,
+  family,
+  days,
+  months,
+  opposites;
 
   /// Sections whose words are spelled letter by letter in English.
   /// Hindi letters teach the letter and word instead.

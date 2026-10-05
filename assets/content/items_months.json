@@ -1,0 +1,242 @@
+[
+  {
+    "id": "month_january",
+    "section": "months",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "January",
+    "word_hi": "जनवरी",
+    "image": "assets/images/months/month_january.webp",
+    "voice_en": "assets/audio/en/month_january.m4a",
+    "voice_hi": "assets/audio/hi/month_january.m4a",
+    "sound": null,
+    "fact_en": "In January, we fly kites on Makar Sankranti!",
+    "fact_hi": "जनवरी में मकर संक्रांति पर पतंग उड़ाते हैं!",
+    "voice_fact_en": "assets/audio/en/month_january_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/month_january_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "month_february",
+    "section": "months",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "February",
+    "word_hi": "फ़रवरी",
+    "image": "assets/images/months/month_february.webp",
+    "voice_en": "assets/audio/en/month_february.m4a",
+    "voice_hi": "assets/audio/hi/month_february.m4a",
+    "sound": null,
+    "fact_en": "In February, flowers bloom. Spring is here!",
+    "fact_hi": "फ़रवरी में फूल खिलते हैं। बसंत आ गया!",
+    "voice_fact_en": "assets/audio/en/month_february_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/month_february_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "month_march",
+    "section": "months",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "March",
+    "word_hi": "मार्च",
+    "image": "assets/images/months/month_march.webp",
+    "voice_en": "assets/audio/en/month_march.m4a",
+    "voice_hi": "assets/audio/hi/month_march.m4a",
+    "sound": null,
+    "fact_en": "In March, we play Holi with colours!",
+    "fact_hi": "मार्च में हम रंगों से होली खेलते हैं!",
+    "voice_fact_en": "assets/audio/en/month_march_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/month_march_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "month_april",
+    "section": "months",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "April",
+    "word_hi": "अप्रैल",
+    "image": "assets/images/months/month_april.webp",
+    "voice_en": "assets/audio/en/month_april.m4a",
+    "voice_hi": "assets/audio/hi/month_april.m4a",
+    "sound": null,
+    "fact_en": "In April, sweet mangoes come!",
+    "fact_hi": "अप्रैल में मीठे-मीठे आम आते हैं!",
+    "voice_fact_en": "assets/audio/en/month_april_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/month_april_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "month_may",
+    "section": "months",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "May",
+    "word_hi": "मई",
+    "image": "assets/images/months/month_may.webp",
+    "voice_en": "assets/audio/en/month_may.m4a",
+    "voice_hi": "assets/audio/hi/month_may.m4a",
+    "sound": null,
+    "fact_en": "May is very hot. Drink lots of water!",
+    "fact_hi": "मई में बहुत गर्मी होती है। खूब पानी पियो!",
+    "voice_fact_en": "assets/audio/en/month_may_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/month_may_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "month_june",
+    "section": "months",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "June",
+    "word_hi": "जून",
+    "image": "assets/images/months/month_june.webp",
+    "voice_en": "assets/audio/en/month_june.m4a",
+    "voice_hi": "assets/audio/hi/month_june.m4a",
+    "sound": null,
+    "fact_en": "June is for summer holidays. Ice cream time!",
+    "fact_hi": "जून में गर्मी की छुट्टियाँ! आइसक्रीम का टाइम!",
+    "voice_fact_en": "assets/audio/en/month_june_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/month_june_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "month_july",
+    "section": "months",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "July",
+    "word_hi": "जुलाई",
+    "image": "assets/images/months/month_july.webp",
+    "voice_en": "assets/audio/en/month_july.m4a",
+    "voice_hi": "assets/audio/hi/month_july.m4a",
+    "sound": null,
+    "fact_en": "In July, the rain comes. Pitter patter!",
+    "fact_hi": "जुलाई में बारिश आती है। टप, टप, टप!",
+    "voice_fact_en": "assets/audio/en/month_july_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/month_july_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "month_august",
+    "section": "months",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "August",
+    "word_hi": "अगस्त",
+    "image": "assets/images/months/month_august.webp",
+    "voice_en": "assets/audio/en/month_august.m4a",
+    "voice_hi": "assets/audio/hi/month_august.m4a",
+    "sound": null,
+    "fact_en": "On 15th August, we celebrate Independence Day!",
+    "fact_hi": "15 अगस्त को हम स्वतंत्रता दिवस मनाते हैं!",
+    "voice_fact_en": "assets/audio/en/month_august_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/month_august_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "month_september",
+    "section": "months",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "September",
+    "word_hi": "सितंबर",
+    "image": "assets/images/months/month_september.webp",
+    "voice_en": "assets/audio/en/month_september.m4a",
+    "voice_hi": "assets/audio/hi/month_september.m4a",
+    "sound": null,
+    "fact_en": "In September, we say thank you on Teachers' Day!",
+    "fact_hi": "सितंबर में शिक्षक दिवस पर हम टीचर को धन्यवाद कहते हैं!",
+    "voice_fact_en": "assets/audio/en/month_september_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/month_september_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "month_october",
+    "section": "months",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "October",
+    "word_hi": "अक्टूबर",
+    "image": "assets/images/months/month_october.webp",
+    "voice_en": "assets/audio/en/month_october.m4a",
+    "voice_hi": "assets/audio/hi/month_october.m4a",
+    "sound": null,
+    "fact_en": "Around October, we light diyas for Diwali!",
+    "fact_hi": "अक्टूबर के आसपास हम दीवाली पर दीये जलाते हैं!",
+    "voice_fact_en": "assets/audio/en/month_october_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/month_october_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "month_november",
+    "section": "months",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "November",
+    "word_hi": "नवंबर",
+    "image": "assets/images/months/month_november.webp",
+    "voice_en": "assets/audio/en/month_november.m4a",
+    "voice_hi": "assets/audio/hi/month_november.m4a",
+    "sound": null,
+    "fact_en": "14th November is Children's Day. Your day!",
+    "fact_hi": "14 नवंबर को बाल दिवस है। तुम्हारा दिन!",
+    "voice_fact_en": "assets/audio/en/month_november_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/month_november_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "month_december",
+    "section": "months",
+    "levels": [
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "December",
+    "word_hi": "दिसंबर",
+    "image": "assets/images/months/month_december.webp",
+    "voice_en": "assets/audio/en/month_december.m4a",
+    "voice_hi": "assets/audio/hi/month_december.m4a",
+    "sound": null,
+    "fact_en": "December is cold. Wear a warm sweater!",
+    "fact_hi": "दिसंबर में ठंड होती है। गरम स्वेटर पहनो!",
+    "voice_fact_en": "assets/audio/en/month_december_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/month_december_fact.m4a",
+    "rive_reaction": null
+  }
+]

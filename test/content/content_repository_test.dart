@@ -39,6 +39,18 @@ void main() {
       expect(catalog.itemsFor(SectionId.shapes), hasLength(8));
       expect(catalog.itemsFor(SectionId.vehicles), hasLength(12));
       expect(catalog.itemsFor(SectionId.hindi), hasLength(45));
+      expect(catalog.itemsFor(SectionId.body), hasLength(11));
+      expect(catalog.itemsFor(SectionId.family), hasLength(8));
+      expect(catalog.itemsFor(SectionId.days), hasLength(7));
+      expect(catalog.itemsFor(SectionId.months), hasLength(12));
+      expect(catalog.itemsFor(SectionId.opposites), hasLength(16));
+      // Opposites come in pairs, each naming the other.
+      expect(catalog.itemById('opp_hot')?.factEn, 'Hot! The opposite is cold.');
+      expect(
+        catalog.itemById('opp_cold')?.factEn,
+        'Cold! The opposite is hot.',
+      );
+      expect(catalog.itemById('day_sunday')?.wordHi, 'रविवार');
       // Every item teaches a fun fact, except numbers.
       for (final item in catalog.allItems) {
         if (item.section == SectionId.numbers ||
@@ -72,11 +84,22 @@ void main() {
         bundle: rootBundle,
         validate: false,
       ).load();
-      // Vegetables start in LKG.
-      expect(
-        catalog.sectionsFor(Level.nursery).map((s) => s.id),
-        isNot(contains(SectionId.vegetables)),
-      );
+      // Vegetables, family and days start in LKG; months and opposites
+      // in UKG. Body parts are for everyone.
+      final nursery = catalog.sectionsFor(Level.nursery).map((s) => s.id);
+      expect(nursery, contains(SectionId.body));
+      for (final later in [
+        SectionId.vegetables,
+        SectionId.family,
+        SectionId.days,
+        SectionId.months,
+        SectionId.opposites,
+      ]) {
+        expect(nursery, isNot(contains(later)));
+      }
+      final lkg = catalog.sectionsFor(Level.lkg).map((s) => s.id);
+      expect(lkg, containsAll([SectionId.family, SectionId.days]));
+      expect(lkg, isNot(contains(SectionId.months)));
       expect(
         catalog.sectionsFor(Level.ukg),
         hasLength(SectionId.values.length),

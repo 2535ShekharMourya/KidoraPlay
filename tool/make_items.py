@@ -463,6 +463,125 @@ SOUND_TEXT = {
 }
 
 
+# ------------------------------------------------------- general knowledge
+# (id, English, Hindi, Noto emoji code, (fact EN, fact HI)).
+# Body parts and family are illustrations, never photos of real people.
+# Each fact asks the child to do something (touch, wave, count).
+BODY = [
+    ("body_eyes", "Eyes", "आँखें", "1f440",
+     ("We see with our eyes. Blink, blink!", "हम आँखों से देखते हैं। पलक झपकाओ!")),
+    ("body_ears", "Ears", "कान", "1f442_1f3fd",
+     ("We hear with our ears. Touch your ears!", "हम कानों से सुनते हैं। अपने कान छुओ!")),
+    ("body_nose", "Nose", "नाक", "1f443_1f3fd",
+     ("We smell with our nose. Touch your nose!", "हम नाक से सूँघते हैं। अपनी नाक छुओ!")),
+    ("body_mouth", "Mouth", "मुँह", "1f444",
+     ("We eat and talk with our mouth. Open wide... aaa!", "हम मुँह से खाते और बोलते हैं। मुँह खोलो... आ!")),
+    ("body_teeth", "Teeth", "दाँत", "1f9b7",
+     ("Brush your teeth every day. Shiny teeth!", "रोज़ अपने दाँत ब्रश करो। चमकते दाँत!")),
+    ("body_tongue", "Tongue", "जीभ", "1f445",
+     ("Our tongue tastes sweet and sour!", "जीभ से हम मीठा और खट्टा चखते हैं!")),
+    ("body_hand", "Hand", "हाथ", "270b_1f3fd",
+     ("Wave your hand and say hello!", "हाथ हिलाओ और बोलो... नमस्ते!")),
+    ("body_fingers", "Fingers", "उँगलियाँ", "1f590_1f3fd",
+     ("We have ten fingers. Let's count them!", "हमारी दस उँगलियाँ होती हैं। चलो गिनें!")),
+    ("body_arm", "Arm", "बाँह", "1f4aa_1f3fd",
+     ("Our arms are strong. Show me your muscles!", "हमारी बाँहें मज़बूत हैं। अपनी ताक़त दिखाओ!")),
+    ("body_leg", "Leg", "टाँग", "1f9b5_1f3fd",
+     ("We walk and jump with our legs. Jump, jump!", "हम टाँगों से चलते और कूदते हैं। कूदो, कूदो!")),
+    ("body_foot", "Foot", "पैर", "1f9b6_1f3fd",
+     ("Stamp your feet! Thump, thump!", "पैर पटको! धप, धप!")),
+]
+
+FAMILY = [
+    ("family_mother", "Mother", "माँ", "1f469_1f3fd",
+     ("Mother loves us so much!", "माँ हमसे बहुत प्यार करती हैं!")),
+    ("family_father", "Father", "पापा", "1f468_1f3fd",
+     ("Father plays with us!", "पापा हमारे साथ खेलते हैं!")),
+    ("family_grandmother", "Grandmother", "दादी", "1f475_1f3fd",
+     ("Grandmother tells us lovely stories!", "दादी हमें प्यारी-प्यारी कहानियाँ सुनाती हैं!")),
+    ("family_grandfather", "Grandfather", "दादा", "1f474_1f3fd",
+     ("Grandfather takes us for a walk!", "दादा जी हमें घुमाने ले जाते हैं!")),
+    ("family_brother", "Brother", "भाई", "1f466_1f3fd",
+     ("A brother is a great friend!", "भाई सबसे अच्छा दोस्त होता है!")),
+    ("family_sister", "Sister", "बहन", "1f467_1f3fd",
+     ("A sister shares her toys!", "बहन अपने खिलौने बाँटती है!")),
+    ("family_baby", "Baby", "बेबी", "1f476_1f3fd",
+     ("The baby is tiny. Shh... the baby is sleeping!", "बेबी छोटा सा है। श्श्श... बेबी सो रहा है!")),
+    ("family_family", "Family", "परिवार", "1f46a",
+     ("We love our family. A big hug!", "हमें अपने परिवार से प्यार है। एक बड़ी सी झप्पी!")),
+]
+
+# (id, English, Hindi, card colour, (fact EN, fact HI)); pictures are cards.
+DAYS = [
+    ("day_monday", "Monday", "सोमवार", (231, 76, 60),
+     ("Monday! A new week begins!", "सोमवार! नया हफ़्ता शुरू!")),
+    ("day_tuesday", "Tuesday", "मंगलवार", (243, 156, 18),
+     ("Tuesday comes after Monday!", "मंगलवार, सोमवार के बाद आता है!")),
+    ("day_wednesday", "Wednesday", "बुधवार", (241, 196, 15),
+     ("Wednesday is the middle of the week!", "बुधवार हफ़्ते के बीच में आता है!")),
+    ("day_thursday", "Thursday", "गुरुवार", (46, 204, 113),
+     ("Thursday! Friday is coming soon!", "गुरुवार! जल्दी ही शुक्रवार आएगा!")),
+    ("day_friday", "Friday", "शुक्रवार", (52, 152, 219),
+     ("Friday! The holiday is near!", "शुक्रवार! छुट्टी पास है!")),
+    ("day_saturday", "Saturday", "शनिवार", (142, 68, 173),
+     ("Saturday is a fun day!", "शनिवार मज़े का दिन है!")),
+    ("day_sunday", "Sunday", "रविवार", (233, 30, 99),
+     ("Sunday is a holiday. Let's play!", "रविवार को छुट्टी होती है। चलो खेलें!")),
+]
+
+# Months tied to what Indian children see: festivals and seasons.
+MONTHS = [
+    ("month_january", "January", "जनवरी", "1fa81",
+     ("In January, we fly kites on Makar Sankranti!", "जनवरी में मकर संक्रांति पर पतंग उड़ाते हैं!")),
+    ("month_february", "February", "फ़रवरी", "1f33c",
+     ("In February, flowers bloom. Spring is here!", "फ़रवरी में फूल खिलते हैं। बसंत आ गया!")),
+    ("month_march", "March", "मार्च", "1f3a8",
+     ("In March, we play Holi with colours!", "मार्च में हम रंगों से होली खेलते हैं!")),
+    ("month_april", "April", "अप्रैल", "1f96d",
+     ("In April, sweet mangoes come!", "अप्रैल में मीठे-मीठे आम आते हैं!")),
+    ("month_may", "May", "मई", "2600",
+     ("May is very hot. Drink lots of water!", "मई में बहुत गर्मी होती है। खूब पानी पियो!")),
+    ("month_june", "June", "जून", "1f366",
+     ("June is for summer holidays. Ice cream time!", "जून में गर्मी की छुट्टियाँ! आइसक्रीम का टाइम!")),
+    ("month_july", "July", "जुलाई", "2614",
+     ("In July, the rain comes. Pitter patter!", "जुलाई में बारिश आती है। टप, टप, टप!")),
+    ("month_august", "August", "अगस्त", "1f1ee_1f1f3",
+     ("On 15th August, we celebrate Independence Day!", "15 अगस्त को हम स्वतंत्रता दिवस मनाते हैं!")),
+    ("month_september", "September", "सितंबर", "1f4da",
+     ("In September, we say thank you on Teachers' Day!", "सितंबर में शिक्षक दिवस पर हम टीचर को धन्यवाद कहते हैं!")),
+    ("month_october", "October", "अक्टूबर", "1fa94",
+     ("Around October, we light diyas for Diwali!", "अक्टूबर के आसपास हम दीवाली पर दीये जलाते हैं!")),
+    ("month_november", "November", "नवंबर", "1f388",
+     ("14th November is Children's Day. Your day!", "14 नवंबर को बाल दिवस है। तुम्हारा दिन!")),
+    ("month_december", "December", "दिसंबर", "1f9e3",
+     ("December is cold. Wear a warm sweater!", "दिसंबर में ठंड होती है। गरम स्वेटर पहनो!")),
+]
+
+# Pairs, taught one after the other: (id, English, Hindi, picture) twice.
+OPPOSITES = [
+    (("opp_big", "Big", "बड़ा", "big:1f388"), ("opp_small", "Small", "छोटा", "small:1f388")),
+    (("opp_hot", "Hot", "गरम", "1f525"), ("opp_cold", "Cold", "ठंडा", "1f9ca")),
+    (("opp_up", "Up", "ऊपर", "up:1f388"), ("opp_down", "Down", "नीचे", "down:26bd")),
+    (("opp_happy", "Happy", "खुश", "1f600"), ("opp_sad", "Sad", "उदास", "1f622")),
+    (("opp_fast", "Fast", "तेज़", "1f407"), ("opp_slow", "Slow", "धीमा", "1f422")),
+    (("opp_open", "Open", "खुला", "1f4d6"), ("opp_closed", "Closed", "बंद", "1f4d5")),
+    (("opp_day", "Day", "दिन", "day:2600"), ("opp_night", "Night", "रात", "night:1f319")),
+    (("opp_full", "Full", "भरा", "glass:full"), ("opp_empty", "Empty", "खाली", "glass:empty")),
+]
+
+
+def opposite_items():
+    """Both words of each pair, each saying what its opposite is."""
+    out = []
+    for a, b in OPPOSITES:
+        for (id_, en, hi, _pic), (_, other_en, other_hi, _) in ((a, b), (b, a)):
+            fact = (f"{en}! The opposite is {other_en.lower()}.",
+                    f"{hi}! इसका उल्टा है {other_hi}।")
+            out.append(item("opposites", id_, en, hi, fact=fact,
+                            levels=["ukg"]))
+    return out
+
+
 def write(name, items):
     path = CONTENT / name
     path.write_text(
@@ -515,6 +634,19 @@ def main():
     write("items_shapes.json",
           [item("shapes", i, en, hi, fact=f, levels=NURSERY_UP)
            for i, en, hi, f in SHAPES])
+    write("items_body.json",
+          [item("body", i, en, hi, fact=f, levels=NURSERY_UP)
+           for i, en, hi, _pic, f in BODY])
+    write("items_family.json",
+          [item("family", i, en, hi, fact=f, levels=LKG_UP)
+           for i, en, hi, _pic, f in FAMILY])
+    write("items_days.json",
+          [item("days", i, en, hi, fact=f, levels=LKG_UP)
+           for i, en, hi, _rgb, f in DAYS])
+    write("items_months.json",
+          [item("months", i, en, hi, fact=f, levels=["ukg"])
+           for i, en, hi, _pic, f in MONTHS])
+    write("items_opposites.json", opposite_items())
 
 
 if __name__ == "__main__":

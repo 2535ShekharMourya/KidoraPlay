@@ -4,6 +4,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
 import 'package:kidoraplay/app.dart';
 import 'package:kidoraplay/content/repository/content_catalog.dart';
+import 'package:kidoraplay/core/settings/app_settings.dart';
+import 'package:kidoraplay/core/storage/local_store.dart';
 import 'package:kidoraplay/core/theme/app_tokens.dart';
 import 'package:kidoraplay/core/widgets/arrow_button.dart';
 import 'package:kidoraplay/core/widgets/big_back_button.dart';
@@ -110,6 +112,46 @@ void main() {
     // Close the app so lesson and hint timers end with it.
     await tester.pumpWidget(const SizedBox());
     await tester.pump(const Duration(seconds: 5));
+  });
+
+  testWidgets('UKG Home has two pages of sections; arrows flip them', (
+    tester,
+  ) async {
+    useLandscapePhone(tester);
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: testOverrides(
+          catalog: catalog,
+          store: LocalStore.inMemory({
+            SettingsKeys.language: 'en',
+            SettingsKeys.level: 'ukg',
+          }),
+        ),
+        child: const KidoraApp(),
+      ),
+    );
+    await tester.pump(AppDurations.splash);
+    await settle(tester);
+
+    expect(find.text('Numbers'), findsOneWidget);
+    expect(find.text('Opposites'), findsNothing);
+    // Back arrow only from page two.
+    expect(find.byType(ArrowButton), findsOneWidget);
+
+    await tester.tap(find.byType(ArrowButton));
+    await settle(tester);
+    expect(find.text('Numbers'), findsNothing);
+    for (final label in ['Body', 'Family', 'Days', 'Months', 'Opposites']) {
+      expect(find.text(label), findsOneWidget, reason: label);
+    }
+    // Tiles stay big enough for small fingers.
+    final tile = tester.getSize(find.bySemanticsLabel('Opposites'));
+    expect(tile.width, greaterThanOrEqualTo(AppSpacing.minTapTarget));
+    expect(tile.height, greaterThanOrEqualTo(AppSpacing.minTapTarget));
+
+    await tester.tap(find.byType(ArrowButton));
+    await settle(tester);
+    expect(find.text('Numbers'), findsOneWidget);
   });
 
   testWidgets('unknown section link goes home', (tester) async {

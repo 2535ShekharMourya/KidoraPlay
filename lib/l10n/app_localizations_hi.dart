@@ -233,4 +233,19 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get adBreak => 'किडो थोड़ा आराम कर रहा है 🐘';
+
+  @override
+  String get sectionBody => 'शरीर';
+
+  @override
+  String get sectionFamily => 'परिवार';
+
+  @override
+  String get sectionDays => 'दिन';
+
+  @override
+  String get sectionMonths => 'महीने';
+
+  @override
+  String get sectionOpposites => 'उल्टे शब्द';
 }

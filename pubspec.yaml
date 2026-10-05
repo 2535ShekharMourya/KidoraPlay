@@ -45,6 +45,11 @@ flutter:
     - assets/images/colours/
     - assets/images/vegetables/
     - assets/images/fruits/
+    - assets/images/body/
+    - assets/images/family/
+    - assets/images/days/
+    - assets/images/months/
+    - assets/images/opposites/
     - assets/audio/en/
     - assets/audio/en/kido/
     - assets/audio/en/sections/

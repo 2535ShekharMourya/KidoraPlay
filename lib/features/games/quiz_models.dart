@@ -121,6 +121,8 @@ List<QuizRound> buildQuiz(
         if (kind == GameKind.findIt) ...[
           ...catalog.itemsFor(SectionId.fruits, level: level),
           ...catalog.itemsFor(SectionId.vegetables, level: level),
+          // "Where is the nose?"
+          ...catalog.itemsFor(SectionId.body, level: level),
         ],
       ].where((i) => kind == GameKind.findIt || i.sound != null).toList();
       final pool = items.map(pictureChoice).toList();

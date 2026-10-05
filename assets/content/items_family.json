@@ -1,0 +1,170 @@
+[
+  {
+    "id": "family_mother",
+    "section": "family",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Mother",
+    "word_hi": "माँ",
+    "image": "assets/images/family/family_mother.webp",
+    "voice_en": "assets/audio/en/family_mother.m4a",
+    "voice_hi": "assets/audio/hi/family_mother.m4a",
+    "sound": null,
+    "fact_en": "Mother loves us so much!",
+    "fact_hi": "माँ हमसे बहुत प्यार करती हैं!",
+    "voice_fact_en": "assets/audio/en/family_mother_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/family_mother_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "family_father",
+    "section": "family",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Father",
+    "word_hi": "पापा",
+    "image": "assets/images/family/family_father.webp",
+    "voice_en": "assets/audio/en/family_father.m4a",
+    "voice_hi": "assets/audio/hi/family_father.m4a",
+    "sound": null,
+    "fact_en": "Father plays with us!",
+    "fact_hi": "पापा हमारे साथ खेलते हैं!",
+    "voice_fact_en": "assets/audio/en/family_father_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/family_father_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "family_grandmother",
+    "section": "family",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Grandmother",
+    "word_hi": "दादी",
+    "image": "assets/images/family/family_grandmother.webp",
+    "voice_en": "assets/audio/en/family_grandmother.m4a",
+    "voice_hi": "assets/audio/hi/family_grandmother.m4a",
+    "sound": null,
+    "fact_en": "Grandmother tells us lovely stories!",
+    "fact_hi": "दादी हमें प्यारी-प्यारी कहानियाँ सुनाती हैं!",
+    "voice_fact_en": "assets/audio/en/family_grandmother_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/family_grandmother_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "family_grandfather",
+    "section": "family",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Grandfather",
+    "word_hi": "दादा",
+    "image": "assets/images/family/family_grandfather.webp",
+    "voice_en": "assets/audio/en/family_grandfather.m4a",
+    "voice_hi": "assets/audio/hi/family_grandfather.m4a",
+    "sound": null,
+    "fact_en": "Grandfather takes us for a walk!",
+    "fact_hi": "दादा जी हमें घुमाने ले जाते हैं!",
+    "voice_fact_en": "assets/audio/en/family_grandfather_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/family_grandfather_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "family_brother",
+    "section": "family",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Brother",
+    "word_hi": "भाई",
+    "image": "assets/images/family/family_brother.webp",
+    "voice_en": "assets/audio/en/family_brother.m4a",
+    "voice_hi": "assets/audio/hi/family_brother.m4a",
+    "sound": null,
+    "fact_en": "A brother is a great friend!",
+    "fact_hi": "भाई सबसे अच्छा दोस्त होता है!",
+    "voice_fact_en": "assets/audio/en/family_brother_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/family_brother_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "family_sister",
+    "section": "family",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Sister",
+    "word_hi": "बहन",
+    "image": "assets/images/family/family_sister.webp",
+    "voice_en": "assets/audio/en/family_sister.m4a",
+    "voice_hi": "assets/audio/hi/family_sister.m4a",
+    "sound": null,
+    "fact_en": "A sister shares her toys!",
+    "fact_hi": "बहन अपने खिलौने बाँटती है!",
+    "voice_fact_en": "assets/audio/en/family_sister_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/family_sister_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "family_baby",
+    "section": "family",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Baby",
+    "word_hi": "बेबी",
+    "image": "assets/images/family/family_baby.webp",
+    "voice_en": "assets/audio/en/family_baby.m4a",
+    "voice_hi": "assets/audio/hi/family_baby.m4a",
+    "sound": null,
+    "fact_en": "The baby is tiny. Shh... the baby is sleeping!",
+    "fact_hi": "बेबी छोटा सा है। श्श्श... बेबी सो रहा है!",
+    "voice_fact_en": "assets/audio/en/family_baby_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/family_baby_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "family_family",
+    "section": "family",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Family",
+    "word_hi": "परिवार",
+    "image": "assets/images/family/family_family.webp",
+    "voice_en": "assets/audio/en/family_family.m4a",
+    "voice_hi": "assets/audio/hi/family_family.m4a",
+    "sound": null,
+    "fact_en": "We love our family. A big hug!",
+    "fact_hi": "हमें अपने परिवार से प्यार है। एक बड़ी सी झप्पी!",
+    "voice_fact_en": "assets/audio/en/family_family_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/family_family_fact.m4a",
+    "rive_reaction": null
+  }
+]

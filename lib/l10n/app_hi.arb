@@ -70,5 +70,10 @@
   "sectionHindi": "हिंदी",
   "traceIt": "लिखो",
   "traceAgain": "फिर से लिखो",
-  "adBreak": "किडो थोड़ा आराम कर रहा है 🐘"
+  "adBreak": "किडो थोड़ा आराम कर रहा है 🐘",
+  "sectionBody": "शरीर",
+  "sectionFamily": "परिवार",
+  "sectionDays": "दिन",
+  "sectionMonths": "महीने",
+  "sectionOpposites": "उल्टे शब्द"
 }

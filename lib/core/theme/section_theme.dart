@@ -52,5 +52,25 @@ class SectionTheme {
       background: AppColors.vehiclesBg,
       accent: AppColors.vehiclesAccent,
     ),
+    SectionId.body => const SectionTheme(
+      background: AppColors.bodyBg,
+      accent: AppColors.bodyAccent,
+    ),
+    SectionId.family => const SectionTheme(
+      background: AppColors.familyBg,
+      accent: AppColors.familyAccent,
+    ),
+    SectionId.days => const SectionTheme(
+      background: AppColors.daysBg,
+      accent: AppColors.daysAccent,
+    ),
+    SectionId.months => const SectionTheme(
+      background: AppColors.monthsBg,
+      accent: AppColors.monthsAccent,
+    ),
+    SectionId.opposites => const SectionTheme(
+      background: AppColors.oppositesBg,
+      accent: AppColors.oppositesAccent,
+    ),
   };
 }

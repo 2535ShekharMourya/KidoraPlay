@@ -73,6 +73,16 @@ abstract final class AppColors {
   static const shapesAccent = Color(0xFF14A39A);
   static const vehiclesBg = Color(0xFFE4E9FF);
   static const vehiclesAccent = Color(0xFF4F5BD5);
+  static const bodyBg = Color(0xFFFFE9DE);
+  static const bodyAccent = Color(0xFFF26B4F);
+  static const familyBg = Color(0xFFF3E8FF);
+  static const familyAccent = Color(0xFF9B5DE5);
+  static const daysBg = Color(0xFFDDF6F8);
+  static const daysAccent = Color(0xFF00A3BF);
+  static const monthsBg = Color(0xFFFFF0D4);
+  static const monthsAccent = Color(0xFFEB8F00);
+  static const oppositesBg = Color(0xFFE6E9FF);
+  static const oppositesAccent = Color(0xFF5468F0);
   static const hindiBg = Color(0xFFFFEBD9);
   static const hindiAccent = Color(0xFFE2711D);
   static const gamesBg = Color(0xFFF1E7FF);
