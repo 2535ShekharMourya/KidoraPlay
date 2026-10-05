@@ -49,6 +49,16 @@ abstract final class KidoEvent {
   static const thatsA = 'thats_a';
   static const gameDone = 'game_done';
 
+  // Finger tracing.
+  /// "Let's write A!"
+  static const traceIt = 'trace_it';
+
+  /// "Start at the green dot, and follow me!" (idle hint).
+  static const traceHint = 'trace_hint';
+
+  /// "You wrote A!"
+  static const traceDone = 'trace_done';
+
   static const all = [
     welcomeFirst,
     welcomeBack,
@@ -73,6 +83,9 @@ abstract final class KidoEvent {
     findLetter,
     thatsA,
     gameDone,
+    traceIt,
+    traceHint,
+    traceDone,
   ];
 }
 

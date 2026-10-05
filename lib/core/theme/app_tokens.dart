@@ -85,6 +85,11 @@ abstract final class AppDurations {
   static const stickerFlight = Duration(milliseconds: 900);
   static const celebration = Duration(milliseconds: 3500);
   static const quizNext = Duration(milliseconds: 600);
+
+  /// Tracing: idle time before Kido shows the stroke again, and how long
+  /// one demo of a stroke takes.
+  static const traceIdle = Duration(seconds: 7);
+  static const traceDemo = Duration(milliseconds: 1800);
 }
 
 /// Curve tokens.

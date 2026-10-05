@@ -23,6 +23,12 @@ abstract final class AppColors {
   static const celebrate = Color(0xFFFFC93C);
   static const glow = Color(0xFFFFF3A8);
 
+  // Tracing board.
+  static const traceBoard = Color(0xF2FFFFFF);
+  static const traceRoad = Color(0xFFF1EEF9);
+  static const traceRoadEdge = Color(0xFFCFC7E6);
+  static const traceGuide = Color(0xFFB3A9D3);
+
   // Place-value view: ones dots (tens use the section accent)
   static const placeOnes = Color(0xFFFF5D8F);
 

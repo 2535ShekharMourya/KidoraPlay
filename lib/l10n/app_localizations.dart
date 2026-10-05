@@ -505,6 +505,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Hindi'**
   String get sectionHindi;
+
+  /// No description provided for @traceIt.
+  ///
+  /// In en, this message translates to:
+  /// **'Write it'**
+  String get traceIt;
+
+  /// No description provided for @traceAgain.
+  ///
+  /// In en, this message translates to:
+  /// **'Write again'**
+  String get traceAgain;
 }
 
 class _AppLocalizationsDelegate

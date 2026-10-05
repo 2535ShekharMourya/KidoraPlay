@@ -19,6 +19,7 @@ import '../../core/widgets/item_picture.dart';
 import '../../core/widgets/particle_burst.dart';
 import '../../core/widgets/section_background.dart';
 import '../../core/widgets/wiggle.dart';
+import '../../l10n/app_localizations.dart';
 import '../kido/hint_timer.dart';
 import '../kido/kido_controller.dart';
 import '../kido/kido_widget.dart';
@@ -26,6 +27,7 @@ import '../numbers/place_value_view.dart';
 import '../progress/progress_controller.dart';
 import '../progress/sticker_widgets.dart';
 import '../section_grid/section_items.dart';
+import '../tracing/trace_logic.dart';
 import 'learn_card_controller.dart';
 import 'spelling_strip.dart';
 
@@ -177,6 +179,9 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
     final pictureBeckons =
         state.phase == LessonPhase.youDo && state.hint == HintLevel.glow;
 
+    final canTrace =
+        ref.watch(traceGuidesProvider).value?.glyphsFor(item) != null;
+
     void goTo(LearningItem other) =>
         context.go(AppRoutes.learn(widget.scope, other.id));
 
@@ -320,6 +325,20 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
                     ),
                   ),
                 ),
+                if (canTrace)
+                  Align(
+                    alignment: Alignment.bottomRight,
+                    child: Padding(
+                      padding: const EdgeInsets.all(AppSpacing.md),
+                      child: _WriteButton(
+                        color: theme.accent,
+                        onPressed: () {
+                          _controller.pause();
+                          context.go(AppRoutes.trace(widget.scope, item.id));
+                        },
+                      ),
+                    ),
+                  ),
                 const KidoCorner(),
                 if (_celebrationKey > 0)
                   Positioned.fill(
@@ -330,6 +349,42 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
                   ),
               ],
             ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Pencil button: write this letter or number with a finger.
+class _WriteButton extends StatelessWidget {
+  const _WriteButton({required this.color, required this.onPressed});
+
+  final Color color;
+  final VoidCallback onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return IdleFloat(
+      phase: 0.5,
+      child: BouncyButton(
+        semanticLabel: AppLocalizations.of(context).traceIt,
+        onPressed: onPressed,
+        child: Container(
+          width: AppSpacing.minTapTarget,
+          height: AppSpacing.minTapTarget,
+          decoration: BoxDecoration(
+            color: color,
+            shape: BoxShape.circle,
+            border: Border.all(
+              color: AppColors.outline,
+              width: AppStroke.thick,
+            ),
+          ),
+          child: const Icon(
+            Icons.draw_rounded,
+            size: AppSpacing.minTapTarget * 0.55,
+            color: AppColors.white,
           ),
         ),
       ),

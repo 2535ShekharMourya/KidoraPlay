@@ -224,4 +224,10 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get sectionHindi => 'हिंदी';
+
+  @override
+  String get traceIt => 'लिखो';
+
+  @override
+  String get traceAgain => 'फिर से लिखो';
 }

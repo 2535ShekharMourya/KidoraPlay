@@ -170,6 +170,13 @@ class LearnCardController extends Notifier<LearnCardState> {
 
   bool _alive(int run) => !_disposed && ref.mounted && run == _run;
 
+  /// Quiets the card while another screen (tracing) is on top of it.
+  void pause() {
+    _run++;
+    _hints.stop();
+    unawaited(ref.read(audioServiceProvider).stopVoice(owner: this));
+  }
+
   /// Tells the card which set (section or numbers row) it is shown in.
   void attach(ItemScope scope) => _scope = scope;
 

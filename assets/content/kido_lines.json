@@ -536,5 +536,65 @@
         ]
       }
     ]
+  },
+  "trace_it": {
+    "en": [
+      {
+        "text": "Let's write {item}!",
+        "audio": [
+          "assets/audio/en/kido/lets_write.m4a",
+          "{item}"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "चलो {item} लिखें!",
+        "audio": [
+          "assets/audio/hi/kido/chalo.m4a",
+          "{item}",
+          "assets/audio/hi/kido/likhen.m4a"
+        ]
+      }
+    ]
+  },
+  "trace_hint": {
+    "en": [
+      {
+        "text": "Start at the green dot, and follow me!",
+        "audio": [
+          "assets/audio/en/kido/trace_hint.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "हरे बिंदु से शुरू करो, और मेरे पीछे-पीछे चलो!",
+        "audio": [
+          "assets/audio/hi/kido/trace_hint.m4a"
+        ]
+      }
+    ]
+  },
+  "trace_done": {
+    "en": [
+      {
+        "text": "Wow! You wrote {item}!",
+        "audio": [
+          "assets/audio/en/kido/you_wrote.m4a",
+          "{item}"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "तुमने {item} लिखा!",
+        "audio": [
+          "assets/audio/hi/kido/tumne.m4a",
+          "{item}",
+          "assets/audio/hi/kido/likha.m4a"
+        ]
+      }
+    ]
   }
 }

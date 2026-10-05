@@ -67,5 +67,7 @@
   "sectionColours": "रंग",
   "sectionShapes": "आकार",
   "sectionVehicles": "वाहन",
-  "sectionHindi": "हिंदी"
+  "sectionHindi": "हिंदी",
+  "traceIt": "लिखो",
+  "traceAgain": "फिर से लिखो"
 }

@@ -112,5 +112,7 @@
   "sectionColours": "Colours",
   "sectionShapes": "Shapes",
   "sectionVehicles": "Vehicles",
-  "sectionHindi": "Hindi"
+  "sectionHindi": "Hindi",
+  "traceIt": "Write it",
+  "traceAgain": "Write again"
 }

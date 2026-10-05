@@ -14,6 +14,7 @@ import '../../features/progress/sticker_book_screen.dart';
 import '../../features/section_grid/item_grid_screen.dart';
 import '../../features/section_grid/section_items.dart';
 import '../../features/splash/splash_screen.dart';
+import '../../features/tracing/trace_screen.dart';
 import '../theme/app_tokens.dart';
 
 /// Route paths. Screens are nested so the back button walks up the path:
@@ -37,6 +38,10 @@ abstract final class AppRoutes {
         : numberRow(scope.row!);
     return '$base/learn/$itemId';
   }
+
+  /// Finger tracing, on top of the item's learn card.
+  static String trace(ItemScope scope, String itemId) =>
+      '${learn(scope, itemId)}/trace';
 }
 
 SectionId? _sectionOf(GoRouterState state) =>
@@ -79,6 +84,18 @@ GoRoute _learnRoute({required int? Function(GoRouterState) row}) => GoRoute(
       itemId: state.pathParameters['itemId']!,
     ),
   ),
+  routes: [
+    GoRoute(
+      path: 'trace',
+      pageBuilder: (context, state) => _playfulPage(
+        state,
+        TraceScreen(
+          scope: (section: _sectionOf(state)!, row: row(state)),
+          itemId: state.pathParameters['itemId']!,
+        ),
+      ),
+    ),
+  ],
 );
 
 final appRouterProvider = Provider<GoRouter>((ref) {

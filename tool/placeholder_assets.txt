@@ -257,6 +257,7 @@ assets/audio/en/kido/how_many.m4a
 assets/audio/en/kido/lets_count.m4a
 assets/audio/en/kido/lets_learn.m4a
 assets/audio/en/kido/lets_play.m4a
+assets/audio/en/kido/lets_write.m4a
 assets/audio/en/kido/listen_to_the.m4a
 assets/audio/en/kido/look.m4a
 assets/audio/en/kido/praise_1.m4a
@@ -269,6 +270,7 @@ assets/audio/en/kido/say_with_me.m4a
 assets/audio/en/kido/spell_together.m4a
 assets/audio/en/kido/tap.m4a
 assets/audio/en/kido/thats.m4a
+assets/audio/en/kido/trace_hint.m4a
 assets/audio/en/kido/try_again.m4a
 assets/audio/en/kido/welcome_back.m4a
 assets/audio/en/kido/welcome_first.m4a
@@ -278,6 +280,7 @@ assets/audio/en/kido/yay_1.m4a
 assets/audio/en/kido/yay_2.m4a
 assets/audio/en/kido/yay_3.m4a
 assets/audio/en/kido/you_learned.m4a
+assets/audio/en/kido/you_wrote.m4a
 assets/audio/en/koel.m4a
 assets/audio/en/koel_fact.m4a
 assets/audio/en/l_lion.m4a
@@ -761,6 +764,8 @@ assets/audio/hi/kido/ki_awaaz.m4a
 assets/audio/hi/kido/ko_chhuo.m4a
 assets/audio/hi/kido/lets_count.m4a
 assets/audio/hi/kido/lets_play.m4a
+assets/audio/hi/kido/likha.m4a
+assets/audio/hi/kido/likhen.m4a
 assets/audio/hi/kido/look.m4a
 assets/audio/hi/kido/praise_1.m4a
 assets/audio/hi/kido/praise_2.m4a
@@ -774,6 +779,7 @@ assets/audio/hi/kido/seekhe.m4a
 assets/audio/hi/kido/seekhen.m4a
 assets/audio/hi/kido/spell_together.m4a
 assets/audio/hi/kido/suno.m4a
+assets/audio/hi/kido/trace_hint.m4a
 assets/audio/hi/kido/try_again.m4a
 assets/audio/hi/kido/tumne.m4a
 assets/audio/hi/kido/welcome_back.m4a
