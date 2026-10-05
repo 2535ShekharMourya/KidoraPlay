@@ -81,11 +81,9 @@ void main() {
     test('ABC says "A for Apple!"', () async {
       await setUpContainer();
       await controller('a_apple').playLesson();
-      expect(audio.voice.played.sublist(0, 5), [
+      expect(audio.voice.played.sublist(0, 3), [
         '$kido/look.m4a',
-        'assets/audio/letters/a.m4a',
-        '$kido/for.m4a',
-        'assets/audio/en/a_apple.m4a',
+        'assets/audio/en/a_apple_intro.m4a', // "A for Apple!" in one breath
         'assets/audio/en/a_apple_fact.m4a',
       ]);
     });
@@ -141,15 +139,13 @@ void main() {
       expect(played.where((a) => a.contains('/en/kido/')), isEmpty);
     });
 
-    test('"both" ABC: "A for Apple" in English, then सेब', () async {
+    test('"both" ABC: "A for Apple!" in English, then सेब', () async {
       await setUpContainer(
         store: LocalStore.inMemory({SettingsKeys.language: 'both'}),
       );
       await controller('a_apple').playLesson();
-      expect(audio.voice.played.sublist(1, 5), [
-        'assets/audio/letters/a.m4a',
-        'assets/audio/en/kido/for.m4a',
-        'assets/audio/en/a_apple.m4a',
+      expect(audio.voice.played.sublist(1, 3), [
+        'assets/audio/en/a_apple_intro.m4a', // "A for Apple!" in one breath
         'assets/audio/hi/a_apple.m4a',
       ]);
     });
@@ -184,22 +180,26 @@ void main() {
     });
   });
 
-  test('Hindi letter: "अ से अनार" in Hindi, no English spelling', () async {
-    await setUpContainer();
-    await controller('hi_anar').playLesson();
-    final played = audio.voice.played;
-    expect(played.sublist(0, 5), [
-      'assets/audio/hi/kido/look.m4a', // देखो! (Hindi even in English mode)
-      'assets/audio/hi/letters/hi_anar.m4a', // अ
-      'assets/audio/hi/kido/se.m4a', // से
-      'assets/audio/hi/hi_anar.m4a', // अनार
-      'assets/audio/hi/kido/say_with_me.m4a',
-    ]);
-    expect(played.where((a) => a.contains('/letters/') && !a.contains('/hi/')),
-        isEmpty);
-    expect(stateOf('hi_anar').revealed, 0);
-    expect(stateOf('hi_anar').phase, LessonPhase.youDo);
-  });
+  test(
+    'Hindi letter: "अ से अनार!", a little chat, no English spelling',
+    () async {
+      await setUpContainer();
+      await controller('hi_anar').playLesson();
+      final played = audio.voice.played;
+      expect(played.sublist(0, 4), [
+        'assets/audio/hi/kido/look.m4a', // देखो! (Hindi even in English mode)
+        'assets/audio/hi/hi_anar_intro.m4a', // अ से अनार!
+        'assets/audio/hi/hi_anar_fact.m4a', // क्या तुमने कभी अनार खाया है?
+        'assets/audio/hi/kido/say_with_me.m4a',
+      ]);
+      expect(
+        played.where((a) => a.contains('/letters/') && !a.contains('/hi/')),
+        isEmpty,
+      );
+      expect(stateOf('hi_anar').revealed, 0);
+      expect(stateOf('hi_anar').phase, LessonPhase.youDo);
+    },
+  );
 
   test('tapping a letter stops the lesson and says that letter', () async {
     await setUpContainer();

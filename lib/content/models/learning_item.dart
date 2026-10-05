@@ -25,6 +25,8 @@ class LearningItem {
     this.voiceFactEn,
     this.voiceFactHi,
     this.letterVoice,
+    this.voiceIntroEn,
+    this.voiceIntroHi,
     this.riveReaction,
   });
 
@@ -50,6 +52,8 @@ class LearningItem {
       voiceFactEn: r.optString('voice_fact_en'),
       voiceFactHi: r.optString('voice_fact_hi'),
       letterVoice: r.optString('letter_voice'),
+      voiceIntroEn: r.optString('voice_intro_en'),
+      voiceIntroHi: r.optString('voice_intro_hi'),
       riveReaction: r.optString('rive_reaction'),
     );
   }
@@ -83,6 +87,10 @@ class LearningItem {
   /// Recording of [letter] itself when it is not an English letter
   /// (e.g. "अ").
   final String? letterVoice;
+
+  /// "A for Apple!" / "अ से अनार!" recorded as one natural sentence.
+  final String? voiceIntroEn;
+  final String? voiceIntroHi;
 
   /// Rive state-machine input for the picture's reaction, if any.
   final String? riveReaction;
@@ -127,6 +135,8 @@ class LearningItem {
     'voice_fact_en': voiceFactEn,
     'voice_fact_hi': voiceFactHi,
     if (letterVoice != null) 'letter_voice': letterVoice,
+    if (voiceIntroEn != null) 'voice_intro_en': voiceIntroEn,
+    if (voiceIntroHi != null) 'voice_intro_hi': voiceIntroHi,
     'rive_reaction': riveReaction,
   };
 }

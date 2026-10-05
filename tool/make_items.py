@@ -395,6 +395,53 @@ HINDI = [
     ("ज्ञ", "hi_gyan", "Knowledge", "ज्ञान", "noto:1f4da", LKG_UP),
 ]
 
+# Hindi cards: a little chat with the child (Hindi, English).
+HINDI_CHAT = {'hi_anar': ('क्या तुमने कभी अनार खाया है? इसके लाल-लाल दाने बहुत मीठे होते हैं... और इसका जूस भी!', 'Have you ever eaten a pomegranate? Its red seeds are so sweet... and so is its juice!'),
+    'hi_aam': ('आम बहुत मीठा होता है... टेस्टी, टेस्टी! क्या तुम्हें आम पसंद है?', 'A mango is so sweet... tasty, tasty! Do you like mangoes?'),
+    'hi_imli': ('इमली खट्टी-खट्टी होती है! खाओ तो ऐसा मुँह बन जाता है... उफ़्फ़!', 'Tamarind is sour, sour! It makes a funny face... oof!'),
+    'hi_eekh': ('ईख से मीठा-मीठा रस निकलता है। क्या तुमने गन्ने का रस पिया है?', 'Sugarcane gives sweet juice. Have you had sugarcane juice?'),
+    'hi_ullu': ('उल्लू रात को जागता है, और बोलता है... हू... हू!', 'The owl stays awake at night, and says... hoo... hoo!'),
+    'hi_oon': ('ऊन से गरम-गरम स्वेटर बनता है। सर्दी में कितना आराम मिलता है!', 'Wool makes warm, cosy sweaters. So nice in winter!'),
+    'hi_rishi': ('ऋषि शांत बैठकर ध्यान करते हैं। चलो, हम भी आँखें बंद करें!', "A sage sits quietly and thinks. Let's close our eyes too!"),
+    'hi_edi': ('यह है हमारी एड़ी! अपनी एड़ी को छू कर दिखाओ!', 'This is our heel! Can you touch your heel?'),
+    'hi_ainak': ('ऐनक लगाकर दादाजी सब कुछ साफ़-साफ़ देखते हैं!', 'With glasses, Grandpa can see everything clearly!'),
+    'hi_okhli': ('ओखली में मसाले कूटते हैं... ठक, ठक, ठक!', 'We crush spices in a mortar... thak, thak, thak!'),
+    'hi_aurat': ('यह एक औरत है। देखो, वह मुस्कुरा रही है!', 'This is a woman. Look, she is smiling!'),
+    'hi_angoor': ('अंगूर गोल-गोल और रसीले होते हैं। एक, दो, तीन... खा लिए!', 'Grapes are round and juicy. One, two, three... yum!'),
+    'hi_kabootar': ('कबूतर बोलता है... गुटर गूँ, गुटर गूँ!', 'The pigeon says... coo coo, coo coo!'),
+    'hi_khargosh': ('खरगोश फुदक-फुदक कर चलता है, और कुतर-कुतर गाजर खाता है!', 'The rabbit hops along, and nibbles carrots!'),
+    'hi_gamla': ('गमले में सुंदर पौधा उगता है। इसे रोज़ पानी देना!', 'A pretty plant grows in the pot. Water it every day!'),
+    'hi_ghadi': ('घड़ी करती है... टिक, टिक, टिक! बताओ, अभी क्या टाइम हुआ?', 'The clock goes... tick, tick, tick! What time is it now?'),
+    'hi_chammach': ('चम्मच से हम खाना खाते हैं। एक चम्मच खीर... आहा!', 'We eat with a spoon. A spoonful of kheer... aha!'),
+    'hi_chhatri': ('बारिश आई, बारिश आई! जल्दी से छतरी खोलो!', 'Here comes the rain! Quick, open the umbrella!'),
+    'hi_jahaaz': ('जहाज़ बड़े समुद्र में तैरता है, और भोंपू बजाता है!', 'A ship sails on the big sea, and toots its horn!'),
+    'hi_jhanda': ('झंडा हवा में लहराता है... ऊपर, ऊपर, ऊपर!', 'The flag waves in the wind... up, up, up!'),
+    'hi_tamatar': ('लाल-लाल टमाटर! इससे चटनी भी बनती है और सूप भी!', 'Red, red tomato! It makes chutney and soup too!'),
+    'hi_thela': ('ठेले वाले भैया ताज़े फल और सब्ज़ियाँ बेचते हैं!', 'The cart man sells fresh fruits and vegetables!'),
+    'hi_damru': ('डमरू बजता है... डम, डम, डम!', 'The damru goes... dum, dum, dum!'),
+    'hi_dhol': ('ढोल बजाओ... ढम, ढम, ढम! चलो, सब मिलकर नाचें!', "Beat the dhol... dhum, dhum, dhum! Let's all dance!"),
+    'hi_tarbooz': ('तरबूज़ अंदर से लाल और ठंडा-ठंडा होता है। गर्मी में तो मज़ा आ जाता है!', 'Watermelon is red and cool inside. So yummy in summer!'),
+    'hi_tharmas': ('थरमस में चाय बहुत देर तक गरम-गरम रहती है!', 'A flask keeps the tea nice and hot for a long time!'),
+    'hi_darwaza': ('दरवाज़ा खोलो... ठक ठक! कौन आया? अरे, नमस्ते!', 'Open the door... knock knock! Who is it? Oh, hello!'),
+    'hi_dhanush': ('धनुष से तीर चलता है... सर्रर्र!', 'A bow shoots an arrow... whoosh!'),
+    'hi_nal': ('नल से पानी आता है। पानी बचाओ, नल बंद करो!', 'Water comes from the tap. Save water, turn it off!'),
+    'hi_patang': ('पतंग ऊँची-ऊँची उड़ती है! क्या तुमने कभी पतंग उड़ाई है?', 'The kite flies high, high! Have you ever flown a kite?'),
+    'hi_phal': ('फल खाओ, ताक़तवर बनो! बताओ, तुम्हें कौन सा फल सबसे अच्छा लगता है?', 'Eat fruits and grow strong! Which fruit do you like best?'),
+    'hi_bakri': ('बकरी बोलती है... मैं, मैं! वह हरी-हरी घास खाती है।', 'The goat says... meh, meh! It eats green grass.'),
+    'hi_bhalu': ('भालू को शहद बहुत पसंद है... यम, यम, यम!', 'The bear loves honey... yum, yum, yum!'),
+    'hi_machhli': ('मछली जल की रानी है! वह पानी में तैरती रहती है।', 'The fish is the queen of the water! It swims all day.'),
+    'hi_yagya': ('यज्ञ में पवित्र आग जलती है, और सब मिलकर प्रार्थना करते हैं।', 'A holy fire burns in a yagya, and everyone prays together.'),
+    'hi_rath': ('रथ के बड़े-बड़े पहिए होते हैं। रथ यात्रा में सब मिलकर रथ खींचते हैं!', 'A chariot has big wheels. At the Rath Yatra everyone pulls it together!'),
+    'hi_lattu': ('लट्टू गोल-गोल घूमता है... घूम, घूम, घूम!', 'The top spins round and round... spin, spin, spin!'),
+    'hi_van': ('वन में बहुत सारे पेड़ होते हैं, और बहुत सारे जानवर भी रहते हैं!', 'A forest has lots of trees, and lots of animals live there too!'),
+    'hi_sher': ('शेर जंगल का राजा है! वह दहाड़ता है... ग्रर्र!', 'The lion is king of the jungle! It roars... grrr!'),
+    'hi_shatkon': ('षट्कोण के छह कोने होते हैं। चलो गिनें... एक से छह!', "A hexagon has six corners. Let's count... one to six!"),
+    'hi_seb': ('सेब लाल और मीठा होता है। रोज़ एक सेब खाओ, तंदुरुस्त रहो!', 'An apple is red and sweet. Eat an apple a day and stay healthy!'),
+    'hi_haathi': ('हाथी बहुत बड़ा होता है, और उसकी लंबी सूँड होती है... बिल्कुल मेरी तरह!', 'An elephant is so big, with a long trunk... just like me!'),
+    'hi_kshitij': ('जहाँ आसमान और धरती मिलते हुए दिखते हैं, उसे क्षितिज कहते हैं!', 'Where the sky seems to meet the land is called the horizon!'),
+    'hi_trishul': ('त्रिशूल के तीन नुकीले सिरे होते हैं... एक, दो, तीन!', 'A trident has three points... one, two, three!'),
+    'hi_gyan': ('किताबें पढ़ने से ज्ञान मिलता है। चलो, साथ में पढ़ें!', "Reading books gives us knowledge. Let's read together!")}
+
 # What Kido says for each animal/bird sound until real recordings exist.
 SOUND_TEXT = {
     "cow": "Mooo! Mooo!", "dog": "Woof woof!", "cat": "Meow! Meow!",
@@ -429,9 +476,12 @@ def main():
     write("items_numbers.json",
           [item("numbers", i, en, hi, number=n, levels=lv)
            for n, i, en, hi, lv in NUMBERS])
-    write("items_abc.json",
-          [item("abc", i, en, hi, letter=l, fact=f)
-           for l, i, en, hi, f in ABC])
+    abc_items = []
+    for l, i, en, hi, f in ABC:
+        it = item("abc", i, en, hi, letter=l, fact=f)
+        it["voice_intro_en"] = f"assets/audio/en/{i}_intro.m4a"
+        abc_items.append(it)
+    write("items_abc.json", abc_items)
     write("items_animals.json",
           [item("animals", i, en, hi, sound=True, fact=f)
            for i, en, hi, f in ANIMALS])
@@ -453,8 +503,12 @@ def main():
            for i, en, hi, f in VEHICLES])
     hindi_items = []
     for letter, id_, en, hi, _src, levels in HINDI:
-        it = item("hindi", id_, en, hi, letter=letter, levels=levels)
+        chat_hi, chat_en = HINDI_CHAT[id_]
+        it = item("hindi", id_, en, hi, letter=letter, levels=levels,
+                  fact=(chat_en, chat_hi))
         it["letter_voice"] = f"assets/audio/hi/letters/{id_}.m4a"
+        # "अ से अनार!" recorded as one natural sentence.
+        it["voice_intro_hi"] = f"assets/audio/hi/{id_}_intro.m4a"
         hindi_items.append(it)
     write("items_hindi.json", hindi_items)
     write("items_shapes.json",

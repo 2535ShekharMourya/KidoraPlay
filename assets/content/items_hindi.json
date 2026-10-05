@@ -15,12 +15,13 @@
     "voice_en": "assets/audio/en/hi_anar.m4a",
     "voice_hi": "assets/audio/hi/hi_anar.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "Have you ever eaten a pomegranate? Its red seeds are so sweet... and so is its juice!",
+    "fact_hi": "क्या तुमने कभी अनार खाया है? इसके लाल-लाल दाने बहुत मीठे होते हैं... और इसका जूस भी!",
+    "voice_fact_en": "assets/audio/en/hi_anar_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_anar_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_anar.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_anar.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_anar_intro.m4a"
   },
   {
     "id": "hi_aam",
@@ -38,12 +39,13 @@
     "voice_en": "assets/audio/en/hi_aam.m4a",
     "voice_hi": "assets/audio/hi/hi_aam.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "A mango is so sweet... tasty, tasty! Do you like mangoes?",
+    "fact_hi": "आम बहुत मीठा होता है... टेस्टी, टेस्टी! क्या तुम्हें आम पसंद है?",
+    "voice_fact_en": "assets/audio/en/hi_aam_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_aam_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_aam.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_aam.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_aam_intro.m4a"
   },
   {
     "id": "hi_imli",
@@ -61,12 +63,13 @@
     "voice_en": "assets/audio/en/hi_imli.m4a",
     "voice_hi": "assets/audio/hi/hi_imli.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "Tamarind is sour, sour! It makes a funny face... oof!",
+    "fact_hi": "इमली खट्टी-खट्टी होती है! खाओ तो ऐसा मुँह बन जाता है... उफ़्फ़!",
+    "voice_fact_en": "assets/audio/en/hi_imli_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_imli_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_imli.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_imli.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_imli_intro.m4a"
   },
   {
     "id": "hi_eekh",
@@ -84,12 +87,13 @@
     "voice_en": "assets/audio/en/hi_eekh.m4a",
     "voice_hi": "assets/audio/hi/hi_eekh.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "Sugarcane gives sweet juice. Have you had sugarcane juice?",
+    "fact_hi": "ईख से मीठा-मीठा रस निकलता है। क्या तुमने गन्ने का रस पिया है?",
+    "voice_fact_en": "assets/audio/en/hi_eekh_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_eekh_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_eekh.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_eekh.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_eekh_intro.m4a"
   },
   {
     "id": "hi_ullu",
@@ -107,12 +111,13 @@
     "voice_en": "assets/audio/en/hi_ullu.m4a",
     "voice_hi": "assets/audio/hi/hi_ullu.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "The owl stays awake at night, and says... hoo... hoo!",
+    "fact_hi": "उल्लू रात को जागता है, और बोलता है... हू... हू!",
+    "voice_fact_en": "assets/audio/en/hi_ullu_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_ullu_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_ullu.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_ullu.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_ullu_intro.m4a"
   },
   {
     "id": "hi_oon",
@@ -130,12 +135,13 @@
     "voice_en": "assets/audio/en/hi_oon.m4a",
     "voice_hi": "assets/audio/hi/hi_oon.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "Wool makes warm, cosy sweaters. So nice in winter!",
+    "fact_hi": "ऊन से गरम-गरम स्वेटर बनता है। सर्दी में कितना आराम मिलता है!",
+    "voice_fact_en": "assets/audio/en/hi_oon_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_oon_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_oon.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_oon.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_oon_intro.m4a"
   },
   {
     "id": "hi_rishi",
@@ -153,12 +159,13 @@
     "voice_en": "assets/audio/en/hi_rishi.m4a",
     "voice_hi": "assets/audio/hi/hi_rishi.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "A sage sits quietly and thinks. Let's close our eyes too!",
+    "fact_hi": "ऋषि शांत बैठकर ध्यान करते हैं। चलो, हम भी आँखें बंद करें!",
+    "voice_fact_en": "assets/audio/en/hi_rishi_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_rishi_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_rishi.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_rishi.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_rishi_intro.m4a"
   },
   {
     "id": "hi_edi",
@@ -176,12 +183,13 @@
     "voice_en": "assets/audio/en/hi_edi.m4a",
     "voice_hi": "assets/audio/hi/hi_edi.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "This is our heel! Can you touch your heel?",
+    "fact_hi": "यह है हमारी एड़ी! अपनी एड़ी को छू कर दिखाओ!",
+    "voice_fact_en": "assets/audio/en/hi_edi_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_edi_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_edi.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_edi.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_edi_intro.m4a"
   },
   {
     "id": "hi_ainak",
@@ -199,12 +207,13 @@
     "voice_en": "assets/audio/en/hi_ainak.m4a",
     "voice_hi": "assets/audio/hi/hi_ainak.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "With glasses, Grandpa can see everything clearly!",
+    "fact_hi": "ऐनक लगाकर दादाजी सब कुछ साफ़-साफ़ देखते हैं!",
+    "voice_fact_en": "assets/audio/en/hi_ainak_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_ainak_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_ainak.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_ainak.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_ainak_intro.m4a"
   },
   {
     "id": "hi_okhli",
@@ -222,12 +231,13 @@
     "voice_en": "assets/audio/en/hi_okhli.m4a",
     "voice_hi": "assets/audio/hi/hi_okhli.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "We crush spices in a mortar... thak, thak, thak!",
+    "fact_hi": "ओखली में मसाले कूटते हैं... ठक, ठक, ठक!",
+    "voice_fact_en": "assets/audio/en/hi_okhli_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_okhli_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_okhli.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_okhli.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_okhli_intro.m4a"
   },
   {
     "id": "hi_aurat",
@@ -245,12 +255,13 @@
     "voice_en": "assets/audio/en/hi_aurat.m4a",
     "voice_hi": "assets/audio/hi/hi_aurat.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "This is a woman. Look, she is smiling!",
+    "fact_hi": "यह एक औरत है। देखो, वह मुस्कुरा रही है!",
+    "voice_fact_en": "assets/audio/en/hi_aurat_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_aurat_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_aurat.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_aurat.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_aurat_intro.m4a"
   },
   {
     "id": "hi_angoor",
@@ -268,12 +279,13 @@
     "voice_en": "assets/audio/en/hi_angoor.m4a",
     "voice_hi": "assets/audio/hi/hi_angoor.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "Grapes are round and juicy. One, two, three... yum!",
+    "fact_hi": "अंगूर गोल-गोल और रसीले होते हैं। एक, दो, तीन... खा लिए!",
+    "voice_fact_en": "assets/audio/en/hi_angoor_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_angoor_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_angoor.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_angoor.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_angoor_intro.m4a"
   },
   {
     "id": "hi_kabootar",
@@ -290,12 +302,13 @@
     "voice_en": "assets/audio/en/hi_kabootar.m4a",
     "voice_hi": "assets/audio/hi/hi_kabootar.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "The pigeon says... coo coo, coo coo!",
+    "fact_hi": "कबूतर बोलता है... गुटर गूँ, गुटर गूँ!",
+    "voice_fact_en": "assets/audio/en/hi_kabootar_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_kabootar_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_kabootar.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_kabootar.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_kabootar_intro.m4a"
   },
   {
     "id": "hi_khargosh",
@@ -312,12 +325,13 @@
     "voice_en": "assets/audio/en/hi_khargosh.m4a",
     "voice_hi": "assets/audio/hi/hi_khargosh.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "The rabbit hops along, and nibbles carrots!",
+    "fact_hi": "खरगोश फुदक-फुदक कर चलता है, और कुतर-कुतर गाजर खाता है!",
+    "voice_fact_en": "assets/audio/en/hi_khargosh_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_khargosh_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_khargosh.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_khargosh.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_khargosh_intro.m4a"
   },
   {
     "id": "hi_gamla",
@@ -334,12 +348,13 @@
     "voice_en": "assets/audio/en/hi_gamla.m4a",
     "voice_hi": "assets/audio/hi/hi_gamla.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "A pretty plant grows in the pot. Water it every day!",
+    "fact_hi": "गमले में सुंदर पौधा उगता है। इसे रोज़ पानी देना!",
+    "voice_fact_en": "assets/audio/en/hi_gamla_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_gamla_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_gamla.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_gamla.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_gamla_intro.m4a"
   },
   {
     "id": "hi_ghadi",
@@ -356,12 +371,13 @@
     "voice_en": "assets/audio/en/hi_ghadi.m4a",
     "voice_hi": "assets/audio/hi/hi_ghadi.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "The clock goes... tick, tick, tick! What time is it now?",
+    "fact_hi": "घड़ी करती है... टिक, टिक, टिक! बताओ, अभी क्या टाइम हुआ?",
+    "voice_fact_en": "assets/audio/en/hi_ghadi_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_ghadi_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_ghadi.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_ghadi.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_ghadi_intro.m4a"
   },
   {
     "id": "hi_chammach",
@@ -378,12 +394,13 @@
     "voice_en": "assets/audio/en/hi_chammach.m4a",
     "voice_hi": "assets/audio/hi/hi_chammach.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "We eat with a spoon. A spoonful of kheer... aha!",
+    "fact_hi": "चम्मच से हम खाना खाते हैं। एक चम्मच खीर... आहा!",
+    "voice_fact_en": "assets/audio/en/hi_chammach_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_chammach_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_chammach.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_chammach.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_chammach_intro.m4a"
   },
   {
     "id": "hi_chhatri",
@@ -400,12 +417,13 @@
     "voice_en": "assets/audio/en/hi_chhatri.m4a",
     "voice_hi": "assets/audio/hi/hi_chhatri.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "Here comes the rain! Quick, open the umbrella!",
+    "fact_hi": "बारिश आई, बारिश आई! जल्दी से छतरी खोलो!",
+    "voice_fact_en": "assets/audio/en/hi_chhatri_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_chhatri_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_chhatri.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_chhatri.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_chhatri_intro.m4a"
   },
   {
     "id": "hi_jahaaz",
@@ -422,12 +440,13 @@
     "voice_en": "assets/audio/en/hi_jahaaz.m4a",
     "voice_hi": "assets/audio/hi/hi_jahaaz.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "A ship sails on the big sea, and toots its horn!",
+    "fact_hi": "जहाज़ बड़े समुद्र में तैरता है, और भोंपू बजाता है!",
+    "voice_fact_en": "assets/audio/en/hi_jahaaz_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_jahaaz_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_jahaaz.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_jahaaz.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_jahaaz_intro.m4a"
   },
   {
     "id": "hi_jhanda",
@@ -444,12 +463,13 @@
     "voice_en": "assets/audio/en/hi_jhanda.m4a",
     "voice_hi": "assets/audio/hi/hi_jhanda.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "The flag waves in the wind... up, up, up!",
+    "fact_hi": "झंडा हवा में लहराता है... ऊपर, ऊपर, ऊपर!",
+    "voice_fact_en": "assets/audio/en/hi_jhanda_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_jhanda_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_jhanda.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_jhanda.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_jhanda_intro.m4a"
   },
   {
     "id": "hi_tamatar",
@@ -466,12 +486,13 @@
     "voice_en": "assets/audio/en/hi_tamatar.m4a",
     "voice_hi": "assets/audio/hi/hi_tamatar.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "Red, red tomato! It makes chutney and soup too!",
+    "fact_hi": "लाल-लाल टमाटर! इससे चटनी भी बनती है और सूप भी!",
+    "voice_fact_en": "assets/audio/en/hi_tamatar_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_tamatar_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_tamatar.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_tamatar.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_tamatar_intro.m4a"
   },
   {
     "id": "hi_thela",
@@ -488,12 +509,13 @@
     "voice_en": "assets/audio/en/hi_thela.m4a",
     "voice_hi": "assets/audio/hi/hi_thela.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "The cart man sells fresh fruits and vegetables!",
+    "fact_hi": "ठेले वाले भैया ताज़े फल और सब्ज़ियाँ बेचते हैं!",
+    "voice_fact_en": "assets/audio/en/hi_thela_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_thela_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_thela.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_thela.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_thela_intro.m4a"
   },
   {
     "id": "hi_damru",
@@ -510,12 +532,13 @@
     "voice_en": "assets/audio/en/hi_damru.m4a",
     "voice_hi": "assets/audio/hi/hi_damru.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "The damru goes... dum, dum, dum!",
+    "fact_hi": "डमरू बजता है... डम, डम, डम!",
+    "voice_fact_en": "assets/audio/en/hi_damru_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_damru_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_damru.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_damru.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_damru_intro.m4a"
   },
   {
     "id": "hi_dhol",
@@ -532,12 +555,13 @@
     "voice_en": "assets/audio/en/hi_dhol.m4a",
     "voice_hi": "assets/audio/hi/hi_dhol.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "Beat the dhol... dhum, dhum, dhum! Let's all dance!",
+    "fact_hi": "ढोल बजाओ... ढम, ढम, ढम! चलो, सब मिलकर नाचें!",
+    "voice_fact_en": "assets/audio/en/hi_dhol_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_dhol_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_dhol.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_dhol.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_dhol_intro.m4a"
   },
   {
     "id": "hi_tarbooz",
@@ -554,12 +578,13 @@
     "voice_en": "assets/audio/en/hi_tarbooz.m4a",
     "voice_hi": "assets/audio/hi/hi_tarbooz.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "Watermelon is red and cool inside. So yummy in summer!",
+    "fact_hi": "तरबूज़ अंदर से लाल और ठंडा-ठंडा होता है। गर्मी में तो मज़ा आ जाता है!",
+    "voice_fact_en": "assets/audio/en/hi_tarbooz_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_tarbooz_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_tarbooz.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_tarbooz.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_tarbooz_intro.m4a"
   },
   {
     "id": "hi_tharmas",
@@ -576,12 +601,13 @@
     "voice_en": "assets/audio/en/hi_tharmas.m4a",
     "voice_hi": "assets/audio/hi/hi_tharmas.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "A flask keeps the tea nice and hot for a long time!",
+    "fact_hi": "थरमस में चाय बहुत देर तक गरम-गरम रहती है!",
+    "voice_fact_en": "assets/audio/en/hi_tharmas_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_tharmas_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_tharmas.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_tharmas.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_tharmas_intro.m4a"
   },
   {
     "id": "hi_darwaza",
@@ -598,12 +624,13 @@
     "voice_en": "assets/audio/en/hi_darwaza.m4a",
     "voice_hi": "assets/audio/hi/hi_darwaza.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "Open the door... knock knock! Who is it? Oh, hello!",
+    "fact_hi": "दरवाज़ा खोलो... ठक ठक! कौन आया? अरे, नमस्ते!",
+    "voice_fact_en": "assets/audio/en/hi_darwaza_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_darwaza_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_darwaza.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_darwaza.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_darwaza_intro.m4a"
   },
   {
     "id": "hi_dhanush",
@@ -620,12 +647,13 @@
     "voice_en": "assets/audio/en/hi_dhanush.m4a",
     "voice_hi": "assets/audio/hi/hi_dhanush.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "A bow shoots an arrow... whoosh!",
+    "fact_hi": "धनुष से तीर चलता है... सर्रर्र!",
+    "voice_fact_en": "assets/audio/en/hi_dhanush_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_dhanush_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_dhanush.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_dhanush.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_dhanush_intro.m4a"
   },
   {
     "id": "hi_nal",
@@ -642,12 +670,13 @@
     "voice_en": "assets/audio/en/hi_nal.m4a",
     "voice_hi": "assets/audio/hi/hi_nal.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "Water comes from the tap. Save water, turn it off!",
+    "fact_hi": "नल से पानी आता है। पानी बचाओ, नल बंद करो!",
+    "voice_fact_en": "assets/audio/en/hi_nal_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_nal_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_nal.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_nal.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_nal_intro.m4a"
   },
   {
     "id": "hi_patang",
@@ -664,12 +693,13 @@
     "voice_en": "assets/audio/en/hi_patang.m4a",
     "voice_hi": "assets/audio/hi/hi_patang.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "The kite flies high, high! Have you ever flown a kite?",
+    "fact_hi": "पतंग ऊँची-ऊँची उड़ती है! क्या तुमने कभी पतंग उड़ाई है?",
+    "voice_fact_en": "assets/audio/en/hi_patang_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_patang_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_patang.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_patang.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_patang_intro.m4a"
   },
   {
     "id": "hi_phal",
@@ -686,12 +716,13 @@
     "voice_en": "assets/audio/en/hi_phal.m4a",
     "voice_hi": "assets/audio/hi/hi_phal.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "Eat fruits and grow strong! Which fruit do you like best?",
+    "fact_hi": "फल खाओ, ताक़तवर बनो! बताओ, तुम्हें कौन सा फल सबसे अच्छा लगता है?",
+    "voice_fact_en": "assets/audio/en/hi_phal_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_phal_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_phal.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_phal.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_phal_intro.m4a"
   },
   {
     "id": "hi_bakri",
@@ -708,12 +739,13 @@
     "voice_en": "assets/audio/en/hi_bakri.m4a",
     "voice_hi": "assets/audio/hi/hi_bakri.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "The goat says... meh, meh! It eats green grass.",
+    "fact_hi": "बकरी बोलती है... मैं, मैं! वह हरी-हरी घास खाती है।",
+    "voice_fact_en": "assets/audio/en/hi_bakri_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_bakri_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_bakri.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_bakri.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_bakri_intro.m4a"
   },
   {
     "id": "hi_bhalu",
@@ -730,12 +762,13 @@
     "voice_en": "assets/audio/en/hi_bhalu.m4a",
     "voice_hi": "assets/audio/hi/hi_bhalu.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "The bear loves honey... yum, yum, yum!",
+    "fact_hi": "भालू को शहद बहुत पसंद है... यम, यम, यम!",
+    "voice_fact_en": "assets/audio/en/hi_bhalu_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_bhalu_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_bhalu.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_bhalu.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_bhalu_intro.m4a"
   },
   {
     "id": "hi_machhli",
@@ -752,12 +785,13 @@
     "voice_en": "assets/audio/en/hi_machhli.m4a",
     "voice_hi": "assets/audio/hi/hi_machhli.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "The fish is the queen of the water! It swims all day.",
+    "fact_hi": "मछली जल की रानी है! वह पानी में तैरती रहती है।",
+    "voice_fact_en": "assets/audio/en/hi_machhli_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_machhli_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_machhli.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_machhli.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_machhli_intro.m4a"
   },
   {
     "id": "hi_yagya",
@@ -774,12 +808,13 @@
     "voice_en": "assets/audio/en/hi_yagya.m4a",
     "voice_hi": "assets/audio/hi/hi_yagya.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "A holy fire burns in a yagya, and everyone prays together.",
+    "fact_hi": "यज्ञ में पवित्र आग जलती है, और सब मिलकर प्रार्थना करते हैं।",
+    "voice_fact_en": "assets/audio/en/hi_yagya_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_yagya_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_yagya.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_yagya.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_yagya_intro.m4a"
   },
   {
     "id": "hi_rath",
@@ -796,12 +831,13 @@
     "voice_en": "assets/audio/en/hi_rath.m4a",
     "voice_hi": "assets/audio/hi/hi_rath.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "A chariot has big wheels. At the Rath Yatra everyone pulls it together!",
+    "fact_hi": "रथ के बड़े-बड़े पहिए होते हैं। रथ यात्रा में सब मिलकर रथ खींचते हैं!",
+    "voice_fact_en": "assets/audio/en/hi_rath_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_rath_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_rath.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_rath.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_rath_intro.m4a"
   },
   {
     "id": "hi_lattu",
@@ -818,12 +854,13 @@
     "voice_en": "assets/audio/en/hi_lattu.m4a",
     "voice_hi": "assets/audio/hi/hi_lattu.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "The top spins round and round... spin, spin, spin!",
+    "fact_hi": "लट्टू गोल-गोल घूमता है... घूम, घूम, घूम!",
+    "voice_fact_en": "assets/audio/en/hi_lattu_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_lattu_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_lattu.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_lattu.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_lattu_intro.m4a"
   },
   {
     "id": "hi_van",
@@ -840,12 +877,13 @@
     "voice_en": "assets/audio/en/hi_van.m4a",
     "voice_hi": "assets/audio/hi/hi_van.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "A forest has lots of trees, and lots of animals live there too!",
+    "fact_hi": "वन में बहुत सारे पेड़ होते हैं, और बहुत सारे जानवर भी रहते हैं!",
+    "voice_fact_en": "assets/audio/en/hi_van_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_van_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_van.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_van.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_van_intro.m4a"
   },
   {
     "id": "hi_sher",
@@ -862,12 +900,13 @@
     "voice_en": "assets/audio/en/hi_sher.m4a",
     "voice_hi": "assets/audio/hi/hi_sher.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "The lion is king of the jungle! It roars... grrr!",
+    "fact_hi": "शेर जंगल का राजा है! वह दहाड़ता है... ग्रर्र!",
+    "voice_fact_en": "assets/audio/en/hi_sher_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_sher_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_sher.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_sher.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_sher_intro.m4a"
   },
   {
     "id": "hi_shatkon",
@@ -884,12 +923,13 @@
     "voice_en": "assets/audio/en/hi_shatkon.m4a",
     "voice_hi": "assets/audio/hi/hi_shatkon.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "A hexagon has six corners. Let's count... one to six!",
+    "fact_hi": "षट्कोण के छह कोने होते हैं। चलो गिनें... एक से छह!",
+    "voice_fact_en": "assets/audio/en/hi_shatkon_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_shatkon_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_shatkon.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_shatkon.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_shatkon_intro.m4a"
   },
   {
     "id": "hi_seb",
@@ -906,12 +946,13 @@
     "voice_en": "assets/audio/en/hi_seb.m4a",
     "voice_hi": "assets/audio/hi/hi_seb.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "An apple is red and sweet. Eat an apple a day and stay healthy!",
+    "fact_hi": "सेब लाल और मीठा होता है। रोज़ एक सेब खाओ, तंदुरुस्त रहो!",
+    "voice_fact_en": "assets/audio/en/hi_seb_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_seb_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_seb.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_seb.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_seb_intro.m4a"
   },
   {
     "id": "hi_haathi",
@@ -928,12 +969,13 @@
     "voice_en": "assets/audio/en/hi_haathi.m4a",
     "voice_hi": "assets/audio/hi/hi_haathi.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "An elephant is so big, with a long trunk... just like me!",
+    "fact_hi": "हाथी बहुत बड़ा होता है, और उसकी लंबी सूँड होती है... बिल्कुल मेरी तरह!",
+    "voice_fact_en": "assets/audio/en/hi_haathi_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_haathi_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_haathi.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_haathi.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_haathi_intro.m4a"
   },
   {
     "id": "hi_kshitij",
@@ -950,12 +992,13 @@
     "voice_en": "assets/audio/en/hi_kshitij.m4a",
     "voice_hi": "assets/audio/hi/hi_kshitij.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "Where the sky seems to meet the land is called the horizon!",
+    "fact_hi": "जहाँ आसमान और धरती मिलते हुए दिखते हैं, उसे क्षितिज कहते हैं!",
+    "voice_fact_en": "assets/audio/en/hi_kshitij_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_kshitij_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_kshitij.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_kshitij.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_kshitij_intro.m4a"
   },
   {
     "id": "hi_trishul",
@@ -972,12 +1015,13 @@
     "voice_en": "assets/audio/en/hi_trishul.m4a",
     "voice_hi": "assets/audio/hi/hi_trishul.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "A trident has three points... one, two, three!",
+    "fact_hi": "त्रिशूल के तीन नुकीले सिरे होते हैं... एक, दो, तीन!",
+    "voice_fact_en": "assets/audio/en/hi_trishul_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_trishul_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_trishul.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_trishul.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_trishul_intro.m4a"
   },
   {
     "id": "hi_gyan",
@@ -994,11 +1038,12 @@
     "voice_en": "assets/audio/en/hi_gyan.m4a",
     "voice_hi": "assets/audio/hi/hi_gyan.m4a",
     "sound": null,
-    "fact_en": null,
-    "fact_hi": null,
-    "voice_fact_en": null,
-    "voice_fact_hi": null,
+    "fact_en": "Reading books gives us knowledge. Let's read together!",
+    "fact_hi": "किताबें पढ़ने से ज्ञान मिलता है। चलो, साथ में पढ़ें!",
+    "voice_fact_en": "assets/audio/en/hi_gyan_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/hi_gyan_fact.m4a",
     "rive_reaction": null,
-    "letter_voice": "assets/audio/hi/letters/hi_gyan.m4a"
+    "letter_voice": "assets/audio/hi/letters/hi_gyan.m4a",
+    "voice_intro_hi": "assets/audio/hi/hi_gyan_intro.m4a"
   }
 ]

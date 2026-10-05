@@ -66,6 +66,8 @@ List<String> validateContent(
       requireAsset(where, 'voice_fact_en', item.voiceFactEn);
       requireAsset(where, 'voice_fact_hi', item.voiceFactHi);
       requireAsset(where, 'letter_voice', item.letterVoice);
+      requireAsset(where, 'voice_intro_en', item.voiceIntroEn);
+      requireAsset(where, 'voice_intro_hi', item.voiceIntroHi);
       for (final tile in item.spelling) {
         if (tile.audioAsset case final audio?) {
           requireAsset(where, 'letter ${tile.char} audio', audio);

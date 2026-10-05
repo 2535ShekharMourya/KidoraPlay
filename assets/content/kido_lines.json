@@ -10,7 +10,7 @@
     ],
     "hi": [
       {
-        "text": "नमस्ते दोस्त! मैं हूँ किडो, छोटा सा हाथी। चलो साथ में खेलें और सीखें!",
+        "text": "नमस्ते, नमस्ते दोस्त! मैं हूँ किडो, छोटा सा हाथी! चलो, साथ में खेलें और सीखें!",
         "audio": [
           "assets/audio/hi/kido/welcome_first.m4a"
         ]
@@ -28,7 +28,7 @@
     ],
     "hi": [
       {
-        "text": "फिर से नमस्ते, दोस्त! चलो खेलें!",
+        "text": "अरे! तुम आ गए! फिर से नमस्ते, दोस्त! चलो खेलें!",
         "audio": [
           "assets/audio/hi/kido/welcome_back.m4a"
         ]
@@ -67,7 +67,7 @@
     ],
     "hi": [
       {
-        "text": "देखो!",
+        "text": "अरे, देखो देखो!",
         "audio": [
           "assets/audio/hi/kido/look.m4a"
         ]
@@ -146,7 +146,7 @@
     ],
     "hi": [
       {
-        "text": "मेरे साथ बोलो!",
+        "text": "अब तुम बोलो... मेरे साथ!",
         "audio": [
           "assets/audio/hi/kido/say_with_me.m4a"
         ]
@@ -176,19 +176,19 @@
     ],
     "hi": [
       {
-        "text": "वाह!",
+        "text": "वाह वाह!",
         "audio": [
           "assets/audio/hi/kido/yay_1.m4a"
         ]
       },
       {
-        "text": "बहुत अच्छे!",
+        "text": "अरे वाह! बहुत अच्छे!",
         "audio": [
           "assets/audio/hi/kido/yay_2.m4a"
         ]
       },
       {
-        "text": "बढ़िया!",
+        "text": "बढ़िया! एकदम बढ़िया!",
         "audio": [
           "assets/audio/hi/kido/yay_3.m4a"
         ]
@@ -316,7 +316,7 @@
     ],
     "hi": [
       {
-        "text": "शाबाश!",
+        "text": "शाबाश! शाबाश!",
         "audio": [
           "assets/audio/hi/kido/praise_1.m4a"
         ]
@@ -328,7 +328,7 @@
         ]
       },
       {
-        "text": "तुमने कर दिखाया!",
+        "text": "अरे वाह! तुमने कर दिखाया!",
         "audio": [
           "assets/audio/hi/kido/praise_3.m4a"
         ]
@@ -346,7 +346,7 @@
         ]
       },
       {
-        "text": "बहुत अच्छे, दोस्त!",
+        "text": "बहुत अच्छे, मेरे दोस्त!",
         "audio": [
           "assets/audio/hi/kido/praise_6.m4a"
         ]
@@ -364,7 +364,7 @@
     ],
     "hi": [
       {
-        "text": "चलो फिर से देखें!",
+        "text": "कोई बात नहीं! चलो फिर से देखें!",
         "audio": [
           "assets/audio/hi/kido/try_again.m4a"
         ]
@@ -405,7 +405,7 @@
     ],
     "hi": [
       {
-        "text": "बाय बाय दोस्त! फिर मिलेंगे!",
+        "text": "बाय बाय, दोस्त! जल्दी फिर मिलेंगे!",
         "audio": [
           "assets/audio/hi/kido/goodbye.m4a"
         ]
@@ -423,7 +423,7 @@
     ],
     "hi": [
       {
-        "text": "चलो एक खेल खेलें!",
+        "text": "चलो चलो, एक मज़ेदार खेल खेलें!",
         "audio": [
           "assets/audio/hi/kido/lets_play.m4a"
         ]
@@ -441,7 +441,7 @@
     ],
     "hi": [
       {
-        "text": "सुनो! यह किसकी आवाज़ है?",
+        "text": "श्श्श... सुनो! यह किसकी आवाज़ है?",
         "audio": [
           "assets/audio/hi/kido/who_says.m4a"
         ]
@@ -530,7 +530,7 @@
         ]
       },
       {
-        "text": "वाह! खेल पूरा हुआ! तुम सुपरस्टार हो!",
+        "text": "वाह! खेल पूरा हुआ! तुम तो सुपरस्टार हो!",
         "audio": [
           "assets/audio/hi/kido/game_done_2.m4a"
         ]

@@ -19,7 +19,8 @@
     "fact_hi": "सेब लाल और मीठा होता है!",
     "voice_fact_en": "assets/audio/en/a_apple_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/a_apple_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "voice_intro_en": "assets/audio/en/a_apple_intro.m4a"
   },
   {
     "id": "b_ball",
@@ -41,7 +42,8 @@
     "fact_hi": "गेंद गोल होती है। चलो खेलें!",
     "voice_fact_en": "assets/audio/en/b_ball_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/b_ball_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "voice_intro_en": "assets/audio/en/b_ball_intro.m4a"
   },
   {
     "id": "c_cat",
@@ -63,7 +65,8 @@
     "fact_hi": "बिल्ली म्याऊँ करती है!",
     "voice_fact_en": "assets/audio/en/c_cat_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/c_cat_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "voice_intro_en": "assets/audio/en/c_cat_intro.m4a"
   },
   {
     "id": "d_dog",
@@ -85,7 +88,8 @@
     "fact_hi": "कुत्ता भौं भौं करता है!",
     "voice_fact_en": "assets/audio/en/d_dog_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/d_dog_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "voice_intro_en": "assets/audio/en/d_dog_intro.m4a"
   },
   {
     "id": "e_egg",
@@ -107,7 +111,8 @@
     "fact_hi": "अंडे से छोटा सा चूज़ा निकलता है!",
     "voice_fact_en": "assets/audio/en/e_egg_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/e_egg_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "voice_intro_en": "assets/audio/en/e_egg_intro.m4a"
   },
   {
     "id": "f_fish",
@@ -129,7 +134,8 @@
     "fact_hi": "मछली पानी में तैरती है।",
     "voice_fact_en": "assets/audio/en/f_fish_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/f_fish_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "voice_intro_en": "assets/audio/en/f_fish_intro.m4a"
   },
   {
     "id": "g_grapes",
@@ -151,7 +157,8 @@
     "fact_hi": "अंगूर छोटे और मीठे होते हैं!",
     "voice_fact_en": "assets/audio/en/g_grapes_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/g_grapes_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "voice_intro_en": "assets/audio/en/g_grapes_intro.m4a"
   },
   {
     "id": "h_hat",
@@ -173,7 +180,8 @@
     "fact_hi": "टोपी सिर पर पहनते हैं।",
     "voice_fact_en": "assets/audio/en/h_hat_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/h_hat_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "voice_intro_en": "assets/audio/en/h_hat_intro.m4a"
   },
   {
     "id": "i_ice_cream",
@@ -195,7 +203,8 @@
     "fact_hi": "आइसक्रीम ठंडी और मज़ेदार होती है!",
     "voice_fact_en": "assets/audio/en/i_ice_cream_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/i_ice_cream_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "voice_intro_en": "assets/audio/en/i_ice_cream_intro.m4a"
   },
   {
     "id": "j_jug",
@@ -217,7 +226,8 @@
     "fact_hi": "जग में पानी रखते हैं।",
     "voice_fact_en": "assets/audio/en/j_jug_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/j_jug_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "voice_intro_en": "assets/audio/en/j_jug_intro.m4a"
   },
   {
     "id": "k_kite",
@@ -239,7 +249,8 @@
     "fact_hi": "पतंग आसमान में ऊँची उड़ती है!",
     "voice_fact_en": "assets/audio/en/k_kite_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/k_kite_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "voice_intro_en": "assets/audio/en/k_kite_intro.m4a"
   },
   {
     "id": "l_lion",
@@ -261,7 +272,8 @@
     "fact_hi": "शेर जंगल का राजा है!",
     "voice_fact_en": "assets/audio/en/l_lion_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/l_lion_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "voice_intro_en": "assets/audio/en/l_lion_intro.m4a"
   },
   {
     "id": "m_mango",
@@ -283,7 +295,8 @@
     "fact_hi": "आम फलों का राजा है!",
     "voice_fact_en": "assets/audio/en/m_mango_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/m_mango_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "voice_intro_en": "assets/audio/en/m_mango_intro.m4a"
   },
   {
     "id": "n_nest",
@@ -305,7 +318,8 @@
     "fact_hi": "चिड़िया घोंसले में रहती है।",
     "voice_fact_en": "assets/audio/en/n_nest_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/n_nest_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "voice_intro_en": "assets/audio/en/n_nest_intro.m4a"
   },
   {
     "id": "o_orange",
@@ -327,7 +341,8 @@
     "fact_hi": "संतरा गोल और रसीला होता है!",
     "voice_fact_en": "assets/audio/en/o_orange_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/o_orange_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "voice_intro_en": "assets/audio/en/o_orange_intro.m4a"
   },
   {
     "id": "p_parrot",
@@ -349,7 +364,8 @@
     "fact_hi": "तोता हरा होता है और बोल सकता है!",
     "voice_fact_en": "assets/audio/en/p_parrot_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/p_parrot_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "voice_intro_en": "assets/audio/en/p_parrot_intro.m4a"
   },
   {
     "id": "q_queen",
@@ -371,7 +387,8 @@
     "fact_hi": "रानी मुकुट पहनती है।",
     "voice_fact_en": "assets/audio/en/q_queen_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/q_queen_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "voice_intro_en": "assets/audio/en/q_queen_intro.m4a"
   },
   {
     "id": "r_rabbit",
@@ -393,7 +410,8 @@
     "fact_hi": "खरगोश के लंबे कान होते हैं और उसे गाजर पसंद है!",
     "voice_fact_en": "assets/audio/en/r_rabbit_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/r_rabbit_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "voice_intro_en": "assets/audio/en/r_rabbit_intro.m4a"
   },
   {
     "id": "s_sun",
@@ -415,7 +433,8 @@
     "fact_hi": "सूरज हमें रोशनी देता है!",
     "voice_fact_en": "assets/audio/en/s_sun_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/s_sun_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "voice_intro_en": "assets/audio/en/s_sun_intro.m4a"
   },
   {
     "id": "t_tree",
@@ -437,7 +456,8 @@
     "fact_hi": "पेड़ हमें फल और छाया देता है।",
     "voice_fact_en": "assets/audio/en/t_tree_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/t_tree_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "voice_intro_en": "assets/audio/en/t_tree_intro.m4a"
   },
   {
     "id": "u_umbrella",
@@ -459,7 +479,8 @@
     "fact_hi": "छाता हमें बारिश से बचाता है!",
     "voice_fact_en": "assets/audio/en/u_umbrella_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/u_umbrella_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "voice_intro_en": "assets/audio/en/u_umbrella_intro.m4a"
   },
   {
     "id": "v_van",
@@ -481,7 +502,8 @@
     "fact_hi": "वैन चलती है, वूँ वूँ!",
     "voice_fact_en": "assets/audio/en/v_van_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/v_van_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "voice_intro_en": "assets/audio/en/v_van_intro.m4a"
   },
   {
     "id": "w_watch",
@@ -503,7 +525,8 @@
     "fact_hi": "घड़ी हमें समय बताती है। टिक टिक!",
     "voice_fact_en": "assets/audio/en/w_watch_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/w_watch_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "voice_intro_en": "assets/audio/en/w_watch_intro.m4a"
   },
   {
     "id": "x_x_ray",
@@ -525,7 +548,8 @@
     "fact_hi": "एक्स-रे हमारे अंदर की हड्डियाँ दिखाता है!",
     "voice_fact_en": "assets/audio/en/x_x_ray_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/x_x_ray_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "voice_intro_en": "assets/audio/en/x_x_ray_intro.m4a"
   },
   {
     "id": "y_yo_yo",
@@ -547,7 +571,8 @@
     "fact_hi": "यो-यो ऊपर नीचे जाता है!",
     "voice_fact_en": "assets/audio/en/y_yo_yo_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/y_yo_yo_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "voice_intro_en": "assets/audio/en/y_yo_yo_intro.m4a"
   },
   {
     "id": "z_zebra",
@@ -569,6 +594,7 @@
     "fact_hi": "ज़ेबरा पर काली और सफ़ेद धारियाँ होती हैं!",
     "voice_fact_en": "assets/audio/en/z_zebra_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/z_zebra_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "voice_intro_en": "assets/audio/en/z_zebra_intro.m4a"
   }
 ]

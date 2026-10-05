@@ -204,7 +204,10 @@ class LearnCardController extends Notifier<LearnCardState> {
     if (!_alive(run)) return;
 
     // Name it.
-    if (item.section == SectionId.hindi && item.letterVoice != null) {
+    if (item.section == SectionId.hindi && item.voiceIntroHi != null) {
+      // "अ से अनार!" in one breath.
+      await _speak([item.voiceIntroHi!], run);
+    } else if (item.section == SectionId.hindi && item.letterVoice != null) {
       // "अ से अनार!"
       await _kidoSay(
         KidoEvent.letterFor,
@@ -213,6 +216,13 @@ class LearnCardController extends Notifier<LearnCardState> {
         item: item,
         letterAudio: item.letterVoice,
       );
+    } else if (item.section == SectionId.abc && item.voiceIntroEn != null) {
+      // "A for Apple!" in one breath, then the Hindi word when bilingual.
+      await _speak([item.voiceIntroEn!], run);
+      if (!_alive(run)) return;
+      if (_languages.contains(ContentLanguage.hi)) {
+        await _speak([item.voiceHi], run);
+      }
     } else if (item.section == SectionId.abc && item.letter != null) {
       // "A for Apple" in English (the letters are the goal), then the
       // Hindi word when bilingual.

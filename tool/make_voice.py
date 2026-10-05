@@ -41,8 +41,16 @@ LIST_FILE = ROOT / "tool" / "placeholder_assets.txt"
 MANIFEST = ROOT / "tool" / ".cache" / "voice_manifest.json"
 
 VOICES = {"en": "en-IN-NeerjaNeural", "hi": "hi-IN-SwaraNeural"}
-RATE = "-12%"
-PITCH = "+8Hz"
+# Hindi a little slower and brighter: clearer and warmer for children.
+PROSODY = {"en": ("-12%", "+8Hz"), "hi": ("-18%", "+14Hz")}
+
+# How to say a Hindi letter on its own. The TTS reads some bare letters
+# oddly (or as their name in English), so give it a spoken form.
+LETTER_SAY = {
+    "अ": "अ!", "आ": "आ!", "इ": "इ!", "ई": "ई!", "उ": "उ!", "ऊ": "ऊ!",
+    "ऋ": "रि!", "ए": "ए!", "ऐ": "ऐ!", "ओ": "ओ!", "औ": "औ!",
+    "अं": "अं!", "ष": "ष!", "क्ष": "क्ष!", "त्र": "त्र!", "ज्ञ": "ग्य!",
+}
 RETRIES = 8
 WORKERS = 4
 
@@ -63,8 +71,15 @@ def collect():
             if it.get("fact_en"):
                 jobs[it["voice_fact_en"]] = ("en", it["fact_en"])
                 jobs[it["voice_fact_hi"]] = ("hi", it["fact_hi"])
+            if it.get("voice_intro_en"):
+                jobs[it["voice_intro_en"]] = (
+                    "en", f'{it["letter"]} for {it["word_en"]}!')
+            if it.get("voice_intro_hi"):
+                jobs[it["voice_intro_hi"]] = (
+                    "hi", f'{it["letter"]} से {it["word_hi"]}!')
             if it.get("letter_voice"):
-                jobs[it["letter_voice"]] = ("hi", it["letter"])
+                jobs[it["letter_voice"]] = (
+                    "hi", LETTER_SAY.get(it["letter"], it["letter"] + "!"))
             if it.get("sound"):
                 jobs[it["sound"]] = ("en", SOUND_TEXT[it["id"]])
 
@@ -83,15 +98,17 @@ def collect():
 
 
 def fingerprint(lang, text):
-    raw = f"{VOICES[lang]}|{RATE}|{PITCH}|{text}"
+    rate, pitch = PROSODY[lang]
+    raw = f"{VOICES[lang]}|{rate}|{pitch}|{text}"
     return hashlib.sha1(raw.encode("utf-8")).hexdigest()
 
 
 async def synthesise(lang, text, out_mp3):
     for attempt in range(1, RETRIES + 1):
         try:
+            rate, pitch = PROSODY[lang]
             await edge_tts.Communicate(
-                text, VOICES[lang], rate=RATE, pitch=PITCH,
+                text, VOICES[lang], rate=rate, pitch=pitch,
             ).save(str(out_mp3))
             if out_mp3.stat().st_size > 500:
                 return
