@@ -23,6 +23,7 @@ import '../../core/widgets/pop_in.dart';
 import '../../core/widgets/section_background.dart';
 import '../../core/widgets/wiggle.dart';
 import '../../l10n/app_localizations.dart';
+import '../ads/ad_manager.dart';
 import '../kido/hint_timer.dart';
 import '../kido/kido_controller.dart';
 import '../kido/kido_widget.dart';
@@ -52,6 +53,7 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
   final _pictureKey = GlobalKey();
   final _jarKey = GlobalKey();
   int _celebrationKey = 0;
+  Timer? _adBreak;
   List<GlobalKey> _tileKeys = const [];
 
   LearnCardController get _controller =>
@@ -69,6 +71,7 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
 
   @override
   void dispose() {
+    _adBreak?.cancel();
     _burst.dispose();
     super.dispose();
   }
@@ -132,6 +135,17 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
     if (next.completions > (prev?.completions ?? 0)) {
       setState(() => _celebrationKey++);
       _kido.act(KidoAction.trumpet);
+      // A finished section is a natural break: after the celebration,
+      // maybe an ad (the manager decides; usually not).
+      _adBreak?.cancel();
+      _adBreak = Timer(AppDurations.celebration, () {
+        if (!mounted) return;
+        unawaited(
+          ref
+              .read(adManagerProvider)
+              .maybeShowBreak(context, reason: 'section_done'),
+        );
+      });
       return;
     }
     if (next.stickers > (prev?.stickers ?? 0)) {

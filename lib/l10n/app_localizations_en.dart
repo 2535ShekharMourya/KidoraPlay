@@ -232,4 +232,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get traceAgain => 'Write again';
+
+  @override
+  String get adBreak => 'Kido is taking a little break 🐘';
 }

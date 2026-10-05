@@ -10,6 +10,8 @@ import 'package:kidoraplay/core/audio/audio_service.dart';
 import 'package:kidoraplay/core/settings/app_settings.dart';
 import 'package:kidoraplay/core/storage/local_store.dart';
 import 'package:kidoraplay/core/theme/app_theme.dart';
+import 'package:kidoraplay/features/ads/ad_gateway.dart';
+import 'package:kidoraplay/features/ads/ad_manager.dart';
 import 'package:kidoraplay/features/billing/billing_controller.dart';
 import 'package:kidoraplay/l10n/app_localizations.dart';
 
@@ -31,6 +33,7 @@ List<Override> testOverrides({
   FakeAudio? audio,
   ContentCatalog? catalog,
   FakeStore? playStore,
+  AdGateway? ads,
 }) => [
   // English-only unless a test chooses a language, so expected clip
   // lists stay short.
@@ -39,6 +42,7 @@ List<Override> testOverrides({
   ),
   audioChannelsProvider.overrideWithValue((audio ?? FakeAudio()).channels),
   storeGatewayProvider.overrideWithValue(playStore ?? FakeStore()),
+  adGatewayProvider.overrideWithValue(ads ?? const NoAdsGateway()),
   if (catalog != null)
     contentCatalogProvider.overrideWith((ref) async => catalog),
 ];

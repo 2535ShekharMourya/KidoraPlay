@@ -1,8 +1,20 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
+
+// The real AdMob app ID lives in android/local.properties (not committed):
+//   admobAppId=ca-app-pub-XXXXXXXXXXXXXXXX~YYYYYYYYYY
+// Without it, Google's sample app ID is used (test ads only).
+val localProps = Properties().apply {
+    val file = rootProject.file("local.properties")
+    if (file.exists()) file.inputStream().use { load(it) }
+}
+val admobAppId: String =
+    localProps.getProperty("admobAppId") ?: "ca-app-pub-3940256099942544~3347511713"
 
 android {
     namespace = "com.kidoraplay.kidoraplay"
@@ -27,6 +39,7 @@ android {
         // flag during build.
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+        manifestPlaceholders["admobAppId"] = admobAppId
     }
 
     buildTypes {

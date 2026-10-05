@@ -230,4 +230,7 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get traceAgain => 'फिर से लिखो';
+
+  @override
+  String get adBreak => 'किडो थोड़ा आराम कर रहा है 🐘';
 }

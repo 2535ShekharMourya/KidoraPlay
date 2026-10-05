@@ -9,6 +9,7 @@ import 'app.dart';
 import 'content/repository/content_repository.dart';
 import 'core/audio/audio_service.dart';
 import 'core/licences.dart';
+import 'features/ads/ad_manager.dart';
 import 'features/billing/billing_controller.dart';
 import 'features/tracing/trace_logic.dart';
 import 'core/storage/local_store.dart';
@@ -63,6 +64,10 @@ Future<void> main() async {
   // Premium is read from the device cache at once (ads depend on it);
   // Google Play is asked in the background to confirm it.
   unawaited(container.read(billingControllerProvider.notifier).refresh());
+
+  // Not premium (from the device cache): start child-directed ads in the
+  // background. Premium users never start the ad SDK.
+  unawaited(container.read(adManagerProvider).start());
 
   runApp(
     UncontrolledProviderScope(container: container, child: const KidoraApp()),

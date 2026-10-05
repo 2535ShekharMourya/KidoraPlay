@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
@@ -14,6 +15,7 @@ import '../../core/widgets/pop_in.dart';
 import '../../core/widgets/section_background.dart';
 import '../../core/widgets/wiggle.dart';
 import '../../l10n/app_localizations.dart';
+import '../ads/ad_manager.dart';
 import '../kido/hint_timer.dart';
 import '../kido/kido_controller.dart';
 import '../kido/kido_widget.dart';
@@ -35,6 +37,7 @@ class QuizScreen extends ConsumerStatefulWidget {
 
 class _QuizScreenState extends ConsumerState<QuizScreen> {
   final _answerKey = GlobalKey();
+  Timer? _adBreak;
 
   QuizController get _controller =>
       ref.read(quizControllerProvider(widget.kind).notifier);
@@ -48,6 +51,12 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     });
   }
 
+  @override
+  void dispose() {
+    _adBreak?.cancel();
+    super.dispose();
+  }
+
   Offset? _answerCenter() {
     final box = _answerKey.currentContext?.findRenderObject() as RenderBox?;
     if (box == null || !box.hasSize || !box.attached) return null;
@@ -57,6 +66,16 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
   void _directKido(QuizState? prev, QuizState next) {
     if (next.games > (prev?.games ?? 0)) {
       _kido.act(KidoAction.trumpet);
+      // A finished game is a natural break: maybe an ad, after the cheer.
+      _adBreak?.cancel();
+      _adBreak = Timer(AppDurations.celebration, () {
+        if (!mounted) return;
+        unawaited(
+          ref
+              .read(adManagerProvider)
+              .maybeShowBreak(context, reason: 'game_done'),
+        );
+      });
     } else if (next.solved > (prev?.solved ?? 0)) {
       _kido.act(KidoAction.clap);
     } else if (next.answerGlows && !(prev?.answerGlows ?? false)) {

@@ -517,6 +517,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Write again'**
   String get traceAgain;
+
+  /// No description provided for @adBreak.
+  ///
+  /// In en, this message translates to:
+  /// **'Kido is taking a little break 🐘'**
+  String get adBreak;
 }
 
 class _AppLocalizationsDelegate
