@@ -644,5 +644,23 @@
         ]
       }
     ]
+  },
+  "balloon_party": {
+    "en": [
+      {
+        "text": "Balloon party! Pop the balloons!",
+        "audio": [
+          "assets/audio/en/kido/balloon_party.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "गुब्बारों की पार्टी! गुब्बारे फोड़ो!",
+        "audio": [
+          "assets/audio/hi/kido/balloon_party.m4a"
+        ]
+      }
+    ]
   }
 }

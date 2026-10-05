@@ -16,6 +16,7 @@ import '../kido/hint_timer.dart';
 import '../kido/kido_memory.dart';
 import '../kido/kido_voice.dart';
 import '../progress/progress_controller.dart';
+import '../rewards/balloon_party.dart';
 import '../section_grid/section_items.dart';
 
 /// Where the learn card is.
@@ -68,6 +69,7 @@ class LearnCardState {
     this.starGoal = 0,
     this.busy = false,
     this.discovery,
+    this.parties = 0,
   });
 
   final LessonPhase phase;
@@ -109,6 +111,9 @@ class LearnCardState {
   /// The discovery playing now, if any.
   final Discovery? discovery;
 
+  /// Increments when the child earns a balloon party.
+  final int parties;
+
   bool get playing => busy;
 
   LearnCardState copyWith({
@@ -128,6 +133,7 @@ class LearnCardState {
     bool? busy,
     Discovery? discovery,
     bool clearDiscovery = false,
+    int? parties,
   }) => LearnCardState(
     phase: phase ?? this.phase,
     highlighted: clearHighlight ? null : highlighted ?? this.highlighted,
@@ -143,6 +149,7 @@ class LearnCardState {
     starGoal: starGoal ?? this.starGoal,
     busy: busy ?? this.busy,
     discovery: clearDiscovery ? null : discovery ?? this.discovery,
+    parties: parties ?? this.parties,
   );
 }
 
@@ -489,6 +496,25 @@ class LearnCardController extends Notifier<LearnCardState> {
       );
       return;
     }
+    // Every few cards: a balloon party (the screen shows it and calls
+    // [partyOver] when it ends).
+    if (ref.read(sessionRewardsProvider).cardCompleted()) {
+      state = state.copyWith(parties: state.parties + 1);
+      await _kidoSay(KidoEvent.balloonParty, run);
+      return;
+    }
+    await _sayNextOne(item, scope, run);
+  }
+
+  /// The balloon party ended: on to the next card.
+  Future<void> partyOver() async {
+    final item = _item;
+    if (item == null) return;
+    final run = ++_run;
+    await _sayNextOne(item, _scope ?? (section: item.section, row: null), run);
+  }
+
+  Future<void> _sayNextOne(LearningItem item, ItemScope scope, int run) async {
     final items = ref.read(scopeItemsProvider(scope));
     final isLast = items.isNotEmpty && items.last.id == item.id;
     if (!isLast) await _kidoSay(KidoEvent.nextOne, run);

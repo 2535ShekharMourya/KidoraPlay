@@ -41,6 +41,9 @@ abstract final class KidoEvent {
 
   /// "Let's see the next one!" after a card's stars are all earned.
   static const nextOne = 'next_one';
+
+  /// "Balloon party! Pop the balloons!" (every few cards).
+  static const balloonParty = 'balloon_party';
   static const tryAgain = 'try_again';
   static const sectionDone = 'section_done';
   static const goodbye = 'goodbye';
@@ -82,6 +85,7 @@ abstract final class KidoEvent {
     praise,
     tapToPlay,
     nextOne,
+    balloonParty,
     tryAgain,
     sectionDone,
     goodbye,

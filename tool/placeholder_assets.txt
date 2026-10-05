@@ -298,6 +298,7 @@ assets/audio/en/j_jug_intro.m4a
 assets/audio/en/k_kite.m4a
 assets/audio/en/k_kite_fact.m4a
 assets/audio/en/k_kite_intro.m4a
+assets/audio/en/kido/balloon_party.m4a
 assets/audio/en/kido/can_you_tap_it.m4a
 assets/audio/en/kido/find_the_letter.m4a
 assets/audio/en/kido/for.m4a
@@ -920,6 +921,7 @@ assets/audio/hi/j_jug_fact.m4a
 assets/audio/hi/k_kite.m4a
 assets/audio/hi/k_kite_fact.m4a
 assets/audio/hi/kido/akshar_dhoondho.m4a
+assets/audio/hi/kido/balloon_party.m4a
 assets/audio/hi/kido/chalo.m4a
 assets/audio/hi/kido/game_done_1.m4a
 assets/audio/hi/kido/game_done_2.m4a

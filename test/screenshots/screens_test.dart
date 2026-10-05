@@ -6,6 +6,7 @@
 // Images land in build/screenshots/<size>/<name>.png.
 
 import 'dart:io';
+import 'dart:math' as math;
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
@@ -24,6 +25,7 @@ import 'package:kidoraplay/core/theme/app_tokens.dart';
 import 'package:kidoraplay/features/games/quiz_models.dart';
 import 'package:kidoraplay/features/home/home_screen.dart';
 import 'package:kidoraplay/features/learn_card/learn_card_controller.dart';
+import 'package:kidoraplay/features/rewards/balloon_party.dart';
 import 'package:kidoraplay/features/tracing/trace_logic.dart';
 
 import '../helpers/fake_audio.dart';
@@ -83,6 +85,26 @@ void main() {
       file.writeAsBytesSync(bytes!.buffer.asUint8List());
     });
   }
+
+  testWidgets('balloon party', (tester) async {
+    await pumpApp(
+      tester,
+      RepaintBoundary(
+        key: boundary,
+        child: BalloonParty(
+          items: catalog.itemsFor(SectionId.animals).take(6).toList(),
+          onDone: () {},
+          random: math.Random(3),
+        ),
+      ),
+      catalog: catalog,
+      reduceMotion: true,
+    );
+    await settle(tester);
+    await shoot(tester, 'phone_800x360', 'balloon_party');
+    await tester.pumpWidget(const SizedBox());
+    await tester.pump(const Duration(seconds: 30));
+  }, skip: !enabled);
 
   for (final MapEntry(key: size, value: physical) in sizes.entries) {
     for (final level in ['nursery', 'ukg']) {

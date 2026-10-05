@@ -23,6 +23,10 @@ abstract final class AppColors {
   static const celebrate = Color(0xFFFFC93C);
   static const glow = Color(0xFFFFF3A8);
 
+  /// Behind a balloon party.
+  static const partyVeil = Color(0x66FFFFFF);
+  static const balloonShine = Color(0x88FFFFFF);
+
   // Tracing board.
   static const traceBoard = Color(0xF2FFFFFF);
   static const traceRoad = Color(0xFFF1EEF9);

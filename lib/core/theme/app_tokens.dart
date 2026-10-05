@@ -109,6 +109,12 @@ abstract final class AppDurations {
   /// Tracing: idle time before Kido shows the stroke again, and how long
   /// one demo of a stroke takes.
   static const traceIdle = Duration(seconds: 7);
+
+  /// Balloon party: one balloon's rise, the whole party at most, and
+  /// the pause after the last pop.
+  static const balloonRise = Duration(seconds: 7);
+  static const balloonParty = Duration(seconds: 15);
+  static const balloonLastPop = Duration(milliseconds: 1400);
   static const traceDemo = Duration(milliseconds: 1800);
 }
 
@@ -132,4 +138,7 @@ abstract final class AppScale {
 abstract final class AppParticles {
   static const sparkle = 12;
   static const confetti = 70;
+
+  /// Balloons in a balloon party.
+  static const balloons = 6;
 }

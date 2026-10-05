@@ -30,6 +30,7 @@ import '../kido/kido_widget.dart';
 import '../numbers/place_value_view.dart';
 import '../progress/progress_controller.dart';
 import '../progress/sticker_widgets.dart';
+import '../rewards/balloon_party.dart';
 import '../section_grid/section_items.dart';
 import '../tracing/trace_logic.dart';
 import 'learn_card_controller.dart';
@@ -54,6 +55,9 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
   final _pictureKey = GlobalKey();
   final _jarKey = GlobalKey();
   int _celebrationKey = 0;
+
+  /// Balloon party on screen (learned pictures of this set).
+  List<LearningItem>? _party;
   Timer? _adBreak;
   List<GlobalKey> _tileKeys = const [];
 
@@ -149,6 +153,16 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
     }
     if (next.stickers > (prev?.stickers ?? 0)) {
       _flySticker();
+    }
+    if (next.parties > (prev?.parties ?? 0)) {
+      final progress = ref.read(progressProvider);
+      final learned = ref
+          .read(scopeItemsProvider(widget.scope))
+          .where((i) => progress.isLearned(i.id))
+          .toList();
+      setState(() => _party = learned);
+      _kido.act(KidoAction.trumpet);
+      return;
     }
     if (next.stars > (prev?.stars ?? 0)) {
       // A star earned: sparkle on the picture and a clap from Kido.
@@ -398,6 +412,16 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
                     ),
                   ),
                 const KidoCorner(),
+                if (_party case final party? when party.isNotEmpty)
+                  Positioned.fill(
+                    child: BalloonParty(
+                      items: party,
+                      onDone: () {
+                        setState(() => _party = null);
+                        unawaited(_controller.partyOver());
+                      },
+                    ),
+                  ),
                 if (_celebrationKey > 0)
                   Positioned.fill(
                     child: CelebrationOverlay(
