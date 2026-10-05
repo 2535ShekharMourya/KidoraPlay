@@ -109,8 +109,13 @@ class QuizController extends Notifier<QuizState> {
 
   bool _alive(int run) => !_disposed && ref.mounted && run == _run;
 
-  /// Starts (or restarts) the game with fresh rounds.
-  Future<void> start() async {
+  /// Most answer cards that fit side by side at a child-friendly size.
+  int? _maxChoices;
+
+  /// Starts (or restarts) the game. [maxChoices] limits the answer cards
+  /// to what fits the screen (kept for "play again").
+  Future<void> start({int? maxChoices}) async {
+    _maxChoices = maxChoices ?? _maxChoices;
     final catalog = ref.read(contentCatalogProvider).value;
     if (catalog == null) return;
     final run = ++_run;
@@ -120,6 +125,7 @@ class QuizController extends Notifier<QuizState> {
       catalog,
       ref.read(settingsProvider).level,
       ref.read(quizRandomProvider),
+      maxChoices: _maxChoices,
     );
     // Choices are live at once: an eager child can answer while Kido is
     // still saying "Let's play!".

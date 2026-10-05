@@ -1,5 +1,3 @@
-import 'dart:math' as math;
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -15,6 +13,7 @@ import '../../core/widgets/idle_float.dart';
 import '../../core/widgets/item_picture.dart';
 import '../../core/widgets/pop_in.dart';
 import '../../core/widgets/section_background.dart';
+import '../../core/widgets/tile_layout.dart';
 import '../kido/kido_memory.dart';
 import '../kido/kido_widget.dart';
 import 'section_items.dart';
@@ -31,7 +30,6 @@ class ItemGridScreen extends ConsumerStatefulWidget {
 }
 
 class _ItemGridScreenState extends ConsumerState<ItemGridScreen> {
-  static const _perPage = AppLayout.gridColumns * AppLayout.gridRows;
   int _page = 0;
 
   @override
@@ -49,57 +47,76 @@ class _ItemGridScreenState extends ConsumerState<ItemGridScreen> {
   Widget build(BuildContext context) {
     final items = ref.watch(scopeItemsProvider(widget.scope));
     final theme = SectionTheme.of(widget.scope.section);
-    final pages = math.max(1, (items.length / _perPage).ceil());
-    final page = _page.clamp(0, pages - 1);
-    final pageItems = items.skip(page * _perPage).take(_perPage).toList();
 
     return Scaffold(
       body: SectionBackground(
         section: widget.scope.section,
         child: SafeArea(
-          child: Stack(
-            children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: AppLayout.sideZone,
-                  vertical: AppSpacing.md,
+          child: LayoutBuilder(
+            builder: (context, constraints) {
+              // As many tiles per page as fit at a child-friendly size.
+              final layout = TileLayout.fit(
+                Size(
+                  constraints.maxWidth - AppLayout.sideZone * 2,
+                  constraints.maxHeight - AppSpacing.md * 2,
                 ),
-                child: _Grid(
-                  // A new key per page replays the pop-in animation.
-                  key: ValueKey(page),
-                  items: pageItems,
-                  accent: theme.accent,
-                  onTap: (item) =>
-                      context.go(AppRoutes.learn(widget.scope, item.id)),
-                ),
-              ),
-              const Align(alignment: Alignment.topLeft, child: BigBackButton()),
-              const KidoCorner(),
-              if (page > 0)
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding: const EdgeInsets.all(AppSpacing.md),
-                    child: ArrowButton(
-                      direction: ArrowDirection.previous,
-                      color: theme.accent,
-                      onPressed: () => setState(() => _page = page - 1),
+                square: true,
+              );
+              final pages = layout.pagesFor(items.length);
+              final page = _page.clamp(0, pages - 1);
+              final pageItems = items
+                  .skip(page * layout.perPage)
+                  .take(layout.perPage)
+                  .toList();
+              return Stack(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: AppLayout.sideZone,
+                      vertical: AppSpacing.md,
+                    ),
+                    child: _Grid(
+                      // A new key per page replays the pop-in animation.
+                      key: ValueKey(page),
+                      items: pageItems,
+                      layout: layout,
+                      accent: theme.accent,
+                      onTap: (item) =>
+                          context.go(AppRoutes.learn(widget.scope, item.id)),
                     ),
                   ),
-                ),
-              if (page < pages - 1)
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: Padding(
-                    padding: const EdgeInsets.all(AppSpacing.md),
-                    child: ArrowButton(
-                      direction: ArrowDirection.next,
-                      color: theme.accent,
-                      onPressed: () => setState(() => _page = page + 1),
-                    ),
+                  const Align(
+                    alignment: Alignment.topLeft,
+                    child: BigBackButton(),
                   ),
-                ),
-            ],
+                  const KidoCorner(),
+                  if (page > 0)
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Padding(
+                        padding: const EdgeInsets.all(AppSpacing.md),
+                        child: ArrowButton(
+                          direction: ArrowDirection.previous,
+                          color: theme.accent,
+                          onPressed: () => setState(() => _page = page - 1),
+                        ),
+                      ),
+                    ),
+                  if (page < pages - 1)
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: Padding(
+                        padding: const EdgeInsets.all(AppSpacing.md),
+                        child: ArrowButton(
+                          direction: ArrowDirection.next,
+                          color: theme.accent,
+                          onPressed: () => setState(() => _page = page + 1),
+                        ),
+                      ),
+                    ),
+                ],
+              );
+            },
           ),
         ),
       ),
@@ -110,60 +127,55 @@ class _ItemGridScreenState extends ConsumerState<ItemGridScreen> {
 class _Grid extends StatelessWidget {
   const _Grid({
     required this.items,
+    required this.layout,
     required this.accent,
     required this.onTap,
     super.key,
   });
 
   final List<LearningItem> items;
+  final TileLayout layout;
   final Color accent;
   final void Function(LearningItem) onTap;
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        const cols = AppLayout.gridColumns;
-        const rows = AppLayout.gridRows;
-        const gap = AppSpacing.tapGap;
-        final size = math.max(
-          AppSpacing.minTapTarget,
-          math.min(
-            (constraints.maxWidth - gap * (cols - 1)) / cols,
-            (constraints.maxHeight - gap * (rows - 1)) / rows,
-          ),
-        );
-
-        return Center(
-          child: Wrap(
-            spacing: gap,
-            runSpacing: gap,
-            alignment: WrapAlignment.center,
-            children: [
-              for (final (i, item) in items.indexed)
-                SizedBox.square(
-                  dimension: size,
-                  child: PopIn(
-                    index: i,
-                    child: IdleFloat(
-                      phase: (i * 0.37) % 1,
-                      child: BouncyButton(
-                        semanticLabel: item.wordEn,
-                        onPressed: () => onTap(item),
-                        child: ItemPicture(
-                          image: item.image,
-                          fallbackText: item.wordEn,
-                          accent: accent,
-                          badge: item.badge,
+    const gap = AppSpacing.tapGap;
+    final cols = layout.columns;
+    return Center(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        spacing: gap,
+        children: [
+          for (var r = 0; r * cols < items.length; r++)
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              spacing: gap,
+              children: [
+                for (final (k, item) in items.skip(r * cols).take(cols).indexed)
+                  SizedBox.fromSize(
+                    size: layout.tile,
+                    child: PopIn(
+                      index: r * cols + k,
+                      child: IdleFloat(
+                        phase: ((r * cols + k) * 0.37) % 1,
+                        child: BouncyButton(
+                          semanticLabel: item.wordEn,
+                          onPressed: () => onTap(item),
+                          child: ItemPicture(
+                            image: item.image,
+                            fallbackText: item.wordEn,
+                            accent: accent,
+                            badge: item.badge,
+                          ),
                         ),
                       ),
                     ),
                   ),
-                ),
-            ],
-          ),
-        );
-      },
+              ],
+            ),
+        ],
+      ),
     );
   }
 }

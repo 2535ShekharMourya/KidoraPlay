@@ -27,6 +27,14 @@ abstract final class AppLayout {
   /// him.
   static const sideZone = AppSpacing.minTapTarget + AppSpacing.md * 2;
 
+  /// Screens with a shorter side above this (tablets) are laid out at
+  /// this height and scaled up, up to [maxScale].
+  static const designShortSide = 420.0;
+  static const maxScale = 2.0;
+
+  /// Home section tiles hold a picture, a name and progress.
+  static const sectionTileMinHeight = 120.0;
+
   /// Kido waving on the splash screen.
   static const splashKido = 150.0;
 

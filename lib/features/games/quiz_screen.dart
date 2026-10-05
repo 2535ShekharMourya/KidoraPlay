@@ -13,6 +13,7 @@ import '../../core/widgets/bouncy_button.dart';
 import '../../core/widgets/item_picture.dart';
 import '../../core/widgets/pop_in.dart';
 import '../../core/widgets/section_background.dart';
+import '../../core/widgets/tile_layout.dart';
 import '../../core/widgets/wiggle.dart';
 import '../../l10n/app_localizations.dart';
 import '../ads/ad_manager.dart';
@@ -47,7 +48,14 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (mounted) _controller.start();
+      if (!mounted) return;
+      // As many answer cards as fit side by side at full size.
+      final width = MediaQuery.sizeOf(context).width - AppLayout.sideZone * 2;
+      final fit = TileLayout.fit(
+        Size(width, AppSpacing.minTapTarget),
+        maxColumns: 4,
+      ).columns;
+      _controller.start(maxChoices: fit);
     });
   }
 
@@ -277,12 +285,10 @@ class _Choices extends StatelessWidget {
       builder: (context, constraints) {
         final n = round.choices.length;
         const gap = AppSpacing.tapGap;
-        final size = math.max(
-          AppSpacing.minTapTarget,
-          math.min(
-            (constraints.maxWidth - gap * (n - 1)) / n,
-            math.min(constraints.maxHeight, 170.0),
-          ),
+        // Always fits: the game offers only as many cards as fit at 96 dp.
+        final size = math.min(
+          (constraints.maxWidth - gap * (n - 1)) / n,
+          math.min(constraints.maxHeight, 170.0),
         );
         return Center(
           child: Row(

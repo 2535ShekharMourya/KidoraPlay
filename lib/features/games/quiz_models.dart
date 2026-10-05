@@ -102,8 +102,13 @@ List<QuizRound> buildQuiz(
   Level level,
   math.Random random, {
   int rounds = roundsPerGame,
+  int? maxChoices,
 }) {
-  final choiceCount = choicesFor(level);
+  // Fewer choices on screens too narrow for big cards.
+  final choiceCount = math.max(
+    2,
+    math.min(choicesFor(level), maxChoices ?? choicesFor(level)),
+  );
 
   QuizChoice pictureChoice(LearningItem i) =>
       QuizChoice(id: i.id, label: i.wordEn, item: i);

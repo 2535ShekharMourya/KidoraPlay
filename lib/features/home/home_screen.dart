@@ -17,6 +17,7 @@ import '../../core/widgets/bouncy_button.dart';
 import '../../core/widgets/idle_float.dart';
 import '../../core/widgets/pop_in.dart';
 import '../../core/widgets/section_background.dart';
+import '../../core/widgets/tile_layout.dart';
 import '../../content/models/kido_line.dart';
 import '../../l10n/app_localizations.dart';
 import '../kido/kido_controller.dart';
@@ -38,9 +39,6 @@ class HomeScreen extends ConsumerStatefulWidget {
 }
 
 class _HomeScreenState extends ConsumerState<HomeScreen> {
-  /// Sections per page: two rows of five, big enough for small fingers.
-  static const perPage = _SectionGrid.perRow * 2;
-
   int _page = 0;
 
   @override
@@ -83,106 +81,122 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               const <Section>[])
         s.id,
     ];
-    final pages = (sections.length / perPage).ceil().clamp(1, 99);
-    final page = _page.clamp(0, pages - 1);
-    final shown = sections.skip(page * perPage).take(perPage).toList();
-
     return Scaffold(
       body: SectionBackground(
         child: SafeArea(
-          child: Stack(
-            children: [
-              Padding(
-                // The left column is Kido's and the right one holds the
-                // sticker book and games; tiles never sit under either.
-                padding: const EdgeInsets.symmetric(
-                  horizontal: AppLayout.sideZone,
-                  vertical: AppSpacing.md,
+          child: LayoutBuilder(
+            builder: (context, constraints) {
+              // Up to two rows of five; fewer, bigger tiles on small phones,
+              // with the rest on the next page.
+              final layout = TileLayout.fit(
+                Size(
+                  constraints.maxWidth - AppLayout.sideZone * 2,
+                  constraints.maxHeight - AppSpacing.md * 2,
                 ),
-                child: _SectionGrid(
-                  // A new page pops in afresh.
-                  key: ValueKey(page),
-                  sections: shown,
-                  labelOf: (id) => sectionLabel(l10n, id),
-                  imageOf: (id) => catalog?.section(id)?.image,
-                  onOpen: open,
-                ),
-              ),
-              Align(
-                alignment: Alignment.centerRight,
-                child: Padding(
-                  padding: const EdgeInsets.all(AppSpacing.md),
-                  child: PopIn(
-                    index: 6,
-                    child: BouncyButton(
-                      semanticLabel: l10n.games,
-                      onPressed: () => context.go(AppRoutes.games),
-                      child: const _GamesButton(),
+                minHeight: AppLayout.sectionTileMinHeight,
+              );
+              final pages = layout.pagesFor(sections.length);
+              final page = _page.clamp(0, pages - 1);
+              final shown = sections
+                  .skip(page * layout.perPage)
+                  .take(layout.perPage)
+                  .toList();
+              return Stack(
+                children: [
+                  Padding(
+                    // The left column is Kido's and the right one holds the
+                    // sticker book and games; tiles never sit under either.
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: AppLayout.sideZone,
+                      vertical: AppSpacing.md,
+                    ),
+                    child: _SectionGrid(
+                      // A new page pops in afresh.
+                      key: ValueKey(page),
+                      sections: shown,
+                      layout: layout,
+                      labelOf: (id) => sectionLabel(l10n, id),
+                      imageOf: (id) => catalog?.section(id)?.image,
+                      onOpen: open,
                     ),
                   ),
-                ),
-              ),
-              // Grown-ups' corner: small and plain on purpose; the parent
-              // gate behind it keeps children out.
-              Align(
-                alignment: Alignment.topLeft,
-                child: Padding(
-                  padding: const EdgeInsets.all(AppSpacing.md),
-                  child: Semantics(
-                    button: true,
-                    label: l10n.parentArea,
-                    excludeSemantics: true,
-                    child: IconButton.filledTonal(
-                      iconSize: AppSpacing.xl,
-                      onPressed: () => context.go(AppRoutes.parent),
-                      icon: const Icon(Icons.lock_rounded),
-                    ),
-                  ),
-                ),
-              ),
-              Align(
-                alignment: Alignment.topRight,
-                child: Padding(
-                  padding: const EdgeInsets.all(AppSpacing.md),
-                  child: BouncyButton(
-                    semanticLabel: l10n.stickerBook,
-                    onPressed: () => context.go(AppRoutes.stickers),
-                    child: StickerJar(
-                      count: ref.watch(progressProvider).learned.length,
-                    ),
-                  ),
-                ),
-              ),
-              // More sections on the next page (taps only, no swiping).
-              if (page < pages - 1)
-                Align(
-                  alignment: Alignment.bottomRight,
-                  child: Padding(
-                    padding: const EdgeInsets.all(AppSpacing.md),
-                    child: PopIn(
-                      index: 8,
-                      child: ArrowButton(
-                        direction: ArrowDirection.next,
-                        color: AppColors.numbersAccent,
-                        onPressed: () => setState(() => _page = page + 1),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: Padding(
+                      padding: const EdgeInsets.all(AppSpacing.md),
+                      child: PopIn(
+                        index: 6,
+                        child: BouncyButton(
+                          semanticLabel: l10n.games,
+                          onPressed: () => context.go(AppRoutes.games),
+                          child: const _GamesButton(),
+                        ),
                       ),
                     ),
                   ),
-                ),
-              if (page > 0)
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding: const EdgeInsets.all(AppSpacing.md),
-                    child: ArrowButton(
-                      direction: ArrowDirection.previous,
-                      color: AppColors.numbersAccent,
-                      onPressed: () => setState(() => _page = page - 1),
+                  // Grown-ups' corner: small and plain on purpose; the parent
+                  // gate behind it keeps children out.
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Padding(
+                      padding: const EdgeInsets.all(AppSpacing.md),
+                      child: Semantics(
+                        button: true,
+                        label: l10n.parentArea,
+                        excludeSemantics: true,
+                        child: IconButton.filledTonal(
+                          iconSize: AppSpacing.xl,
+                          onPressed: () => context.go(AppRoutes.parent),
+                          icon: const Icon(Icons.lock_rounded),
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              const KidoCorner(),
-            ],
+                  Align(
+                    alignment: Alignment.topRight,
+                    child: Padding(
+                      padding: const EdgeInsets.all(AppSpacing.md),
+                      child: BouncyButton(
+                        semanticLabel: l10n.stickerBook,
+                        onPressed: () => context.go(AppRoutes.stickers),
+                        child: StickerJar(
+                          count: ref.watch(progressProvider).learned.length,
+                        ),
+                      ),
+                    ),
+                  ),
+                  // More sections on the next page (taps only, no swiping).
+                  if (page < pages - 1)
+                    Align(
+                      alignment: Alignment.bottomRight,
+                      child: Padding(
+                        padding: const EdgeInsets.all(AppSpacing.md),
+                        child: PopIn(
+                          index: 8,
+                          child: ArrowButton(
+                            direction: ArrowDirection.next,
+                            color: AppColors.numbersAccent,
+                            onPressed: () => setState(() => _page = page + 1),
+                          ),
+                        ),
+                      ),
+                    ),
+                  if (page > 0)
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Padding(
+                        padding: const EdgeInsets.all(AppSpacing.md),
+                        child: ArrowButton(
+                          direction: ArrowDirection.previous,
+                          color: AppColors.numbersAccent,
+                          onPressed: () => setState(() => _page = page - 1),
+                        ),
+                      ),
+                    ),
+                  const KidoCorner(),
+                ],
+              );
+            },
           ),
         ),
       ),
@@ -217,14 +231,11 @@ class _SectionGrid extends StatelessWidget {
     required this.labelOf,
     required this.imageOf,
     required this.onOpen,
+    required this.layout,
     super.key,
   });
 
-  static const perRow = 5;
-
-  /// Tiles keep their two-row size on a page with fewer sections.
-  static const minRows = 2;
-
+  final TileLayout layout;
   final List<SectionId> sections;
   final String Function(SectionId) labelOf;
   final String? Function(SectionId) imageOf;
@@ -232,16 +243,17 @@ class _SectionGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final perRow = layout.columns;
     final rows = [
       for (var i = 0; i < sections.length; i += perRow)
-        sections.sublist(i, (i + perRow).clamp(0, sections.length)),
+        sections.sublist(i, math.min(i + perRow, sections.length)),
     ];
-    return LayoutBuilder(
-      builder: (context, constraints) {
+    return Builder(
+      builder: (context) {
         const gap = AppSpacing.tapGap;
-        final width = (constraints.maxWidth - gap * (perRow - 1)) / perRow;
-        final slots = math.max(rows.length, minRows);
-        final height = (constraints.maxHeight - gap * (slots - 1)) / slots;
+        // Same tile size on every page, even a page with fewer sections.
+        final width = layout.tile.width;
+        final height = layout.tile.height;
         var index = 0;
         return Column(
           mainAxisAlignment: MainAxisAlignment.center,

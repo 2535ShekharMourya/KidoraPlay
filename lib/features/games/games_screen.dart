@@ -8,6 +8,7 @@ import '../../core/theme/section_theme.dart';
 import '../../core/widgets/big_back_button.dart';
 import '../../core/widgets/bouncy_button.dart';
 import '../../core/widgets/idle_float.dart';
+import '../../core/widgets/paged_tiles.dart';
 import '../../core/widgets/pop_in.dart';
 import '../../core/widgets/section_background.dart';
 import '../../l10n/app_localizations.dart';
@@ -42,36 +43,31 @@ class GamesScreen extends StatelessWidget {
         child: SafeArea(
           child: Stack(
             children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: AppLayout.sideZone,
-                  vertical: AppSpacing.xxl,
-                ),
-                child: Row(
-                  children: [
-                    for (final (i, kind) in GameKind.values.indexed)
-                      Expanded(
-                        child: Padding(
-                          padding: const EdgeInsets.all(AppSpacing.tapGap / 2),
-                          child: PopIn(
-                            index: i,
-                            child: IdleFloat(
-                              phase: i / GameKind.values.length,
-                              child: BouncyButton(
-                                semanticLabel: labelFor(l10n, kind),
-                                onPressed: () =>
-                                    context.go(AppRoutes.game(kind)),
-                                child: _GameCard(
-                                  image: imageFor(kind),
-                                  label: labelFor(l10n, kind),
-                                  color: SectionTheme.of(kind.theme).accent,
-                                ),
-                              ),
-                            ),
+              // One row of four; two rows on small phones (never thin).
+              Positioned.fill(
+                child: PagedTiles(
+                  count: GameKind.values.length,
+                  maxColumns: GameKind.values.length,
+                  minHeight: AppLayout.sectionTileMinHeight,
+                  arrowColor: AppColors.numbersAccent,
+                  builder: (context, i, slot) {
+                    final kind = GameKind.values[i];
+                    return PopIn(
+                      index: slot,
+                      child: IdleFloat(
+                        phase: i / GameKind.values.length,
+                        child: BouncyButton(
+                          semanticLabel: labelFor(l10n, kind),
+                          onPressed: () => context.go(AppRoutes.game(kind)),
+                          child: _GameCard(
+                            image: imageFor(kind),
+                            label: labelFor(l10n, kind),
+                            color: SectionTheme.of(kind.theme).accent,
                           ),
                         ),
                       ),
-                  ],
+                    );
+                  },
                 ),
               ),
               const Align(alignment: Alignment.topLeft, child: BigBackButton()),

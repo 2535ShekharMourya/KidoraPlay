@@ -1,5 +1,3 @@
-import 'dart:math' as math;
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -12,8 +10,8 @@ import '../../core/settings/app_settings.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_tokens.dart';
 import '../../core/theme/section_theme.dart';
-import '../../core/widgets/arrow_button.dart';
 import '../../core/widgets/big_back_button.dart';
+import '../../core/widgets/paged_tiles.dart';
 import '../../core/widgets/bouncy_button.dart';
 import '../../core/widgets/item_picture.dart';
 import '../../core/widgets/pop_in.dart';
@@ -32,11 +30,8 @@ class StickerBookScreen extends ConsumerStatefulWidget {
 }
 
 class _StickerBookScreenState extends ConsumerState<StickerBookScreen> {
-  static const _perPage = AppLayout.gridColumns * AppLayout.gridRows;
-
   /// Null: choosing a section. Otherwise: that section's stickers.
   SectionId? _section;
-  int _page = 0;
 
   void _say(LearningItem item) {
     final languages = ref.read(settingsProvider).language.languages;
@@ -54,36 +49,21 @@ class _StickerBookScreenState extends ConsumerState<StickerBookScreen> {
         child: SafeArea(
           child: Stack(
             children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: AppLayout.sideZone,
-                  vertical: AppSpacing.md,
-                ),
-                child: Center(
-                  child: Wrap(
-                    alignment: WrapAlignment.center,
-                    spacing: AppSpacing.tapGap,
-                    runSpacing: AppSpacing.tapGap,
-                    children: [
-                      for (final (i, section) in sections.indexed)
-                        SizedBox(
-                          width: AppSpacing.minTapTarget,
-                          height: AppSpacing.minTapTarget * 1.3,
-                          child: PopIn(
-                            index: i,
-                            child: _SectionTab(
-                              id: section.id,
-                              image: section.image,
-                              label: section.titleEn,
-                              selected: false,
-                              onPressed: () => setState(() {
-                                _section = section.id;
-                                _page = 0;
-                              }),
-                            ),
-                          ),
-                        ),
-                    ],
+              Positioned.fill(
+                child: PagedTiles(
+                  count: sections.length,
+                  minHeight: AppLayout.sectionTileMinHeight,
+                  arrowColor: AppColors.numbersAccent,
+                  builder: (context, i, slot) => PopIn(
+                    index: slot,
+                    child: _SectionTab(
+                      id: sections[i].id,
+                      image: sections[i].image,
+                      label: sections[i].titleEn,
+                      selected: false,
+                      onPressed: () =>
+                          setState(() => _section = sections[i].id),
+                    ),
                   ),
                 ),
               ),
@@ -104,79 +84,53 @@ class _StickerBookScreenState extends ConsumerState<StickerBookScreen> {
     final items = ref.watch(scopeItemsProvider((section: selected, row: null)));
     final progress = ref.watch(progressProvider);
     final theme = SectionTheme.of(selected);
-    final pages = math.max(1, (items.length / _perPage).ceil());
-    final page = _page.clamp(0, pages - 1);
-    final pageItems = items.skip(page * _perPage).take(_perPage).toList();
+    const header = AppSpacing.minTapTarget;
 
     return Scaffold(
       body: SectionBackground(
         child: SafeArea(
           child: Stack(
             children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: AppLayout.sideZone,
-                  vertical: AppSpacing.sm,
+              Positioned.fill(
+                child: PagedTiles(
+                  key: ValueKey(selected),
+                  count: items.length,
+                  square: true,
+                  arrowColor: theme.accent,
+                  padding: const EdgeInsets.fromLTRB(
+                    AppLayout.sideZone,
+                    AppSpacing.sm * 2 + header,
+                    AppLayout.sideZone,
+                    AppSpacing.sm,
+                  ),
+                  builder: (context, i, slot) => PopIn(
+                    index: slot,
+                    child: _Sticker(
+                      item: items[i],
+                      learned: progress.isLearned(items[i].id),
+                      accent: theme.accent,
+                      onPressed: () => _say(items[i]),
+                    ),
+                  ),
                 ),
-                child: Column(
-                  children: [
-                    // Section tabs.
-                    SizedBox(
-                      height: AppSpacing.minTapTarget,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          _SectionTab(
-                            id: selected,
-                            image: catalog?.section(selected)?.image,
-                            label:
-                                catalog?.section(selected)?.titleEn ??
-                                selected.name,
-                            selected: true,
-                            onPressed: () {},
-                          ),
-                        ],
-                      ),
+              ),
+              // The section's tab on top.
+              Align(
+                alignment: Alignment.topCenter,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: AppSpacing.sm),
+                  child: SizedBox(
+                    height: header,
+                    width: header,
+                    child: _SectionTab(
+                      id: selected,
+                      image: catalog?.section(selected)?.image,
+                      label:
+                          catalog?.section(selected)?.titleEn ?? selected.name,
+                      selected: true,
+                      onPressed: () {},
                     ),
-                    const SizedBox(height: AppSpacing.sm),
-                    Expanded(
-                      child: LayoutBuilder(
-                        builder: (context, constraints) {
-                          const gap = AppSpacing.tapGap;
-                          final size = math.max(
-                            AppSpacing.minTapTarget,
-                            math.min(
-                              (constraints.maxWidth - gap * 4) / 5,
-                              (constraints.maxHeight - gap) / 2,
-                            ),
-                          );
-                          return Center(
-                            child: Wrap(
-                              key: ValueKey('$_section-$page'),
-                              spacing: gap,
-                              runSpacing: gap,
-                              alignment: WrapAlignment.center,
-                              children: [
-                                for (final (i, item) in pageItems.indexed)
-                                  SizedBox.square(
-                                    dimension: size,
-                                    child: PopIn(
-                                      index: i,
-                                      child: _Sticker(
-                                        item: item,
-                                        learned: progress.isLearned(item.id),
-                                        accent: theme.accent,
-                                        onPressed: () => _say(item),
-                                      ),
-                                    ),
-                                  ),
-                              ],
-                            ),
-                          );
-                        },
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
               Align(
@@ -186,30 +140,6 @@ class _StickerBookScreenState extends ConsumerState<StickerBookScreen> {
                   onPressed: () => setState(() => _section = null),
                 ),
               ),
-              if (page > 0)
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding: const EdgeInsets.all(AppSpacing.md),
-                    child: ArrowButton(
-                      direction: ArrowDirection.previous,
-                      color: theme.accent,
-                      onPressed: () => setState(() => _page = page - 1),
-                    ),
-                  ),
-                ),
-              if (page < pages - 1)
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: Padding(
-                    padding: const EdgeInsets.all(AppSpacing.md),
-                    child: ArrowButton(
-                      direction: ArrowDirection.next,
-                      color: theme.accent,
-                      onPressed: () => setState(() => _page = page + 1),
-                    ),
-                  ),
-                ),
               const KidoCorner(),
             ],
           ),
