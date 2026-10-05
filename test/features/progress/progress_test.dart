@@ -101,13 +101,17 @@ void main() {
   });
 
   group('learn card rewards', () {
-    test('finding the picture earns a sticker', () async {
+    test('earning all the stars earns a sticker', () async {
       final audio = FakeAudio();
       final c = await containerWith(audio: audio);
       c.listen(learnCardControllerProvider('cow'), (_, _) {});
       final card = c.read(learnCardControllerProvider('cow').notifier)
         ..attach((section: SectionId.animals, row: null));
       await card.playLesson();
+      await card.tapPicture();
+      await card.tapPicture();
+      // Not yet: two of three stars.
+      expect(c.read(progressProvider).isLearned('cow'), isFalse);
       await card.tapPicture();
 
       expect(c.read(learnCardControllerProvider('cow')).stickers, 1);
@@ -131,11 +135,14 @@ void main() {
       final card = c.read(learnCardControllerProvider('ten').notifier)
         ..attach(row1);
       await card.playLesson();
-      audio.voice.played.clear();
-      await card.tapPicture();
+      for (var i = 0; i < 3; i++) {
+        audio.voice.played.clear();
+        await card.tapPicture();
+      }
 
       expect(c.read(learnCardControllerProvider('ten')).completions, 1);
-      expect(audio.sfxNames, ['cheer', 'sparkle']);
+      final sfx = audio.sfxNames;
+      expect(sfx.sublist(sfx.length - 2), ['cheer', 'sparkle']);
       // "You learned" + "ten" + "Numbers".
       expect(audio.voice.played.sublist(audio.voice.played.length - 3), [
         'assets/audio/en/kido/you_learned.m4a',

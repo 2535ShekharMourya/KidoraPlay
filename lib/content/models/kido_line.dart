@@ -35,6 +35,12 @@ abstract final class KidoEvent {
   /// "Here it is! Tap the apple!" (idle hint).
   static const hintTap = 'hint_tap';
   static const praise = 'praise';
+
+  /// "Tap the picture, and see what happens!" (first visit to a section).
+  static const tapToPlay = 'tap_to_play';
+
+  /// "Let's see the next one!" after a card's stars are all earned.
+  static const nextOne = 'next_one';
   static const tryAgain = 'try_again';
   static const sectionDone = 'section_done';
   static const goodbye = 'goodbye';
@@ -74,6 +80,8 @@ abstract final class KidoEvent {
     findIt,
     hintTap,
     praise,
+    tapToPlay,
+    nextOne,
     tryAgain,
     sectionDone,
     goodbye,

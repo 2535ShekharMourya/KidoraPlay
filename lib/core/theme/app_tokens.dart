@@ -30,6 +30,9 @@ abstract final class AppLayout {
   /// Kido waving on the splash screen.
   static const splashKido = 150.0;
 
+  /// Star slots on a learn card.
+  static const starMeter = 36.0;
+
   /// Items per page in a section grid (5 × 2). Paging uses big arrow
   /// buttons because child screens never scroll or swipe.
   static const gridColumns = 5;
@@ -82,6 +85,12 @@ abstract final class AppDurations {
 
   /// Quiet gap after "Say it with me… Apple!" for the child to repeat.
   static const echoPause = Duration(milliseconds: 1600);
+
+  /// Learn cards: idle hints come sooner while the child discovers by
+  /// tapping (look → point + "Tap the apple!" → glow).
+  static const discoverLook = Duration(seconds: 3);
+  static const discoverPoint = Duration(seconds: 6);
+  static const discoverGlow = Duration(seconds: 9);
 
   /// Count along up to this number on number cards (longer gets tiring).
   static const countAlongMax = 10;

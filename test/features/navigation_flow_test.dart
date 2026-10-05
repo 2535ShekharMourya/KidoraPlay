@@ -1,4 +1,4 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
@@ -13,6 +13,7 @@ import 'package:kidoraplay/core/widgets/item_picture.dart';
 import 'package:kidoraplay/core/widgets/letter_tile.dart';
 import 'package:kidoraplay/features/home/home_screen.dart';
 import 'package:kidoraplay/features/learn_card/learn_card_screen.dart';
+import 'package:kidoraplay/features/learn_card/star_meter.dart';
 import 'package:kidoraplay/features/numbers/number_rows_screen.dart';
 import 'package:kidoraplay/features/section_grid/item_grid_screen.dart';
 
@@ -89,7 +90,9 @@ void main() {
     expect(find.byType(ArrowButton), findsNWidgets(2));
   });
 
-  testWidgets('tapping the picture replays the lesson', (tester) async {
+  testWidgets('tapping the picture discovers its sound and earns a star', (
+    tester,
+  ) async {
     final audio = await startApp(tester);
     await tester.tap(find.text('Animals'));
     await settle(tester);
@@ -105,9 +108,17 @@ void main() {
     );
     await settle(tester);
     expect(audio.voice.played.length, greaterThan(firstRun));
+    // Lion's first discovery is its roar.
     expect(
       audio.voice.played.sublist(firstRun),
-      contains('assets/audio/en/kido/look.m4a'),
+      contains('assets/audio/animals/lion.m4a'),
+    );
+    expect(
+      find.descendant(
+        of: find.byType(StarMeter),
+        matching: find.byIcon(Icons.star_rounded),
+      ),
+      findsOneWidget,
     );
     // Close the app so lesson and hint timers end with it.
     await tester.pumpWidget(const SizedBox());

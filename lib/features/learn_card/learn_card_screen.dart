@@ -34,6 +34,7 @@ import '../section_grid/section_items.dart';
 import '../tracing/trace_logic.dart';
 import 'learn_card_controller.dart';
 import 'spelling_strip.dart';
+import 'star_meter.dart';
 
 /// Reusable learn card for any item: big picture, the word (English and/or
 /// Hindi), place value for numbers, the spelling strip, and Kido teaching
@@ -123,9 +124,7 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
 
   /// Turns lesson changes into Kido's body language.
   void _directKido(LearnCardState? prev, LearnCardState next) {
-    final target = next.phase == LessonPhase.weDo
-        ? _centerOf(_tileKey(next.weDoTarget))
-        : _centerOf(_pictureKey);
+    final target = _centerOf(_pictureKey);
 
     if (next.celebrations > (prev?.celebrations ?? 0)) {
       _burst.fire();
@@ -151,6 +150,12 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
     if (next.stickers > (prev?.stickers ?? 0)) {
       _flySticker();
     }
+    if (next.stars > (prev?.stars ?? 0)) {
+      // A star earned: sparkle on the picture and a clap from Kido.
+      _burst.fire();
+      _kido.act(KidoAction.clap);
+      return;
+    }
     if (next.cheers > (prev?.cheers ?? 0)) {
       _kido.act(KidoAction.trumpet);
       return;
@@ -172,10 +177,9 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
           break;
       }
     }
-    final targetMoved = next.weDoTarget != prev?.weDoTarget;
-    if (next.phase != prev?.phase || targetMoved) {
+    if (next.phase != prev?.phase) {
       switch (next.phase) {
-        case LessonPhase.iDo || LessonPhase.weDo || LessonPhase.youDo:
+        case LessonPhase.iDo || LessonPhase.youDo:
           _kido.act(KidoAction.point, target: target);
         case LessonPhase.done || LessonPhase.idle:
           break;
@@ -213,8 +217,11 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
     final languages = ref.watch(
       settingsProvider.select((s) => s.language.languages),
     );
+    // The picture calls for a tap when the child goes quiet.
     final pictureBeckons =
-        state.phase == LessonPhase.youDo && state.hint == HintLevel.glow;
+        state.phase == LessonPhase.youDo &&
+        !state.busy &&
+        (state.hint == HintLevel.point || state.hint == HintLevel.glow);
 
     final canTrace =
         ref.watch(traceGuidesProvider).value?.glyphsFor(item) != null;
@@ -256,7 +263,7 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
                                         child: Beckon(
                                           key: _pictureKey,
                                           active: pictureBeckons,
-                                          strong: true,
+                                          strong: state.hint == HintLevel.glow,
                                           child: IdleFloat(
                                             child: Wiggle(
                                               active: state.reacting,
@@ -296,6 +303,8 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
                                         ]
                                       : languages,
                                   section: widget.scope.section,
+                                  stars: state.stars,
+                                  starGoal: state.starGoal,
                                 ),
                               ),
                             ),
@@ -309,6 +318,7 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
                             ? _BigLetter(
                                 letter: item.letter ?? '',
                                 accent: theme.accent,
+                                onTap: _controller.tapBigLetter,
                               )
                             : SpellingStrip(
                                 tiles: tiles,
@@ -316,8 +326,6 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
                                 highlighted: state.highlighted,
                                 accent: theme.accent,
                                 onTapLetter: _controller.tapLetter,
-                                beckonIndex: state.weDoTarget,
-                                strongBeckon: state.hint == HintLevel.glow,
                                 tileKeys: _tileKeys,
                               ),
                       ),
@@ -345,10 +353,15 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
                     alignment: Alignment.centerRight,
                     child: Padding(
                       padding: const EdgeInsets.all(AppSpacing.md),
-                      child: ArrowButton(
-                        direction: ArrowDirection.next,
-                        color: theme.accent,
-                        onPressed: () => goTo(items[index + 1]),
+                      // All stars earned: the way on glows and bounces.
+                      child: Beckon(
+                        active: state.phase == LessonPhase.done,
+                        strong: true,
+                        child: ArrowButton(
+                          direction: ArrowDirection.next,
+                          color: theme.accent,
+                          onPressed: () => goTo(items[index + 1]),
+                        ),
                       ),
                     ),
                   ),
@@ -497,33 +510,43 @@ class _CountBubble extends StatelessWidget {
 
 /// Hindi letter cards: the letter, big, where the spelling strip would be.
 class _BigLetter extends StatelessWidget {
-  const _BigLetter({required this.letter, required this.accent});
+  const _BigLetter({
+    required this.letter,
+    required this.accent,
+    required this.onTap,
+  });
 
   final String letter;
   final Color accent;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: AspectRatio(
         aspectRatio: 1,
-        child: Container(
-          decoration: BoxDecoration(
-            color: accent,
-            borderRadius: BorderRadius.circular(AppRadii.card),
-            border: Border.all(
-              color: AppColors.outline,
-              width: AppStroke.thick,
+        child: BouncyButton(
+          semanticLabel: letter,
+          sfx: null,
+          onPressed: onTap,
+          child: Container(
+            decoration: BoxDecoration(
+              color: accent,
+              borderRadius: BorderRadius.circular(AppRadii.card),
+              border: Border.all(
+                color: AppColors.outline,
+                width: AppStroke.thick,
+              ),
             ),
-          ),
-          alignment: Alignment.center,
-          child: FittedBox(
-            child: Padding(
-              padding: const EdgeInsets.all(AppSpacing.sm),
-              child: Text(
-                letter,
-                style: Theme.of(context).textTheme.displayLarge
-                    ?.copyWith(color: AppColors.white, height: 1.3),
+            alignment: Alignment.center,
+            child: FittedBox(
+              child: Padding(
+                padding: const EdgeInsets.all(AppSpacing.sm),
+                child: Text(
+                  letter,
+                  style: Theme.of(context).textTheme.displayLarge
+                      ?.copyWith(color: AppColors.white, height: 1.3),
+                ),
               ),
             ),
           ),
@@ -538,11 +561,15 @@ class _WordPanel extends StatelessWidget {
     required this.item,
     required this.languages,
     required this.section,
+    required this.stars,
+    required this.starGoal,
   });
 
   final LearningItem item;
   final List<ContentLanguage> languages;
   final SectionId section;
+  final int stars;
+  final int starGoal;
 
   @override
   Widget build(BuildContext context) {
@@ -551,6 +578,7 @@ class _WordPanel extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        if (starGoal > 0) StarMeter(stars: stars, goal: starGoal),
         // The first word is the one being taught, so it is the big one.
         for (final (i, lang) in languages.indexed)
           FittedBox(

@@ -18,22 +18,37 @@ import '../kido/kido_voice.dart';
 import '../progress/progress_controller.dart';
 import '../section_grid/section_items.dart';
 
-/// Where the learn card is in "I do, we do, you do".
+/// Where the learn card is.
 enum LessonPhase {
   /// Nothing yet.
   idle,
 
-  /// Kido shows it: look, name, sound/count, fact, spelling, echo.
+  /// Kido names it ("A for Apple!"). Short: the child acts next.
   iDo,
 
-  /// "Now let's spell it together!": the child taps each glowing letter.
-  weDo,
-
-  /// "Where is the apple? Can you tap it?": the child taps the picture.
+  /// The child taps the picture to discover more, earning a star each time.
   youDo,
 
-  /// Finished (celebrated); tapping the picture replays.
+  /// All stars earned (celebrated); taps keep discovering, for fun.
   done,
+}
+
+/// What one tap on the picture reveals, in order of excitement.
+enum Discovery {
+  /// The real sound (animals, birds, vehicles), with the picture reacting.
+  sound,
+
+  /// "Let's count!" 1, 2, 3 … (numbers up to ten).
+  count,
+
+  /// A one-line fun fact (or the little chat on Hindi cards).
+  fact,
+
+  /// The letters light up one by one (the letter itself on Hindi cards).
+  spell,
+
+  /// "Say it with me… Apple!" with a quiet pause for the child, then "Yay!".
+  say,
 }
 
 @immutable
@@ -43,13 +58,16 @@ class LearnCardState {
     this.highlighted,
     this.revealed = 0,
     this.reacting = false,
-    this.weDoTarget,
     this.hint = HintLevel.none,
     this.celebrations = 0,
     this.counted = 0,
     this.cheers = 0,
     this.stickers = 0,
     this.completions = 0,
+    this.stars = 0,
+    this.starGoal = 0,
+    this.busy = false,
+    this.discovery,
   });
 
   final LessonPhase phase;
@@ -57,19 +75,16 @@ class LearnCardState {
   /// Spelling tile currently lit up (being spoken), if any.
   final int? highlighted;
 
-  /// How many spelling tiles are visible (they appear one by one).
+  /// How many spelling tiles are visible.
   final int revealed;
 
   /// The picture is reacting to its sound (animals, birds).
   final bool reacting;
 
-  /// During "we do": the letter tile the child should tap next.
-  final int? weDoTarget;
-
-  /// Idle hint level for the current target.
+  /// Idle hint level (the picture is the target).
   final HintLevel hint;
 
-  /// Increments each time the child completes the card.
+  /// Increments each time the child completes the card (all stars).
   final int celebrations;
 
   /// Number cards: how far Kido has counted (0 = not counting).
@@ -84,7 +99,17 @@ class LearnCardState {
   /// Increments when this item completes its set (row or section).
   final int completions;
 
-  bool get playing => phase == LessonPhase.iDo;
+  /// Stars earned on this card (one per discovery tap) out of [starGoal].
+  final int stars;
+  final int starGoal;
+
+  /// A discovery (or the name) is playing; taps just bounce meanwhile.
+  final bool busy;
+
+  /// The discovery playing now, if any.
+  final Discovery? discovery;
+
+  bool get playing => busy;
 
   LearnCardState copyWith({
     LessonPhase? phase,
@@ -92,44 +117,47 @@ class LearnCardState {
     bool clearHighlight = false,
     int? revealed,
     bool? reacting,
-    int? weDoTarget,
-    bool clearWeDoTarget = false,
     HintLevel? hint,
     int? celebrations,
     int? counted,
     int? cheers,
     int? stickers,
     int? completions,
+    int? stars,
+    int? starGoal,
+    bool? busy,
+    Discovery? discovery,
+    bool clearDiscovery = false,
   }) => LearnCardState(
     phase: phase ?? this.phase,
     highlighted: clearHighlight ? null : highlighted ?? this.highlighted,
     revealed: revealed ?? this.revealed,
     reacting: reacting ?? this.reacting,
-    weDoTarget: clearWeDoTarget ? null : weDoTarget ?? this.weDoTarget,
     hint: hint ?? this.hint,
     celebrations: celebrations ?? this.celebrations,
     counted: counted ?? this.counted,
     cheers: cheers ?? this.cheers,
     stickers: stickers ?? this.stickers,
     completions: completions ?? this.completions,
+    stars: stars ?? this.stars,
+    starGoal: starGoal ?? this.starGoal,
+    busy: busy ?? this.busy,
+    discovery: clearDiscovery ? null : discovery ?? this.discovery,
   );
 }
 
-/// Runs one learn card the way young children learn best: short, warm,
-/// multi-sensory, with lots of repetition and a turn for the child.
+/// Runs one learn card the way toddlers engage best: the child sets the
+/// pace and every tap pays off at once.
 ///
-/// 1. **I do**: "Look!" → the name ("A for Apple!", or the animal's name
-///    then "Listen to the cow!" + its sound, or counting "1, 2, 3") → a
-///    one-line fun fact → letter-by-letter spelling → "Say it with me…
-///    Apple!" with a quiet pause for the child to echo → "Yay!".
-/// 2. **We do** (first visit to a section only): "Now let's spell it
-///    together!"; each letter glows in turn and the child taps it.
-/// 3. **You do**: "Where is the apple? Can you tap it?" (later visits: no
-///    prompt, just idle hints); the child taps it and Kido praises.
+/// 1. Kido names it ("A for Apple!") — about two seconds.
+/// 2. Each tap on the picture discovers something new — the sound, a count,
+///    a fun fact, the spelling, "say it with me" — and earns a star.
+/// 3. All stars: sticker, celebration, and "Let's see the next one!".
 ///
-/// No "wrong" answers: tapping another letter just says that letter. Idle
-/// hints escalate gently (look → point + "Here it is!" → glow). With sound
-/// off or a missing clip, every step still runs silently on a timer.
+/// Taps never restart or cut off what's playing; they bounce and pop.
+/// No "wrong" answers. Idle hints (look → point + "Tap the apple!" →
+/// glow) bring a quiet child back. With sound off or a missing clip, every
+/// step still runs silently on a timer.
 class LearnCardController extends Notifier<LearnCardState> {
   LearnCardController(this.itemId);
 
@@ -139,7 +167,19 @@ class LearnCardController extends Notifier<LearnCardState> {
   /// The set this card belongs to, for stickers and set completion.
   ItemScope? _scope;
   bool _disposed = false;
-  late final HintTimer _hints = HintTimer(onLevel: _onHint);
+  List<Discovery> _steps = const [];
+  int _nextStep = 0;
+
+  /// Most stars a card asks for: short enough to finish, long enough to
+  /// see the best parts.
+  static const maxStars = 3;
+
+  late final HintTimer _hints = HintTimer(
+    onLevel: _onHint,
+    lookAfter: AppDurations.discoverLook,
+    pointAfter: AppDurations.discoverPoint,
+    glowAfter: AppDurations.discoverGlow,
+  );
 
   LearningItem? get _item =>
       ref.read(contentCatalogProvider).value?.itemById(itemId);
@@ -174,13 +214,15 @@ class LearnCardController extends Notifier<LearnCardState> {
   void pause() {
     _run++;
     _hints.stop();
+    state = state.copyWith(busy: false, reacting: false, clearDiscovery: true);
     unawaited(ref.read(audioServiceProvider).stopVoice(owner: this));
   }
 
   /// Tells the card which set (section or numbers row) it is shown in.
   void attach(ItemScope scope) => _scope = scope;
 
-  /// Opens the card: full guidance on the first visit to a section.
+  /// Opens the card. On the first visit to a section Kido also says "Tap
+  /// the picture, and see what happens!".
   Future<void> start() async {
     final item = _item;
     if (item == null) return;
@@ -189,33 +231,155 @@ class LearnCardController extends Notifier<LearnCardState> {
     );
   }
 
-  /// Runs (or restarts) the lesson from "I do".
+  /// The things this item can reveal, in tap order.
+  List<Discovery> discoveriesFor(LearningItem item) {
+    final n = item.number;
+    return [
+      if (item.sound != null) Discovery.sound,
+      if (n != null && n <= AppDurations.countAlongMax) Discovery.count,
+      if (_talkLanguages.any((l) => item.factVoice(l) != null)) Discovery.fact,
+      if (item.section.hasSpelling || item.letterVoice != null) Discovery.spell,
+      Discovery.say,
+    ];
+  }
+
+  /// Names the item, then hands over to the child.
   Future<void> playLesson({bool fullGuidance = false}) async {
     final item = _item;
     if (item == null) return;
     final run = ++_run;
     _hints.stop();
-    final tiles = item.spelling;
-    final words = _words(item);
-
+    _steps = discoveriesFor(item);
+    _nextStep = 0;
     state = state.copyWith(
       phase: LessonPhase.iDo,
       clearHighlight: true,
-      clearWeDoTarget: true,
+      revealed: item.spelling.length,
       hint: HintLevel.none,
+      counted: 0,
+      stars: 0,
+      starGoal: math.min(maxStars, _steps.length),
+      busy: true,
+      clearDiscovery: true,
+    );
+
+    await _sayName(item, run);
+    if (!_alive(run)) return;
+    if (fullGuidance) {
+      await _kidoSay(KidoEvent.tapToPlay, run);
+      if (!_alive(run)) return;
+    }
+    state = state.copyWith(phase: LessonPhase.youDo, busy: false);
+    _hints.start();
+  }
+
+  /// Child tapped the picture: discover the next thing (and earn a star).
+  Future<void> tapPicture() async {
+    final item = _item;
+    if (item == null || state.phase == LessonPhase.idle) return;
+
+    // Something is playing: a happy bounce and pop, never a restart.
+    if (state.busy && state.phase != LessonPhase.iDo) {
+      _audio.playSfx(Sfx.pop);
+      return;
+    }
+
+    // Tapping during the name means "I'm ready!": go straight on.
+    final run = ++_run;
+    _hints.stop();
+    if (_steps.isEmpty) _steps = discoveriesFor(item);
+    final step = _steps[_nextStep % _steps.length];
+    _nextStep++;
+    final earning =
+        state.phase != LessonPhase.done && state.stars < state.starGoal;
+    if (earning) _audio.playSfx(Sfx.sparkle);
+    state = state.copyWith(
+      phase: state.phase == LessonPhase.done
+          ? LessonPhase.done
+          : LessonPhase.youDo,
+      busy: true,
+      hint: HintLevel.none,
+      stars: earning ? state.stars + 1 : state.stars,
+      discovery: step,
+      clearHighlight: true,
+      reacting: false,
       counted: 0,
     );
 
-    // Attention.
-    await _kidoSay(KidoEvent.look, run);
+    try {
+      await _discover(step, item, run);
+    } finally {
+      if (_alive(run)) {
+        state = state.copyWith(
+          busy: false,
+          reacting: false,
+          clearHighlight: true,
+          clearDiscovery: true,
+          counted: 0,
+        );
+      }
+    }
     if (!_alive(run)) return;
 
-    // Name it.
+    if (earning && state.stars >= state.starGoal) {
+      await _complete(item, run);
+    } else if (state.phase != LessonPhase.done) {
+      _hints.start();
+    }
+  }
+
+  /// Child tapped a letter tile: say that letter (stops anything playing).
+  Future<void> tapLetter(int index) async {
+    final item = _item;
+    if (item == null) return;
+    final audio = item.spelling[index].audioAsset;
+    if (audio == null) return;
+
+    final run = ++_run;
+    _hints.stop();
+    state = state.copyWith(
+      phase: state.phase == LessonPhase.done
+          ? LessonPhase.done
+          : LessonPhase.youDo,
+      highlighted: index,
+      revealed: item.spelling.length,
+      reacting: false,
+      counted: 0,
+      busy: false,
+      clearDiscovery: true,
+    );
+    await _speak([audio], run);
+    if (!_alive(run)) return;
+    state = state.copyWith(clearHighlight: true);
+    if (state.phase != LessonPhase.done) _hints.start();
+  }
+
+  /// Child tapped the big Hindi letter: "अ… अनार!".
+  Future<void> tapBigLetter() async {
+    final item = _item;
+    if (item == null || item.letterVoice == null) return;
+    final run = ++_run;
+    _hints.stop();
+    state = state.copyWith(
+      phase: state.phase == LessonPhase.done
+          ? LessonPhase.done
+          : LessonPhase.youDo,
+      busy: false,
+      reacting: false,
+      clearDiscovery: true,
+    );
+    await _speak([item.letterVoice!, item.voiceHi], run);
+    if (_alive(run) && state.phase != LessonPhase.done) _hints.start();
+  }
+
+  /// Any tap anywhere on the screen: hints go away and the clock restarts.
+  void userTapped() => _hints.reset();
+
+  Future<void> _sayName(LearningItem item, int run) async {
     if (item.section == SectionId.hindi && item.voiceIntroHi != null) {
       // "अ से अनार!" in one breath.
       await _speak([item.voiceIntroHi!], run);
     } else if (item.section == SectionId.hindi && item.letterVoice != null) {
-      // "अ से अनार!"
       await _kidoSay(
         KidoEvent.letterFor,
         run,
@@ -225,172 +389,78 @@ class LearnCardController extends Notifier<LearnCardState> {
       );
     } else if (item.section == SectionId.abc && item.voiceIntroEn != null) {
       // "A for Apple!" in one breath, then the Hindi word when bilingual.
-      await _speak([item.voiceIntroEn!], run);
-      if (!_alive(run)) return;
-      if (_languages.contains(ContentLanguage.hi)) {
-        await _speak([item.voiceHi], run);
-      }
+      await _speak([
+        item.voiceIntroEn!,
+        if (_languages.contains(ContentLanguage.hi)) item.voiceHi,
+      ], run);
     } else if (item.section == SectionId.abc && item.letter != null) {
-      // "A for Apple" in English (the letters are the goal), then the
-      // Hindi word when bilingual.
       await _kidoSay(
         KidoEvent.letterFor,
         run,
         languages: const [ContentLanguage.en],
         item: item,
-        letterAudio: tiles.first.audioAsset,
+        letterAudio: item.spelling.first.audioAsset,
       );
       if (!_alive(run)) return;
       if (_languages.contains(ContentLanguage.hi)) {
         await _speak([item.voiceHi], run);
       }
     } else {
-      await _speak(words, run);
-    }
-    if (!_alive(run)) return;
-
-    // Hear it: animals and birds.
-    if (item.sound case final sound?) {
-      await _kidoSay(KidoEvent.listenSound, run, item: item);
-      if (!_alive(run)) return;
-      state = state.copyWith(reacting: true);
-      await _speak([sound], run);
-      if (!_alive(run)) return;
-      state = state.copyWith(reacting: false);
-    }
-
-    // Count it: small numbers.
-    final n = item.number;
-    if (n != null && n <= AppDurations.countAlongMax) {
-      await _countTo(n, run);
-      if (!_alive(run)) return;
-      await _speak(words, run);
-      if (!_alive(run)) return;
-    }
-
-    // Know something about it.
-    // The fact in Kido's talk language only (Hindi when bilingual).
-    final facts = [for (final l in _talkLanguages) ?item.factVoice(l)];
-    if (facts.isNotEmpty) {
-      await _speak(facts, run);
-      if (!_alive(run)) return;
-    }
-
-    // Spell it: tiles appear and light up letter by letter.
-    final voiced = item.section.hasSpelling
-        ? _voicedIndexes(item)
-        : const <int>[];
-    if (voiced.isNotEmpty) {
-      await _speak(
-        [for (final i in voiced) tiles[i].audioAsset!],
-        run,
-        onSegment: (k) {
-          if (!_alive(run)) return;
-          state = state.copyWith(
-            highlighted: voiced[k],
-            revealed: math.max(state.revealed, voiced[k] + 1),
-          );
-        },
-      );
-      if (!_alive(run)) return;
-      state = state.copyWith(clearHighlight: true, revealed: tiles.length);
-    }
-
-    // Say it together, with a quiet moment for the child's turn.
-    await _kidoSay(KidoEvent.sayWithMe, run);
-    if (!_alive(run)) return;
-    await _speak(words, run);
-    if (!_alive(run)) return;
-    await Future<void>.delayed(AppDurations.echoPause);
-    if (!_alive(run)) return;
-    state = state.copyWith(cheers: state.cheers + 1);
-    await _kidoSay(KidoEvent.yay, run);
-    if (!_alive(run)) return;
-
-    if (fullGuidance && voiced.isNotEmpty) {
-      await _kidoSay(KidoEvent.spellTogether, run);
-      if (!_alive(run)) return;
-      state = state.copyWith(phase: LessonPhase.weDo, weDoTarget: voiced.first);
-      _hints.start();
-    } else {
-      await _startYouDo(run, prompt: fullGuidance);
+      await _speak(_words(item), run);
     }
   }
 
-  /// Child tapped a letter tile.
-  Future<void> tapLetter(int index) async {
-    final item = _item;
-    if (item == null) return;
-    final audio = item.spelling[index].audioAsset;
-    if (audio == null) return;
+  Future<void> _discover(Discovery step, LearningItem item, int run) async {
+    switch (step) {
+      case Discovery.sound:
+        state = state.copyWith(reacting: true);
+        await _speak([item.sound!], run);
+        if (!_alive(run)) return;
+        state = state.copyWith(reacting: false);
+        // "Lion!" again, so the sound and the name go together.
+        await _speak([_words(item).first], run);
 
-    if (state.phase == LessonPhase.weDo) {
-      await _weDoTap(item, index, audio);
-      return;
+      case Discovery.count:
+        await _countTo(item.number!, run);
+        if (!_alive(run)) return;
+        await _speak(_words(item), run);
+
+      case Discovery.fact:
+        await _speak([for (final l in _talkLanguages) ?item.factVoice(l)], run);
+
+      case Discovery.spell:
+        if (!item.section.hasSpelling) {
+          // Hindi: the letter, then the word ("अ… अनार!").
+          await _speak([?item.letterVoice, item.voiceHi], run);
+          return;
+        }
+        final tiles = item.spelling;
+        final voiced = _voicedIndexes(item);
+        await _speak(
+          [for (final i in voiced) tiles[i].audioAsset!],
+          run,
+          onSegment: (k) {
+            if (_alive(run)) state = state.copyWith(highlighted: voiced[k]);
+          },
+        );
+        if (!_alive(run)) return;
+        state = state.copyWith(clearHighlight: true);
+        await _speak([_words(item).first], run);
+
+      case Discovery.say:
+        await _kidoSay(KidoEvent.sayWithMe, run);
+        if (!_alive(run)) return;
+        await _speak(_words(item), run);
+        if (!_alive(run)) return;
+        await Future<void>.delayed(AppDurations.echoPause);
+        if (!_alive(run)) return;
+        state = state.copyWith(cheers: state.cheers + 1);
+        await _kidoSay(KidoEvent.yay, run);
     }
-
-    // Anywhere else: stop what's playing and just say that letter.
-    final run = ++_run;
-    final wasYouDo = state.phase == LessonPhase.youDo;
-    _hints.stop();
-    state = state.copyWith(
-      phase: wasYouDo ? LessonPhase.youDo : LessonPhase.done,
-      highlighted: index,
-      revealed: item.spelling.length,
-      reacting: false,
-      counted: 0,
-    );
-    await _speak([audio], run);
-    if (!_alive(run)) return;
-    state = state.copyWith(clearHighlight: true);
-    if (wasYouDo) _hints.start();
   }
 
-  Future<void> _weDoTap(LearningItem item, int index, String audio) async {
-    final run = _run; // Taps continue the "we do" flow, not restart it.
-    final target = state.weDoTarget;
-    state = state.copyWith(highlighted: index, hint: HintLevel.none);
-    await _speak([audio], run);
-    if (!_alive(run) || state.phase != LessonPhase.weDo) return;
-
-    if (index != target) {
-      // A different letter: say it, no "wrong", keep the same target.
-      state = state.copyWith(clearHighlight: true);
-      return;
-    }
-
-    final next = _voicedIndexes(item).where((i) => i > index).firstOrNull;
-    if (next != null) {
-      state = state.copyWith(clearHighlight: true, weDoTarget: next);
-      return;
-    }
-
-    _hints.stop();
-    state = state.copyWith(clearHighlight: true, clearWeDoTarget: true);
-    await _speak(_words(item), run);
-    if (!_alive(run)) return;
-    await _kidoSay(KidoEvent.praise, run);
-    if (!_alive(run)) return;
-    await _startYouDo(run, prompt: true);
-  }
-
-  Future<void> _startYouDo(int run, {required bool prompt}) async {
-    state = state.copyWith(phase: LessonPhase.youDo, hint: HintLevel.none);
-    if (prompt) {
-      await _kidoSay(KidoEvent.findIt, run, item: _item);
-      if (!_alive(run)) return;
-    }
-    _hints.start();
-  }
-
-  /// Child tapped the picture: completes "you do", otherwise replays.
-  Future<void> tapPicture() async {
-    if (state.phase != LessonPhase.youDo) {
-      await playLesson();
-      return;
-    }
-    final run = ++_run;
-    _hints.stop();
+  /// All stars: sticker, celebration, then on to the next one.
+  Future<void> _complete(LearningItem item, int run) async {
     _audio.playSfx(Sfx.cheer);
     state = state.copyWith(
       phase: LessonPhase.done,
@@ -398,38 +468,35 @@ class LearnCardController extends Notifier<LearnCardState> {
       celebrations: state.celebrations + 1,
     );
 
-    final item = _item;
-    final scope =
-        _scope ?? (item == null ? null : (section: item.section, row: null));
-    var completed = false;
-    if (item != null && scope != null) {
-      final result = await ref
-          .read(progressProvider.notifier)
-          .markLearned(item, scope);
-      if (!_alive(run)) return;
-      completed = result.completedScope;
-      state = state.copyWith(
-        stickers: state.stickers + (result.newSticker ? 1 : 0),
-      );
-    }
+    final scope = _scope ?? (section: item.section, row: null);
+    final result = await ref
+        .read(progressProvider.notifier)
+        .markLearned(item, scope);
+    if (!_alive(run)) return;
+    state = state.copyWith(
+      stickers: state.stickers + (result.newSticker ? 1 : 0),
+    );
 
     await _kidoSay(KidoEvent.praise, run);
-    if (!_alive(run) || !completed || scope == null) return;
+    if (!_alive(run)) return;
 
-    // Finished the whole set: big celebration.
-    state = state.copyWith(completions: state.completions + 1);
-    _audio.playSfx(Sfx.sparkle);
-    final catalog = ref.read(contentCatalogProvider).value;
-    await _kidoSay(
-      KidoEvent.sectionDone,
-      run,
-      n: ref.read(scopeItemsProvider(scope)).length,
-      section: catalog?.section(scope.section),
-    );
+    if (result.completedScope) {
+      // Finished the whole set: big celebration.
+      state = state.copyWith(completions: state.completions + 1);
+      _audio.playSfx(Sfx.sparkle);
+      final catalog = ref.read(contentCatalogProvider).value;
+      await _kidoSay(
+        KidoEvent.sectionDone,
+        run,
+        n: ref.read(scopeItemsProvider(scope)).length,
+        section: catalog?.section(scope.section),
+      );
+      return;
+    }
+    final items = ref.read(scopeItemsProvider(scope));
+    final isLast = items.isNotEmpty && items.last.id == item.id;
+    if (!isLast) await _kidoSay(KidoEvent.nextOne, run);
   }
-
-  /// Any tap anywhere on the screen: hints go away and the clock restarts.
-  void userTapped() => _hints.reset();
 
   void _onHint(HintLevel level) {
     if (_disposed) return;
@@ -437,17 +504,8 @@ class LearnCardController extends Notifier<LearnCardState> {
     if (level != HintLevel.point) return;
     final item = _item;
     if (item == null) return;
-    // "Tap A!" during we do, "Here it is! Tap the apple!" during you do.
-    final target = state.phase == LessonPhase.weDo ? state.weDoTarget : null;
-    unawaited(
-      target != null
-          ? _kidoSay(
-              KidoEvent.tapLetter,
-              _run,
-              itemAudio: item.spelling[target].audioAsset,
-            )
-          : _kidoSay(KidoEvent.hintTap, _run, item: item),
-    );
+    // "Here it is! Tap the apple!"
+    unawaited(_kidoSay(KidoEvent.hintTap, _run, item: item));
   }
 
   List<String> _words(LearningItem item) => [
@@ -480,7 +538,6 @@ class LearnCardController extends Notifier<LearnCardState> {
         if (_alive(run)) state = state.copyWith(counted: k + 1);
       },
     );
-    if (_alive(run)) state = state.copyWith(counted: 0);
   }
 
   /// Plays [assets]; if nothing could be heard (muted or missing audio),
@@ -490,6 +547,7 @@ class LearnCardController extends Notifier<LearnCardState> {
     int run, {
     void Function(int index)? onSegment,
   }) async {
+    if (assets.isEmpty || !_alive(run)) return;
     final ok = await _audio.playVoiceSequence(
       assets,
       onSegment: onSegment,

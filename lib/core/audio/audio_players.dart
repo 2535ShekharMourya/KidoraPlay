@@ -9,6 +9,14 @@ abstract interface class VoicePlayer {
   /// Throws if the asset cannot be played.
   Future<void> play(String asset);
 
+  /// Plays [assets] back to back with no gaps (a stitched sentence like
+  /// "Tap the" + "apple"), calling [onIndex] as each one starts. Completes
+  /// when the last one finishes or playback is stopped.
+  Future<void> playAll(
+    List<String> assets, {
+    void Function(int index)? onIndex,
+  });
+
   Future<void> stop();
 
   Future<void> dispose();

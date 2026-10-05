@@ -13,6 +13,7 @@ class FakeVoicePlayer implements VoicePlayer {
   Completer<void>? _current;
 
   bool get isPlaying => _current != null && !_current!.isCompleted;
+  int _generation = 0;
 
   @override
   Future<void> play(String asset) async {
@@ -24,10 +25,27 @@ class FakeVoicePlayer implements VoicePlayer {
     }
   }
 
-  void finishCurrent() => _current?.complete();
+  void finishCurrent() {
+    if (isPlaying) _current!.complete();
+  }
+
+  /// Like the real player: clip by clip, stopping early if stopped.
+  @override
+  Future<void> playAll(
+    List<String> assets, {
+    void Function(int index)? onIndex,
+  }) async {
+    final generation = ++_generation;
+    for (var i = 0; i < assets.length; i++) {
+      if (generation != _generation) return;
+      onIndex?.call(i);
+      await play(assets[i]);
+    }
+  }
 
   @override
   Future<void> stop() async {
+    _generation++;
     stops++;
     if (isPlaying) _current!.complete();
   }

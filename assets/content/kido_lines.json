@@ -596,5 +596,53 @@
         ]
       }
     ]
+  },
+  "tap_to_play": {
+    "en": [
+      {
+        "text": "Tap the picture, and see what happens!",
+        "audio": [
+          "assets/audio/en/kido/tap_to_play.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "तस्वीर को छुओ, और देखो क्या होता है!",
+        "audio": [
+          "assets/audio/hi/kido/tap_to_play.m4a"
+        ]
+      }
+    ]
+  },
+  "next_one": {
+    "en": [
+      {
+        "text": "Yay! Let's see the next one!",
+        "audio": [
+          "assets/audio/en/kido/next_one_1.m4a"
+        ]
+      },
+      {
+        "text": "Super! What's next? Tap the arrow!",
+        "audio": [
+          "assets/audio/en/kido/next_one_2.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "वाह! चलो, अगला देखें!",
+        "audio": [
+          "assets/audio/hi/kido/next_one_1.m4a"
+        ]
+      },
+      {
+        "text": "शाबाश! अब आगे क्या है? तीर को छुओ!",
+        "audio": [
+          "assets/audio/hi/kido/next_one_2.m4a"
+        ]
+      }
+    ]
   }
 }

@@ -14,8 +14,12 @@ class JustAudioVoicePlayer implements VoicePlayer {
   static const _grace = Duration(seconds: 2);
   static const _unknownLength = Duration(seconds: 8);
 
+  /// Each new playback (or stop) bumps this, so a superseded one ends.
+  int _generation = 0;
+
   @override
   Future<void> play(String asset) async {
+    _generation++;
     final length = await _player.setAsset(asset) ?? _unknownLength;
     // play() only completes on pause/stop, so wait for completion or stop.
     final done = _player.processingStateStream.firstWhere(
@@ -32,7 +36,51 @@ class JustAudioVoicePlayer implements VoicePlayer {
   }
 
   @override
-  Future<void> stop() => _player.stop();
+  Future<void> playAll(
+    List<String> assets, {
+    void Function(int index)? onIndex,
+  }) async {
+    if (assets.isEmpty) return;
+    if (assets.length == 1) {
+      onIndex?.call(0);
+      return play(assets.single);
+    }
+    final generation = ++_generation;
+    // One gapless playlist: the next clip is already loaded when the
+    // current one ends, so stitched lines sound like one sentence.
+    await _player.setAudioSources([
+      for (final a in assets) ja.AudioSource.asset(a),
+    ]);
+    if (generation != _generation) return;
+    var last = -1;
+    final sub = _player.currentIndexStream.listen((i) {
+      if (i != null && i > last && generation == _generation) {
+        last = i;
+        onIndex?.call(i);
+      }
+    });
+    final done = _player.processingStateStream.firstWhere(
+      (s) => s == ja.ProcessingState.completed || s == ja.ProcessingState.idle,
+    );
+    unawaited(_player.play());
+    try {
+      await done.timeout(
+        _unknownLength * assets.length + _grace,
+        onTimeout: () async {
+          await _player.stop();
+          throw TimeoutException('voice sequence did not finish: $assets');
+        },
+      );
+    } finally {
+      await sub.cancel();
+    }
+  }
+
+  @override
+  Future<void> stop() {
+    _generation++;
+    return _player.stop();
+  }
 
   @override
   Future<void> dispose() => _player.dispose();

@@ -58,6 +58,7 @@ class AudioService {
   DateTime? _lastVoiceAt;
   bool _musicPlaying = false;
   bool _paused = false;
+  bool _disposed = false;
 
   bool get isSpeaking => _voiceActive;
 
@@ -86,7 +87,9 @@ class AudioService {
     bool debounce = true,
     Object? owner,
   }) async {
-    if (assets.isEmpty || !_settings.soundEnabled || _paused) return false;
+    if (assets.isEmpty || !_settings.soundEnabled || _paused || _disposed) {
+      return false;
+    }
 
     // Toddler mashing: ignore an identical request within the debounce time.
     final key = assets.join('|');
@@ -107,13 +110,21 @@ class AudioService {
     _setVoiceActive(true);
     _voiceOwner = owner;
     try {
+      if (gap == Duration.zero) {
+        // Gapless: one playlist, so stitched lines sound like one sentence.
+        await _voice.playAll(
+          assets,
+          onIndex: (i) {
+            if (token == _voiceToken) onSegment?.call(i);
+          },
+        );
+        return token == _voiceToken;
+      }
       for (var i = 0; i < assets.length; i++) {
         if (token != _voiceToken) return false;
         onSegment?.call(i);
         await _voice.play(assets[i]);
-        if (gap > Duration.zero && i < assets.length - 1) {
-          await Future<void>.delayed(gap);
-        }
+        if (i < assets.length - 1) await Future<void>.delayed(gap);
       }
       return token == _voiceToken;
     } catch (e, s) {
@@ -139,6 +150,8 @@ class AudioService {
   }
 
   void _setVoiceActive(bool active) {
+    // A screen may close after the app's audio has shut down.
+    if (_disposed) return;
     _voiceActive = active;
     speaking.value = active;
     _setDucked(active);
@@ -208,6 +221,7 @@ class AudioService {
 
   Future<void> dispose() async {
     _voiceToken++;
+    _disposed = true;
     speaking.dispose();
     await Future.wait([
       _safe(_voice.dispose, 'dispose voice'),
