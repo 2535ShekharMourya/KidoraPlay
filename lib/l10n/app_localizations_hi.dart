@@ -218,4 +218,10 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get sectionShapes => 'आकार';
+
+  @override
+  String get sectionVehicles => 'वाहन';
+
+  @override
+  String get sectionHindi => 'हिंदी';
 }

@@ -493,6 +493,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Shapes'**
   String get sectionShapes;
+
+  /// No description provided for @sectionVehicles.
+  ///
+  /// In en, this message translates to:
+  /// **'Vehicles'**
+  String get sectionVehicles;
+
+  /// No description provided for @sectionHindi.
+  ///
+  /// In en, this message translates to:
+  /// **'Hindi'**
+  String get sectionHindi;
 }
 
 class _AppLocalizationsDelegate

@@ -144,8 +144,17 @@ class LearnCardController extends Notifier<LearnCardState> {
   LearningItem? get _item =>
       ref.read(contentCatalogProvider).value?.itemById(itemId);
   AudioService get _audio => ref.read(audioServiceProvider);
-  List<ContentLanguage> get _languages =>
-      ref.read(settingsProvider).language.languages;
+
+  /// Hindi letter cards are taught in Hindi whatever the app language.
+  bool get _hindiCard => _item?.section == SectionId.hindi;
+
+  List<ContentLanguage> get _languages => _hindiCard
+      ? const [ContentLanguage.hi]
+      : ref.read(settingsProvider).language.languages;
+
+  List<ContentLanguage> get _talkLanguages => _hindiCard
+      ? const [ContentLanguage.hi]
+      : ref.read(settingsProvider).language.talkLanguages;
 
   @override
   LearnCardState build() {
@@ -195,7 +204,16 @@ class LearnCardController extends Notifier<LearnCardState> {
     if (!_alive(run)) return;
 
     // Name it.
-    if (item.section == SectionId.abc && item.letter != null) {
+    if (item.section == SectionId.hindi && item.letterVoice != null) {
+      // "अ से अनार!"
+      await _kidoSay(
+        KidoEvent.letterFor,
+        run,
+        languages: const [ContentLanguage.hi],
+        item: item,
+        letterAudio: item.letterVoice,
+      );
+    } else if (item.section == SectionId.abc && item.letter != null) {
       // "A for Apple" in English (the letters are the goal), then the
       // Hindi word when bilingual.
       await _kidoSay(
@@ -235,30 +253,31 @@ class LearnCardController extends Notifier<LearnCardState> {
 
     // Know something about it.
     // The fact in Kido's talk language only (Hindi when bilingual).
-    final facts = [
-      for (final l in ref.read(settingsProvider).language.talkLanguages)
-        ?item.factVoice(l),
-    ];
+    final facts = [for (final l in _talkLanguages) ?item.factVoice(l)];
     if (facts.isNotEmpty) {
       await _speak(facts, run);
       if (!_alive(run)) return;
     }
 
     // Spell it: tiles appear and light up letter by letter.
-    final voiced = _voicedIndexes(item);
-    await _speak(
-      [for (final i in voiced) tiles[i].audioAsset!],
-      run,
-      onSegment: (k) {
-        if (!_alive(run)) return;
-        state = state.copyWith(
-          highlighted: voiced[k],
-          revealed: math.max(state.revealed, voiced[k] + 1),
-        );
-      },
-    );
-    if (!_alive(run)) return;
-    state = state.copyWith(clearHighlight: true, revealed: tiles.length);
+    final voiced = item.section.hasSpelling
+        ? _voicedIndexes(item)
+        : const <int>[];
+    if (voiced.isNotEmpty) {
+      await _speak(
+        [for (final i in voiced) tiles[i].audioAsset!],
+        run,
+        onSegment: (k) {
+          if (!_alive(run)) return;
+          state = state.copyWith(
+            highlighted: voiced[k],
+            revealed: math.max(state.revealed, voiced[k] + 1),
+          );
+        },
+      );
+      if (!_alive(run)) return;
+      state = state.copyWith(clearHighlight: true, revealed: tiles.length);
+    }
 
     // Say it together, with a quiet moment for the child's turn.
     await _kidoSay(KidoEvent.sayWithMe, run);
@@ -483,7 +502,7 @@ class LearnCardController extends Notifier<LearnCardState> {
         .read(kidoVoiceProvider)
         .say(
           event,
-          languages: languages,
+          languages: languages ?? (_hindiCard ? _talkLanguages : null),
           item: item,
           itemAudio: itemAudio,
           letterAudio: letterAudio,

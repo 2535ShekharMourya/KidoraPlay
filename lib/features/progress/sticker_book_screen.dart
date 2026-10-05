@@ -348,6 +348,7 @@ class _Sticker extends StatelessWidget {
       image: item.image,
       fallbackText: item.wordEn,
       accent: learned ? accent : AppColors.outline.withValues(alpha: 0.3),
+      badge: item.badge,
     );
     return BouncyButton(
       semanticLabel: item.wordEn,

@@ -160,6 +160,7 @@ SHAPE_COLOURS = {
     "triangle": (255, 193, 7), "rectangle": (76, 175, 80),
     "star": (255, 152, 0), "heart": (233, 30, 99),
     "oval": (156, 39, 176), "diamond": (0, 188, 212),
+    "hexagon": (255, 112, 67),
 }
 OUTLINE = (59, 53, 97, 255)
 
@@ -171,6 +172,9 @@ def shape_points(name, box):
     w, h = r - l, b - t
     if name == "triangle":
         return [(cx, t), (r, b), (l, b)]
+    if name == "hexagon":
+        return [(cx + (w / 2) * math.cos(math.pi / 3 * i),
+                 cy + (h / 2) * math.sin(math.pi / 3 * i)) for i in range(6)]
     if name == "diamond":
         return [(cx, t), (r, cy), (cx, b), (l, cy)]
     if name == "star":
@@ -285,6 +289,25 @@ def main():
         made.append(save(compose_shape(id_), f"assets/images/shapes/{id_}.webp"))
     made.append(save(compose_plain(("1f3a8",)), "assets/images/sections/colours.webp"))
     made.append(save(compose_shapes_tile(), "assets/images/sections/shapes.webp"))
+    from make_items import HINDI
+    import shutil
+    for _letter, id_, _en, _hi, src, _lv in HINDI:
+        out = f"assets/images/hindi/{id_}.webp"
+        kind, _, ref = src.partition(":")
+        if kind == "copy":
+            (ROOT / out).parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(ROOT / f"assets/images/{ref}.webp", ROOT / out)
+            made.append(out)
+        elif kind == "noto":
+            made.append(save(compose_plain((ref,)), out))
+        elif kind == "shape":
+            made.append(save(compose_shape(ref), out))
+        # "photo:" items come from tool/make_photos.py.
+    # Hindi tile: the first vowels drawn in Baloo 2 (single code points,
+    # so no Devanagari shaping is needed).
+    tile = canvas()
+    text_centered(ImageDraw.Draw(tile), 90, "अ आ", 250)
+    made.append(save(tile, "assets/images/sections/hindi.webp"))
     for game in ("games", "find_it", "who_says", "count_it", "letters"):
         made.append(save(compose_plain(PICTURES[f"games/{game}"]),
                          f"assets/images/games/{game}.webp"))

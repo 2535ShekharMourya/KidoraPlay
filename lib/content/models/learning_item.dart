@@ -24,6 +24,7 @@ class LearningItem {
     this.factHi,
     this.voiceFactEn,
     this.voiceFactHi,
+    this.letterVoice,
     this.riveReaction,
   });
 
@@ -48,6 +49,7 @@ class LearningItem {
       factHi: r.optString('fact_hi'),
       voiceFactEn: r.optString('voice_fact_en'),
       voiceFactHi: r.optString('voice_fact_hi'),
+      letterVoice: r.optString('letter_voice'),
       riveReaction: r.optString('rive_reaction'),
     );
   }
@@ -57,7 +59,7 @@ class LearningItem {
   final SectionId section;
   final List<Level> levels;
 
-  /// ABC items only, e.g. "A".
+  /// ABC and Hindi letter items, e.g. "A" or "अ".
   final String? letter;
 
   /// Numbers items only, 1–100.
@@ -78,8 +80,15 @@ class LearningItem {
   final String? voiceFactEn;
   final String? voiceFactHi;
 
+  /// Recording of [letter] itself when it is not an English letter
+  /// (e.g. "अ").
+  final String? letterVoice;
+
   /// Rive state-machine input for the picture's reaction, if any.
   final String? riveReaction;
+
+  /// Letter shown on the picture when it isn't drawn into it (Hindi).
+  String? get badge => section == SectionId.hindi ? letter : null;
 
   /// Letter tiles for spelling mode, always derived from [wordEn].
   List<SpellingTile> get spelling => spellingOf(wordEn);
@@ -117,6 +126,7 @@ class LearningItem {
     'fact_hi': factHi,
     'voice_fact_en': voiceFactEn,
     'voice_fact_hi': voiceFactHi,
+    if (letterVoice != null) 'letter_voice': letterVoice,
     'rive_reaction': riveReaction,
   };
 }

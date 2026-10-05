@@ -65,5 +65,7 @@
   "sectionFruits": "फल",
   "sectionVegetables": "सब्ज़ियाँ",
   "sectionColours": "रंग",
-  "sectionShapes": "आकार"
+  "sectionShapes": "आकार",
+  "sectionVehicles": "वाहन",
+  "sectionHindi": "हिंदी"
 }

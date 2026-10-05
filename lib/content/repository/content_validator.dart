@@ -20,6 +20,7 @@ class ContentValidationException implements Exception {
 final _idPattern = RegExp(r'^[a-z0-9]+(_[a-z0-9]+)*$');
 final _wordPattern = RegExp(r'^[A-Za-z]+([ -][A-Za-z]+)*$');
 final _letterPattern = RegExp(r'^[A-Z]$');
+final _devanagari = RegExp(r'^[\u0900-\u097F]+$');
 
 /// Checks content for mistakes. [assets] is every bundled asset path.
 /// Returns a list of human-readable errors (empty when valid).
@@ -64,6 +65,7 @@ List<String> validateContent(
       requireAsset(where, 'sound', item.sound);
       requireAsset(where, 'voice_fact_en', item.voiceFactEn);
       requireAsset(where, 'voice_fact_hi', item.voiceFactHi);
+      requireAsset(where, 'letter_voice', item.letterVoice);
       for (final tile in item.spelling) {
         if (tile.audioAsset case final audio?) {
           requireAsset(where, 'letter ${tile.char} audio', audio);
@@ -179,8 +181,17 @@ List<String> _validateItem(
       } else if (!item.wordEn.toUpperCase().startsWith(letter)) {
         errors.add('$where: "word_en" must start with "$letter"');
       }
-    case SectionId.animals || SectionId.birds:
+    case SectionId.animals || SectionId.birds || SectionId.vehicles:
       if (item.sound == null) errors.add('$where: "sound" is required');
+    case SectionId.hindi:
+      if (item.letter == null || item.letter!.trim().isEmpty) {
+        errors.add('$where: "letter" is required');
+      } else if (!_devanagari.hasMatch(item.letter!)) {
+        errors.add('$where: "letter" must be Devanagari');
+      }
+      if (item.letterVoice == null) {
+        errors.add('$where: "letter_voice" is required');
+      }
     case SectionId.fruits ||
         SectionId.vegetables ||
         SectionId.colours ||

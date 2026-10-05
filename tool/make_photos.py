@@ -59,8 +59,19 @@ ARTICLES = {
     "cabbage": "File:Cabbage on farm.jpg", "brinjal": "Eggplant", "peas": "File:Green pea pod opened.jpg",
     "cucumber": "Cucumber", "pumpkin": "Pumpkin", "spinach": "File:Fresh Spinach leaves.jpg",
     "lady_finger": "Okra",
+    # Vehicles (Indian roads where it matters).
+    "car": "Hatchback", "bus": "Bus", "train": "Train",
+    "aeroplane": "Airliner", "bicycle": "Bicycle",
+    "motorcycle": "Motorcycle", "auto_rickshaw": "Auto rickshaw",
+    "truck": "File:TATA 1109H EX2 - Howrah 2012-08-11 01560.jpg", "tractor": "Tractor", "boat": "Boat",
+    "helicopter": "Helicopter", "ambulance": "Ambulance",
+    # Hindi letter pictures with no photo elsewhere (see make_items.HINDI).
+    "hi_imli": "Tamarind", "hi_eekh": "File:Sugarcane stalks.jpg",
+    "hi_okhli": "Mortar and pestle", "hi_tharmas": "Vacuum flask",
+    "hi_rath": "File:Chariot of Lord Jagganath.JPG", "hi_lattu": "File:Spinning top.jpg",
     # Section tiles.
     "sections/animals": "Lion", "sections/birds": "Peafowl",
+    "sections/vehicles": "Auto rickshaw",
     "sections/fruits": "File:A basket of fruits.jpg", "sections/vegetables": "File:Vegetables at vegetable market, Havelock Island, Andamans.jpg",
 }
 
@@ -139,10 +150,24 @@ def square(img):
     return img.crop((left, top, left + side, top + side))
 
 
+META = CACHE / "meta.json"
+
+
+def cached_info(article, meta):
+    """file_info(lead_file(article)), remembered between runs."""
+    if article not in meta:
+        meta[article] = file_info(lead_file(article))
+        CACHE.mkdir(parents=True, exist_ok=True)
+        META.write_text(json.dumps(meta, indent=1), encoding="utf-8")
+    return meta[article]
+
+
 def main():
+    meta = json.loads(META.read_text("utf-8")) if META.exists() else {}
     images = {}
     for name in ("items_animals.json", "items_birds.json",
-                 "items_fruits.json", "items_vegetables.json"):
+                 "items_fruits.json", "items_vegetables.json",
+                 "items_vehicles.json", "items_hindi.json"):
         for it in json.loads((CONTENT / name).read_text(encoding="utf-8")):
             images[it["id"]] = it["image"]
     for s in json.loads((CONTENT / "sections.json").read_text("utf-8")):
@@ -150,7 +175,7 @@ def main():
 
     credits, sheet = [], []
     for key, article in ARTICLES.items():
-        info = file_info(lead_file(article))
+        info = cached_info(article, meta)
         if not allowed(info["licence"]):
             print(f"SKIP {key}: {info['title']} is {info['licence']}")
             continue

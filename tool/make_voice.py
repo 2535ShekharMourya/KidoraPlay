@@ -63,6 +63,8 @@ def collect():
             if it.get("fact_en"):
                 jobs[it["voice_fact_en"]] = ("en", it["fact_en"])
                 jobs[it["voice_fact_hi"]] = ("hi", it["fact_hi"])
+            if it.get("letter_voice"):
+                jobs[it["letter_voice"]] = ("hi", it["letter"])
             if it.get("sound"):
                 jobs[it["sound"]] = ("en", SOUND_TEXT[it["id"]])
 

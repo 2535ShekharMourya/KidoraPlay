@@ -1,0 +1,254 @@
+[
+  {
+    "id": "car",
+    "section": "vehicles",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Car",
+    "word_hi": "कार",
+    "image": "assets/images/vehicles/car.webp",
+    "voice_en": "assets/audio/en/car.m4a",
+    "voice_hi": "assets/audio/hi/car.m4a",
+    "sound": "assets/audio/vehicles/car.m4a",
+    "fact_en": "A car has four wheels!",
+    "fact_hi": "कार के चार पहिए होते हैं!",
+    "voice_fact_en": "assets/audio/en/car_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/car_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "bus",
+    "section": "vehicles",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Bus",
+    "word_hi": "बस",
+    "image": "assets/images/vehicles/bus.webp",
+    "voice_en": "assets/audio/en/bus.m4a",
+    "voice_hi": "assets/audio/hi/bus.m4a",
+    "sound": "assets/audio/vehicles/bus.m4a",
+    "fact_en": "A bus carries many people!",
+    "fact_hi": "बस में बहुत सारे लोग बैठते हैं!",
+    "voice_fact_en": "assets/audio/en/bus_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/bus_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "train",
+    "section": "vehicles",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Train",
+    "word_hi": "रेलगाड़ी",
+    "image": "assets/images/vehicles/train.webp",
+    "voice_en": "assets/audio/en/train.m4a",
+    "voice_hi": "assets/audio/hi/train.m4a",
+    "sound": "assets/audio/vehicles/train.m4a",
+    "fact_en": "A train runs on tracks!",
+    "fact_hi": "रेलगाड़ी पटरी पर चलती है!",
+    "voice_fact_en": "assets/audio/en/train_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/train_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "aeroplane",
+    "section": "vehicles",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Aeroplane",
+    "word_hi": "हवाई जहाज़",
+    "image": "assets/images/vehicles/aeroplane.webp",
+    "voice_en": "assets/audio/en/aeroplane.m4a",
+    "voice_hi": "assets/audio/hi/aeroplane.m4a",
+    "sound": "assets/audio/vehicles/aeroplane.m4a",
+    "fact_en": "An aeroplane flies in the sky!",
+    "fact_hi": "हवाई जहाज़ आसमान में उड़ता है!",
+    "voice_fact_en": "assets/audio/en/aeroplane_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/aeroplane_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "bicycle",
+    "section": "vehicles",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Bicycle",
+    "word_hi": "साइकिल",
+    "image": "assets/images/vehicles/bicycle.webp",
+    "voice_en": "assets/audio/en/bicycle.m4a",
+    "voice_hi": "assets/audio/hi/bicycle.m4a",
+    "sound": "assets/audio/vehicles/bicycle.m4a",
+    "fact_en": "A bicycle has two wheels!",
+    "fact_hi": "साइकिल के दो पहिए होते हैं!",
+    "voice_fact_en": "assets/audio/en/bicycle_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/bicycle_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "motorcycle",
+    "section": "vehicles",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Motorcycle",
+    "word_hi": "मोटरसाइकिल",
+    "image": "assets/images/vehicles/motorcycle.webp",
+    "voice_en": "assets/audio/en/motorcycle.m4a",
+    "voice_hi": "assets/audio/hi/motorcycle.m4a",
+    "sound": "assets/audio/vehicles/motorcycle.m4a",
+    "fact_en": "A motorcycle goes vroom vroom!",
+    "fact_hi": "मोटरसाइकिल चलती है, वूँ वूँ!",
+    "voice_fact_en": "assets/audio/en/motorcycle_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/motorcycle_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "auto_rickshaw",
+    "section": "vehicles",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Auto Rickshaw",
+    "word_hi": "ऑटो रिक्शा",
+    "image": "assets/images/vehicles/auto_rickshaw.webp",
+    "voice_en": "assets/audio/en/auto_rickshaw.m4a",
+    "voice_hi": "assets/audio/hi/auto_rickshaw.m4a",
+    "sound": "assets/audio/vehicles/auto_rickshaw.m4a",
+    "fact_en": "An auto rickshaw has three wheels!",
+    "fact_hi": "ऑटो रिक्शा के तीन पहिए होते हैं!",
+    "voice_fact_en": "assets/audio/en/auto_rickshaw_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/auto_rickshaw_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "truck",
+    "section": "vehicles",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Truck",
+    "word_hi": "ट्रक",
+    "image": "assets/images/vehicles/truck.webp",
+    "voice_en": "assets/audio/en/truck.m4a",
+    "voice_hi": "assets/audio/hi/truck.m4a",
+    "sound": "assets/audio/vehicles/truck.m4a",
+    "fact_en": "A truck carries heavy things!",
+    "fact_hi": "ट्रक भारी सामान ढोता है!",
+    "voice_fact_en": "assets/audio/en/truck_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/truck_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "tractor",
+    "section": "vehicles",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Tractor",
+    "word_hi": "ट्रैक्टर",
+    "image": "assets/images/vehicles/tractor.webp",
+    "voice_en": "assets/audio/en/tractor.m4a",
+    "voice_hi": "assets/audio/hi/tractor.m4a",
+    "sound": "assets/audio/vehicles/tractor.m4a",
+    "fact_en": "A tractor helps farmers!",
+    "fact_hi": "ट्रैक्टर किसानों की मदद करता है!",
+    "voice_fact_en": "assets/audio/en/tractor_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/tractor_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "boat",
+    "section": "vehicles",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Boat",
+    "word_hi": "नाव",
+    "image": "assets/images/vehicles/boat.webp",
+    "voice_en": "assets/audio/en/boat.m4a",
+    "voice_hi": "assets/audio/hi/boat.m4a",
+    "sound": "assets/audio/vehicles/boat.m4a",
+    "fact_en": "A boat floats on water!",
+    "fact_hi": "नाव पानी पर तैरती है!",
+    "voice_fact_en": "assets/audio/en/boat_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/boat_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "helicopter",
+    "section": "vehicles",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Helicopter",
+    "word_hi": "हेलीकॉप्टर",
+    "image": "assets/images/vehicles/helicopter.webp",
+    "voice_en": "assets/audio/en/helicopter.m4a",
+    "voice_hi": "assets/audio/hi/helicopter.m4a",
+    "sound": "assets/audio/vehicles/helicopter.m4a",
+    "fact_en": "A helicopter has spinning blades!",
+    "fact_hi": "हेलीकॉप्टर के पंखे घूमते हैं!",
+    "voice_fact_en": "assets/audio/en/helicopter_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/helicopter_fact.m4a",
+    "rive_reaction": null
+  },
+  {
+    "id": "ambulance",
+    "section": "vehicles",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "letter": null,
+    "number": null,
+    "word_en": "Ambulance",
+    "word_hi": "एम्बुलेंस",
+    "image": "assets/images/vehicles/ambulance.webp",
+    "voice_en": "assets/audio/en/ambulance.m4a",
+    "voice_hi": "assets/audio/hi/ambulance.m4a",
+    "sound": "assets/audio/vehicles/ambulance.m4a",
+    "fact_en": "An ambulance takes people to hospital!",
+    "fact_hi": "एम्बुलेंस लोगों को अस्पताल ले जाती है!",
+    "voice_fact_en": "assets/audio/en/ambulance_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/ambulance_fact.m4a",
+    "rive_reaction": null
+  }
+]

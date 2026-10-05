@@ -62,6 +62,17 @@ SOUNDS = {
     "eagle": ("File:Crested Serpent Eagle from Dhoni.ogg", 3.0),
     "koel": ("File:KoelMale.ogg", 3.0),
     # camel: no suitable licensed recording found yet; keeps Kido's voice.
+    # Vehicles (auto rickshaw and truck: none found yet; Kido's voice).
+    "car": ("File:Car Horn.wav", 2.0),
+    "bus": ("File:WWS CityBusMANSG220horn.ogg", 2.5),
+    "train": ("File:JP-Train horn.wav", 1.8),
+    "aeroplane": ("File:428086 inspectorj airplane-boeing-flyby-right-to-left-a.wav", 3.0),
+    "bicycle": ("File:Bicycle-bell-1.wav", 1.5),
+    "motorcycle": ("File:Kawasaki ER-5.oga", 3.0),
+    "tractor": ("File:WWS TractorLanzBuldogHL12driving.ogg", 3.0),
+    "boat": ("File:Cruise ship Albatros ship horn.ogg", 3.0),
+    "helicopter": ("File:Helicopter over quiet neighbourhood.ogg", 3.0),
+    "ambulance": ("File:Ambulance Sounds2.wav", 3.0),
 }
 
 
@@ -155,14 +166,15 @@ def build(item_id, sound_path, title, seconds):
 
 def main():
     sounds = {}
-    for name in ("items_animals.json", "items_birds.json"):
+    for name in ("items_animals.json", "items_birds.json",
+                 "items_vehicles.json"):
         for it in json.loads((CONTENT / name).read_text(encoding="utf-8")):
             sounds[it["id"]] = it["sound"]
 
     credits = [build(i, sounds[i], *SOUNDS[i]) for i in SOUNDS]
 
     lines = [
-        "# Animal and bird sound credits",
+        "# Animal, bird and vehicle sound credits",
         "",
         "Real recordings from Wikimedia Commons, trimmed and volume-",
         "normalised for Kidoraplay. Trimmed clips of CC BY-SA recordings are",

@@ -110,5 +110,7 @@
   "sectionFruits": "Fruits",
   "sectionVegetables": "Vegetables",
   "sectionColours": "Colours",
-  "sectionShapes": "Shapes"
+  "sectionShapes": "Shapes",
+  "sectionVehicles": "Vehicles",
+  "sectionHindi": "Hindi"
 }

@@ -184,6 +184,23 @@ void main() {
     });
   });
 
+  test('Hindi letter: "अ से अनार" in Hindi, no English spelling', () async {
+    await setUpContainer();
+    await controller('hi_anar').playLesson();
+    final played = audio.voice.played;
+    expect(played.sublist(0, 5), [
+      'assets/audio/hi/kido/look.m4a', // देखो! (Hindi even in English mode)
+      'assets/audio/hi/letters/hi_anar.m4a', // अ
+      'assets/audio/hi/kido/se.m4a', // से
+      'assets/audio/hi/hi_anar.m4a', // अनार
+      'assets/audio/hi/kido/say_with_me.m4a',
+    ]);
+    expect(played.where((a) => a.contains('/letters/') && !a.contains('/hi/')),
+        isEmpty);
+    expect(stateOf('hi_anar').revealed, 0);
+    expect(stateOf('hi_anar').phase, LessonPhase.youDo);
+  });
+
   test('tapping a letter stops the lesson and says that letter', () async {
     await setUpContainer();
     audio.voice.holdPlayback = true;

@@ -224,6 +224,7 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
                                                 image: item.image,
                                                 fallbackText: item.wordEn,
                                                 accent: theme.accent,
+                                                badge: item.badge,
                                               ),
                                             ),
                                           ),
@@ -238,7 +239,13 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
                             Expanded(
                               child: _WordPanel(
                                 item: item,
-                                languages: languages,
+                                // Hindi letters: the Hindi word first.
+                                languages: item.section == SectionId.hindi
+                                    ? const [
+                                        ContentLanguage.hi,
+                                        ContentLanguage.en,
+                                      ]
+                                    : languages,
                                 section: widget.scope.section,
                               ),
                             ),
@@ -248,16 +255,21 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
                       const SizedBox(height: AppSpacing.md),
                       Expanded(
                         flex: 2,
-                        child: SpellingStrip(
-                          tiles: tiles,
-                          revealed: state.revealed,
-                          highlighted: state.highlighted,
-                          accent: theme.accent,
-                          onTapLetter: _controller.tapLetter,
-                          beckonIndex: state.weDoTarget,
-                          strongBeckon: state.hint == HintLevel.glow,
-                          tileKeys: _tileKeys,
-                        ),
+                        child: !item.section.hasSpelling
+                            ? _BigLetter(
+                                letter: item.letter ?? '',
+                                accent: theme.accent,
+                              )
+                            : SpellingStrip(
+                                tiles: tiles,
+                                revealed: state.revealed,
+                                highlighted: state.highlighted,
+                                accent: theme.accent,
+                                onTapLetter: _controller.tapLetter,
+                                beckonIndex: state.weDoTarget,
+                                strongBeckon: state.hint == HintLevel.glow,
+                                tileKeys: _tileKeys,
+                              ),
                       ),
                     ],
                   ),
@@ -379,6 +391,44 @@ class _CountBubble extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+/// Hindi letter cards: the letter, big, where the spelling strip would be.
+class _BigLetter extends StatelessWidget {
+  const _BigLetter({required this.letter, required this.accent});
+
+  final String letter;
+  final Color accent;
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: AspectRatio(
+        aspectRatio: 1,
+        child: Container(
+          decoration: BoxDecoration(
+            color: accent,
+            borderRadius: BorderRadius.circular(AppRadii.card),
+            border: Border.all(
+              color: AppColors.outline,
+              width: AppStroke.thick,
+            ),
+          ),
+          alignment: Alignment.center,
+          child: FittedBox(
+            child: Padding(
+              padding: const EdgeInsets.all(AppSpacing.sm),
+              child: Text(
+                letter,
+                style: Theme.of(context).textTheme.displayLarge
+                    ?.copyWith(color: AppColors.white, height: 1.3),
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

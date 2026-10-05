@@ -153,12 +153,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 String sectionLabel(AppLocalizations l10n, SectionId id) => switch (id) {
   SectionId.numbers => l10n.sectionNumbers,
   SectionId.abc => l10n.sectionAbc,
+  SectionId.hindi => l10n.sectionHindi,
   SectionId.animals => l10n.sectionAnimals,
   SectionId.birds => l10n.sectionBirds,
   SectionId.fruits => l10n.sectionFruits,
   SectionId.vegetables => l10n.sectionVegetables,
   SectionId.colours => l10n.sectionColours,
   SectionId.shapes => l10n.sectionShapes,
+  SectionId.vehicles => l10n.sectionVehicles,
 };
 
 /// Section tiles in two rows of up to five (5 × 96 dp + gaps fits the

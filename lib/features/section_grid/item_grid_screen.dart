@@ -154,6 +154,7 @@ class _Grid extends StatelessWidget {
                           image: item.image,
                           fallbackText: item.wordEn,
                           accent: accent,
+                          badge: item.badge,
                         ),
                       ),
                     ),

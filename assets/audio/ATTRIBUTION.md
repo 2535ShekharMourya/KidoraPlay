@@ -1,4 +1,4 @@
-# Animal and bird sound credits
+# Animal, bird and vehicle sound credits
 
 Real recordings from Wikimedia Commons, trimmed and volume-
 normalised for Kidoraplay. Trimmed clips of CC BY-SA recordings are
@@ -28,3 +28,13 @@ shared under the same licence.
 - **owl**: "Strix aluco male.oga" by Vianney Bajart, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), https://commons.wikimedia.org/wiki/File:Strix_aluco_male.oga
 - **eagle**: "Crested Serpent Eagle from Dhoni.ogg" by Raghu.kuttan, Public domain (public domain), https://commons.wikimedia.org/wiki/File:Crested_Serpent_Eagle_from_Dhoni.ogg
 - **koel**: "KoelMale.ogg" by L. Shyamal, CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/), https://commons.wikimedia.org/wiki/File:KoelMale.ogg
+- **car**: "Car Horn.wav" by 15HPanska_Ruttner_Jan, CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en), https://commons.wikimedia.org/wiki/File:Car_Horn.wav
+- **bus**: "WWS CityBusMANSG220horn.ogg" by Work With Sounds / Technical Museum of Slovenia, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0), https://commons.wikimedia.org/wiki/File:WWS_CityBusMANSG220horn.ogg
+- **train**: "JP-Train horn.wav" by JIRCTRAINZ, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), https://commons.wikimedia.org/wiki/File:JP-Train_horn.wav
+- **aeroplane**: "428086 inspectorj airplane-boeing-flyby-right-to-left-a.wav" by InspectorJ, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0), https://commons.wikimedia.org/wiki/File:428086_inspectorj_airplane-boeing-flyby-right-to-left-a.wav
+- **bicycle**: "Bicycle-bell-1.wav" by Soundscape_Leuphana, CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en), https://commons.wikimedia.org/wiki/File:Bicycle-bell-1.wav
+- **motorcycle**: "Kawasaki ER-5.oga" by OllemanW, CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0), https://commons.wikimedia.org/wiki/File:Kawasaki_ER-5.oga
+- **tractor**: "WWS TractorLanzBuldogHL12driving.ogg" by Work With Sounds / Museum of Municipal Engineering, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0), https://commons.wikimedia.org/wiki/File:WWS_TractorLanzBuldogHL12driving.ogg
+- **boat**: "Cruise ship Albatros ship horn.ogg" by Tvabutzku1234, CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en), https://commons.wikimedia.org/wiki/File:Cruise_ship_Albatros_ship_horn.ogg
+- **helicopter**: "Helicopter over quiet neighbourhood.ogg" by ezwa, Public domain (public domain), https://commons.wikimedia.org/wiki/File:Helicopter_over_quiet_neighbourhood.ogg
+- **ambulance**: "Ambulance Sounds2.wav" by Demircimehmed, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), https://commons.wikimedia.org/wiki/File:Ambulance_Sounds2.wav

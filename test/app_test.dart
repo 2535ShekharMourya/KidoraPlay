@@ -22,6 +22,8 @@ const sections = [
   'Vegetables',
   'Colours',
   'Shapes',
+  'Vehicles',
+  'Hindi',
 ];
 
 late ContentCatalog _catalog;

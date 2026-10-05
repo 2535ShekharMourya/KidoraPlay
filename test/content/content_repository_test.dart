@@ -37,9 +37,14 @@ void main() {
       expect(catalog.itemsFor(SectionId.vegetables), hasLength(12));
       expect(catalog.itemsFor(SectionId.colours), hasLength(10));
       expect(catalog.itemsFor(SectionId.shapes), hasLength(8));
+      expect(catalog.itemsFor(SectionId.vehicles), hasLength(12));
+      expect(catalog.itemsFor(SectionId.hindi), hasLength(45));
       // Every item teaches a fun fact, except numbers.
       for (final item in catalog.allItems) {
-        if (item.section == SectionId.numbers) continue;
+        if (item.section == SectionId.numbers ||
+            item.section == SectionId.hindi) {
+          continue;
+        }
         expect(item.factEn, isNotNull, reason: item.id);
       }
       expect(catalog.itemById('peacock')?.wordHi, 'मोर');

@@ -20,6 +20,10 @@ class SectionTheme {
       background: AppColors.abcBg,
       accent: AppColors.abcAccent,
     ),
+    SectionId.hindi => const SectionTheme(
+      background: AppColors.hindiBg,
+      accent: AppColors.hindiAccent,
+    ),
     SectionId.animals => const SectionTheme(
       background: AppColors.animalsBg,
       accent: AppColors.animalsAccent,
@@ -43,6 +47,10 @@ class SectionTheme {
     SectionId.shapes => const SectionTheme(
       background: AppColors.shapesBg,
       accent: AppColors.shapesAccent,
+    ),
+    SectionId.vehicles => const SectionTheme(
+      background: AppColors.vehiclesBg,
+      accent: AppColors.vehiclesAccent,
     ),
   };
 }

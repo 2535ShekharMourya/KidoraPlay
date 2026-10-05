@@ -8,12 +8,18 @@ import 'level.dart';
 enum SectionId {
   numbers,
   abc,
+  hindi,
   animals,
   birds,
   fruits,
   vegetables,
   colours,
   shapes,
+  vehicles;
+
+  /// Sections whose words are spelled letter by letter in English.
+  /// Hindi letters teach the letter and word instead.
+  bool get hasSpelling => this != hindi;
 }
 
 @immutable

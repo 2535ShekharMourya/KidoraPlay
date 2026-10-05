@@ -312,6 +312,89 @@ SHAPES = [
      ("A kite looks like a diamond!", "पतंग हीरे जैसी दिखती है!")),
 ]
 
+
+VEHICLES = [
+    ("car", "Car", "कार",
+     ("A car has four wheels!", "कार के चार पहिए होते हैं!")),
+    ("bus", "Bus", "बस",
+     ("A bus carries many people!", "बस में बहुत सारे लोग बैठते हैं!")),
+    ("train", "Train", "रेलगाड़ी",
+     ("A train runs on tracks!", "रेलगाड़ी पटरी पर चलती है!")),
+    ("aeroplane", "Aeroplane", "हवाई जहाज़",
+     ("An aeroplane flies in the sky!", "हवाई जहाज़ आसमान में उड़ता है!")),
+    ("bicycle", "Bicycle", "साइकिल",
+     ("A bicycle has two wheels!", "साइकिल के दो पहिए होते हैं!")),
+    ("motorcycle", "Motorcycle", "मोटरसाइकिल",
+     ("A motorcycle goes vroom vroom!", "मोटरसाइकिल चलती है, वूँ वूँ!")),
+    ("auto_rickshaw", "Auto Rickshaw", "ऑटो रिक्शा",
+     ("An auto rickshaw has three wheels!", "ऑटो रिक्शा के तीन पहिए होते हैं!")),
+    ("truck", "Truck", "ट्रक",
+     ("A truck carries heavy things!", "ट्रक भारी सामान ढोता है!")),
+    ("tractor", "Tractor", "ट्रैक्टर",
+     ("A tractor helps farmers!", "ट्रैक्टर किसानों की मदद करता है!")),
+    ("boat", "Boat", "नाव",
+     ("A boat floats on water!", "नाव पानी पर तैरती है!")),
+    ("helicopter", "Helicopter", "हेलीकॉप्टर",
+     ("A helicopter has spinning blades!", "हेलीकॉप्टर के पंखे घूमते हैं!")),
+    ("ambulance", "Ambulance", "एम्बुलेंस",
+     ("An ambulance takes people to hospital!", "एम्बुलेंस लोगों को अस्पताल ले जाती है!")),
+]
+
+
+# Hindi letters (Devanagari). (letter, id, English meaning, Hindi word,
+# picture source, levels). Picture source: "copy:<existing image>",
+# "noto:<codepoint>", "photo:<Wikipedia article or File:...>" or
+# "shape:<name>". ङ, ञ, ण and अः have no picture word on school charts.
+HINDI = [
+    # स्वर (vowels): Nursery and up.
+    ("अ", "hi_anar", "Pomegranate", "अनार", "copy:fruits/pomegranate", NURSERY_UP),
+    ("आ", "hi_aam", "Mango", "आम", "copy:fruits/mango", NURSERY_UP),
+    ("इ", "hi_imli", "Tamarind", "इमली", "photo:Tamarind", NURSERY_UP),
+    ("ई", "hi_eekh", "Sugarcane", "ईख", "photo:Sugarcane", NURSERY_UP),
+    ("उ", "hi_ullu", "Owl", "उल्लू", "copy:birds/owl", NURSERY_UP),
+    ("ऊ", "hi_oon", "Wool", "ऊन", "noto:1f9f6", NURSERY_UP),
+    ("ऋ", "hi_rishi", "Sage", "ऋषि", "noto:1f9d8", NURSERY_UP),
+    ("ए", "hi_edi", "Heel", "एड़ी", "noto:1f9b6", NURSERY_UP),
+    ("ऐ", "hi_ainak", "Spectacles", "ऐनक", "noto:1f453", NURSERY_UP),
+    ("ओ", "hi_okhli", "Mortar", "ओखली", "photo:Mortar and pestle", NURSERY_UP),
+    ("औ", "hi_aurat", "Woman", "औरत", "noto:1f469", NURSERY_UP),
+    ("अं", "hi_angoor", "Grapes", "अंगूर", "copy:fruits/grapes", NURSERY_UP),
+    # व्यंजन (consonants): LKG and up.
+    ("क", "hi_kabootar", "Pigeon", "कबूतर", "copy:birds/pigeon", LKG_UP),
+    ("ख", "hi_khargosh", "Rabbit", "खरगोश", "copy:animals/rabbit", LKG_UP),
+    ("ग", "hi_gamla", "Flowerpot", "गमला", "noto:1fab4", LKG_UP),
+    ("घ", "hi_ghadi", "Clock", "घड़ी", "noto:23f0", LKG_UP),
+    ("च", "hi_chammach", "Spoon", "चम्मच", "noto:1f944", LKG_UP),
+    ("छ", "hi_chhatri", "Umbrella", "छतरी", "noto:2602", LKG_UP),
+    ("ज", "hi_jahaaz", "Ship", "जहाज़", "noto:1f6a2", LKG_UP),
+    ("झ", "hi_jhanda", "Flag", "झंडा", "noto:1f6a9", LKG_UP),
+    ("ट", "hi_tamatar", "Tomato", "टमाटर", "copy:vegetables/tomato", LKG_UP),
+    ("ठ", "hi_thela", "Cart", "ठेला", "noto:1f6d2", LKG_UP),
+    ("ड", "hi_damru", "Drum", "डमरू", "noto:1fa98", LKG_UP),
+    ("ढ", "hi_dhol", "Dhol", "ढोल", "noto:1f941", LKG_UP),
+    ("त", "hi_tarbooz", "Watermelon", "तरबूज़", "copy:fruits/watermelon", LKG_UP),
+    ("थ", "hi_tharmas", "Flask", "थरमस", "photo:Vacuum flask", LKG_UP),
+    ("द", "hi_darwaza", "Door", "दरवाज़ा", "noto:1f6aa", LKG_UP),
+    ("ध", "hi_dhanush", "Bow", "धनुष", "noto:1f3f9", LKG_UP),
+    ("न", "hi_nal", "Tap", "नल", "noto:1f6b0", LKG_UP),
+    ("प", "hi_patang", "Kite", "पतंग", "noto:1fa81", LKG_UP),
+    ("फ", "hi_phal", "Fruits", "फल", "copy:sections/fruits", LKG_UP),
+    ("ब", "hi_bakri", "Goat", "बकरी", "copy:animals/goat", LKG_UP),
+    ("भ", "hi_bhalu", "Bear", "भालू", "copy:animals/bear", LKG_UP),
+    ("म", "hi_machhli", "Fish", "मछली", "noto:1f41f", LKG_UP),
+    ("य", "hi_yagya", "Holy Fire", "यज्ञ", "noto:1f525", LKG_UP),
+    ("र", "hi_rath", "Chariot", "रथ", "photo:Ratha (Hinduism)", LKG_UP),
+    ("ल", "hi_lattu", "Spinning Top", "लट्टू", "photo:Top", LKG_UP),
+    ("व", "hi_van", "Forest", "वन", "noto:1f333", LKG_UP),
+    ("श", "hi_sher", "Lion", "शेर", "copy:animals/lion", LKG_UP),
+    ("ष", "hi_shatkon", "Hexagon", "षट्कोण", "shape:hexagon", LKG_UP),
+    ("स", "hi_seb", "Apple", "सेब", "copy:fruits/apple", LKG_UP),
+    ("ह", "hi_haathi", "Elephant", "हाथी", "copy:animals/elephant", LKG_UP),
+    ("क्ष", "hi_kshitij", "Horizon", "क्षितिज", "noto:1f305", LKG_UP),
+    ("त्र", "hi_trishul", "Trident", "त्रिशूल", "noto:1f531", LKG_UP),
+    ("ज्ञ", "hi_gyan", "Knowledge", "ज्ञान", "noto:1f4da", LKG_UP),
+]
+
 # What Kido says for each animal/bird sound until real recordings exist.
 SOUND_TEXT = {
     "cow": "Mooo! Mooo!", "dog": "Woof woof!", "cat": "Meow! Meow!",
@@ -324,6 +407,11 @@ SOUND_TEXT = {
     "sparrow": "Chirp chirp!", "pigeon": "Coo coo!", "duck": "Quack quack!",
     "hen": "Cluck cluck!", "owl": "Hoo hoo!", "eagle": "Screech!",
     "koel": "Koo-hoo! Koo-hoo!",
+    "car": "Beep beep!", "bus": "Honk honk!", "train": "Choo choo!",
+    "aeroplane": "Whoooosh!", "bicycle": "Tring tring!",
+    "motorcycle": "Vroom vroom!", "auto_rickshaw": "Pom pom!",
+    "truck": "Honk!", "tractor": "Put put put!", "boat": "Toot toot!",
+    "helicopter": "Chop chop chop!", "ambulance": "Nee-naw nee-naw!",
 }
 
 
@@ -360,6 +448,15 @@ def main():
     write("items_colours.json",
           [item("colours", i, en, hi, fact=f, levels=NURSERY_UP)
            for i, en, hi, _rgb, _emoji, f in COLOURS])
+    write("items_vehicles.json",
+          [item("vehicles", i, en, hi, sound=True, fact=f, levels=LKG_UP)
+           for i, en, hi, f in VEHICLES])
+    hindi_items = []
+    for letter, id_, en, hi, _src, levels in HINDI:
+        it = item("hindi", id_, en, hi, letter=letter, levels=levels)
+        it["letter_voice"] = f"assets/audio/hi/letters/{id_}.m4a"
+        hindi_items.append(it)
+    write("items_hindi.json", hindi_items)
     write("items_shapes.json",
           [item("shapes", i, en, hi, fact=f, levels=NURSERY_UP)
            for i, en, hi, f in SHAPES])

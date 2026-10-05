@@ -28,6 +28,20 @@
     "voice_hi": "assets/audio/hi/sections/abc.m4a"
   },
   {
+    "id": "hindi",
+    "title_en": "Hindi",
+    "title_hi": "हिंदी",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "items": "assets/content/items_hindi.json",
+    "image": "assets/images/sections/hindi.webp",
+    "voice_en": "assets/audio/en/sections/hindi.m4a",
+    "voice_hi": "assets/audio/hi/sections/hindi.m4a"
+  },
+  {
     "id": "animals",
     "title_en": "Animals",
     "title_hi": "जानवर",
@@ -109,5 +123,18 @@
     "image": "assets/images/sections/shapes.webp",
     "voice_en": "assets/audio/en/sections/shapes.m4a",
     "voice_hi": "assets/audio/hi/sections/shapes.m4a"
+  },
+  {
+    "id": "vehicles",
+    "title_en": "Vehicles",
+    "title_hi": "वाहन",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "items": "assets/content/items_vehicles.json",
+    "image": "assets/images/sections/vehicles.webp",
+    "voice_en": "assets/audio/en/sections/vehicles.m4a",
+    "voice_hi": "assets/audio/hi/sections/vehicles.m4a"
   }
 ]

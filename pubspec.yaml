@@ -38,6 +38,8 @@ flutter:
     - assets/images/animals/
     - assets/images/birds/
     - assets/images/games/
+    - assets/images/hindi/
+    - assets/images/vehicles/
     - assets/images/shapes/
     - assets/images/colours/
     - assets/images/vegetables/
@@ -49,8 +51,10 @@ flutter:
     - assets/audio/hi/kido/
     - assets/audio/hi/sections/
     - assets/audio/letters/
+    - assets/audio/hi/letters/
     - assets/audio/animals/
     - assets/audio/birds/
+    - assets/audio/vehicles/
     - assets/audio/sfx/
     - assets/audio/music/
     - assets/audio/ATTRIBUTION.md

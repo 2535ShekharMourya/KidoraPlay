@@ -65,6 +65,10 @@ abstract final class AppColors {
   static const coloursAccent = Color(0xFFE0479E);
   static const shapesBg = Color(0xFFDDF7F5);
   static const shapesAccent = Color(0xFF14A39A);
+  static const vehiclesBg = Color(0xFFE4E9FF);
+  static const vehiclesAccent = Color(0xFF4F5BD5);
+  static const hindiBg = Color(0xFFFFEBD9);
+  static const hindiAccent = Color(0xFFE2711D);
   static const gamesBg = Color(0xFFF1E7FF);
   static const gamesAccent = Color(0xFF9B5DE5);
 }
