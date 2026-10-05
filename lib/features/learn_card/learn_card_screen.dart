@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -17,6 +19,7 @@ import '../../core/widgets/bouncy_button.dart';
 import '../../core/widgets/idle_float.dart';
 import '../../core/widgets/item_picture.dart';
 import '../../core/widgets/particle_burst.dart';
+import '../../core/widgets/pop_in.dart';
 import '../../core/widgets/section_background.dart';
 import '../../core/widgets/wiggle.dart';
 import '../../l10n/app_localizations.dart';
@@ -91,6 +94,25 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
     final to = _rectOf(_jarKey);
     if (item == null || from == null || to == null) return;
     flySticker(context, image: item.image, from: from, to: to);
+  }
+
+  final _warmed = <String>{};
+
+  /// Decodes the neighbours' pictures ahead, so next/previous is instant.
+  void _warmNeighbours(List<LearningItem> items, int index) {
+    final images = [
+      for (final i in [index - 1, index + 1])
+        if (i >= 0 && i < items.length) items[i].image,
+    ].where(_warmed.add).toList();
+    if (images.isEmpty) return;
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+      for (final image in images) {
+        unawaited(
+          precacheImage(AssetImage(image), context, onError: (_, _) {}),
+        );
+      }
+    });
   }
 
   GlobalKey? _tileKey(int? index) =>
@@ -168,6 +190,7 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
     }
 
     final item = items[index];
+    _warmNeighbours(items, index);
     final tiles = item.spelling;
     if (_tileKeys.length != tiles.length) {
       _tileKeys = [for (final _ in tiles) GlobalKey()];
@@ -209,27 +232,31 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
                               child: Center(
                                 child: AspectRatio(
                                   aspectRatio: 1,
-                                  child: ParticleBurst(
-                                    controller: _burst,
-                                    child: _CountBubble(
-                                      count: state.counted,
-                                      color: theme.accent,
-                                      child: Beckon(
-                                        key: _pictureKey,
-                                        active: pictureBeckons,
-                                        strong: true,
-                                        child: IdleFloat(
-                                          child: Wiggle(
-                                            active: state.reacting,
-                                            child: BouncyButton(
-                                              semanticLabel: item.wordEn,
-                                              sfx: null,
-                                              onPressed: _controller.tapPicture,
-                                              child: ItemPicture(
-                                                image: item.image,
-                                                fallbackText: item.wordEn,
-                                                accent: theme.accent,
-                                                badge: item.badge,
+                                  child: PopIn(
+                                    key: ValueKey(item.id),
+                                    child: ParticleBurst(
+                                      controller: _burst,
+                                      child: _CountBubble(
+                                        count: state.counted,
+                                        color: theme.accent,
+                                        child: Beckon(
+                                          key: _pictureKey,
+                                          active: pictureBeckons,
+                                          strong: true,
+                                          child: IdleFloat(
+                                            child: Wiggle(
+                                              active: state.reacting,
+                                              child: BouncyButton(
+                                                semanticLabel: item.wordEn,
+                                                sfx: null,
+                                                onPressed:
+                                                    _controller.tapPicture,
+                                                child: ItemPicture(
+                                                  image: item.image,
+                                                  fallbackText: item.wordEn,
+                                                  accent: theme.accent,
+                                                  badge: item.badge,
+                                                ),
                                               ),
                                             ),
                                           ),
@@ -242,16 +269,20 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
                             ),
                             const SizedBox(width: AppSpacing.lg),
                             Expanded(
-                              child: _WordPanel(
-                                item: item,
-                                // Hindi letters: the Hindi word first.
-                                languages: item.section == SectionId.hindi
-                                    ? const [
-                                        ContentLanguage.hi,
-                                        ContentLanguage.en,
-                                      ]
-                                    : languages,
-                                section: widget.scope.section,
+                              child: PopIn(
+                                key: ValueKey('word-${item.id}'),
+                                index: 1,
+                                child: _WordPanel(
+                                  item: item,
+                                  // Hindi letters: the Hindi word first.
+                                  languages: item.section == SectionId.hindi
+                                      ? const [
+                                          ContentLanguage.hi,
+                                          ContentLanguage.en,
+                                        ]
+                                      : languages,
+                                  section: widget.scope.section,
+                                ),
                               ),
                             ),
                           ],

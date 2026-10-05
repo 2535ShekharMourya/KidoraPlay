@@ -44,14 +44,17 @@ class _IdleFloatState extends State<IdleFloat>
     return AnimatedBuilder(
       animation: _anim,
       builder: (context, child) {
-        if (!_anim.isAnimating) return child!;
+        // Same tree when stopped, so the child keeps its state.
         final t = (_anim.value + widget.phase) * 2 * math.pi;
         return Transform.translate(
-          offset: Offset(0, math.sin(t) * AppScale.idleFloatOffset),
+          offset: _anim.isAnimating
+              ? Offset(0, math.sin(t) * AppScale.idleFloatOffset)
+              : Offset.zero,
           child: child,
         );
       },
-      child: widget.child,
+      // Moved, not repainted, every frame.
+      child: RepaintBoundary(child: widget.child),
     );
   }
 }

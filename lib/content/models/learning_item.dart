@@ -95,8 +95,12 @@ class LearningItem {
   /// Rive state-machine input for the picture's reaction, if any.
   final String? riveReaction;
 
-  /// Letter shown on the picture when it isn't drawn into it (Hindi).
-  String? get badge => section == SectionId.hindi ? letter : null;
+  /// Letter shown on the picture's corner: "Aa" for ABC, "अ" for Hindi.
+  String? get badge => switch ((section, letter)) {
+    (SectionId.abc, final l?) => '${l.toUpperCase()}${l.toLowerCase()}',
+    (SectionId.hindi, final l?) => l,
+    _ => null,
+  };
 
   /// Letter tiles for spelling mode, always derived from [wordEn].
   List<SpellingTile> get spelling => spellingOf(wordEn);

@@ -115,13 +115,16 @@ class _TraceScreenState extends ConsumerState<TraceScreen> {
                 child: Center(
                   child: !state.ready
                       ? const SizedBox.shrink()
-                      : ParticleBurst(
-                          controller: _sparkle,
-                          child: TraceBoard(
-                            key: _boardKey,
-                            state: state,
-                            accent: theme.accent,
-                            onMove: _controller.move,
+                      : PopIn(
+                          key: ValueKey(widget.itemId),
+                          child: ParticleBurst(
+                            controller: _sparkle,
+                            child: TraceBoard(
+                              key: _boardKey,
+                              state: state,
+                              accent: theme.accent,
+                              onMove: _controller.move,
+                            ),
                           ),
                         ),
                 ),

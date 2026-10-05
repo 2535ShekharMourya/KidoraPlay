@@ -368,7 +368,7 @@
     "voice_intro_en": "assets/audio/en/p_parrot_intro.m4a"
   },
   {
-    "id": "q_queen",
+    "id": "q_quail",
     "section": "abc",
     "levels": [
       "nursery",
@@ -377,18 +377,18 @@
     ],
     "letter": "Q",
     "number": null,
-    "word_en": "Queen",
-    "word_hi": "रानी",
-    "image": "assets/images/abc/q_queen.webp",
-    "voice_en": "assets/audio/en/q_queen.m4a",
-    "voice_hi": "assets/audio/hi/q_queen.m4a",
+    "word_en": "Quail",
+    "word_hi": "बटेर",
+    "image": "assets/images/abc/q_quail.webp",
+    "voice_en": "assets/audio/en/q_quail.m4a",
+    "voice_hi": "assets/audio/hi/q_quail.m4a",
     "sound": null,
-    "fact_en": "A queen wears a crown.",
-    "fact_hi": "रानी मुकुट पहनती है।",
-    "voice_fact_en": "assets/audio/en/q_queen_fact.m4a",
-    "voice_fact_hi": "assets/audio/hi/q_queen_fact.m4a",
+    "fact_en": "A quail is a little bird that runs very fast!",
+    "fact_hi": "बटेर एक छोटी सी चिड़िया है, जो बहुत तेज़ दौड़ती है!",
+    "voice_fact_en": "assets/audio/en/q_quail_fact.m4a",
+    "voice_fact_hi": "assets/audio/hi/q_quail_fact.m4a",
     "rive_reaction": null,
-    "voice_intro_en": "assets/audio/en/q_queen_intro.m4a"
+    "voice_intro_en": "assets/audio/en/q_quail_intro.m4a"
   },
   {
     "id": "r_rabbit",

@@ -69,6 +69,16 @@ ARTICLES = {
     "hi_imli": "Tamarind", "hi_eekh": "File:Sugarcane stalks.jpg",
     "hi_okhli": "Mortar and pestle", "hi_tharmas": "Vacuum flask",
     "hi_rath": "File:Chariot of Lord Jagganath.JPG", "hi_lattu": "File:Spinning top.jpg",
+    # ABC: real photos; the letter is a badge drawn by the app.
+    "a_apple": "File:Red Apple.jpg", "b_ball": "File:Football Pallo valmiina-cropped.jpg", "c_cat": "Cat",
+    "d_dog": "Indian pariah dog", "e_egg": "File:White chicken egg.jpg", "f_fish": "Goldfish",
+    "g_grapes": "Grape", "h_hat": "File:Straw hat, Vietnamese Women's Museum.jpg", "i_ice_cream": "Ice cream",
+    "j_jug": "Jug", "k_kite": "Kite", "l_lion": "Lion", "m_mango": "Mango",
+    "n_nest": "Bird nest", "o_orange": "Orange (fruit)",
+    "p_parrot": "Rose-ringed parakeet", "q_quail": "Common quail",
+    "r_rabbit": "Domestic rabbit", "s_sun": "File:The Sun by the Atmospheric Imaging Assembly of NASA's Solar Dynamics Observatory - 20100819.jpg", "t_tree": "Tree",
+    "u_umbrella": "Umbrella", "v_van": "Van", "w_watch": "File:Citizen wristwatch.jpg",
+    "x_x_ray": "File:Jaccoud arthropathy hand x-ray front.jpg", "y_yo_yo": "Yo-yo", "z_zebra": "File:Equus quagga burchellii - Etosha, 2014.jpg",
     # Section tiles.
     "sections/animals": "Lion", "sections/birds": "Peafowl",
     "sections/vehicles": "Auto rickshaw",
@@ -167,7 +177,8 @@ def main():
     images = {}
     for name in ("items_animals.json", "items_birds.json",
                  "items_fruits.json", "items_vegetables.json",
-                 "items_vehicles.json", "items_hindi.json"):
+                 "items_vehicles.json", "items_hindi.json",
+                 "items_abc.json"):
         for it in json.loads((CONTENT / name).read_text(encoding="utf-8")):
             images[it["id"]] = it["image"]
     for s in json.loads((CONTENT / "sections.json").read_text("utf-8")):

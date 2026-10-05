@@ -348,9 +348,9 @@ assets/audio/en/potato.m4a
 assets/audio/en/potato_fact.m4a
 assets/audio/en/pumpkin.m4a
 assets/audio/en/pumpkin_fact.m4a
-assets/audio/en/q_queen.m4a
-assets/audio/en/q_queen_fact.m4a
-assets/audio/en/q_queen_intro.m4a
+assets/audio/en/q_quail.m4a
+assets/audio/en/q_quail_fact.m4a
+assets/audio/en/q_quail_intro.m4a
 assets/audio/en/r_rabbit.m4a
 assets/audio/en/r_rabbit_fact.m4a
 assets/audio/en/r_rabbit_intro.m4a
@@ -897,8 +897,8 @@ assets/audio/hi/potato.m4a
 assets/audio/hi/potato_fact.m4a
 assets/audio/hi/pumpkin.m4a
 assets/audio/hi/pumpkin_fact.m4a
-assets/audio/hi/q_queen.m4a
-assets/audio/hi/q_queen_fact.m4a
+assets/audio/hi/q_quail.m4a
+assets/audio/hi/q_quail_fact.m4a
 assets/audio/hi/r_rabbit.m4a
 assets/audio/hi/r_rabbit_fact.m4a
 assets/audio/hi/rabbit.m4a

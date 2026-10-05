@@ -41,7 +41,7 @@ PICTURES = {
     "g_grapes": ("1f347",), "h_hat": ("1f452",), "i_ice_cream": ("1f366",),
     "j_jug": ("1f3fa",), "k_kite": ("1fa81",), "l_lion": ("1f981",),
     "m_mango": ("1f96d",), "n_nest": ("1faba",), "o_orange": ("1f34a",),
-    "p_parrot": ("1f99c",), "q_queen": ("1f478",), "r_rabbit": ("1f407",),
+    "p_parrot": ("1f99c",), "q_quail": ("1f426",), "r_rabbit": ("1f407",),
     "s_sun": ("2600",), "t_tree": ("1f333",), "u_umbrella": ("2602",),
     "v_van": ("1f690",), "w_watch": ("231a",), "x_x_ray": ("1fa7b",),
     "y_yo_yo": ("1fa80",), "z_zebra": ("1f993",),

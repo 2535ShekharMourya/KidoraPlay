@@ -27,6 +27,9 @@ abstract final class AppLayout {
   /// him.
   static const sideZone = AppSpacing.minTapTarget + AppSpacing.md * 2;
 
+  /// Kido waving on the splash screen.
+  static const splashKido = 150.0;
+
   /// Items per page in a section grid (5 × 2). Paging uses big arrow
   /// buttons because child screens never scroll or swipe.
   static const gridColumns = 5;

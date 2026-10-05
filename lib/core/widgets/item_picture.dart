@@ -18,7 +18,7 @@ class ItemPicture extends StatelessWidget {
   final String fallbackText;
   final Color accent;
 
-  /// Text shown on the picture's corner (a Hindi letter).
+  /// Text shown on the picture's corner ("Aa", "अ").
   final String? badge;
 
   @override

@@ -10,6 +10,7 @@ import 'content/repository/content_repository.dart';
 import 'core/audio/audio_service.dart';
 import 'core/licences.dart';
 import 'features/billing/billing_controller.dart';
+import 'features/tracing/trace_logic.dart';
 import 'core/storage/local_store.dart';
 
 Future<void> main() async {
@@ -53,6 +54,11 @@ Future<void> main() async {
   // Start audio (applies settings, starts music if enabled) and load SFX
   // into memory without blocking the first frame.
   unawaited(container.read(audioServiceProvider).preloadSfx());
+  unawaited(
+    container
+        .read(traceGuidesProvider.future)
+        .then<void>((_) {}, onError: (_) {}),
+  );
 
   // Premium is read from the device cache at once (ads depend on it);
   // Google Play is asked in the background to confirm it.

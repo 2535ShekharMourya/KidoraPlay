@@ -25,6 +25,19 @@ Map<String, Object?> appleJson() => {
 
 void main() {
   group('LearningItem', () {
+    test('picture badge: "Aa" for ABC, the letter for Hindi, none else', () {
+      expect(LearningItem.fromJson(appleJson()).badge, 'Aa');
+      final hindi = {
+        ...appleJson(),
+        'section': 'hindi',
+        'letter': 'अ',
+        'letter_voice': 'assets/audio/hi/letters/hi_anar.m4a',
+      };
+      expect(LearningItem.fromJson(hindi).badge, 'अ');
+      final animal = {...appleJson(), 'section': 'animals', 'letter': null};
+      expect(LearningItem.fromJson(animal).badge, isNull);
+    });
+
     test('parses JSON', () {
       final item = LearningItem.fromJson(appleJson());
       expect(item.id, 'a_apple');
