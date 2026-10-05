@@ -451,14 +451,15 @@ class _WordPanel extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        for (final lang in languages)
+        // The first word is the one being taught, so it is the big one.
+        for (final (i, lang) in languages.indexed)
           FittedBox(
             fit: BoxFit.scaleDown,
             child: Text(
               item.word(lang),
-              style: lang == ContentLanguage.en
+              style: i == 0
                   ? text.displayLarge?.copyWith(fontSize: 48)
-                  : text.headlineMedium?.copyWith(fontSize: 40),
+                  : text.headlineMedium?.copyWith(fontSize: 34),
             ),
           ),
         if (number != null && number >= 10) ...[
