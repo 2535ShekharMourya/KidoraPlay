@@ -721,5 +721,23 @@
         ]
       }
     ]
+  },
+  "tap_play": {
+    "en": [
+      {
+        "text": "Tap anywhere, and see who comes to play!",
+        "audio": [
+          "assets/audio/en/kido/tap_play.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "कहीं भी छुओ, और देखो कौन खेलने आता है!",
+        "audio": [
+          "assets/audio/hi/kido/tap_play.m4a"
+        ]
+      }
+    ]
   }
 }

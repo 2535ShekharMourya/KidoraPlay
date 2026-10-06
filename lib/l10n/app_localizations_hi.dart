@@ -248,4 +248,7 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get sectionOpposites => 'उल्टे शब्द';
+
+  @override
+  String get toyTapPlay => 'छुओ और खेलो';
 }

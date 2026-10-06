@@ -13,6 +13,7 @@ import '../../core/widgets/pop_in.dart';
 import '../../core/widgets/section_background.dart';
 import '../../l10n/app_localizations.dart';
 import '../kido/kido_widget.dart';
+import '../play/toys.dart';
 import 'quiz_models.dart';
 
 /// Picks a practice game.
@@ -37,32 +38,48 @@ class GamesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
+    final activities = [
+      for (final toy in ToyKind.values)
+        (
+          label: toy.label(l10n),
+          image: toy.image,
+          color: AppColors.toyAccent,
+          route: AppRoutes.toy(toy),
+        ),
+      for (final kind in GameKind.values)
+        (
+          label: labelFor(l10n, kind),
+          image: imageFor(kind),
+          color: SectionTheme.of(kind.theme).accent,
+          route: AppRoutes.game(kind),
+        ),
+    ];
     return Scaffold(
       backgroundColor: AppColors.gamesBg,
       body: SectionBackground(
         child: SafeArea(
           child: Stack(
             children: [
-              // One row of four; two rows on small phones (never thin).
+              // Toys first (the youngest can play them), then quiz games.
               Positioned.fill(
                 child: PagedTiles(
-                  count: GameKind.values.length,
-                  maxColumns: GameKind.values.length,
+                  count: activities.length,
+                  maxColumns: 4,
                   minHeight: AppLayout.sectionTileMinHeight,
                   arrowColor: AppColors.numbersAccent,
                   builder: (context, i, slot) {
-                    final kind = GameKind.values[i];
+                    final a = activities[i];
                     return PopIn(
                       index: slot,
                       child: IdleFloat(
-                        phase: i / GameKind.values.length,
+                        phase: i / activities.length,
                         child: BouncyButton(
-                          semanticLabel: labelFor(l10n, kind),
-                          onPressed: () => context.go(AppRoutes.game(kind)),
+                          semanticLabel: a.label,
+                          onPressed: () => context.go(a.route),
                           child: _GameCard(
-                            image: imageFor(kind),
-                            label: labelFor(l10n, kind),
-                            color: SectionTheme.of(kind.theme).accent,
+                            image: a.image,
+                            label: a.label,
+                            color: a.color,
                           ),
                         ),
                       ),

@@ -23,6 +23,9 @@ abstract final class AppColors {
   static const celebrate = Color(0xFFFFC93C);
   static const glow = Color(0xFFFFF3A8);
 
+  /// Toy cards in the Games area.
+  static const toyAccent = Color(0xFFFF6FA8);
+
   /// Behind a balloon party.
   static const partyVeil = Color(0x66FFFFFF);
   static const balloonShine = Color(0x88FFFFFF);

@@ -118,6 +118,9 @@ abstract final class AppDurations {
   /// Balloon party: one balloon's rise, the whole party at most, and
   /// the pause after the last pop.
   static const balloonRise = Duration(seconds: 7);
+
+  /// Tap & Play: how long a popped-up friend stays before floating off.
+  static const tapPlayLife = Duration(milliseconds: 3200);
   static const balloonParty = Duration(seconds: 15);
   static const balloonLastPop = Duration(milliseconds: 1400);
   static const traceDemo = Duration(milliseconds: 1800);

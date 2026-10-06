@@ -553,6 +553,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Opposites'**
   String get sectionOpposites;
+
+  /// No description provided for @toyTapPlay.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap & Play'**
+  String get toyTapPlay;
 }
 
 class _AppLocalizationsDelegate

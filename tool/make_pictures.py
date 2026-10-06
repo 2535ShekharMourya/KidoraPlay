@@ -64,6 +64,8 @@ PICTURES = {
     "games/games": ("1f9e9",), "games/find_it": ("1f50d",),
     "games/who_says": ("1f442",), "games/count_it": ("1f9ee",),
     "games/letters": ("1f524",),
+    "games/tap_play": ("1f423",), "games/memory": ("1f0cf",),
+    "games/music": ("1f3b9",),
 }
 STAR = "2b50"
 
@@ -482,7 +484,8 @@ def main():
     tile = canvas()
     text_centered(ImageDraw.Draw(tile), 90, "अ आ", 250)
     made.append(save(tile, "assets/images/sections/hindi.webp"))
-    for game in ("games", "find_it", "who_says", "count_it", "letters"):
+    for game in ("games", "find_it", "who_says", "count_it", "letters",
+                 "tap_play", "memory", "music"):
         made.append(save(compose_plain(PICTURES[f"games/{game}"]),
                          f"assets/images/games/{game}.webp"))
     for s in json.loads((CONTENT / "sections.json").read_text("utf-8")):

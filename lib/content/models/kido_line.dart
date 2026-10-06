@@ -51,6 +51,9 @@ abstract final class KidoEvent {
   /// Number cards: "Let's count the stars!" … "How many stars? Three!".
   static const countStars = 'count_stars';
   static const howManyStars = 'how_many_stars';
+
+  /// Tap & Play: "Tap anywhere, and see who comes to play!".
+  static const tapPlay = 'tap_play';
   static const tryAgain = 'try_again';
   static const sectionDone = 'section_done';
   static const goodbye = 'goodbye';
@@ -96,6 +99,7 @@ abstract final class KidoEvent {
     letsSpell,
     countStars,
     howManyStars,
+    tapPlay,
     tryAgain,
     sectionDone,
     goodbye,

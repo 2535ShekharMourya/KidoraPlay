@@ -10,6 +10,8 @@ import '../../features/home/home_screen.dart';
 import '../../features/learn_card/learn_card_screen.dart';
 import '../../features/numbers/number_rows_screen.dart';
 import '../../features/parent/parent_area_screen.dart';
+import '../../features/play/tap_play_screen.dart';
+import '../../features/play/toys.dart';
 import '../../features/progress/sticker_book_screen.dart';
 import '../../features/section_grid/item_grid_screen.dart';
 import '../../features/section_grid/section_items.dart';
@@ -27,6 +29,8 @@ abstract final class AppRoutes {
   static const games = '/home/games';
 
   static String game(GameKind kind) => '$games/${kind.name}';
+
+  static String toy(ToyKind kind) => '$games/toy/${kind.name}';
 
   static String section(SectionId id) => '$home/section/${id.name}';
 
@@ -120,6 +124,19 @@ final appRouterProvider = Provider<GoRouter>((ref) {
             pageBuilder: (context, state) =>
                 _playfulPage(state, const GamesScreen()),
             routes: [
+              GoRoute(
+                path: 'toy/:toy',
+                redirect: (context, state) =>
+                    ToyKind.values.asNameMap()[state.pathParameters['toy']] ==
+                        null
+                    ? AppRoutes.games
+                    : null,
+                pageBuilder: (context, state) =>
+                    _playfulPage(state, switch (ToyKind.values
+                        .asNameMap()[state.pathParameters['toy']]!) {
+                      ToyKind.tapPlay => const TapPlayScreen(),
+                    }),
+              ),
               GoRoute(
                 path: ':kind',
                 redirect: (context, state) =>
