@@ -3,6 +3,7 @@
     "id": "circle",
     "section": "shapes",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -30,6 +31,7 @@
     "id": "square",
     "section": "shapes",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -57,6 +59,7 @@
     "id": "triangle",
     "section": "shapes",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -111,6 +114,7 @@
     "id": "star",
     "section": "shapes",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"

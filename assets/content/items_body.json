@@ -3,6 +3,7 @@
     "id": "body_eyes",
     "section": "body",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -29,6 +30,7 @@
     "id": "body_ears",
     "section": "body",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -55,6 +57,7 @@
     "id": "body_nose",
     "section": "body",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -81,6 +84,7 @@
     "id": "body_mouth",
     "section": "body",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -107,6 +111,7 @@
     "id": "body_teeth",
     "section": "body",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -133,6 +138,7 @@
     "id": "body_tongue",
     "section": "body",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -159,6 +165,7 @@
     "id": "body_hand",
     "section": "body",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -185,6 +192,7 @@
     "id": "body_fingers",
     "section": "body",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -211,6 +219,7 @@
     "id": "body_arm",
     "section": "body",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -237,6 +246,7 @@
     "id": "body_leg",
     "section": "body",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -263,6 +273,7 @@
     "id": "body_foot",
     "section": "body",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"

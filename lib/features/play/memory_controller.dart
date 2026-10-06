@@ -75,6 +75,7 @@ class MemoryState {
 
 /// Pairs per class: few for the youngest.
 int memoryPairsFor(Level level) => switch (level) {
+  Level.baby => 2,
   Level.nursery => 3,
   Level.lkg => 4,
   Level.ukg => 6,

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../content/models/level.dart';
 import '../../core/router/app_router.dart';
+import '../../core/settings/app_settings.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_tokens.dart';
 import '../../core/theme/section_theme.dart';
@@ -17,7 +20,7 @@ import '../play/toys.dart';
 import 'quiz_models.dart';
 
 /// Picks a practice game.
-class GamesScreen extends StatelessWidget {
+class GamesScreen extends ConsumerWidget {
   const GamesScreen({super.key});
 
   static String imageFor(GameKind kind) => switch (kind) {
@@ -36,8 +39,9 @@ class GamesScreen extends StatelessWidget {
       };
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context);
+    final level = ref.watch(settingsProvider.select((s) => s.level));
     final activities = [
       for (final toy in ToyKind.values)
         (
@@ -47,12 +51,14 @@ class GamesScreen extends StatelessWidget {
           route: AppRoutes.toy(toy),
         ),
       for (final kind in GameKind.values)
-        (
-          label: labelFor(l10n, kind),
-          image: imageFor(kind),
-          color: SectionTheme.of(kind.theme).accent,
-          route: AppRoutes.game(kind),
-        ),
+        // Letters come later than the baby class.
+        if (kind != GameKind.letters || level != Level.baby)
+          (
+            label: labelFor(l10n, kind),
+            image: imageFor(kind),
+            color: SectionTheme.of(kind.theme).accent,
+            route: AppRoutes.game(kind),
+          ),
     ];
     return Scaffold(
       backgroundColor: AppColors.gamesBg,

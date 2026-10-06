@@ -3,6 +3,7 @@
     "id": "apple",
     "section": "fruits",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -29,6 +30,7 @@
     "id": "banana",
     "section": "fruits",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -55,6 +57,7 @@
     "id": "mango",
     "section": "fruits",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -81,6 +84,7 @@
     "id": "orange",
     "section": "fruits",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -107,6 +111,7 @@
     "id": "grapes",
     "section": "fruits",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -133,6 +138,7 @@
     "id": "watermelon",
     "section": "fruits",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -159,6 +165,7 @@
     "id": "papaya",
     "section": "fruits",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -185,6 +192,7 @@
     "id": "pineapple",
     "section": "fruits",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -212,6 +220,7 @@
     "id": "guava",
     "section": "fruits",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -238,6 +247,7 @@
     "id": "pomegranate",
     "section": "fruits",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -264,6 +274,7 @@
     "id": "strawberry",
     "section": "fruits",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -291,6 +302,7 @@
     "id": "coconut",
     "section": "fruits",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"

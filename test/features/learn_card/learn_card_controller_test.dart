@@ -286,6 +286,22 @@ void main() {
     });
   });
 
+  test('babies (1-3): two stars, no letter-by-letter spelling', () async {
+    await setUpContainer(
+      store: LocalStore.inMemory({
+        SettingsKeys.language: 'en',
+        SettingsKeys.level: 'baby',
+        'kido.discovered': true,
+      }),
+    );
+    await controller('cow').playLesson();
+    expect(stateOf('cow').starGoal, 2);
+    await tap('cow'); // the moo
+    final second = await tap('cow');
+    expect(second.where((a) => a.contains('/letters/')), isEmpty);
+    expect(stateOf('cow').phase, LessonPhase.done);
+  });
+
   group('taps never break anything', () {
     test('mashing during a discovery just pops: no restart, no cut', () async {
       await setUpContainer();

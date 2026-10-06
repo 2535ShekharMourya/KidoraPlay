@@ -79,6 +79,7 @@ class _ParentAreaScreenState extends ConsumerState<ParentAreaScreen> {
             _Heading(l10n.settingsClass),
             SegmentedButton<Level>(
               segments: [
+                ButtonSegment(value: Level.baby, label: Text(l10n.levelBaby)),
                 ButtonSegment(
                   value: Level.nursery,
                   label: Text(l10n.levelNursery),

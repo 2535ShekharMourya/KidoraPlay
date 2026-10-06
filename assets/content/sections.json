@@ -4,6 +4,7 @@
     "title_en": "Numbers",
     "title_hi": "गिनती",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -46,6 +47,7 @@
     "title_en": "Animals",
     "title_hi": "जानवर",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -60,6 +62,7 @@
     "title_en": "Birds",
     "title_hi": "पक्षी",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -74,6 +77,7 @@
     "title_en": "Fruits",
     "title_hi": "फल",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -101,6 +105,7 @@
     "title_en": "Colours",
     "title_hi": "रंग",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -115,6 +120,7 @@
     "title_en": "Shapes",
     "title_hi": "आकार",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -129,6 +135,7 @@
     "title_en": "Vehicles",
     "title_hi": "वाहन",
     "levels": [
+      "baby",
       "lkg",
       "ukg"
     ],
@@ -142,6 +149,7 @@
     "title_en": "Body Parts",
     "title_hi": "शरीर के अंग",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"

@@ -3,6 +3,7 @@
     "id": "colour_red",
     "section": "colours",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -29,6 +30,7 @@
     "id": "colour_blue",
     "section": "colours",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -55,6 +57,7 @@
     "id": "colour_yellow",
     "section": "colours",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -81,6 +84,7 @@
     "id": "colour_green",
     "section": "colours",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -107,6 +111,7 @@
     "id": "colour_orange",
     "section": "colours",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -133,6 +138,7 @@
     "id": "colour_pink",
     "section": "colours",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -159,6 +165,7 @@
     "id": "colour_purple",
     "section": "colours",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -186,6 +193,7 @@
     "id": "colour_brown",
     "section": "colours",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -212,6 +220,7 @@
     "id": "colour_black",
     "section": "colours",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -238,6 +247,7 @@
     "id": "colour_white",
     "section": "colours",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"

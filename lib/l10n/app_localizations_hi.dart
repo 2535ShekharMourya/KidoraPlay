@@ -260,4 +260,7 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get toyMusic => 'म्यूज़िक';
+
+  @override
+  String get levelBaby => 'बेबी';
 }

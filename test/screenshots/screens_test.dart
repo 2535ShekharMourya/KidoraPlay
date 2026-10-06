@@ -107,7 +107,7 @@ void main() {
   }, skip: !enabled);
 
   for (final MapEntry(key: size, value: physical) in sizes.entries) {
-    for (final level in ['nursery', 'ukg']) {
+    for (final level in ['baby', 'nursery', 'ukg']) {
       testWidgets('screens $size $level', (tester) async {
         tester.view
           ..physicalSize = physical

@@ -15,6 +15,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "assets" / "content"
 ALL_LEVELS = ["nursery", "lkg", "ukg"]
+# Babies (1-3) too: first words, real sounds, colours, body, vehicles.
+BABY_UP = ["baby"] + ALL_LEVELS
+BABY_SHAPES = {"circle", "square", "triangle", "star"}
 
 
 def item(section, id_, word_en, word_hi, *, letter=None, number=None,
@@ -81,7 +84,7 @@ def number_id(n):
 # Curriculum: Nursery learns 1–20; LKG and UKG learn 1–100.
 NUMBERS = [
     (n, number_id(n), number_name_en(n), HINDI_NUMBERS[n],
-     ALL_LEVELS if n <= 20 else ["lkg", "ukg"])
+     (BABY_UP if n <= 5 else ALL_LEVELS) if n <= 20 else ["lkg", "ukg"])
     for n in range(1, 101)
 ]
 
@@ -659,23 +662,23 @@ def main():
         abc_items.append(it)
     write("items_abc.json", abc_items)
     write("items_animals.json",
-          [item("animals", i, en, hi, sound=True, fact=f)
+          [item("animals", i, en, hi, sound=True, fact=f, levels=BABY_UP)
            for i, en, hi, f in ANIMALS])
     write("items_birds.json",
-          [item("birds", i, en, hi, sound=True, fact=f)
+          [item("birds", i, en, hi, sound=True, fact=f, levels=BABY_UP)
            for i, en, hi, f in BIRDS])
 
     write("items_fruits.json",
-          [item("fruits", i, en, hi, fact=f, levels=NURSERY_UP)
+          [item("fruits", i, en, hi, fact=f, levels=BABY_UP)
            for i, en, hi, f in FRUITS])
     write("items_vegetables.json",
           [item("vegetables", i, en, hi, fact=f, levels=LKG_UP)
            for i, en, hi, f in VEGETABLES])
     write("items_colours.json",
-          [item("colours", i, en, hi, fact=f, levels=NURSERY_UP)
+          [item("colours", i, en, hi, fact=f, levels=BABY_UP)
            for i, en, hi, _rgb, _emoji, f in COLOURS])
     write("items_vehicles.json",
-          [item("vehicles", i, en, hi, sound=True, fact=f, levels=LKG_UP)
+          [item("vehicles", i, en, hi, sound=True, fact=f, levels=BABY_UP)
            for i, en, hi, f in VEHICLES])
     hindi_items = []
     for letter, id_, en, hi, _src, levels in HINDI:
@@ -688,10 +691,11 @@ def main():
         hindi_items.append(it)
     write("items_hindi.json", hindi_items)
     write("items_shapes.json",
-          [item("shapes", i, en, hi, fact=f, levels=NURSERY_UP)
+          [item("shapes", i, en, hi, fact=f,
+                levels=BABY_UP if i in BABY_SHAPES else NURSERY_UP)
            for i, en, hi, f in SHAPES])
     write("items_body.json",
-          [item("body", i, en, hi, fact=f, levels=NURSERY_UP)
+          [item("body", i, en, hi, fact=f, levels=BABY_UP)
            for i, en, hi, _pic, f in BODY])
     write("items_family.json",
           [item("family", i, en, hi, fact=f, levels=LKG_UP)

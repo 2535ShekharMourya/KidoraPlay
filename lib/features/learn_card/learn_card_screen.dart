@@ -252,7 +252,9 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
         !state.busy &&
         (state.hint == HintLevel.point || state.hint == HintLevel.glow);
 
+    // Tracing starts with Nursery (babies don't hold a "pencil" yet).
     final canTrace =
+        ref.watch(settingsProvider.select((s) => s.level)) != Level.baby &&
         ref.watch(traceGuidesProvider).value?.glyphsFor(item) != null;
 
     void goTo(LearningItem other) =>

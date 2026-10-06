@@ -3,6 +3,7 @@
     "id": "crow",
     "section": "birds",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -29,6 +30,7 @@
     "id": "parrot",
     "section": "birds",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -55,6 +57,7 @@
     "id": "peacock",
     "section": "birds",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -81,6 +84,7 @@
     "id": "sparrow",
     "section": "birds",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -107,6 +111,7 @@
     "id": "pigeon",
     "section": "birds",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -133,6 +138,7 @@
     "id": "duck",
     "section": "birds",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -159,6 +165,7 @@
     "id": "hen",
     "section": "birds",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -185,6 +192,7 @@
     "id": "owl",
     "section": "birds",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -211,6 +219,7 @@
     "id": "eagle",
     "section": "birds",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -237,6 +246,7 @@
     "id": "koel",
     "section": "birds",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"

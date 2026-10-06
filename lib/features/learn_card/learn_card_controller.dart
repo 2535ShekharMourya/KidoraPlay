@@ -233,14 +233,18 @@ class LearnCardController extends Notifier<LearnCardState> {
   /// Opens the card.
   Future<void> start() => playLesson();
 
-  /// The things this item can reveal, in tap order.
+  bool get _baby => ref.read(settingsProvider).level == Level.baby;
+
+  /// The things this item can reveal, in tap order. Babies (1–3) get the
+  /// sound, counting, fact and "say it", but no letter-by-letter spelling.
   List<Discovery> discoveriesFor(LearningItem item) {
     final n = item.number;
     return [
       if (item.sound != null) Discovery.sound,
       if (n != null && n <= AppDurations.countAlongMax) Discovery.count,
       if (_talkLanguages.any((l) => item.factVoice(l) != null)) Discovery.fact,
-      if (item.section.hasSpelling || item.letterVoice != null) Discovery.spell,
+      if (!_baby && (item.section.hasSpelling || item.letterVoice != null))
+        Discovery.spell,
       Discovery.say,
     ];
   }
@@ -260,7 +264,8 @@ class LearnCardController extends Notifier<LearnCardState> {
       hint: HintLevel.none,
       counted: 0,
       stars: 0,
-      starGoal: math.min(maxStars, _steps.length),
+      // Babies: two stars make a card (short attention spans).
+      starGoal: math.min(_baby ? 2 : maxStars, _steps.length),
       busy: true,
       clearDiscovery: true,
     );

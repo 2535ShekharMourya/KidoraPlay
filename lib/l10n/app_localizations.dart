@@ -577,6 +577,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Music'**
   String get toyMusic;
+
+  /// No description provided for @levelBaby.
+  ///
+  /// In en, this message translates to:
+  /// **'Baby'**
+  String get levelBaby;
 }
 
 class _AppLocalizationsDelegate

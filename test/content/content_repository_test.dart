@@ -97,6 +97,26 @@ void main() {
       ]) {
         expect(nursery, isNot(contains(later)));
       }
+      // Babies (1–3): first words, sounds, colours, body, vehicles; no
+      // letters yet, and numbers only to five.
+      expect(catalog.sectionsFor(Level.baby).map((s) => s.id), [
+        SectionId.numbers,
+        SectionId.animals,
+        SectionId.birds,
+        SectionId.fruits,
+        SectionId.colours,
+        SectionId.shapes,
+        SectionId.vehicles,
+        SectionId.body,
+      ]);
+      expect(
+        catalog.itemsFor(SectionId.numbers, level: Level.baby),
+        hasLength(5),
+      );
+      expect(
+        catalog.itemsFor(SectionId.shapes, level: Level.baby).map((i) => i.id),
+        ['circle', 'square', 'triangle', 'star'],
+      );
       final lkg = catalog.sectionsFor(Level.lkg).map((s) => s.id);
       expect(lkg, containsAll([SectionId.family, SectionId.days]));
       expect(lkg, isNot(contains(SectionId.months)));

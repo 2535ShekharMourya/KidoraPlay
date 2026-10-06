@@ -33,13 +33,17 @@ const roundsPerGame = 5;
 
 /// Choices per round grow with the class: Nursery 2, LKG 3, UKG 4.
 int choicesFor(Level level) => switch (level) {
-  Level.nursery => 2,
+  Level.baby || Level.nursery => 2,
   Level.lkg => 3,
   Level.ukg => 4,
 };
 
 /// Counting goes up to 5 in Nursery, 10 after that.
-int countMaxFor(Level level) => level == Level.nursery ? 5 : 10;
+int countMaxFor(Level level) => switch (level) {
+  Level.baby => 3,
+  Level.nursery => 5,
+  Level.lkg || Level.ukg => 10,
+};
 
 /// One tappable answer.
 @immutable

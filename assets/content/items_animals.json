@@ -3,6 +3,7 @@
     "id": "cow",
     "section": "animals",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -29,6 +30,7 @@
     "id": "dog",
     "section": "animals",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -55,6 +57,7 @@
     "id": "cat",
     "section": "animals",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -81,6 +84,7 @@
     "id": "lion",
     "section": "animals",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -107,6 +111,7 @@
     "id": "tiger",
     "section": "animals",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -133,6 +138,7 @@
     "id": "elephant",
     "section": "animals",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -159,6 +165,7 @@
     "id": "monkey",
     "section": "animals",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -185,6 +192,7 @@
     "id": "horse",
     "section": "animals",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -211,6 +219,7 @@
     "id": "goat",
     "section": "animals",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -237,6 +246,7 @@
     "id": "sheep",
     "section": "animals",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -263,6 +273,7 @@
     "id": "camel",
     "section": "animals",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -289,6 +300,7 @@
     "id": "deer",
     "section": "animals",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -315,6 +327,7 @@
     "id": "bear",
     "section": "animals",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -341,6 +354,7 @@
     "id": "rabbit",
     "section": "animals",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
@@ -367,6 +381,7 @@
     "id": "squirrel",
     "section": "animals",
     "levels": [
+      "baby",
       "nursery",
       "lkg",
       "ukg"
