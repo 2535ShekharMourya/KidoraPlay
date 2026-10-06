@@ -16,7 +16,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 sys.path.insert(0, str(Path(__file__).parent))
-from make_pictures import emoji_toned, fit, save  # noqa: E402
+from make_pictures import emoji_toned, fit, recolour, save  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "assets" / "content"
@@ -284,7 +284,11 @@ def compose(scene, elements):
     for code, x, y, size in elements:
         # "~code": a reflection in water (upside down, faint).
         mirror = code.startswith("~")
-        e = fit(emoji_toned(code.lstrip("~")), int(H * size))
+        # "*code": the same animal in black (Baa Baa Black Sheep).
+        dark = code.startswith("*")
+        e = fit(emoji_toned(code.lstrip("~*")), int(H * size))
+        if dark:
+            e = recolour(e, (35, 35, 45), (120, 120, 135))
         if mirror:
             e = e.transpose(Image.FLIP_TOP_BOTTOM)
             e.putalpha(e.getchannel("A").point(lambda a: a * 55 // 100))

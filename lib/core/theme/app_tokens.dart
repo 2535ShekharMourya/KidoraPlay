@@ -126,6 +126,9 @@ abstract final class AppDurations {
   static const roomFeed = Duration(milliseconds: 650);
   static const roomBath = Duration(milliseconds: 2600);
 
+  /// One beat of a rhyme's tune.
+  static const rhymeBeat = Duration(milliseconds: 320);
+
   /// Memory match: how long two different cards stay up, and a flip.
   static const memoryLook = Duration(milliseconds: 1300);
   static const cardFlip = Duration(milliseconds: 260);

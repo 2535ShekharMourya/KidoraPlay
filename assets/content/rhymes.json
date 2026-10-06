@@ -1,0 +1,286 @@
+[
+  {
+    "id": "twinkle",
+    "language": "en",
+    "levels": [
+      "baby",
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "title_en": "Twinkle Twinkle",
+    "title_hi": "ट्विंकल ट्विंकल",
+    "image": "assets/images/rhymes/twinkle.webp",
+    "lines": [
+      {
+        "text": "Twinkle, twinkle, little star,",
+        "tune": "c5:1 c5:1 g5:1 g5:1 a5:1 a5:1 g5:2",
+        "voice": "assets/audio/en/rhymes/twinkle_1.m4a"
+      },
+      {
+        "text": "How I wonder what you are!",
+        "tune": "f5:1 f5:1 e5:1 e5:1 d5:1 d5:1 c5:2",
+        "voice": "assets/audio/en/rhymes/twinkle_2.m4a"
+      },
+      {
+        "text": "Up above the world so high,",
+        "tune": "g5:1 g5:1 f5:1 f5:1 e5:1 e5:1 d5:2",
+        "voice": "assets/audio/en/rhymes/twinkle_3.m4a"
+      },
+      {
+        "text": "Like a diamond in the sky.",
+        "tune": "g5:1 g5:1 f5:1 f5:1 e5:1 e5:1 d5:2",
+        "voice": "assets/audio/en/rhymes/twinkle_4.m4a"
+      },
+      {
+        "text": "Twinkle, twinkle, little star,",
+        "tune": "c5:1 c5:1 g5:1 g5:1 a5:1 a5:1 g5:2",
+        "voice": "assets/audio/en/rhymes/twinkle_5.m4a"
+      },
+      {
+        "text": "How I wonder what you are!",
+        "tune": "f5:1 f5:1 e5:1 e5:1 d5:1 d5:1 c5:2",
+        "voice": "assets/audio/en/rhymes/twinkle_6.m4a"
+      }
+    ]
+  },
+  {
+    "id": "baa_baa",
+    "language": "en",
+    "levels": [
+      "baby",
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "title_en": "Baa Baa",
+    "title_hi": "बा बा ब्लैक शीप",
+    "image": "assets/images/rhymes/baa_baa.webp",
+    "lines": [
+      {
+        "text": "Baa, baa, black sheep, have you any wool?",
+        "tune": "c5:1 c5:1 g5:1 g5:1 a5:1 a5:1 a5:1 a5:1 g5:2",
+        "voice": "assets/audio/en/rhymes/baa_baa_1.m4a"
+      },
+      {
+        "text": "Yes sir, yes sir, three bags full!",
+        "tune": "f5:1 f5:1 e5:1 e5:1 d5:1 d5:1 c5:2",
+        "voice": "assets/audio/en/rhymes/baa_baa_2.m4a"
+      },
+      {
+        "text": "One for the master, one for the dame,",
+        "tune": "g5:1 g5:1 g5:1 f5:1 f5:1 e5:1 e5:1 d5:2",
+        "voice": "assets/audio/en/rhymes/baa_baa_3.m4a"
+      },
+      {
+        "text": "And one for the little boy who lives down the lane.",
+        "tune": "g5:1 g5:1 f5:1 f5:1 f5:1 e5:1 e5:1 e5:1 d5:2",
+        "voice": "assets/audio/en/rhymes/baa_baa_4.m4a"
+      }
+    ]
+  },
+  {
+    "id": "johny_johny",
+    "language": "en",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "title_en": "Johny Johny",
+    "title_hi": "जॉनी जॉनी",
+    "image": "assets/images/rhymes/johny_johny.webp",
+    "lines": [
+      {
+        "text": "Johny, Johny!",
+        "tune": "g5:1 e5:1 g5:1 e5:1",
+        "voice": "assets/audio/en/rhymes/johny_johny_1.m4a"
+      },
+      {
+        "text": "Yes, Papa?",
+        "tune": "g5:1 g5:1 e5:2",
+        "voice": "assets/audio/en/rhymes/johny_johny_2.m4a"
+      },
+      {
+        "text": "Eating sugar?",
+        "tune": "f5:1 f5:1 d5:1 d5:1",
+        "voice": "assets/audio/en/rhymes/johny_johny_3.m4a"
+      },
+      {
+        "text": "No, Papa!",
+        "tune": "f5:1 f5:1 d5:2",
+        "voice": "assets/audio/en/rhymes/johny_johny_4.m4a"
+      },
+      {
+        "text": "Telling lies?",
+        "tune": "e5:1 e5:1 c5:2",
+        "voice": "assets/audio/en/rhymes/johny_johny_5.m4a"
+      },
+      {
+        "text": "No, Papa!",
+        "tune": "e5:1 e5:1 c5:2",
+        "voice": "assets/audio/en/rhymes/johny_johny_6.m4a"
+      },
+      {
+        "text": "Open your mouth!",
+        "tune": "g5:1 g5:1 g5:1 c6:1",
+        "voice": "assets/audio/en/rhymes/johny_johny_7.m4a"
+      },
+      {
+        "text": "Ha! Ha! Ha!",
+        "tune": "c6:1 g5:1 c5:2",
+        "voice": "assets/audio/en/rhymes/johny_johny_8.m4a"
+      }
+    ]
+  },
+  {
+    "id": "rain_rain",
+    "language": "en",
+    "levels": [
+      "baby",
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "title_en": "Rain Rain",
+    "title_hi": "रेन रेन",
+    "image": "assets/images/rhymes/rain_rain.webp",
+    "lines": [
+      {
+        "text": "Rain, rain, go away,",
+        "tune": "g5:1 e5:1 g5:1 g5:1 e5:2",
+        "voice": "assets/audio/en/rhymes/rain_rain_1.m4a"
+      },
+      {
+        "text": "Come again another day.",
+        "tune": "g5:1 g5:1 e5:1 a5:1 g5:1 g5:1 e5:2",
+        "voice": "assets/audio/en/rhymes/rain_rain_2.m4a"
+      },
+      {
+        "text": "Little children want to play,",
+        "tune": "g5:1 g5:1 e5:1 e5:1 g5:1 g5:1 e5:2",
+        "voice": "assets/audio/en/rhymes/rain_rain_3.m4a"
+      },
+      {
+        "text": "Rain, rain, go away!",
+        "tune": "g5:1 e5:1 g5:1 g5:1 c5:2",
+        "voice": "assets/audio/en/rhymes/rain_rain_4.m4a"
+      }
+    ]
+  },
+  {
+    "id": "machhli",
+    "language": "hi",
+    "levels": [
+      "baby",
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "title_en": "Machhli Jal Ki Rani",
+    "title_hi": "मछली जल की रानी है",
+    "image": "assets/images/rhymes/machhli.webp",
+    "lines": [
+      {
+        "text": "मछली जल की रानी है,",
+        "tune": "e5:1 g5:1 g5:1 e5:1 a5:2",
+        "voice": "assets/audio/hi/rhymes/machhli_1.m4a"
+      },
+      {
+        "text": "जीवन उसका पानी है।",
+        "tune": "g5:1 g5:1 e5:1 d5:1 c5:2",
+        "voice": "assets/audio/hi/rhymes/machhli_2.m4a"
+      },
+      {
+        "text": "हाथ लगाओ, डर जाएगी,",
+        "tune": "e5:1 g5:1 g5:1 e5:1 a5:2",
+        "voice": "assets/audio/hi/rhymes/machhli_3.m4a"
+      },
+      {
+        "text": "बाहर निकालो, मर जाएगी।",
+        "tune": "g5:1 g5:1 e5:1 d5:1 c5:2",
+        "voice": "assets/audio/hi/rhymes/machhli_4.m4a"
+      }
+    ]
+  },
+  {
+    "id": "hathi_raja",
+    "language": "hi",
+    "levels": [
+      "baby",
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "title_en": "Hathi Raja",
+    "title_hi": "हाथी राजा कहाँ चले",
+    "image": "assets/images/rhymes/hathi_raja.webp",
+    "lines": [
+      {
+        "text": "हाथी राजा, कहाँ चले?",
+        "tune": "c5:1 e5:1 g5:1 g5:1 e5:2",
+        "voice": "assets/audio/hi/rhymes/hathi_raja_1.m4a"
+      },
+      {
+        "text": "सूँड हिलाकर, कहाँ चले?",
+        "tune": "d5:1 f5:1 a5:1 a5:1 f5:2",
+        "voice": "assets/audio/hi/rhymes/hathi_raja_2.m4a"
+      },
+      {
+        "text": "मेरे घर भी आओ ना,",
+        "tune": "e5:1 e5:1 g5:1 g5:1 c6:2",
+        "voice": "assets/audio/hi/rhymes/hathi_raja_3.m4a"
+      },
+      {
+        "text": "हलवा पूरी खाओ ना!",
+        "tune": "a5:1 a5:1 g5:1 e5:1 c5:2",
+        "voice": "assets/audio/hi/rhymes/hathi_raja_4.m4a"
+      }
+    ]
+  },
+  {
+    "id": "ginti_gaana",
+    "language": "hi",
+    "levels": [
+      "baby",
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "title_en": "Kido's Counting Song",
+    "title_hi": "किडो का गिनती गाना",
+    "image": "assets/images/rhymes/ginti_gaana.webp",
+    "lines": [
+      {
+        "text": "एक, दो, तीन, चार,",
+        "tune": "c5:1 d5:1 e5:1 f5:1",
+        "voice": "assets/audio/hi/rhymes/ginti_gaana_1.m4a"
+      },
+      {
+        "text": "किडो बोले, नमस्कार!",
+        "tune": "g5:1 g5:1 a5:1 g5:2",
+        "voice": "assets/audio/hi/rhymes/ginti_gaana_2.m4a"
+      },
+      {
+        "text": "पाँच, छह, सात, आठ,",
+        "tune": "c6:1 b5:1 a5:1 g5:1",
+        "voice": "assets/audio/hi/rhymes/ginti_gaana_3.m4a"
+      },
+      {
+        "text": "सीखो रोज़ नया पाठ!",
+        "tune": "f5:1 f5:1 e5:1 d5:2",
+        "voice": "assets/audio/hi/rhymes/ginti_gaana_4.m4a"
+      },
+      {
+        "text": "नौ और दस,",
+        "tune": "e5:1 e5:1 g5:2",
+        "voice": "assets/audio/hi/rhymes/ginti_gaana_5.m4a"
+      },
+      {
+        "text": "बस, बस, बस!",
+        "tune": "c6:1 c6:1 c6:2",
+        "voice": "assets/audio/hi/rhymes/ginti_gaana_6.m4a"
+      }
+    ]
+  }
+]

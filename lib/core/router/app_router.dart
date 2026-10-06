@@ -11,6 +11,7 @@ import '../../features/learn_card/learn_card_screen.dart';
 import '../../features/numbers/number_rows_screen.dart';
 import '../../features/parent/parent_area_screen.dart';
 import '../../features/path/path_screen.dart';
+import '../../features/rhymes/rhyme_screens.dart';
 import '../../features/stories/story_screens.dart';
 import '../../features/play/kido_room_screen.dart';
 import '../../features/play/memory_screen.dart';
@@ -36,6 +37,10 @@ abstract final class AppRoutes {
   static const stories = '/home/stories';
 
   static String story(String id) => '$stories/$id';
+
+  static const rhymes = '/home/rhymes';
+
+  static String rhyme(String id) => '$rhymes/$id';
 
   static String game(GameKind kind) => '$games/${kind.name}';
 
@@ -179,6 +184,23 @@ final appRouterProvider = Provider<GoRouter>((ref) {
                   StoryReaderScreen(
                     key: ValueKey('story/${state.pathParameters['storyId']}'),
                     storyId: state.pathParameters['storyId']!,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          GoRoute(
+            path: 'rhymes',
+            pageBuilder: (context, state) =>
+                _playfulPage(state, const RhymesScreen()),
+            routes: [
+              GoRoute(
+                path: ':rhymeId',
+                pageBuilder: (context, state) => _playfulPage(
+                  state,
+                  RhymePlayerScreen(
+                    key: ValueKey('rhyme/${state.pathParameters['rhymeId']}'),
+                    rhymeId: state.pathParameters['rhymeId']!,
                   ),
                 ),
               ),

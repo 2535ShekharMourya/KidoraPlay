@@ -324,4 +324,10 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get roomKido => 'किडो';
+
+  @override
+  String get rhymes => 'कविताएँ';
+
+  @override
+  String get rhymeAgain => 'फिर से गाओ';
 }

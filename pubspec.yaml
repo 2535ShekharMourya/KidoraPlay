@@ -46,6 +46,9 @@ flutter:
     - assets/images/vegetables/
     - assets/images/fruits/
     - assets/images/stories/
+    - assets/images/rhymes/
+    - assets/audio/en/rhymes/
+    - assets/audio/hi/rhymes/
     - assets/images/room/
     - assets/audio/en/stories/
     - assets/audio/hi/stories/

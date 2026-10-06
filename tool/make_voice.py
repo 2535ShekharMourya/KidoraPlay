@@ -96,6 +96,13 @@ def collect():
                 jobs[page["voice_en"]] = ("en", page["text_en"])
                 jobs[page["voice_hi"]] = ("hi", page["text_hi"])
 
+    # Rhymes: each line in the rhyme's own language.
+    rhymes = CONTENT / "rhymes.json"
+    if rhymes.exists():
+        for rh in json.loads(rhymes.read_text(encoding="utf-8")):
+            for line in rh["lines"]:
+                jobs[line["voice"]] = (rh["language"], line["text"])
+
     for event in load("kido_lines.json").values():
         for lang, variants in event.items():
             for v in variants:

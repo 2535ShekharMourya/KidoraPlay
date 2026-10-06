@@ -28,6 +28,14 @@ NOTES = {
 }
 
 
+# The full scale, by pitch name, for rhyme tunes (tool/make_rhymes.py).
+SCALE = {
+    "g4": 392.00, "a4": 440.00, "b4": 493.88,
+    "c5": 523.25, "d5": 587.33, "e5": 659.25, "f5": 698.46,
+    "g5": 783.99, "a5": 880.00, "b5": 987.77, "c6": 1046.50,
+}
+
+
 def bar(freq):
     """A struck wooden bar: quick attack, fast decay, soft overtones."""
     samples = []
@@ -44,7 +52,7 @@ def bar(freq):
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory() as tmp:
-        for name, freq in NOTES.items():
+        for name, freq in {**NOTES, **SCALE}.items():
             wav = Path(tmp) / f"{name}.wav"
             with wave.open(str(wav), "wb") as w:
                 w.setnchannels(1)

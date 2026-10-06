@@ -685,6 +685,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Kido'**
   String get roomKido;
+
+  /// No description provided for @rhymes.
+  ///
+  /// In en, this message translates to:
+  /// **'Rhymes'**
+  String get rhymes;
+
+  /// No description provided for @rhymeAgain.
+  ///
+  /// In en, this message translates to:
+  /// **'Sing again'**
+  String get rhymeAgain;
 }
 
 class _AppLocalizationsDelegate

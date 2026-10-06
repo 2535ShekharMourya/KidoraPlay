@@ -25,6 +25,7 @@ import '../kido/kido_memory.dart';
 import '../kido/kido_voice.dart';
 import '../kido/kido_widget.dart';
 import '../path/path_tile.dart';
+import '../rhymes/rhyme_screens.dart';
 import '../stories/stories_tile.dart';
 import '../progress/progress_controller.dart';
 import '../progress/sticker_book_screen.dart';
@@ -80,6 +81,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     final sections = <Object>[
       HomeExtra.path, // Today's path, always first.
       HomeExtra.stories,
+      HomeExtra.rhymes,
       for (final s
           in catalog?.sectionsFor(ref.watch(settingsProvider).level) ??
               const <Section>[])
@@ -209,7 +211,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 }
 
 /// Home tiles that aren't sections.
-enum HomeExtra { path, stories }
+enum HomeExtra { path, stories, rhymes }
 
 /// Child-facing name of a section, in the app language.
 String sectionLabel(AppLocalizations l10n, SectionId id) => switch (id) {
@@ -284,6 +286,7 @@ class _SectionGrid extends StatelessWidget {
                           child: switch (id) {
                             HomeExtra.path => const PathTile(),
                             HomeExtra.stories => const StoriesTile(),
+                            HomeExtra.rhymes => const RhymesTile(),
                             final SectionId s => _SectionTile(
                               id: s,
                               label: labelOf(s),

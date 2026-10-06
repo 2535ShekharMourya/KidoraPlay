@@ -30,6 +30,9 @@ abstract final class AppColors {
   /// Stories (shelf, covers, page arrows).
   static const storyAccent = Color(0xFF2FA3A8);
 
+  /// Rhymes.
+  static const rhymeAccent = Color(0xFFE85D9C);
+
   /// Toy cards in the Games area.
   static const toyAccent = Color(0xFFFF6FA8);
 
