@@ -191,8 +191,8 @@ BIRDS = [
      ("A parrot is green and can talk!", "तोता हरा होता है और बोल सकता है!")),
     ("peacock", "Peacock", "मोर",
      ("The peacock is India's national bird!", "मोर भारत का राष्ट्रीय पक्षी है!")),
-    ("sparrow", "Sparrow", "गौरैया",
-     ("A sparrow is a tiny brown bird.", "गौरैया छोटी सी भूरी चिड़िया है।")),
+    ("sparrow", "Sparrow", "चिड़िया",
+     ("A sparrow is a tiny brown bird.", "चिड़िया छोटी सी और भूरी होती है।")),
     ("pigeon", "Pigeon", "कबूतर",
      ("A pigeon says coo coo!", "कबूतर गुटर गूँ करता है!")),
     ("duck", "Duck", "बत्तख",
@@ -229,8 +229,8 @@ FRUITS = [
       "तरबूज़ बाहर से हरा और अंदर से लाल होता है!")),
     ("papaya", "Papaya", "पपीता",
      ("A papaya is orange inside!", "पपीता अंदर से नारंगी होता है!")),
-    ("pineapple", "Pineapple", "अनानास",
-     ("A pineapple has a spiky crown!", "अनानास के ऊपर काँटेदार ताज होता है!")),
+    ("pineapple", "Pineapple", "पाइनएप्पल",
+     ("A pineapple has a spiky crown!", "पाइनएप्पल के ऊपर काँटेदार ताज होता है!")),
     ("guava", "Guava", "अमरूद",
      ("A guava is green and sweet!", "अमरूद हरा और मीठा होता है!")),
     ("pomegranate", "Pomegranate", "अनार",
@@ -256,7 +256,7 @@ VEGETABLES = [
     ("cabbage", "Cabbage", "पत्तागोभी",
      ("A cabbage has many leaves!", "पत्तागोभी में बहुत सारे पत्ते होते हैं!")),
     ("brinjal", "Brinjal", "बैंगन",
-     ("A brinjal is purple!", "बैंगन बैंगनी रंग का होता है!")),
+     ("A brinjal is purple!", "बैंगन पर्पल रंग का होता है!")),
     ("peas", "Peas", "मटर",
      ("Peas hide inside a pod!", "मटर फली के अंदर छिपे होते हैं!")),
     ("cucumber", "Cucumber", "खीरा",
@@ -283,8 +283,8 @@ COLOURS = [
      ("Oranges are orange!", "संतरा नारंगी होता है!")),
     ("colour_pink", "Pink", "गुलाबी", (255, 120, 180), "1f338",
      ("Some flowers are pink!", "कुछ फूल गुलाबी होते हैं!")),
-    ("colour_purple", "Purple", "बैंगनी", (142, 68, 173), "1f347",
-     ("Some grapes are purple!", "कुछ अंगूर बैंगनी होते हैं!")),
+    ("colour_purple", "Purple", "पर्पल", (142, 68, 173), "1f347",
+     ("Some grapes are purple!", "कुछ अंगूर पर्पल होते हैं!")),
     ("colour_brown", "Brown", "भूरा", (141, 90, 60), "1f9f8",
      ("A teddy bear is brown!", "टेडी बियर भूरा होता है!")),
     ("colour_black", "Black", "काला", (40, 40, 48), "1f426_200d_2b1b",
@@ -295,50 +295,62 @@ COLOURS = [
 
 # (id, English, Hindi, (fact EN, fact HI))
 SHAPES = [
-    ("circle", "Circle", "गोला",
-     ("A wheel is a circle!", "पहिया गोल होता है!")),
-    ("square", "Square", "वर्ग",
-     ("A square has four equal sides!", "वर्ग की चारों भुजाएँ बराबर होती हैं!")),
-    ("triangle", "Triangle", "त्रिभुज",
-     ("A triangle has three sides!", "त्रिभुज की तीन भुजाएँ होती हैं!")),
-    ("rectangle", "Rectangle", "आयत",
-     ("A door is a rectangle!", "दरवाज़ा आयत जैसा होता है!")),
-    ("star", "Star", "तारा",
-     ("Stars twinkle in the night sky!", "तारे रात के आसमान में टिमटिमाते हैं!")),
-    ("heart", "Heart", "दिल",
-     ("A heart means love!", "दिल का मतलब प्यार है!")),
-    ("oval", "Oval", "अंडाकार",
-     ("An egg is an oval!", "अंडा अंडाकार होता है!")),
-    ("diamond", "Diamond", "हीरा",
-     ("A kite looks like a diamond!", "पतंग हीरे जैसी दिखती है!")),
+    ("circle", "Circle", "सर्कल",
+     ("A wheel is round, just like a circle!",
+      "पहिया गोल होता है, बिल्कुल सर्कल जैसा!")),
+    ("square", "Square", "स्क्वायर",
+     ("A square has four equal sides!",
+      "स्क्वायर की चारों साइड बराबर होती हैं!")),
+    ("triangle", "Triangle", "ट्रायंगल",
+     ("A triangle has three sides!", "ट्रायंगल की तीन साइड होती हैं!")),
+    ("rectangle", "Rectangle", "रेक्टेंगल",
+     ("A door is a rectangle!", "दरवाज़ा रेक्टेंगल जैसा होता है!")),
+    ("star", "Star", "स्टार",
+     ("Stars twinkle in the night sky!",
+      "रात को आसमान में स्टार टिमटिमाते हैं!")),
+    ("heart", "Heart", "हार्ट",
+     ("A heart means love!", "हार्ट का मतलब है प्यार!")),
+    ("oval", "Oval", "ओवल",
+     ("An egg is an oval!", "अंडा ओवल शेप का होता है!")),
+    ("diamond", "Diamond", "डायमंड",
+     ("A kite looks like a diamond!", "पतंग डायमंड जैसी दिखती है!")),
 ]
 
 
 VEHICLES = [
     ("car", "Car", "कार",
-     ("A car has four wheels!", "कार के चार पहिए होते हैं!")),
+     ("A car takes us places. It has four wheels!",
+      "कार हमें घुमाने ले जाती है। इसके चार पहिए होते हैं!")),
     ("bus", "Bus", "बस",
-     ("A bus carries many people!", "बस में बहुत सारे लोग बैठते हैं!")),
-    ("train", "Train", "रेलगाड़ी",
-     ("A train runs on tracks!", "रेलगाड़ी पटरी पर चलती है!")),
-    ("aeroplane", "Aeroplane", "हवाई जहाज़",
-     ("An aeroplane flies in the sky!", "हवाई जहाज़ आसमान में उड़ता है!")),
+     ("A bus takes lots of people from one place to another!",
+      "बस बहुत सारे लोगों को एक जगह से दूसरी जगह ले जाती है!")),
+    ("train", "Train", "ट्रेन",
+     ("A train runs on tracks... chhuk chhuk!",
+      "ट्रेन पटरी पर चलती है... छुक छुक!")),
+    ("aeroplane", "Aeroplane", "एरोप्लेन",
+     ("An aeroplane flies high in the sky!",
+      "एरोप्लेन आसमान में ऊँचा उड़ता है!")),
     ("bicycle", "Bicycle", "साइकिल",
-     ("A bicycle has two wheels!", "साइकिल के दो पहिए होते हैं!")),
-    ("motorcycle", "Motorcycle", "मोटरसाइकिल",
-     ("A motorcycle goes vroom vroom!", "मोटरसाइकिल चलती है, वूँ वूँ!")),
-    ("auto_rickshaw", "Auto Rickshaw", "ऑटो रिक्शा",
-     ("An auto rickshaw has three wheels!", "ऑटो रिक्शा के तीन पहिए होते हैं!")),
+     ("A bicycle has two wheels. Pedal, pedal!",
+      "साइकिल के दो पहिए होते हैं। पैडल मारो, पैडल!")),
+    ("motorcycle", "Bike", "बाइक",
+     ("A bike goes vroom vroom!", "बाइक चलती है... वूँ वूँ!")),
+    ("auto_rickshaw", "Auto", "ऑटो",
+     ("An auto has three wheels!", "ऑटो के तीन पहिए होते हैं!")),
     ("truck", "Truck", "ट्रक",
-     ("A truck carries heavy things!", "ट्रक भारी सामान ढोता है!")),
+     ("A truck carries heavy things from one place to another!",
+      "ट्रक भारी सामान को एक जगह से दूसरी जगह ले जाता है!")),
     ("tractor", "Tractor", "ट्रैक्टर",
-     ("A tractor helps farmers!", "ट्रैक्टर किसानों की मदद करता है!")),
+     ("A tractor helps farmers in the fields!",
+      "ट्रैक्टर खेत में किसानों की मदद करता है!")),
     ("boat", "Boat", "नाव",
      ("A boat floats on water!", "नाव पानी पर तैरती है!")),
     ("helicopter", "Helicopter", "हेलीकॉप्टर",
-     ("A helicopter has spinning blades!", "हेलीकॉप्टर के पंखे घूमते हैं!")),
+     ("A helicopter's blades go round and round!",
+      "हेलीकॉप्टर के पंखे गोल-गोल घूमते हैं!")),
     ("ambulance", "Ambulance", "एम्बुलेंस",
-     ("An ambulance takes people to hospital!", "एम्बुलेंस लोगों को अस्पताल ले जाती है!")),
+     ("An ambulance takes sick people to the hospital!",
+      "एम्बुलेंस बीमार लोगों को अस्पताल ले जाती है!")),
 ]
 
 
@@ -582,7 +594,51 @@ def opposite_items():
     return out
 
 
+# Sections whose cards open with a sentence instead of a bare word.
+SENTENCE_INTRO = {"animals", "birds", "fruits", "vegetables", "vehicles",
+                  "shapes", "colours", "body", "family"}
+PLURAL_EN = {"Grapes", "Peas", "Eyes", "Ears", "Teeth", "Fingers"}
+PLURAL_HI = {"अंगूर", "मटर", "आँखें", "कान", "दाँत", "उँगलियाँ"}
+
+# English and Hindi names that sound the same: bilingual mode says them once.
+SAME_IN_HINDI = {
+    "car", "bus", "train", "aeroplane", "motorcycle", "auto_rickshaw",
+    "truck", "tractor", "helicopter", "ambulance", "strawberry",
+    "pineapple", "circle", "square", "triangle", "rectangle", "star",
+    "heart", "oval", "diamond", "colour_purple", "family_baby",
+    "i_ice_cream", "j_jug", "v_van", "x_x_ray", "y_yo_yo", "z_zebra",
+}
+
+
+def intro_sentences(it):
+    """("This is a truck!", "यह ट्रक है!") for a card's opening line."""
+    en, hi, section = it["word_en"], it["word_hi"], it["section"]
+    if section == "colours":
+        return (f"This is {en.lower()}!", f"यह {hi} रंग है!")
+    if section == "family":
+        return (f"This is {en}!", f"यह {hi} है!")
+    if en in PLURAL_EN:
+        en_line = f"These are {en.lower()}!"
+    else:
+        article = "an" if en[0] in "AEIOU" else "a"
+        en_line = f"This is {article} {en.lower()}!"
+    hi_line = f"ये {hi} हैं!" if hi in PLURAL_HI else f"यह {hi} है!"
+    return (en_line, hi_line)
+
+
+def finish(items):
+    for it in items:
+        if it["id"] in SAME_IN_HINDI:
+            it["same_in_hindi"] = True
+        if it["section"] in SENTENCE_INTRO:
+            it["intro_en"], it["intro_hi"] = intro_sentences(it)
+            it["voice_intro_en"] = f"assets/audio/en/{it['id']}_intro.m4a"
+            it["voice_intro_hi"] = f"assets/audio/hi/{it['id']}_intro.m4a"
+    return items
+
+
 def write(name, items):
+    items = finish(items)
     path = CONTENT / name
     path.write_text(
         json.dumps(items, ensure_ascii=False, indent=2) + "\n",

@@ -33,6 +33,7 @@ import '../progress/sticker_widgets.dart';
 import '../rewards/balloon_party.dart';
 import '../section_grid/section_items.dart';
 import '../tracing/trace_logic.dart';
+import 'counting_stars.dart';
 import 'learn_card_controller.dart';
 import 'spelling_strip.dart';
 import 'star_meter.dart';
@@ -201,6 +202,20 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
     }
   }
 
+  /// Numbers up to 20 show countable stars; everything else its picture.
+  Widget _picture(LearningItem item, LearnCardState state, Color accent) {
+    final n = item.number;
+    if (n != null && n <= AppDurations.countAlongMax) {
+      return CountingStars(number: n, counted: state.counted, accent: accent);
+    }
+    return ItemPicture(
+      image: item.image,
+      fallbackText: item.wordEn,
+      accent: accent,
+      badge: item.badge,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final items = ref.watch(scopeItemsProvider(widget.scope));
@@ -286,11 +301,10 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
                                                 sfx: null,
                                                 onPressed:
                                                     _controller.tapPicture,
-                                                child: ItemPicture(
-                                                  image: item.image,
-                                                  fallbackText: item.wordEn,
-                                                  accent: theme.accent,
-                                                  badge: item.badge,
+                                                child: _picture(
+                                                  item,
+                                                  state,
+                                                  theme.accent,
                                                 ),
                                               ),
                                             ),

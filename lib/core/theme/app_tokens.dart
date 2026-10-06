@@ -101,7 +101,12 @@ abstract final class AppDurations {
   static const discoverGlow = Duration(seconds: 9);
 
   /// Count along up to this number on number cards (longer gets tiring).
-  static const countAlongMax = 10;
+  static const countAlongMax = 20;
+
+  /// Pauses between spelled letters and counted numbers, so a child can
+  /// follow (and say along).
+  static const spellGap = Duration(milliseconds: 550);
+  static const countGap = Duration(milliseconds: 350);
   static const stickerFlight = Duration(milliseconds: 900);
   static const celebration = Duration(milliseconds: 3500);
   static const quizNext = Duration(milliseconds: 600);

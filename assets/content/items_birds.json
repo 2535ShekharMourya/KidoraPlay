@@ -19,7 +19,11 @@
     "fact_hi": "कौआ काला और चतुर होता है!",
     "voice_fact_en": "assets/audio/en/crow_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/crow_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a crow!",
+    "intro_hi": "यह कौआ है!",
+    "voice_intro_en": "assets/audio/en/crow_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/crow_intro.m4a"
   },
   {
     "id": "parrot",
@@ -41,7 +45,11 @@
     "fact_hi": "तोता हरा होता है और बोल सकता है!",
     "voice_fact_en": "assets/audio/en/parrot_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/parrot_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a parrot!",
+    "intro_hi": "यह तोता है!",
+    "voice_intro_en": "assets/audio/en/parrot_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/parrot_intro.m4a"
   },
   {
     "id": "peacock",
@@ -63,7 +71,11 @@
     "fact_hi": "मोर भारत का राष्ट्रीय पक्षी है!",
     "voice_fact_en": "assets/audio/en/peacock_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/peacock_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a peacock!",
+    "intro_hi": "यह मोर है!",
+    "voice_intro_en": "assets/audio/en/peacock_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/peacock_intro.m4a"
   },
   {
     "id": "sparrow",
@@ -76,16 +88,20 @@
     "letter": null,
     "number": null,
     "word_en": "Sparrow",
-    "word_hi": "गौरैया",
+    "word_hi": "चिड़िया",
     "image": "assets/images/birds/sparrow.webp",
     "voice_en": "assets/audio/en/sparrow.m4a",
     "voice_hi": "assets/audio/hi/sparrow.m4a",
     "sound": "assets/audio/birds/sparrow.m4a",
     "fact_en": "A sparrow is a tiny brown bird.",
-    "fact_hi": "गौरैया छोटी सी भूरी चिड़िया है।",
+    "fact_hi": "चिड़िया छोटी सी और भूरी होती है।",
     "voice_fact_en": "assets/audio/en/sparrow_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/sparrow_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a sparrow!",
+    "intro_hi": "यह चिड़िया है!",
+    "voice_intro_en": "assets/audio/en/sparrow_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/sparrow_intro.m4a"
   },
   {
     "id": "pigeon",
@@ -107,7 +123,11 @@
     "fact_hi": "कबूतर गुटर गूँ करता है!",
     "voice_fact_en": "assets/audio/en/pigeon_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/pigeon_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a pigeon!",
+    "intro_hi": "यह कबूतर है!",
+    "voice_intro_en": "assets/audio/en/pigeon_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/pigeon_intro.m4a"
   },
   {
     "id": "duck",
@@ -129,7 +149,11 @@
     "fact_hi": "बत्तख तालाब में तैरती है!",
     "voice_fact_en": "assets/audio/en/duck_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/duck_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a duck!",
+    "intro_hi": "यह बत्तख है!",
+    "voice_intro_en": "assets/audio/en/duck_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/duck_intro.m4a"
   },
   {
     "id": "hen",
@@ -151,7 +175,11 @@
     "fact_hi": "मुर्गी अंडे देती है।",
     "voice_fact_en": "assets/audio/en/hen_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/hen_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a hen!",
+    "intro_hi": "यह मुर्गी है!",
+    "voice_intro_en": "assets/audio/en/hen_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/hen_intro.m4a"
   },
   {
     "id": "owl",
@@ -173,7 +201,11 @@
     "fact_hi": "उल्लू रात को जागता है!",
     "voice_fact_en": "assets/audio/en/owl_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/owl_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is an owl!",
+    "intro_hi": "यह उल्लू है!",
+    "voice_intro_en": "assets/audio/en/owl_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/owl_intro.m4a"
   },
   {
     "id": "eagle",
@@ -195,7 +227,11 @@
     "fact_hi": "चील बहुत ऊँचा उड़ती है!",
     "voice_fact_en": "assets/audio/en/eagle_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/eagle_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is an eagle!",
+    "intro_hi": "यह चील है!",
+    "voice_intro_en": "assets/audio/en/eagle_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/eagle_intro.m4a"
   },
   {
     "id": "koel",
@@ -217,6 +253,10 @@
     "fact_hi": "कोयल मीठा गाना गाती है!",
     "voice_fact_en": "assets/audio/en/koel_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/koel_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a koel!",
+    "intro_hi": "यह कोयल है!",
+    "voice_intro_en": "assets/audio/en/koel_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/koel_intro.m4a"
   }
 ]

@@ -18,7 +18,11 @@
     "fact_hi": "माँ हमसे बहुत प्यार करती हैं!",
     "voice_fact_en": "assets/audio/en/family_mother_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/family_mother_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is Mother!",
+    "intro_hi": "यह माँ है!",
+    "voice_intro_en": "assets/audio/en/family_mother_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/family_mother_intro.m4a"
   },
   {
     "id": "family_father",
@@ -39,7 +43,11 @@
     "fact_hi": "पापा हमारे साथ खेलते हैं!",
     "voice_fact_en": "assets/audio/en/family_father_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/family_father_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is Father!",
+    "intro_hi": "यह पापा है!",
+    "voice_intro_en": "assets/audio/en/family_father_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/family_father_intro.m4a"
   },
   {
     "id": "family_grandmother",
@@ -60,7 +68,11 @@
     "fact_hi": "दादी हमें प्यारी-प्यारी कहानियाँ सुनाती हैं!",
     "voice_fact_en": "assets/audio/en/family_grandmother_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/family_grandmother_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is Grandmother!",
+    "intro_hi": "यह दादी है!",
+    "voice_intro_en": "assets/audio/en/family_grandmother_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/family_grandmother_intro.m4a"
   },
   {
     "id": "family_grandfather",
@@ -81,7 +93,11 @@
     "fact_hi": "दादा जी हमें घुमाने ले जाते हैं!",
     "voice_fact_en": "assets/audio/en/family_grandfather_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/family_grandfather_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is Grandfather!",
+    "intro_hi": "यह दादा है!",
+    "voice_intro_en": "assets/audio/en/family_grandfather_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/family_grandfather_intro.m4a"
   },
   {
     "id": "family_brother",
@@ -102,7 +118,11 @@
     "fact_hi": "भाई सबसे अच्छा दोस्त होता है!",
     "voice_fact_en": "assets/audio/en/family_brother_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/family_brother_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is Brother!",
+    "intro_hi": "यह भाई है!",
+    "voice_intro_en": "assets/audio/en/family_brother_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/family_brother_intro.m4a"
   },
   {
     "id": "family_sister",
@@ -123,7 +143,11 @@
     "fact_hi": "बहन अपने खिलौने बाँटती है!",
     "voice_fact_en": "assets/audio/en/family_sister_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/family_sister_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is Sister!",
+    "intro_hi": "यह बहन है!",
+    "voice_intro_en": "assets/audio/en/family_sister_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/family_sister_intro.m4a"
   },
   {
     "id": "family_baby",
@@ -144,7 +168,12 @@
     "fact_hi": "बेबी छोटा सा है। श्श्श... बेबी सो रहा है!",
     "voice_fact_en": "assets/audio/en/family_baby_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/family_baby_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "same_in_hindi": true,
+    "intro_en": "This is Baby!",
+    "intro_hi": "यह बेबी है!",
+    "voice_intro_en": "assets/audio/en/family_baby_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/family_baby_intro.m4a"
   },
   {
     "id": "family_family",
@@ -165,6 +194,10 @@
     "fact_hi": "हमें अपने परिवार से प्यार है। एक बड़ी सी झप्पी!",
     "voice_fact_en": "assets/audio/en/family_family_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/family_family_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is Family!",
+    "intro_hi": "यह परिवार है!",
+    "voice_intro_en": "assets/audio/en/family_family_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/family_family_intro.m4a"
   }
 ]

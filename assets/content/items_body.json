@@ -19,7 +19,11 @@
     "fact_hi": "हम आँखों से देखते हैं। पलक झपकाओ!",
     "voice_fact_en": "assets/audio/en/body_eyes_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/body_eyes_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "These are eyes!",
+    "intro_hi": "ये आँखें हैं!",
+    "voice_intro_en": "assets/audio/en/body_eyes_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/body_eyes_intro.m4a"
   },
   {
     "id": "body_ears",
@@ -41,7 +45,11 @@
     "fact_hi": "हम कानों से सुनते हैं। अपने कान छुओ!",
     "voice_fact_en": "assets/audio/en/body_ears_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/body_ears_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "These are ears!",
+    "intro_hi": "ये कान हैं!",
+    "voice_intro_en": "assets/audio/en/body_ears_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/body_ears_intro.m4a"
   },
   {
     "id": "body_nose",
@@ -63,7 +71,11 @@
     "fact_hi": "हम नाक से सूँघते हैं। अपनी नाक छुओ!",
     "voice_fact_en": "assets/audio/en/body_nose_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/body_nose_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a nose!",
+    "intro_hi": "यह नाक है!",
+    "voice_intro_en": "assets/audio/en/body_nose_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/body_nose_intro.m4a"
   },
   {
     "id": "body_mouth",
@@ -85,7 +97,11 @@
     "fact_hi": "हम मुँह से खाते और बोलते हैं। मुँह खोलो... आ!",
     "voice_fact_en": "assets/audio/en/body_mouth_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/body_mouth_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a mouth!",
+    "intro_hi": "यह मुँह है!",
+    "voice_intro_en": "assets/audio/en/body_mouth_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/body_mouth_intro.m4a"
   },
   {
     "id": "body_teeth",
@@ -107,7 +123,11 @@
     "fact_hi": "रोज़ अपने दाँत ब्रश करो। चमकते दाँत!",
     "voice_fact_en": "assets/audio/en/body_teeth_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/body_teeth_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "These are teeth!",
+    "intro_hi": "ये दाँत हैं!",
+    "voice_intro_en": "assets/audio/en/body_teeth_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/body_teeth_intro.m4a"
   },
   {
     "id": "body_tongue",
@@ -129,7 +149,11 @@
     "fact_hi": "जीभ से हम मीठा और खट्टा चखते हैं!",
     "voice_fact_en": "assets/audio/en/body_tongue_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/body_tongue_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a tongue!",
+    "intro_hi": "यह जीभ है!",
+    "voice_intro_en": "assets/audio/en/body_tongue_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/body_tongue_intro.m4a"
   },
   {
     "id": "body_hand",
@@ -151,7 +175,11 @@
     "fact_hi": "हाथ हिलाओ और बोलो... नमस्ते!",
     "voice_fact_en": "assets/audio/en/body_hand_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/body_hand_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a hand!",
+    "intro_hi": "यह हाथ है!",
+    "voice_intro_en": "assets/audio/en/body_hand_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/body_hand_intro.m4a"
   },
   {
     "id": "body_fingers",
@@ -173,7 +201,11 @@
     "fact_hi": "हमारी दस उँगलियाँ होती हैं। चलो गिनें!",
     "voice_fact_en": "assets/audio/en/body_fingers_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/body_fingers_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "These are fingers!",
+    "intro_hi": "ये उँगलियाँ हैं!",
+    "voice_intro_en": "assets/audio/en/body_fingers_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/body_fingers_intro.m4a"
   },
   {
     "id": "body_arm",
@@ -195,7 +227,11 @@
     "fact_hi": "हमारी बाँहें मज़बूत हैं। अपनी ताक़त दिखाओ!",
     "voice_fact_en": "assets/audio/en/body_arm_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/body_arm_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is an arm!",
+    "intro_hi": "यह बाँह है!",
+    "voice_intro_en": "assets/audio/en/body_arm_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/body_arm_intro.m4a"
   },
   {
     "id": "body_leg",
@@ -217,7 +253,11 @@
     "fact_hi": "हम टाँगों से चलते और कूदते हैं। कूदो, कूदो!",
     "voice_fact_en": "assets/audio/en/body_leg_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/body_leg_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a leg!",
+    "intro_hi": "यह टाँग है!",
+    "voice_intro_en": "assets/audio/en/body_leg_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/body_leg_intro.m4a"
   },
   {
     "id": "body_foot",
@@ -239,6 +279,10 @@
     "fact_hi": "पैर पटको! धप, धप!",
     "voice_fact_en": "assets/audio/en/body_foot_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/body_foot_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a foot!",
+    "intro_hi": "यह पैर है!",
+    "voice_intro_en": "assets/audio/en/body_foot_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/body_foot_intro.m4a"
   }
 ]

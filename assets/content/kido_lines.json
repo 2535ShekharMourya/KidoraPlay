@@ -656,9 +656,68 @@
     ],
     "hi": [
       {
-        "text": "गुब्बारों की पार्टी! गुब्बारे फोड़ो!",
+        "text": "बलून पार्टी! बलून फोड़ो!",
         "audio": [
           "assets/audio/hi/kido/balloon_party.m4a"
+        ]
+      }
+    ]
+  },
+  "lets_spell": {
+    "en": [
+      {
+        "text": "Let's learn to spell {item}!",
+        "audio": [
+          "assets/audio/en/kido/lets_spell.m4a",
+          "{item}"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "चलो, {item} की स्पेलिंग सीखते हैं!",
+        "audio": [
+          "assets/audio/hi/kido/chalo.m4a",
+          "{item}",
+          "assets/audio/hi/kido/ki_spelling.m4a"
+        ]
+      }
+    ]
+  },
+  "count_stars": {
+    "en": [
+      {
+        "text": "Let's count the stars!",
+        "audio": [
+          "assets/audio/en/kido/count_stars.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "चलो, तारे गिनते हैं!",
+        "audio": [
+          "assets/audio/hi/kido/count_stars.m4a"
+        ]
+      }
+    ]
+  },
+  "how_many_stars": {
+    "en": [
+      {
+        "text": "How many stars? {n}!",
+        "audio": [
+          "assets/audio/en/kido/how_many_stars.m4a",
+          "{n}"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "कितने तारे? {n}!",
+        "audio": [
+          "assets/audio/hi/kido/kitne_tare.m4a",
+          "{n}"
         ]
       }
     ]

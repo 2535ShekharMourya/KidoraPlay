@@ -27,6 +27,7 @@ class LearningItem {
     this.letterVoice,
     this.voiceIntroEn,
     this.voiceIntroHi,
+    this.sameInHindi = false,
     this.riveReaction,
   });
 
@@ -54,6 +55,7 @@ class LearningItem {
       letterVoice: r.optString('letter_voice'),
       voiceIntroEn: r.optString('voice_intro_en'),
       voiceIntroHi: r.optString('voice_intro_hi'),
+      sameInHindi: r.optBool('same_in_hindi') ?? false,
       riveReaction: r.optString('rive_reaction'),
     );
   }
@@ -91,6 +93,16 @@ class LearningItem {
   /// "A for Apple!" / "अ से अनार!" recorded as one natural sentence.
   final String? voiceIntroEn;
   final String? voiceIntroHi;
+
+  /// The Hindi name sounds like the English one (truck / ट्रक): bilingual
+  /// cards say it once.
+  final bool sameInHindi;
+
+  /// The card's opening sentence ("This is a truck!" / "यह ट्रक है!").
+  String? introVoice(ContentLanguage lang) => switch (lang) {
+    ContentLanguage.en => voiceIntroEn,
+    ContentLanguage.hi => voiceIntroHi,
+  };
 
   /// Rive state-machine input for the picture's reaction, if any.
   final String? riveReaction;
@@ -141,6 +153,7 @@ class LearningItem {
     if (letterVoice != null) 'letter_voice': letterVoice,
     if (voiceIntroEn != null) 'voice_intro_en': voiceIntroEn,
     if (voiceIntroHi != null) 'voice_intro_hi': voiceIntroHi,
+    if (sameInHindi) 'same_in_hindi': true,
     'rive_reaction': riveReaction,
   };
 }

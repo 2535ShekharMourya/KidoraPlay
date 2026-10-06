@@ -29,6 +29,12 @@ class JsonReader {
     throw _error(key, 'an integer or null', value);
   }
 
+  bool? optBool(String key) {
+    final value = _json[key];
+    if (value == null || value is bool) return value as bool?;
+    throw _error(key, 'true, false or null', value);
+  }
+
   List<String> stringList(String key) {
     final value = _json[key];
     if (value is List<dynamic> && value.every((e) => e is String)) {

@@ -51,9 +51,10 @@ void main() {
 
   /// With held playback, finishes clips until [clip] is the one playing.
   Future<void> playUntil(String clip) async {
-    for (var i = 0; i < 60 && audio.voice.played.lastOrNull != clip; i++) {
+    // Real time passes too: spelled letters have short pauses between.
+    for (var i = 0; i < 150 && audio.voice.played.lastOrNull != clip; i++) {
       audio.voice.finishCurrent();
-      await pumpEventQueue();
+      await Future<void>.delayed(const Duration(milliseconds: 20));
     }
     expect(audio.voice.played.last, clip);
   }
@@ -69,7 +70,8 @@ void main() {
     test('just the name, then it is the child\'s turn', () async {
       await setUpContainer();
       await controller('cow').playLesson();
-      expect(audio.voice.played, ['assets/audio/en/cow.m4a']);
+      // "This is a cow!"
+      expect(audio.voice.played, ['assets/audio/en/cow_intro.m4a']);
       final s = stateOf('cow');
       expect(s.phase, LessonPhase.youDo);
       expect(s.busy, isFalse);
@@ -112,13 +114,13 @@ void main() {
       );
       await controller('cow').playLesson();
       expect(audio.voice.played, [
-        'assets/audio/en/cow.m4a',
+        'assets/audio/en/cow_intro.m4a',
         '$kido/tap_to_play.m4a',
       ]);
       await controller('cow').tapPicture();
       audio.voice.played.clear();
       await controller('dog').playLesson();
-      expect(audio.voice.played, ['assets/audio/en/dog.m4a']);
+      expect(audio.voice.played, ['assets/audio/en/dog_intro.m4a']);
     });
   });
 
@@ -139,7 +141,9 @@ void main() {
       expect(stateOf('cow').phase, LessonPhase.youDo);
 
       final third = await tap('cow');
-      expect(third.sublist(0, 4), [
+      expect(third.sublist(0, 6), [
+        '$kido/lets_spell.m4a', // "Let's learn to spell" + Cow
+        'assets/audio/en/cow.m4a',
         'assets/audio/letters/c.m4a',
         'assets/audio/letters/o.m4a',
         'assets/audio/letters/w.m4a',
@@ -151,7 +155,7 @@ void main() {
       expect(s.celebrations, 1);
       expect(s.stickers, 1);
       // Praise, then on to the next one.
-      expect(third[4], startsWith('$kido/praise_'));
+      expect(third[6], startsWith('$kido/praise_'));
       expect(third.last, startsWith('$kido/next_one_'));
       expect(container.read(progressProvider).learned, contains('cow'));
     });
@@ -178,11 +182,13 @@ void main() {
           (_, next) => counts.add(next.counted),
         );
         await controller('three').playLesson();
+        // Stars light up as they are counted, then "How many stars? Three!"
         expect(await tap('three'), [
-          '$kido/lets_count.m4a',
+          '$kido/count_stars.m4a',
           'assets/audio/en/one.m4a',
           'assets/audio/en/two.m4a',
           'assets/audio/en/three.m4a',
+          '$kido/how_many_stars.m4a',
           'assets/audio/en/three.m4a',
         ]);
         expect(counts.toSet().containsAll([1, 2, 3]), isTrue);
@@ -210,12 +216,25 @@ void main() {
         }),
       );
       await controller('cow').playLesson();
+      // "This is a cow!" + "यह गाय है!"
       expect(audio.voice.played, [
-        'assets/audio/en/cow.m4a',
-        'assets/audio/hi/cow.m4a',
+        'assets/audio/en/cow_intro.m4a',
+        'assets/audio/hi/cow_intro.m4a',
       ]);
       await tap('cow');
       expect(await tap('cow'), ['assets/audio/hi/cow_fact.m4a']);
+    });
+
+    test('"both": a word that sounds the same is said once', () async {
+      await setUpContainer(
+        store: LocalStore.inMemory({
+          SettingsKeys.language: 'both',
+          'kido.discovered': true,
+        }),
+      );
+      await controller('truck').playLesson();
+      // "यह ट्रक है!" only, never "Truck… ट्रक".
+      expect(audio.voice.played, ['assets/audio/hi/truck_intro.m4a']);
     });
 
     test('Hindi: chat, then the letter and word, then say it', () async {

@@ -18,7 +18,11 @@
     "fact_hi": "आलू ज़मीन के नीचे उगता है!",
     "voice_fact_en": "assets/audio/en/potato_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/potato_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a potato!",
+    "intro_hi": "यह आलू है!",
+    "voice_intro_en": "assets/audio/en/potato_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/potato_intro.m4a"
   },
   {
     "id": "tomato",
@@ -39,7 +43,11 @@
     "fact_hi": "टमाटर लाल और रसीला होता है!",
     "voice_fact_en": "assets/audio/en/tomato_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/tomato_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a tomato!",
+    "intro_hi": "यह टमाटर है!",
+    "voice_intro_en": "assets/audio/en/tomato_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/tomato_intro.m4a"
   },
   {
     "id": "onion",
@@ -60,7 +68,11 @@
     "fact_hi": "प्याज़ काटने पर आँसू आ जाते हैं!",
     "voice_fact_en": "assets/audio/en/onion_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/onion_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is an onion!",
+    "intro_hi": "यह प्याज़ है!",
+    "voice_intro_en": "assets/audio/en/onion_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/onion_intro.m4a"
   },
   {
     "id": "carrot",
@@ -81,7 +93,11 @@
     "fact_hi": "गाजर आँखों के लिए अच्छी होती है!",
     "voice_fact_en": "assets/audio/en/carrot_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/carrot_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a carrot!",
+    "intro_hi": "यह गाजर है!",
+    "voice_intro_en": "assets/audio/en/carrot_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/carrot_intro.m4a"
   },
   {
     "id": "cauliflower",
@@ -102,7 +118,11 @@
     "fact_hi": "फूलगोभी बादल जैसी सफ़ेद होती है!",
     "voice_fact_en": "assets/audio/en/cauliflower_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/cauliflower_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a cauliflower!",
+    "intro_hi": "यह फूलगोभी है!",
+    "voice_intro_en": "assets/audio/en/cauliflower_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/cauliflower_intro.m4a"
   },
   {
     "id": "cabbage",
@@ -123,7 +143,11 @@
     "fact_hi": "पत्तागोभी में बहुत सारे पत्ते होते हैं!",
     "voice_fact_en": "assets/audio/en/cabbage_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/cabbage_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a cabbage!",
+    "intro_hi": "यह पत्तागोभी है!",
+    "voice_intro_en": "assets/audio/en/cabbage_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/cabbage_intro.m4a"
   },
   {
     "id": "brinjal",
@@ -141,10 +165,14 @@
     "voice_hi": "assets/audio/hi/brinjal.m4a",
     "sound": null,
     "fact_en": "A brinjal is purple!",
-    "fact_hi": "बैंगन बैंगनी रंग का होता है!",
+    "fact_hi": "बैंगन पर्पल रंग का होता है!",
     "voice_fact_en": "assets/audio/en/brinjal_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/brinjal_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a brinjal!",
+    "intro_hi": "यह बैंगन है!",
+    "voice_intro_en": "assets/audio/en/brinjal_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/brinjal_intro.m4a"
   },
   {
     "id": "peas",
@@ -165,7 +193,11 @@
     "fact_hi": "मटर फली के अंदर छिपे होते हैं!",
     "voice_fact_en": "assets/audio/en/peas_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/peas_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "These are peas!",
+    "intro_hi": "ये मटर हैं!",
+    "voice_intro_en": "assets/audio/en/peas_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/peas_intro.m4a"
   },
   {
     "id": "cucumber",
@@ -186,7 +218,11 @@
     "fact_hi": "खीरा ठंडा और हरा होता है!",
     "voice_fact_en": "assets/audio/en/cucumber_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/cucumber_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a cucumber!",
+    "intro_hi": "यह खीरा है!",
+    "voice_intro_en": "assets/audio/en/cucumber_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/cucumber_intro.m4a"
   },
   {
     "id": "pumpkin",
@@ -207,7 +243,11 @@
     "fact_hi": "कद्दू बड़ा और नारंगी होता है!",
     "voice_fact_en": "assets/audio/en/pumpkin_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/pumpkin_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a pumpkin!",
+    "intro_hi": "यह कद्दू है!",
+    "voice_intro_en": "assets/audio/en/pumpkin_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/pumpkin_intro.m4a"
   },
   {
     "id": "spinach",
@@ -228,7 +268,11 @@
     "fact_hi": "पालक हमें ताक़तवर बनाता है!",
     "voice_fact_en": "assets/audio/en/spinach_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/spinach_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a spinach!",
+    "intro_hi": "यह पालक है!",
+    "voice_intro_en": "assets/audio/en/spinach_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/spinach_intro.m4a"
   },
   {
     "id": "lady_finger",
@@ -249,6 +293,10 @@
     "fact_hi": "भिंडी लंबी और हरी होती है!",
     "voice_fact_en": "assets/audio/en/lady_finger_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/lady_finger_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a lady finger!",
+    "intro_hi": "यह भिंडी है!",
+    "voice_intro_en": "assets/audio/en/lady_finger_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/lady_finger_intro.m4a"
   }
 ]

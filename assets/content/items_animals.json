@@ -19,7 +19,11 @@
     "fact_hi": "गाय हमें दूध देती है!",
     "voice_fact_en": "assets/audio/en/cow_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/cow_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a cow!",
+    "intro_hi": "यह गाय है!",
+    "voice_intro_en": "assets/audio/en/cow_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/cow_intro.m4a"
   },
   {
     "id": "dog",
@@ -41,7 +45,11 @@
     "fact_hi": "कुत्ता हमारा अच्छा दोस्त है!",
     "voice_fact_en": "assets/audio/en/dog_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/dog_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a dog!",
+    "intro_hi": "यह कुत्ता है!",
+    "voice_intro_en": "assets/audio/en/dog_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/dog_intro.m4a"
   },
   {
     "id": "cat",
@@ -63,7 +71,11 @@
     "fact_hi": "बिल्ली को दूध पीना पसंद है!",
     "voice_fact_en": "assets/audio/en/cat_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/cat_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a cat!",
+    "intro_hi": "यह बिल्ली है!",
+    "voice_intro_en": "assets/audio/en/cat_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/cat_intro.m4a"
   },
   {
     "id": "lion",
@@ -85,7 +97,11 @@
     "fact_hi": "शेर जंगल का राजा है!",
     "voice_fact_en": "assets/audio/en/lion_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/lion_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a lion!",
+    "intro_hi": "यह शेर है!",
+    "voice_intro_en": "assets/audio/en/lion_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/lion_intro.m4a"
   },
   {
     "id": "tiger",
@@ -107,7 +123,11 @@
     "fact_hi": "बाघ पर नारंगी और काली धारियाँ होती हैं!",
     "voice_fact_en": "assets/audio/en/tiger_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/tiger_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a tiger!",
+    "intro_hi": "यह बाघ है!",
+    "voice_intro_en": "assets/audio/en/tiger_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/tiger_intro.m4a"
   },
   {
     "id": "elephant",
@@ -129,7 +149,11 @@
     "fact_hi": "हाथी की लंबी सूँड होती है, बिल्कुल मेरी तरह!",
     "voice_fact_en": "assets/audio/en/elephant_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/elephant_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is an elephant!",
+    "intro_hi": "यह हाथी है!",
+    "voice_intro_en": "assets/audio/en/elephant_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/elephant_intro.m4a"
   },
   {
     "id": "monkey",
@@ -151,7 +175,11 @@
     "fact_hi": "बंदर को केला बहुत पसंद है!",
     "voice_fact_en": "assets/audio/en/monkey_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/monkey_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a monkey!",
+    "intro_hi": "यह बंदर है!",
+    "voice_intro_en": "assets/audio/en/monkey_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/monkey_intro.m4a"
   },
   {
     "id": "horse",
@@ -173,7 +201,11 @@
     "fact_hi": "घोड़ा बहुत तेज़ दौड़ता है!",
     "voice_fact_en": "assets/audio/en/horse_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/horse_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a horse!",
+    "intro_hi": "यह घोड़ा है!",
+    "voice_intro_en": "assets/audio/en/horse_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/horse_intro.m4a"
   },
   {
     "id": "goat",
@@ -195,7 +227,11 @@
     "fact_hi": "बकरी को पत्ते खाना पसंद है।",
     "voice_fact_en": "assets/audio/en/goat_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/goat_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a goat!",
+    "intro_hi": "यह बकरी है!",
+    "voice_intro_en": "assets/audio/en/goat_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/goat_intro.m4a"
   },
   {
     "id": "sheep",
@@ -217,7 +253,11 @@
     "fact_hi": "भेड़ के बाल मुलायम ऊन जैसे होते हैं।",
     "voice_fact_en": "assets/audio/en/sheep_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/sheep_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a sheep!",
+    "intro_hi": "यह भेड़ है!",
+    "voice_intro_en": "assets/audio/en/sheep_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/sheep_intro.m4a"
   },
   {
     "id": "camel",
@@ -239,7 +279,11 @@
     "fact_hi": "ऊँट रेगिस्तान में चलता है।",
     "voice_fact_en": "assets/audio/en/camel_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/camel_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a camel!",
+    "intro_hi": "यह ऊँट है!",
+    "voice_intro_en": "assets/audio/en/camel_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/camel_intro.m4a"
   },
   {
     "id": "deer",
@@ -261,7 +305,11 @@
     "fact_hi": "हिरण बहुत ऊँचा कूद सकता है!",
     "voice_fact_en": "assets/audio/en/deer_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/deer_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a deer!",
+    "intro_hi": "यह हिरण है!",
+    "voice_intro_en": "assets/audio/en/deer_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/deer_intro.m4a"
   },
   {
     "id": "bear",
@@ -283,7 +331,11 @@
     "fact_hi": "भालू को शहद खाना पसंद है!",
     "voice_fact_en": "assets/audio/en/bear_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/bear_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a bear!",
+    "intro_hi": "यह भालू है!",
+    "voice_intro_en": "assets/audio/en/bear_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/bear_intro.m4a"
   },
   {
     "id": "rabbit",
@@ -305,7 +357,11 @@
     "fact_hi": "खरगोश फुदकता है, फुदक फुदक!",
     "voice_fact_en": "assets/audio/en/rabbit_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/rabbit_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a rabbit!",
+    "intro_hi": "यह खरगोश है!",
+    "voice_intro_en": "assets/audio/en/rabbit_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/rabbit_intro.m4a"
   },
   {
     "id": "squirrel",
@@ -327,6 +383,10 @@
     "fact_hi": "गिलहरी की पूँछ झबरीली होती है!",
     "voice_fact_en": "assets/audio/en/squirrel_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/squirrel_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a squirrel!",
+    "intro_hi": "यह गिलहरी है!",
+    "voice_intro_en": "assets/audio/en/squirrel_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/squirrel_intro.m4a"
   }
 ]

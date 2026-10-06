@@ -204,7 +204,8 @@
     "voice_fact_en": "assets/audio/en/i_ice_cream_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/i_ice_cream_fact.m4a",
     "rive_reaction": null,
-    "voice_intro_en": "assets/audio/en/i_ice_cream_intro.m4a"
+    "voice_intro_en": "assets/audio/en/i_ice_cream_intro.m4a",
+    "same_in_hindi": true
   },
   {
     "id": "j_jug",
@@ -227,7 +228,8 @@
     "voice_fact_en": "assets/audio/en/j_jug_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/j_jug_fact.m4a",
     "rive_reaction": null,
-    "voice_intro_en": "assets/audio/en/j_jug_intro.m4a"
+    "voice_intro_en": "assets/audio/en/j_jug_intro.m4a",
+    "same_in_hindi": true
   },
   {
     "id": "k_kite",
@@ -503,7 +505,8 @@
     "voice_fact_en": "assets/audio/en/v_van_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/v_van_fact.m4a",
     "rive_reaction": null,
-    "voice_intro_en": "assets/audio/en/v_van_intro.m4a"
+    "voice_intro_en": "assets/audio/en/v_van_intro.m4a",
+    "same_in_hindi": true
   },
   {
     "id": "w_watch",
@@ -549,7 +552,8 @@
     "voice_fact_en": "assets/audio/en/x_x_ray_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/x_x_ray_fact.m4a",
     "rive_reaction": null,
-    "voice_intro_en": "assets/audio/en/x_x_ray_intro.m4a"
+    "voice_intro_en": "assets/audio/en/x_x_ray_intro.m4a",
+    "same_in_hindi": true
   },
   {
     "id": "y_yo_yo",
@@ -572,7 +576,8 @@
     "voice_fact_en": "assets/audio/en/y_yo_yo_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/y_yo_yo_fact.m4a",
     "rive_reaction": null,
-    "voice_intro_en": "assets/audio/en/y_yo_yo_intro.m4a"
+    "voice_intro_en": "assets/audio/en/y_yo_yo_intro.m4a",
+    "same_in_hindi": true
   },
   {
     "id": "z_zebra",
@@ -595,6 +600,7 @@
     "voice_fact_en": "assets/audio/en/z_zebra_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/z_zebra_fact.m4a",
     "rive_reaction": null,
-    "voice_intro_en": "assets/audio/en/z_zebra_intro.m4a"
+    "voice_intro_en": "assets/audio/en/z_zebra_intro.m4a",
+    "same_in_hindi": true
   }
 ]

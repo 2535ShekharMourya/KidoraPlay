@@ -73,10 +73,13 @@ def collect():
                 jobs[it["voice_fact_hi"]] = ("hi", it["fact_hi"])
             if it.get("voice_intro_en"):
                 jobs[it["voice_intro_en"]] = (
-                    "en", f'{it["letter"]} for {it["word_en"]}!')
+                    "en", it.get("intro_en")
+                    or f'{it["letter"]} for {it["word_en"]}!')
             if it.get("voice_intro_hi"):
+                # "अ, से अनार!": the pause keeps the vowel a vowel.
                 jobs[it["voice_intro_hi"]] = (
-                    "hi", f'{it["letter"]} से {it["word_hi"]}!')
+                    "hi", it.get("intro_hi")
+                    or f'{it["letter"]}, से {it["word_hi"]}!')
             if it.get("letter_voice"):
                 jobs[it["letter_voice"]] = (
                     "hi", LETTER_SAY.get(it["letter"], it["letter"] + "!"))

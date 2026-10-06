@@ -44,6 +44,13 @@ abstract final class KidoEvent {
 
   /// "Balloon party! Pop the balloons!" (every few cards).
   static const balloonParty = 'balloon_party';
+
+  /// "Let's learn to spell Tractor!" before the letters.
+  static const letsSpell = 'lets_spell';
+
+  /// Number cards: "Let's count the stars!" … "How many stars? Three!".
+  static const countStars = 'count_stars';
+  static const howManyStars = 'how_many_stars';
   static const tryAgain = 'try_again';
   static const sectionDone = 'section_done';
   static const goodbye = 'goodbye';
@@ -86,6 +93,9 @@ abstract final class KidoEvent {
     tapToPlay,
     nextOne,
     balloonParty,
+    letsSpell,
+    countStars,
+    howManyStars,
     tryAgain,
     sectionDone,
     goodbye,

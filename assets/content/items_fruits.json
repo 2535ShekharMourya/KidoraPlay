@@ -19,7 +19,11 @@
     "fact_hi": "सेब लाल और कुरकुरा होता है!",
     "voice_fact_en": "assets/audio/en/apple_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/apple_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is an apple!",
+    "intro_hi": "यह सेब है!",
+    "voice_intro_en": "assets/audio/en/apple_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/apple_intro.m4a"
   },
   {
     "id": "banana",
@@ -41,7 +45,11 @@
     "fact_hi": "केला पीला और नरम होता है!",
     "voice_fact_en": "assets/audio/en/banana_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/banana_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a banana!",
+    "intro_hi": "यह केला है!",
+    "voice_intro_en": "assets/audio/en/banana_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/banana_intro.m4a"
   },
   {
     "id": "mango",
@@ -63,7 +71,11 @@
     "fact_hi": "आम फलों का राजा है!",
     "voice_fact_en": "assets/audio/en/mango_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/mango_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a mango!",
+    "intro_hi": "यह आम है!",
+    "voice_intro_en": "assets/audio/en/mango_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/mango_intro.m4a"
   },
   {
     "id": "orange",
@@ -85,7 +97,11 @@
     "fact_hi": "संतरा गोल और रसीला होता है!",
     "voice_fact_en": "assets/audio/en/orange_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/orange_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is an orange!",
+    "intro_hi": "यह संतरा है!",
+    "voice_intro_en": "assets/audio/en/orange_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/orange_intro.m4a"
   },
   {
     "id": "grapes",
@@ -107,7 +123,11 @@
     "fact_hi": "अंगूर गुच्छों में लगते हैं!",
     "voice_fact_en": "assets/audio/en/grapes_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/grapes_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "These are grapes!",
+    "intro_hi": "ये अंगूर हैं!",
+    "voice_intro_en": "assets/audio/en/grapes_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/grapes_intro.m4a"
   },
   {
     "id": "watermelon",
@@ -129,7 +149,11 @@
     "fact_hi": "तरबूज़ बाहर से हरा और अंदर से लाल होता है!",
     "voice_fact_en": "assets/audio/en/watermelon_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/watermelon_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a watermelon!",
+    "intro_hi": "यह तरबूज़ है!",
+    "voice_intro_en": "assets/audio/en/watermelon_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/watermelon_intro.m4a"
   },
   {
     "id": "papaya",
@@ -151,7 +175,11 @@
     "fact_hi": "पपीता अंदर से नारंगी होता है!",
     "voice_fact_en": "assets/audio/en/papaya_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/papaya_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a papaya!",
+    "intro_hi": "यह पपीता है!",
+    "voice_intro_en": "assets/audio/en/papaya_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/papaya_intro.m4a"
   },
   {
     "id": "pineapple",
@@ -164,16 +192,21 @@
     "letter": null,
     "number": null,
     "word_en": "Pineapple",
-    "word_hi": "अनानास",
+    "word_hi": "पाइनएप्पल",
     "image": "assets/images/fruits/pineapple.webp",
     "voice_en": "assets/audio/en/pineapple.m4a",
     "voice_hi": "assets/audio/hi/pineapple.m4a",
     "sound": null,
     "fact_en": "A pineapple has a spiky crown!",
-    "fact_hi": "अनानास के ऊपर काँटेदार ताज होता है!",
+    "fact_hi": "पाइनएप्पल के ऊपर काँटेदार ताज होता है!",
     "voice_fact_en": "assets/audio/en/pineapple_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/pineapple_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "same_in_hindi": true,
+    "intro_en": "This is a pineapple!",
+    "intro_hi": "यह पाइनएप्पल है!",
+    "voice_intro_en": "assets/audio/en/pineapple_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/pineapple_intro.m4a"
   },
   {
     "id": "guava",
@@ -195,7 +228,11 @@
     "fact_hi": "अमरूद हरा और मीठा होता है!",
     "voice_fact_en": "assets/audio/en/guava_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/guava_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a guava!",
+    "intro_hi": "यह अमरूद है!",
+    "voice_intro_en": "assets/audio/en/guava_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/guava_intro.m4a"
   },
   {
     "id": "pomegranate",
@@ -217,7 +254,11 @@
     "fact_hi": "अनार में लाल-लाल दाने होते हैं!",
     "voice_fact_en": "assets/audio/en/pomegranate_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/pomegranate_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a pomegranate!",
+    "intro_hi": "यह अनार है!",
+    "voice_intro_en": "assets/audio/en/pomegranate_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/pomegranate_intro.m4a"
   },
   {
     "id": "strawberry",
@@ -239,7 +280,12 @@
     "fact_hi": "स्ट्रॉबेरी के बाहर छोटे-छोटे बीज होते हैं!",
     "voice_fact_en": "assets/audio/en/strawberry_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/strawberry_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "same_in_hindi": true,
+    "intro_en": "This is a strawberry!",
+    "intro_hi": "यह स्ट्रॉबेरी है!",
+    "voice_intro_en": "assets/audio/en/strawberry_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/strawberry_intro.m4a"
   },
   {
     "id": "coconut",
@@ -261,6 +307,10 @@
     "fact_hi": "नारियल के अंदर मीठा पानी होता है!",
     "voice_fact_en": "assets/audio/en/coconut_fact.m4a",
     "voice_fact_hi": "assets/audio/hi/coconut_fact.m4a",
-    "rive_reaction": null
+    "rive_reaction": null,
+    "intro_en": "This is a coconut!",
+    "intro_hi": "यह नारियल है!",
+    "voice_intro_en": "assets/audio/en/coconut_intro.m4a",
+    "voice_intro_hi": "assets/audio/hi/coconut_intro.m4a"
   }
 ]

@@ -394,7 +394,8 @@ class LearnCardController extends Notifier<LearnCardState> {
       // "A for Apple!" in one breath, then the Hindi word when bilingual.
       await _speak([
         item.voiceIntroEn!,
-        if (_languages.contains(ContentLanguage.hi)) item.voiceHi,
+        if (_languages.contains(ContentLanguage.hi) && !item.sameInHindi)
+          item.voiceHi,
       ], run);
     } else if (item.section == SectionId.abc && item.letter != null) {
       await _kidoSay(
@@ -408,6 +409,13 @@ class LearnCardController extends Notifier<LearnCardState> {
       if (_languages.contains(ContentLanguage.hi)) {
         await _speak([item.voiceHi], run);
       }
+    } else if (item.voiceIntroEn != null || item.voiceIntroHi != null) {
+      // "This is a cow!" + "यह गाय है!"; a name that sounds the same in
+      // both languages only once ("यह ट्रक है!", never "truck… ट्रक").
+      final langs = item.sameInHindi && _languages.length > 1
+          ? _talkLanguages
+          : _languages;
+      await _speak([for (final l in langs) ?item.introVoice(l)], run);
     } else {
       await _speak(_words(item), run);
     }
@@ -426,7 +434,7 @@ class LearnCardController extends Notifier<LearnCardState> {
       case Discovery.count:
         await _countTo(item.number!, run);
         if (!_alive(run)) return;
-        await _speak(_words(item), run);
+        await _kidoSay(KidoEvent.howManyStars, run, n: item.number);
 
       case Discovery.fact:
         await _speak([for (final l in _talkLanguages) ?item.factVoice(l)], run);
@@ -439,9 +447,14 @@ class LearnCardController extends Notifier<LearnCardState> {
         }
         final tiles = item.spelling;
         final voiced = _voicedIndexes(item);
+        // "चलो, Tractor की स्पेलिंग सीखते हैं!" (the English word).
+        await _kidoSay(KidoEvent.letsSpell, run, itemAudio: item.voiceEn);
+        if (!_alive(run)) return;
         await _speak(
           [for (final i in voiced) tiles[i].audioAsset!],
           run,
+          // Slow and clear: T… R… A… C… T… O… R.
+          gap: AppDurations.spellGap,
           onSegment: (k) {
             if (_alive(run)) state = state.copyWith(highlighted: voiced[k]);
           },
@@ -530,8 +543,10 @@ class LearnCardController extends Notifier<LearnCardState> {
     unawaited(_kidoSay(KidoEvent.hintTap, _run, item: item));
   }
 
+  /// The item's name in each card language (once if it sounds the same).
   List<String> _words(LearningItem item) => [
-    for (final l in _languages) item.voice(l),
+    for (final l in item.sameInHindi ? _languages.take(1) : _languages)
+      item.voice(l),
   ];
 
   static List<int> _voicedIndexes(LearningItem item) => [
@@ -539,10 +554,10 @@ class LearnCardController extends Notifier<LearnCardState> {
       if (t.isVoiced) i,
   ];
 
-  /// "Let's count!" then 1, 2, 3 … [n] in the first selected language, with
-  /// the count shown on screen.
+  /// "Let's count the stars!" then 1, 2, 3 … [n] in the first selected
+  /// language; each star lights up as it is counted.
   Future<void> _countTo(int n, int run) async {
-    await _kidoSay(KidoEvent.letsCount, run);
+    await _kidoSay(KidoEvent.countStars, run);
     if (!_alive(run)) return;
     final numbers =
         ref.read(contentCatalogProvider).value?.itemsFor(SectionId.numbers) ??
@@ -556,6 +571,7 @@ class LearnCardController extends Notifier<LearnCardState> {
     await _speak(
       clips,
       run,
+      gap: AppDurations.countGap,
       onSegment: (k) {
         if (_alive(run)) state = state.copyWith(counted: k + 1);
       },
@@ -568,11 +584,13 @@ class LearnCardController extends Notifier<LearnCardState> {
     List<String> assets,
     int run, {
     void Function(int index)? onSegment,
+    Duration gap = Duration.zero,
   }) async {
     if (assets.isEmpty || !_alive(run)) return;
     final ok = await _audio.playVoiceSequence(
       assets,
       onSegment: onSegment,
+      gap: gap,
       debounce: false,
       owner: this,
     );
