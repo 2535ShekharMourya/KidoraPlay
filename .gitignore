@@ -43,4 +43,10 @@ app.*.map.json
 /android/app/release
 
 # Downloaded source art (tool/make_pictures.py)
-/tool/.cache/
+# Content tool caches (downloads, rebuilt on demand). The two manifests
+# are kept so regenerating content elsewhere doesn't redo everything.
+/tool/.cache/*
+!/tool/.cache/voice_manifest.json
+!/tool/.cache/photos/
+/tool/.cache/photos/*
+!/tool/.cache/photos/meta.json

@@ -1,0 +1,22 @@
+# Text files use LF in the repo on every machine.
+* text=auto eol=lf
+
+# Windows scripts keep CRLF.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Media and binaries are never touched by line-ending conversion.
+*.m4a binary
+*.mp3 binary
+*.ogg binary
+*.wav binary
+*.webp binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ttf binary
+*.otf binary
+*.jar binary
+*.keystore binary
+*.jks binary
