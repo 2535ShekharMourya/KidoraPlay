@@ -96,9 +96,9 @@ abstract final class AppDurations {
 
   /// Learn cards: idle hints come sooner while the child discovers by
   /// tapping (look → point + "Tap the apple!" → glow).
-  static const discoverLook = Duration(seconds: 3);
-  static const discoverPoint = Duration(seconds: 6);
-  static const discoverGlow = Duration(seconds: 9);
+  static const discoverLook = Duration(seconds: 6);
+  static const discoverPoint = Duration(seconds: 12);
+  static const discoverGlow = Duration(seconds: 18);
 
   /// Count along up to this number on number cards (longer gets tiring).
   static const countAlongMax = 20;

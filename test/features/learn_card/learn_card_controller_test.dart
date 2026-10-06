@@ -5,6 +5,7 @@ import 'package:kidoraplay/content/repository/content_repository.dart';
 import 'package:kidoraplay/core/audio/audio_service.dart';
 import 'package:kidoraplay/core/settings/app_settings.dart';
 import 'package:kidoraplay/core/storage/local_store.dart';
+import 'package:kidoraplay/core/theme/app_tokens.dart';
 import 'package:kidoraplay/features/kido/hint_timer.dart';
 import 'package:kidoraplay/features/learn_card/learn_card_controller.dart';
 import 'package:kidoraplay/features/progress/progress_controller.dart';
@@ -349,20 +350,24 @@ void main() {
     await controller('cow').playLesson();
     audio.voice.played.clear();
 
-    await tester.pump(const Duration(seconds: 3));
+    await tester.pump(AppDurations.discoverLook);
     expect(stateOf('cow').hint, HintLevel.look);
-    await tester.pump(const Duration(seconds: 3));
+    expect(audio.voice.played, isEmpty); // looking is silent
+    await tester.pump(AppDurations.discoverPoint - AppDurations.discoverLook);
     expect(stateOf('cow').hint, HintLevel.point);
     expect(audio.voice.played, [
       '$kido/hint_tap.m4a', // "Here it is! Tap the" + cow
       'assets/audio/en/cow.m4a',
     ]);
-    await tester.pump(const Duration(seconds: 3));
+    await tester.pump(AppDurations.discoverGlow - AppDurations.discoverPoint);
     expect(stateOf('cow').hint, HintLevel.glow);
 
+    // Only one spoken hint per card: then Kido waits quietly.
+    audio.voice.played.clear();
+    await tester.pump(const Duration(seconds: 60));
+    expect(audio.voice.played, isEmpty);
+
     controller('cow').userTapped();
-    expect(stateOf('cow').hint, HintLevel.none);
-    await tester.pump(const Duration(seconds: 2));
     expect(stateOf('cow').hint, HintLevel.none);
     await tester.pump(const Duration(seconds: 60));
   });

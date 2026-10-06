@@ -186,6 +186,8 @@ class LearnCardController extends Notifier<LearnCardState> {
     lookAfter: AppDurations.discoverLook,
     pointAfter: AppDurations.discoverPoint,
     glowAfter: AppDurations.discoverGlow,
+    // One gentle spoken hint per card; then Kido waits quietly.
+    maxCycles: 1,
   );
 
   LearningItem? get _item =>
