@@ -59,37 +59,21 @@ class CountingStars extends StatelessWidget {
                 Expanded(
                   flex: 3,
                   child: Center(
-                    child: Wrap(
-                      alignment: WrapAlignment.center,
+                    // Rows of five, like a ten-frame: easy to count.
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
                       children: [
-                        for (var i = 1; i <= number; i++)
-                          SizedBox(
-                            width: star,
-                            height: star,
-                            child: AnimatedScale(
-                              scale: counting && i == counted ? 1.35 : 1,
-                              duration: reduceMotion
-                                  ? Duration.zero
-                                  : AppDurations.highlight,
-                              curve: AppCurves.tap,
-                              child: Icon(
-                                Icons.star_rounded,
-                                size: star,
-                                // Counting: counted stars gold, the rest
-                                // waiting in soft grey.
-                                color: !counting || i <= counted
-                                    ? AppColors.celebrate
-                                    : AppColors.traceRoadEdge,
-                                shadows: counting && i == counted
-                                    ? const [
-                                        Shadow(
-                                          color: AppColors.glow,
-                                          blurRadius: 12,
-                                        ),
-                                      ]
-                                    : null,
-                              ),
-                            ),
+                        for (var r = 0; r * perRow < number; r++)
+                          Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              for (
+                                var i = r * perRow + 1;
+                                i <= math.min(number, (r + 1) * perRow);
+                                i++
+                              )
+                                _star(i, star, counting, reduceMotion),
+                            ],
                           ),
                       ],
                     ),
@@ -102,4 +86,25 @@ class CountingStars extends StatelessWidget {
       ),
     );
   }
+
+  Widget _star(int i, double size, bool counting, bool reduceMotion) =>
+      SizedBox.square(
+        dimension: size,
+        child: AnimatedScale(
+          scale: counting && i == counted ? 1.35 : 1,
+          duration: reduceMotion ? Duration.zero : AppDurations.highlight,
+          curve: AppCurves.tap,
+          child: Icon(
+            Icons.star_rounded,
+            size: size,
+            // Counting: counted stars gold, the rest waiting in soft grey.
+            color: !counting || i <= counted
+                ? AppColors.celebrate
+                : AppColors.traceRoadEdge,
+            shadows: counting && i == counted
+                ? const [Shadow(color: AppColors.glow, blurRadius: 12)]
+                : null,
+          ),
+        ),
+      );
 }

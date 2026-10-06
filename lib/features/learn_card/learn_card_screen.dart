@@ -628,7 +628,8 @@ class _WordPanel extends StatelessWidget {
                   : text.headlineMedium?.copyWith(fontSize: 34),
             ),
           ),
-        if (number != null && number >= 10) ...[
+        // Place value for bigger numbers (up to 20 the stars show it).
+        if (number != null && number > AppDurations.countAlongMax) ...[
           const SizedBox(height: AppSpacing.sm),
           Flexible(
             child: PlaceValueView(

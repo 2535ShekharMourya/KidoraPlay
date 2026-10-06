@@ -180,6 +180,13 @@ void main() {
           await settle(tester, frames: 30);
           await shoot(tester, size, '${level}_learn_opp_big_star');
         }
+        for (final (row, id) in [(1, 'three'), (2, 'twenty')]) {
+          await go(
+            AppRoutes.learn((section: SectionId.numbers, row: row), id),
+            'learn_$id',
+            frames: 40,
+          );
+        }
         await go(
           AppRoutes.learn((section: SectionId.numbers, row: 3), 'twenty_one'),
           'learn_twenty_one',
