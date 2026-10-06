@@ -265,4 +265,26 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get levelBaby => 'Baby';
+
+  @override
+  String get progressReport => 'Progress report';
+
+  @override
+  String progressSummary(int learned, int total) {
+    return '$learned of $total words learned';
+  }
+
+  @override
+  String progressSectionsDone(int done, int total) {
+    return '$done of $total sections complete';
+  }
+
+  @override
+  String progressNext(String section) {
+    return 'Try next: $section';
+  }
+
+  @override
+  String get progressPrivacy =>
+      'Progress is saved only on this phone. Nothing is sent anywhere.';
 }

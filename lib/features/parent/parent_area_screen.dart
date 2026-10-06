@@ -12,6 +12,7 @@ import '../billing/billing_controller.dart';
 import '../billing/plans_screen.dart';
 import '../progress/progress_controller.dart';
 import 'parent_gate.dart';
+import 'progress_report_screen.dart';
 
 /// Settings for grown-ups, always behind the [ParentGate]. Everything here
 /// is stored on the device only.
@@ -140,6 +141,16 @@ class _ParentAreaScreenState extends ConsumerState<ParentAreaScreen> {
               trailing: TextButton(
                 onPressed: stickers == 0 ? null : _confirmReset,
                 child: Text(l10n.resetProgress),
+              ),
+            ),
+            ListTile(
+              leading: const Icon(Icons.insights_rounded),
+              title: Text(l10n.progressReport),
+              trailing: const Icon(Icons.chevron_right_rounded),
+              onTap: () => Navigator.of(context).push(
+                MaterialPageRoute<void>(
+                  builder: (_) => const ProgressReportScreen(),
+                ),
               ),
             ),
             _Heading(l10n.aboutTitle),

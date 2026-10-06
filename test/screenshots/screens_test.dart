@@ -25,6 +25,7 @@ import 'package:kidoraplay/core/theme/app_tokens.dart';
 import 'package:kidoraplay/features/games/quiz_models.dart';
 import 'package:kidoraplay/features/home/home_screen.dart';
 import 'package:kidoraplay/features/learn_card/learn_card_controller.dart';
+import 'package:kidoraplay/features/parent/progress_report_screen.dart';
 import 'package:kidoraplay/features/rewards/balloon_party.dart';
 import 'package:kidoraplay/features/tracing/trace_logic.dart';
 
@@ -104,6 +105,21 @@ void main() {
     await shoot(tester, 'phone_800x360', 'balloon_party');
     await tester.pumpWidget(const SizedBox());
     await tester.pump(const Duration(seconds: 30));
+  }, skip: !enabled);
+
+  testWidgets('progress report', (tester) async {
+    await pumpApp(
+      tester,
+      RepaintBoundary(key: boundary, child: const ProgressReportScreen()),
+      catalog: catalog,
+      store: LocalStore.inMemory({
+        SettingsKeys.language: 'en',
+        SettingsKeys.level: 'nursery',
+        'progress.learned': ['one', 'two', 'three', 'cow', 'lion', 'apple'],
+      }),
+    );
+    await settle(tester);
+    await shoot(tester, 'phone_800x360', 'progress_report');
   }, skip: !enabled);
 
   for (final MapEntry(key: size, value: physical) in sizes.entries) {

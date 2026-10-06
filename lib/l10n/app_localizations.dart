@@ -583,6 +583,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Baby'**
   String get levelBaby;
+
+  /// No description provided for @progressReport.
+  ///
+  /// In en, this message translates to:
+  /// **'Progress report'**
+  String get progressReport;
+
+  /// No description provided for @progressSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'{learned} of {total} words learned'**
+  String progressSummary(int learned, int total);
+
+  /// No description provided for @progressSectionsDone.
+  ///
+  /// In en, this message translates to:
+  /// **'{done} of {total} sections complete'**
+  String progressSectionsDone(int done, int total);
+
+  /// No description provided for @progressNext.
+  ///
+  /// In en, this message translates to:
+  /// **'Try next: {section}'**
+  String progressNext(String section);
+
+  /// No description provided for @progressPrivacy.
+  ///
+  /// In en, this message translates to:
+  /// **'Progress is saved only on this phone. Nothing is sent anywhere.'**
+  String get progressPrivacy;
 }
 
 class _AppLocalizationsDelegate

@@ -125,5 +125,37 @@
   "toyMemory": "Pairs",
   "memoryCard": "Card",
   "toyMusic": "Music",
-  "levelBaby": "Baby"
+  "levelBaby": "Baby",
+  "progressReport": "Progress report",
+  "progressSummary": "{learned} of {total} words learned",
+  "@progressSummary": {
+    "placeholders": {
+      "learned": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "progressSectionsDone": "{done} of {total} sections complete",
+  "@progressSectionsDone": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "progressNext": "Try next: {section}",
+  "@progressNext": {
+    "placeholders": {
+      "section": {
+        "type": "String"
+      }
+    }
+  },
+  "progressPrivacy": "Progress is saved only on this phone. Nothing is sent anywhere."
 }

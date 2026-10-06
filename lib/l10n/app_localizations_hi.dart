@@ -263,4 +263,26 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get levelBaby => 'बेबी';
+
+  @override
+  String get progressReport => 'प्रगति रिपोर्ट';
+
+  @override
+  String progressSummary(int learned, int total) {
+    return '$total में से $learned शब्द सीखे';
+  }
+
+  @override
+  String progressSectionsDone(int done, int total) {
+    return '$total में से $done भाग पूरे';
+  }
+
+  @override
+  String progressNext(String section) {
+    return 'अगला आज़माएँ: $section';
+  }
+
+  @override
+  String get progressPrivacy =>
+      'प्रगति सिर्फ़ इसी फ़ोन में सेव होती है। कुछ भी कहीं नहीं भेजा जाता।';
 }
