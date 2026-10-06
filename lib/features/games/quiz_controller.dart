@@ -12,6 +12,7 @@ import '../../core/audio/audio_service.dart';
 import '../../core/settings/app_settings.dart';
 import '../../core/theme/app_tokens.dart';
 import '../kido/hint_timer.dart';
+import '../path/daily_path.dart';
 import '../kido/kido_voice.dart';
 import 'quiz_models.dart';
 
@@ -219,6 +220,11 @@ class QuizController extends Notifier<QuizState> {
     } else {
       _audio.playSfx(Sfx.sparkle);
       state = state.copyWith(phase: QuizPhase.finished, games: state.games + 1);
+      unawaited(
+        ref
+            .read(dailyPathProvider.notifier)
+            .completed(PathStep(PathKind.game, kind.name)),
+      );
       await _say(KidoEvent.gameDone, run);
     }
   }

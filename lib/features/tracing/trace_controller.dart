@@ -11,6 +11,7 @@ import '../../core/audio/audio_service.dart';
 import '../../core/haptics/haptics.dart';
 import '../../core/theme/app_tokens.dart';
 import '../kido/kido_voice.dart';
+import '../path/daily_path.dart';
 import 'trace_logic.dart';
 
 @immutable
@@ -129,6 +130,11 @@ class TraceController extends Notifier<TraceState> {
           celebrations: state.celebrations + 1,
         );
         unawaited(_cheer());
+        unawaited(
+          ref
+              .read(dailyPathProvider.notifier)
+              .completed(PathStep(PathKind.trace, itemId)),
+        );
     }
   }
 

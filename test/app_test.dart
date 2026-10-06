@@ -5,6 +5,7 @@ import 'package:kidoraplay/app.dart';
 import 'package:kidoraplay/content/repository/content_catalog.dart';
 import 'package:kidoraplay/content/repository/content_repository.dart';
 import 'package:kidoraplay/core/theme/app_tokens.dart';
+import 'package:kidoraplay/core/widgets/arrow_button.dart';
 import 'package:kidoraplay/core/widgets/bouncy_button.dart';
 import 'package:kidoraplay/features/home/home_screen.dart';
 import 'package:kidoraplay/features/splash/splash_screen.dart';
@@ -12,19 +13,21 @@ import 'package:kidoraplay/features/splash/splash_screen.dart';
 import 'helpers/fake_audio.dart';
 import 'helpers/pump_app.dart';
 
-// The default class (LKG) sees every Phase 1 and 2 section.
-const sections = [
+// The default class (LKG): Today's path first, then its sections over
+// two pages of Home.
+const firstPage = [
+  'Today',
   'Numbers',
   'ABC',
+  'Hindi',
   'Animals',
   'Birds',
   'Fruits',
   'Vegetables',
   'Colours',
   'Shapes',
-  'Vehicles',
-  'Hindi',
 ];
+const secondPage = ['Vehicles', 'Body', 'Family', 'Days'];
 
 late ContentCatalog _catalog;
 
@@ -68,8 +71,15 @@ void main() {
   ) async {
     await pumpToHome(tester);
     expect(find.byType(HomeScreen), findsOneWidget);
-    for (final label in sections) {
-      expect(find.text(label), findsOneWidget);
+    for (final label in firstPage) {
+      expect(find.text(label), findsOneWidget, reason: label);
+    }
+    await tester.tap(find.byType(ArrowButton));
+    for (var i = 0; i < 12; i++) {
+      await tester.pump(const Duration(milliseconds: 100));
+    }
+    for (final label in secondPage) {
+      expect(find.text(label), findsOneWidget, reason: label);
     }
   });
 
@@ -77,12 +87,12 @@ void main() {
     tester,
   ) async {
     await pumpToHome(tester);
-    for (final label in sections) {
+    for (final label in firstPage) {
       final tile = find.ancestor(
         of: find.text(label),
         matching: find.byType(BouncyButton),
       );
-      final size = tester.getSize(tile);
+      final size = tester.getSize(tile.first);
       expect(size.width, greaterThanOrEqualTo(AppSpacing.minTapTarget));
       expect(size.height, greaterThanOrEqualTo(AppSpacing.minTapTarget));
     }

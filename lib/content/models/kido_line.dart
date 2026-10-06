@@ -60,6 +60,10 @@ abstract final class KidoEvent {
 
   /// Music toy: "Let's make music! Tap the colours!".
   static const musicStart = 'music_start';
+
+  /// Daily path: "Today's path! Step by step, let's go!" and the finish.
+  static const pathStart = 'path_start';
+  static const pathDone = 'path_done';
   static const tryAgain = 'try_again';
   static const sectionDone = 'section_done';
   static const goodbye = 'goodbye';
@@ -108,6 +112,8 @@ abstract final class KidoEvent {
     tapPlay,
     memoryStart,
     musicStart,
+    pathStart,
+    pathDone,
     tryAgain,
     sectionDone,
     goodbye,

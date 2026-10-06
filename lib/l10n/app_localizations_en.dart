@@ -287,4 +287,12 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get progressPrivacy =>
       'Progress is saved only on this phone. Nothing is sent anywhere.';
+
+  @override
+  String get todayPath => 'Today';
+
+  @override
+  String pathStep(int n) {
+    return 'Step $n';
+  }
 }

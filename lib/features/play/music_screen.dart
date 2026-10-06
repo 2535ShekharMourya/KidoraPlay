@@ -17,11 +17,16 @@ import '../../core/widgets/section_background.dart';
 import '../kido/kido_controller.dart';
 import '../kido/kido_voice.dart';
 import '../kido/kido_widget.dart';
+import '../path/daily_path.dart';
+import 'toys.dart';
 
 /// Music toy: a rainbow xylophone in a pentatonic scale, so every tune a
 /// toddler taps sounds nice. Kido dances along.
 class MusicScreen extends ConsumerStatefulWidget {
   const MusicScreen({super.key});
+
+  /// Notes that complete Music as a step on the daily path.
+  static const stepNotes = 8;
 
   /// Notes from low to high (see tool/make_notes.py).
   static const notes = [
@@ -69,6 +74,14 @@ class _MusicScreenState extends ConsumerState<MusicScreen> {
     // Kido stops talking once the music starts.
     if (_taps++ == 0) unawaited(audio.stopVoice());
     audio.playNote(MusicScreen.notes[i]);
+    // A little tune counts as today's toy step.
+    if (_taps == MusicScreen.stepNotes) {
+      unawaited(
+        ref
+            .read(dailyPathProvider.notifier)
+            .completed(PathStep(PathKind.toy, ToyKind.music.name)),
+      );
+    }
     ref.read(hapticsProvider).tap();
     _bursts[i].fire();
     // Kido dances: a clap now and then.

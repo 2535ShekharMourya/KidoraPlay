@@ -20,6 +20,8 @@ import '../../core/widgets/section_background.dart';
 import '../kido/kido_controller.dart';
 import '../kido/kido_voice.dart';
 import '../kido/kido_widget.dart';
+import '../path/daily_path.dart';
+import 'toys.dart';
 
 /// "Tap & Play" for the youngest (1–3): a tap anywhere pops up an animal,
 /// bird or vehicle right under the finger; it wiggles to its real sound,
@@ -51,6 +53,7 @@ class _TapPlayScreenState extends ConsumerState<TapPlayScreen>
   Duration _now = Duration.zero;
   List<LearningItem>? _pool;
   int _colour = 0;
+  int _taps = 0;
 
   @override
   void initState() {
@@ -104,6 +107,14 @@ class _TapPlayScreenState extends ConsumerState<TapPlayScreen>
         ),
       );
     });
+    // Enough friends met: that counts as today's toy step.
+    if (++_taps == TapPlayScreenLimits.stepTaps) {
+      unawaited(
+        ref
+            .read(dailyPathProvider.notifier)
+            .completed(PathStep(PathKind.toy, ToyKind.tapPlay.name)),
+      );
+    }
     final audio = ref.read(audioServiceProvider);
     audio.playSfx(Sfx.pop);
     ref.read(hapticsProvider).tap();
@@ -199,4 +210,7 @@ class _TapPlayScreenState extends ConsumerState<TapPlayScreen>
 abstract final class TapPlayScreenLimits {
   /// Most friends on screen at once (the oldest leaves first).
   static const maxPops = 5;
+
+  /// Taps that complete Tap & Play as a step on the daily path.
+  static const stepTaps = 6;
 }

@@ -383,6 +383,8 @@ assets/audio/en/kido/memory_start.m4a
 assets/audio/en/kido/music_start.m4a
 assets/audio/en/kido/next_one_1.m4a
 assets/audio/en/kido/next_one_2.m4a
+assets/audio/en/kido/path_done.m4a
+assets/audio/en/kido/path_start.m4a
 assets/audio/en/kido/praise_1.m4a
 assets/audio/en/kido/praise_2.m4a
 assets/audio/en/kido/praise_3.m4a
@@ -1111,6 +1113,8 @@ assets/audio/hi/kido/memory_start.m4a
 assets/audio/hi/kido/music_start.m4a
 assets/audio/hi/kido/next_one_1.m4a
 assets/audio/hi/kido/next_one_2.m4a
+assets/audio/hi/kido/path_done.m4a
+assets/audio/hi/kido/path_start.m4a
 assets/audio/hi/kido/praise_1.m4a
 assets/audio/hi/kido/praise_2.m4a
 assets/audio/hi/kido/praise_3.m4a

@@ -10,6 +10,7 @@ import '../../features/home/home_screen.dart';
 import '../../features/learn_card/learn_card_screen.dart';
 import '../../features/numbers/number_rows_screen.dart';
 import '../../features/parent/parent_area_screen.dart';
+import '../../features/path/path_screen.dart';
 import '../../features/play/memory_screen.dart';
 import '../../features/play/music_screen.dart';
 import '../../features/play/tap_play_screen.dart';
@@ -29,6 +30,7 @@ abstract final class AppRoutes {
   static const stickers = '/home/stickers';
   static const parent = '/home/parent';
   static const games = '/home/games';
+  static const path = '/home/path';
 
   static String game(GameKind kind) => '$games/${kind.name}';
 
@@ -158,6 +160,11 @@ final appRouterProvider = Provider<GoRouter>((ref) {
                 ),
               ),
             ],
+          ),
+          GoRoute(
+            path: 'path',
+            pageBuilder: (context, state) =>
+                _playfulPage(state, const PathScreen()),
           ),
           GoRoute(
             path: 'parent',

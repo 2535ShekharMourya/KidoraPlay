@@ -775,5 +775,41 @@
         ]
       }
     ]
+  },
+  "path_start": {
+    "en": [
+      {
+        "text": "Today's path! Step by step, let's go!",
+        "audio": [
+          "assets/audio/en/kido/path_start.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "आज का रास्ता! चलो, एक-एक कदम चलें!",
+        "audio": [
+          "assets/audio/hi/kido/path_start.m4a"
+        ]
+      }
+    ]
+  },
+  "path_done": {
+    "en": [
+      {
+        "text": "Hooray! You finished today's path! You're a star!",
+        "audio": [
+          "assets/audio/en/kido/path_done.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "हुर्रे! आज का रास्ता पूरा हुआ! तुम तो स्टार हो!",
+        "audio": [
+          "assets/audio/hi/kido/path_done.m4a"
+        ]
+      }
+    ]
   }
 }

@@ -165,6 +165,7 @@ void main() {
           await settle(tester);
           await shoot(tester, size, '${level}_home_page2');
         }
+        await go(AppRoutes.path, 'path', frames: 30);
         await go(AppRoutes.section(SectionId.animals), 'grid_animals');
         await go(AppRoutes.section(SectionId.numbers), 'numbers_rows');
         await go(AppRoutes.numberRow(3), 'numbers_row3');

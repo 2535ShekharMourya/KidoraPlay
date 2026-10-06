@@ -24,6 +24,7 @@ import '../kido/kido_controller.dart';
 import '../kido/kido_memory.dart';
 import '../kido/kido_voice.dart';
 import '../kido/kido_widget.dart';
+import '../path/path_tile.dart';
 import '../progress/progress_controller.dart';
 import '../progress/sticker_book_screen.dart';
 import '../progress/sticker_widgets.dart';
@@ -75,7 +76,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       context.go(AppRoutes.section(id));
     }
 
-    final sections = [
+    final sections = <SectionId?>[
+      null, // Today's path, always first.
       for (final s
           in catalog?.sectionsFor(ref.watch(settingsProvider).level) ??
               const <Section>[])
@@ -236,7 +238,9 @@ class _SectionGrid extends StatelessWidget {
   });
 
   final TileLayout layout;
-  final List<SectionId> sections;
+
+  /// Sections in order; null is the "Today's path" tile.
+  final List<SectionId?> sections;
   final String Function(SectionId) labelOf;
   final String? Function(SectionId) imageOf;
   final void Function(SectionId) onOpen;
@@ -272,12 +276,14 @@ class _SectionGrid extends StatelessWidget {
                         index: index++,
                         child: IdleFloat(
                           phase: (index * 0.37) % 1,
-                          child: _SectionTile(
-                            id: id,
-                            label: labelOf(id),
-                            image: imageOf(id),
-                            onPressed: () => onOpen(id),
-                          ),
+                          child: id == null
+                              ? const PathTile()
+                              : _SectionTile(
+                                  id: id,
+                                  label: labelOf(id),
+                                  image: imageOf(id),
+                                  onPressed: () => onOpen(id),
+                                ),
                         ),
                       ),
                     ),

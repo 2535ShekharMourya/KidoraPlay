@@ -613,6 +613,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Progress is saved only on this phone. Nothing is sent anywhere.'**
   String get progressPrivacy;
+
+  /// No description provided for @todayPath.
+  ///
+  /// In en, this message translates to:
+  /// **'Today'**
+  String get todayPath;
+
+  /// No description provided for @pathStep.
+  ///
+  /// In en, this message translates to:
+  /// **'Step {n}'**
+  String pathStep(int n);
 }
 
 class _AppLocalizationsDelegate

@@ -285,4 +285,12 @@ class AppLocalizationsHi extends AppLocalizations {
   @override
   String get progressPrivacy =>
       'प्रगति सिर्फ़ इसी फ़ोन में सेव होती है। कुछ भी कहीं नहीं भेजा जाता।';
+
+  @override
+  String get todayPath => 'आज';
+
+  @override
+  String pathStep(int n) {
+    return 'कदम $n';
+  }
 }

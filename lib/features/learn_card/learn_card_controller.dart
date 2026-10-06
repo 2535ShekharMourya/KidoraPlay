@@ -15,6 +15,7 @@ import '../../core/theme/app_tokens.dart';
 import '../kido/hint_timer.dart';
 import '../kido/kido_memory.dart';
 import '../kido/kido_voice.dart';
+import '../path/daily_path.dart';
 import '../progress/progress_controller.dart';
 import '../rewards/balloon_party.dart';
 import '../section_grid/section_items.dart';
@@ -495,6 +496,12 @@ class LearnCardController extends Notifier<LearnCardState> {
     final result = await ref
         .read(progressProvider.notifier)
         .markLearned(item, scope);
+    // A step on today's path, if it is one.
+    unawaited(
+      ref
+          .read(dailyPathProvider.notifier)
+          .completed(PathStep(PathKind.learn, item.id)),
+    );
     if (!_alive(run)) return;
     state = state.copyWith(
       stickers: state.stickers + (result.newSticker ? 1 : 0),

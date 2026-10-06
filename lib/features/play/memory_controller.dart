@@ -15,6 +15,8 @@ import '../../core/settings/app_settings.dart';
 import '../../core/theme/app_tokens.dart';
 import '../games/quiz_controller.dart' show quizRandomProvider;
 import '../kido/kido_voice.dart';
+import '../path/daily_path.dart';
+import 'toys.dart';
 
 @immutable
 class MemoryCard {
@@ -174,6 +176,11 @@ class MemoryController extends Notifier<MemoryState> {
 
   Future<void> _finish() async {
     _audio.playSfx(Sfx.cheer);
+    unawaited(
+      ref
+          .read(dailyPathProvider.notifier)
+          .completed(PathStep(PathKind.toy, ToyKind.memory.name)),
+    );
     state = state.copyWith(games: state.games + 1);
     await Future<void>.delayed(AppDurations.quizNext);
     if (!ref.mounted) return;

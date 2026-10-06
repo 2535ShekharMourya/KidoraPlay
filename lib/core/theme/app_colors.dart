@@ -23,6 +23,10 @@ abstract final class AppColors {
   static const celebrate = Color(0xFFFFC93C);
   static const glow = Color(0xFFFFF3A8);
 
+  /// Today's path tile.
+  static const pathAccent = Color(0xFF7B5CFF);
+  static const pathVeil = Color(0x99FFFFFF);
+
   /// Toy cards in the Games area.
   static const toyAccent = Color(0xFFFF6FA8);
 

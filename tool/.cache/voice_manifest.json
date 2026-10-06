@@ -1500,5 +1500,9 @@
  "assets/audio/hi/kido/memory_start.m4a": "0b2d3c388acb6b9b0b9e72dfbedbc3343c07da19",
  "assets/audio/en/kido/music_start.m4a": "9f4150755fa9c048f6959f1cbfc5108775d836f0",
  "assets/audio/hi/kido/music_start.m4a": "13426b05e8ca32157ee5240d090eecc25d6f3c1c",
- "assets/audio/hi/kido/tap_play.m4a": "3c99d21cf6b43030691b67a68cffe34a3e5f3fea"
+ "assets/audio/hi/kido/tap_play.m4a": "3c99d21cf6b43030691b67a68cffe34a3e5f3fea",
+ "assets/audio/hi/kido/path_done.m4a": "bf00fccec35886d8557455ac0575c5086b9b8fad",
+ "assets/audio/en/kido/path_start.m4a": "fcfafa82829c307d89266c7d54125342d89ae484",
+ "assets/audio/hi/kido/path_start.m4a": "23f2195b226be4d7afa6ee783d896ca31ff05712",
+ "assets/audio/en/kido/path_done.m4a": "fb6aed7f04c691374e6f9624b11c50fcc1bf9c09"
 }

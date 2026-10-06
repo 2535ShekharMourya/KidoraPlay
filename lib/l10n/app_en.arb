@@ -157,5 +157,14 @@
       }
     }
   },
-  "progressPrivacy": "Progress is saved only on this phone. Nothing is sent anywhere."
+  "progressPrivacy": "Progress is saved only on this phone. Nothing is sent anywhere.",
+  "todayPath": "Today",
+  "pathStep": "Step {n}",
+  "@pathStep": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  }
 }
