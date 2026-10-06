@@ -332,4 +332,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get rhymeAgain => 'Sing again';
+
+  @override
+  String get toyColouring => 'Colouring';
+
+  @override
+  String get colouringColour => 'Next colour';
 }

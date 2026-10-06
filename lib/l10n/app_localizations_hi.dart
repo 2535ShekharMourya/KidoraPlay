@@ -330,4 +330,10 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get rhymeAgain => 'फिर से गाओ';
+
+  @override
+  String get toyColouring => 'रंग भरो';
+
+  @override
+  String get colouringColour => 'अगला रंग';
 }

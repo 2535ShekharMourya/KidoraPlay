@@ -27,6 +27,7 @@ import 'package:kidoraplay/features/home/home_screen.dart';
 import 'package:kidoraplay/features/learn_card/learn_card_controller.dart';
 import 'package:kidoraplay/features/parent/privacy_policy_screen.dart';
 import 'package:kidoraplay/features/parent/progress_report_screen.dart';
+import 'package:kidoraplay/features/play/colouring.dart';
 import 'package:kidoraplay/features/play/kido_room_controller.dart';
 import 'package:kidoraplay/features/play/toys.dart';
 import 'package:kidoraplay/features/rewards/balloon_party.dart';
@@ -250,6 +251,16 @@ void main() {
         await roomContainer.read(kidoRoomControllerProvider.notifier).nextHat();
         await settle(tester, frames: 20);
         await shoot(tester, size, '${level}_kido_room_hat');
+        await go(AppRoutes.toy(ToyKind.colouring), 'colouring', frames: 25);
+        final paint = ProviderScope.containerOf(
+          tester.element(find.byType(KidoraApp)),
+        ).read(colouringControllerProvider.notifier);
+        for (final area in [0, 1, 2]) {
+          paint.fill(area);
+          await paint.nextColour();
+        }
+        await settle(tester, frames: 10);
+        await shoot(tester, size, '${level}_colouring_filled');
         await go(AppRoutes.games, 'games');
         for (final kind in GameKind.values) {
           await go(AppRoutes.game(kind), 'game_${kind.name}', frames: 30);

@@ -697,6 +697,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Sing again'**
   String get rhymeAgain;
+
+  /// No description provided for @toyColouring.
+  ///
+  /// In en, this message translates to:
+  /// **'Colouring'**
+  String get toyColouring;
+
+  /// No description provided for @colouringColour.
+  ///
+  /// In en, this message translates to:
+  /// **'Next colour'**
+  String get colouringColour;
 }
 
 class _AppLocalizationsDelegate

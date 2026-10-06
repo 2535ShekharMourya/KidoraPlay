@@ -12,13 +12,17 @@ enum ToyKind {
   memory,
 
   /// A rainbow xylophone.
-  music;
+  music,
+
+  /// Colouring pages: tap to fill.
+  colouring;
 
   String get image => switch (this) {
     ToyKind.kidoRoom => 'assets/images/games/kido_room.webp',
     ToyKind.tapPlay => 'assets/images/games/tap_play.webp',
     ToyKind.memory => 'assets/images/games/memory.webp',
     ToyKind.music => 'assets/images/games/music.webp',
+    ToyKind.colouring => 'assets/images/games/colouring.webp',
   };
 
   String label(AppLocalizations l10n) => switch (this) {
@@ -26,5 +30,6 @@ enum ToyKind {
     ToyKind.tapPlay => l10n.toyTapPlay,
     ToyKind.memory => l10n.toyMemory,
     ToyKind.music => l10n.toyMusic,
+    ToyKind.colouring => l10n.toyColouring,
   };
 }

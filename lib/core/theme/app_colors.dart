@@ -30,6 +30,16 @@ abstract final class AppColors {
   /// Stories (shelf, covers, page arrows).
   static const storyAccent = Color(0xFF2FA3A8);
 
+  /// Colouring paints (bright, child-friendly).
+  static const paintRed = Color(0xFFE63946);
+  static const paintYellow = Color(0xFFFFD23F);
+  static const paintBlue = Color(0xFF3A86FF);
+  static const paintGreen = Color(0xFF3DB24B);
+  static const paintOrange = Color(0xFFFF8C2B);
+  static const paintPink = Color(0xFFFF6FA8);
+  static const paintPurple = Color(0xFF8E44AD);
+  static const paintBrown = Color(0xFF8D5A3C);
+
   /// Rhymes.
   static const rhymeAccent = Color(0xFFE85D9C);
 

@@ -13,6 +13,7 @@ import '../../features/parent/parent_area_screen.dart';
 import '../../features/path/path_screen.dart';
 import '../../features/rhymes/rhyme_screens.dart';
 import '../../features/stories/story_screens.dart';
+import '../../features/play/colouring_screen.dart';
 import '../../features/play/kido_room_screen.dart';
 import '../../features/play/memory_screen.dart';
 import '../../features/play/music_screen.dart';
@@ -152,6 +153,7 @@ final appRouterProvider = Provider<GoRouter>((ref) {
                       ToyKind.tapPlay => const TapPlayScreen(),
                       ToyKind.memory => const MemoryScreen(),
                       ToyKind.music => const MusicScreen(),
+                      ToyKind.colouring => const ColouringScreen(),
                     }),
               ),
               GoRoute(
