@@ -257,4 +257,7 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get memoryCard => 'कार्ड';
+
+  @override
+  String get toyMusic => 'म्यूज़िक';
 }

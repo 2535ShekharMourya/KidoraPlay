@@ -63,6 +63,7 @@ flutter:
     - assets/audio/vehicles/
     - assets/audio/sfx/
     - assets/audio/music/
+    - assets/audio/music/notes/
     - assets/audio/ATTRIBUTION.md
     - assets/images/NOTICE-noto-emoji.txt
     - assets/images/PHOTO_CREDITS.md

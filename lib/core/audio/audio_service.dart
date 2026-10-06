@@ -164,6 +164,17 @@ class AudioService {
     unawaited(_safe(() => _sfx.play(sfx.asset), 'sfx ${sfx.name}'));
   }
 
+  /// A musical note (music toy) on the low-latency channel: instant, and
+  /// notes may overlap like a real xylophone.
+  void playNote(String asset) {
+    if (!_settings.soundEnabled || _paused) return;
+    unawaited(_safe(() => _sfx.play(asset), 'note'));
+  }
+
+  /// Loads notes into memory so the first tap already sounds at once.
+  Future<void> preloadNotes(Iterable<String> assets) =>
+      _safe(() => _sfx.preload(assets), 'preload notes');
+
   /// Loads sound effects into memory so they play instantly on tap.
   Future<void> preloadSfx([Iterable<Sfx> sfx = Sfx.values]) =>
       _safe(() => _sfx.preload(sfx.map((s) => s.asset)), 'preload sfx');

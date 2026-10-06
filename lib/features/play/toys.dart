@@ -6,15 +6,20 @@ enum ToyKind {
   tapPlay,
 
   /// Memory match: find the pairs.
-  memory;
+  memory,
+
+  /// A rainbow xylophone.
+  music;
 
   String get image => switch (this) {
     ToyKind.tapPlay => 'assets/images/games/tap_play.webp',
     ToyKind.memory => 'assets/images/games/memory.webp',
+    ToyKind.music => 'assets/images/games/music.webp',
   };
 
   String label(AppLocalizations l10n) => switch (this) {
     ToyKind.tapPlay => l10n.toyTapPlay,
     ToyKind.memory => l10n.toyMemory,
+    ToyKind.music => l10n.toyMusic,
   };
 }

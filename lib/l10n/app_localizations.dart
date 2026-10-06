@@ -571,6 +571,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Card'**
   String get memoryCard;
+
+  /// No description provided for @toyMusic.
+  ///
+  /// In en, this message translates to:
+  /// **'Music'**
+  String get toyMusic;
 }
 
 class _AppLocalizationsDelegate

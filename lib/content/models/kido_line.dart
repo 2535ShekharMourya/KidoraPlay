@@ -57,6 +57,9 @@ abstract final class KidoEvent {
 
   /// Memory match: "Find two the same!".
   static const memoryStart = 'memory_start';
+
+  /// Music toy: "Let's make music! Tap the colours!".
+  static const musicStart = 'music_start';
   static const tryAgain = 'try_again';
   static const sectionDone = 'section_done';
   static const goodbye = 'goodbye';
@@ -104,6 +107,7 @@ abstract final class KidoEvent {
     howManyStars,
     tapPlay,
     memoryStart,
+    musicStart,
     tryAgain,
     sectionDone,
     goodbye,

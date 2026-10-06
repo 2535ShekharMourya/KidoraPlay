@@ -259,4 +259,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get memoryCard => 'Card';
+
+  @override
+  String get toyMusic => 'Music';
 }

@@ -757,5 +757,23 @@
         ]
       }
     ]
+  },
+  "music_start": {
+    "en": [
+      {
+        "text": "Let's make music! Tap the colours!",
+        "audio": [
+          "assets/audio/en/kido/music_start.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "चलो म्यूज़िक बजाएँ! रंगों को छुओ!",
+        "audio": [
+          "assets/audio/hi/kido/music_start.m4a"
+        ]
+      }
+    ]
   }
 }
