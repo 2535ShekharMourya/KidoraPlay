@@ -5,6 +5,12 @@ Hindi letters (अ से अनार), animals, birds, fruits, vegetables, col
 shapes, vehicles, body parts, family, days, months and opposites, in
 English and Hindi, with Kido the baby elephant as guide. Android first.
 
+Also: Kido's daily path (5 steps a day, no streaks), 10 read-aloud
+stories, 7 rhymes, finger tracing, quiz games, and toys (Kido's Room,
+Tap & Play, Pairs, Music, Colouring). Classes: Baby (1–3), Nursery, LKG,
+UKG. Parents get a progress report and a privacy policy (English +
+Hindi, also in [docs/privacy-policy.md](docs/privacy-policy.md)).
+
 Everything the app needs is in this repository: every picture, voice
 clip, sound, font and content file is under `assets/`, and package
 versions are locked in `pubspec.lock`. A fresh clone builds and runs the
@@ -98,7 +104,9 @@ matter to **change** it (Python 3.12, `ffmpeg` on the PATH,
 | `tool/make_pictures.py` | 3D illustrations (Noto Emoji) and drawn cards |
 | `tool/make_sounds.py` | real animal/vehicle sounds + `ATTRIBUTION.md` |
 | `tool/make_tracing.py` | tracing strokes for A–Z and 0–9 |
-| `tool/make_notes.py` | xylophone notes for the music toy |
+| `tool/make_notes.py` | xylophone notes (music toy, rhyme tunes) |
+| `tool/make_stories.py` | the 10 picture stories + their pictures |
+| `tool/make_rhymes.py` | the rhymes (public-domain / original only) + pictures |
 
 Typical change: edit `tool/make_items.py`, then run `make_items.py`,
 `make_voice.py` (only new or changed lines are recorded) and the tests.
