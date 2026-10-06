@@ -643,6 +643,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Read again'**
   String get storyAgain;
+
+  /// No description provided for @privacyPolicy.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy policy'**
+  String get privacyPolicy;
+
+  /// No description provided for @privacyPolicyBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Last updated: 6 October 2026\n\nKidoraplay is a learning app for young children (ages 1–6), used with a parent.\n\nWhat we collect\nNothing. Kidoraplay does not ask for or collect any personal information: no name, age, email, phone number, photos, voice, location or contacts. There is no login. The app does not use the microphone or camera.\n\nWhat stays on your phone\nYour child\'s progress (stickers, today\'s path), the class you choose and your settings are saved only on this phone. They are never sent to us or anyone else. Uninstalling the app deletes them. You can also reset progress in the Parent Area.\n\nNo tracking\nKidoraplay has no analytics, tracking or crash-reporting tools. The advertising ID permission is removed from the app.\n\nAds (free version)\nThe free version shows a short full-screen ad only at natural breaks (after a finished section, game, story or tracing), never in the first minutes of play, at least 4 minutes apart, and after a \"Kido is taking a break\" screen. Ads come from Google AdMob in child-directed mode: they are non-personalised and limited to general-audience (G-rated) content. To show and count an ad, Google may process technical information such as the device\'s IP address and type, under Google\'s own privacy policy (policies.google.com/privacy). Ads cannot be clicked by accident in the play area, and there are no banners.\n\nPurchases\nPremium plans (no ads) are bought through Google Play. Payment details go to Google, not to us. Purchases are only possible in the Parent Area, behind a parental gate.\n\nParental gate\nSettings, purchases and anything outside learning are behind a parental gate that a young child cannot pass.\n\nChildren\'s privacy\nKidoraplay is designed for children and follows Google Play\'s Families policy and India\'s Digital Personal Data Protection Act, 2023. Because we collect no personal data, no parental consent for data processing is needed.\n\nChanges\nIf this policy changes, the new version will be in the app and on our store listing, with a new date.\n\nContact\nYou can reach us at the email address on Kidoraplay\'s Google Play store page.'**
+  String get privacyPolicyBody;
 }
 
 class _AppLocalizationsDelegate

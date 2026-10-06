@@ -12,6 +12,7 @@ import '../billing/billing_controller.dart';
 import '../billing/plans_screen.dart';
 import '../progress/progress_controller.dart';
 import 'parent_gate.dart';
+import 'privacy_policy_screen.dart';
 import 'progress_report_screen.dart';
 
 /// Settings for grown-ups, always behind the [ParentGate]. Everything here
@@ -160,6 +161,16 @@ class _ParentAreaScreenState extends ConsumerState<ParentAreaScreen> {
                 color: AppColors.success,
               ),
               title: Text(l10n.privacyNote),
+            ),
+            ListTile(
+              leading: const Icon(Icons.privacy_tip_rounded),
+              title: Text(l10n.privacyPolicy),
+              trailing: const Icon(Icons.chevron_right_rounded),
+              onTap: () => Navigator.of(context).push(
+                MaterialPageRoute<void>(
+                  builder: (_) => const PrivacyPolicyScreen(),
+                ),
+              ),
             ),
             ListTile(
               leading: const Icon(Icons.description_rounded),
