@@ -122,6 +122,10 @@ abstract final class AppDurations {
   /// Tap & Play: how long a popped-up friend stays before floating off.
   static const tapPlayLife = Duration(milliseconds: 3200);
 
+  /// Kido's Room: a fruit's flight to his mouth, and a bath's bubbles.
+  static const roomFeed = Duration(milliseconds: 650);
+  static const roomBath = Duration(milliseconds: 2600);
+
   /// Memory match: how long two different cards stay up, and a flip.
   static const memoryLook = Duration(milliseconds: 1300);
   static const cardFlip = Duration(milliseconds: 260);

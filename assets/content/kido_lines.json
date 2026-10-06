@@ -829,5 +829,175 @@
         ]
       }
     ]
+  },
+  "room_hello": {
+    "en": [
+      {
+        "text": "Hello! Come and play with me! Tap me, feed me, and give me a bath!",
+        "audio": [
+          "assets/audio/en/kido/room_hello_1.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "नमस्ते! आओ मेरे साथ खेलो! मुझे छुओ, खाना खिलाओ, और नहलाओ!",
+        "audio": [
+          "assets/audio/hi/kido/room_hello_1.m4a"
+        ]
+      }
+    ]
+  },
+  "room_pat": {
+    "en": [
+      {
+        "text": "Aww, that feels so nice!",
+        "audio": [
+          "assets/audio/en/kido/room_pat_1.m4a"
+        ]
+      },
+      {
+        "text": "Thank you, friend!",
+        "audio": [
+          "assets/audio/en/kido/room_pat_2.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "अरे वाह, कितना अच्छा लगा!",
+        "audio": [
+          "assets/audio/hi/kido/room_pat_1.m4a"
+        ]
+      },
+      {
+        "text": "धन्यवाद, दोस्त!",
+        "audio": [
+          "assets/audio/hi/kido/room_pat_2.m4a"
+        ]
+      }
+    ]
+  },
+  "room_tickle": {
+    "en": [
+      {
+        "text": "Hee hee hee! That tickles!",
+        "audio": [
+          "assets/audio/en/kido/room_tickle_1.m4a"
+        ]
+      },
+      {
+        "text": "Ha ha ha! Stop, stop!",
+        "audio": [
+          "assets/audio/en/kido/room_tickle_2.m4a"
+        ]
+      },
+      {
+        "text": "Hee hee! Again!",
+        "audio": [
+          "assets/audio/en/kido/room_tickle_3.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "ही ही ही! गुदगुदी हो रही है!",
+        "audio": [
+          "assets/audio/hi/kido/room_tickle_1.m4a"
+        ]
+      },
+      {
+        "text": "हा हा हा! बस, बस!",
+        "audio": [
+          "assets/audio/hi/kido/room_tickle_2.m4a"
+        ]
+      },
+      {
+        "text": "ही ही! फिर से!",
+        "audio": [
+          "assets/audio/hi/kido/room_tickle_3.m4a"
+        ]
+      }
+    ]
+  },
+  "room_bath": {
+    "en": [
+      {
+        "text": "Splish splash! Bath time!",
+        "audio": [
+          "assets/audio/en/kido/room_bath_1.m4a"
+        ]
+      },
+      {
+        "text": "Bubbles, bubbles! I'm all clean!",
+        "audio": [
+          "assets/audio/en/kido/room_bath_2.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "छप छप! नहाने का टाइम!",
+        "audio": [
+          "assets/audio/hi/kido/room_bath_1.m4a"
+        ]
+      },
+      {
+        "text": "बुलबुले, बुलबुले! मैं एकदम साफ़ हो गया!",
+        "audio": [
+          "assets/audio/hi/kido/room_bath_2.m4a"
+        ]
+      }
+    ]
+  },
+  "room_hat": {
+    "en": [
+      {
+        "text": "Do I look nice?",
+        "audio": [
+          "assets/audio/en/kido/room_hat_1.m4a"
+        ]
+      },
+      {
+        "text": "I love my hat!",
+        "audio": [
+          "assets/audio/en/kido/room_hat_2.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "मैं कैसा लग रहा हूँ?",
+        "audio": [
+          "assets/audio/hi/kido/room_hat_1.m4a"
+        ]
+      },
+      {
+        "text": "मुझे मेरी टोपी बहुत पसंद है!",
+        "audio": [
+          "assets/audio/hi/kido/room_hat_2.m4a"
+        ]
+      }
+    ]
+  },
+  "room_yum": {
+    "en": [
+      {
+        "text": "Yum yum! {item}!",
+        "audio": [
+          "assets/audio/en/kido/yum.m4a",
+          "{item}"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "यम यम! {item}!",
+        "audio": [
+          "assets/audio/hi/kido/yum.m4a",
+          "{item}"
+        ]
+      }
+    ]
   }
 }

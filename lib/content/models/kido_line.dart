@@ -67,6 +67,16 @@ abstract final class KidoEvent {
 
   /// The end of a story: "The end! Did you like the story?".
   static const storyEnd = 'story_end';
+
+  // Kido's Room.
+  static const roomHello = 'room_hello';
+  static const roomPat = 'room_pat';
+  static const roomTickle = 'room_tickle';
+
+  /// "Yum yum!" + the fruit's name.
+  static const roomYum = 'room_yum';
+  static const roomBath = 'room_bath';
+  static const roomHat = 'room_hat';
   static const tryAgain = 'try_again';
   static const sectionDone = 'section_done';
   static const goodbye = 'goodbye';
@@ -118,6 +128,12 @@ abstract final class KidoEvent {
     pathStart,
     pathDone,
     storyEnd,
+    roomHello,
+    roomPat,
+    roomTickle,
+    roomYum,
+    roomBath,
+    roomHat,
     tryAgain,
     sectionDone,
     goodbye,

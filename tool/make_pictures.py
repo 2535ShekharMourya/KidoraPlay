@@ -64,7 +64,7 @@ PICTURES = {
     "games/games": ("1f9e9",), "games/find_it": ("1f50d",),
     "games/who_says": ("1f442",), "games/count_it": ("1f9ee",),
     "games/letters": ("1f524",),
-    "games/tap_play": ("1f423",), "games/memory": ("1f0cf",),
+    "games/kido_room": ("1f418",), "games/tap_play": ("1f423",), "games/memory": ("1f0cf",),
     "games/music": ("1f3b9",),
 }
 STAR = "2b50"
@@ -485,7 +485,7 @@ def main():
     text_centered(ImageDraw.Draw(tile), 90, "अ आ", 250)
     made.append(save(tile, "assets/images/sections/hindi.webp"))
     for game in ("games", "find_it", "who_says", "count_it", "letters",
-                 "tap_play", "memory", "music"):
+                 "tap_play", "memory", "music", "kido_room"):
         made.append(save(compose_plain(PICTURES[f"games/{game}"]),
                          f"assets/images/games/{game}.webp"))
     for s in json.loads((CONTENT / "sections.json").read_text("utf-8")):
@@ -495,6 +495,10 @@ def main():
         made.append(save(compose_plain(PICTURES[f"sections/{s['id']}"]),
                          s["image"]))
     made += general_knowledge()
+    # Kido's Room: hats and the bath.
+    for name, code in {"crown": "1f451", "cap": "1f9e2", "tophat": "1f3a9",
+                       "soap": "1f9fc", "bubbles": "1fae7", "banana": "1f34c"}.items():
+        made.append(save(compose_emoji(code), f"assets/images/room/{name}.webp"))
     write_notice()
 
     # These pictures are no longer placeholders.

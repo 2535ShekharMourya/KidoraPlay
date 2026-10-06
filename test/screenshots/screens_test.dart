@@ -27,6 +27,8 @@ import 'package:kidoraplay/features/home/home_screen.dart';
 import 'package:kidoraplay/features/learn_card/learn_card_controller.dart';
 import 'package:kidoraplay/features/parent/privacy_policy_screen.dart';
 import 'package:kidoraplay/features/parent/progress_report_screen.dart';
+import 'package:kidoraplay/features/play/kido_room_controller.dart';
+import 'package:kidoraplay/features/play/toys.dart';
 import 'package:kidoraplay/features/rewards/balloon_party.dart';
 import 'package:kidoraplay/features/stories/story.dart';
 import 'package:kidoraplay/features/tracing/trace_logic.dart';
@@ -235,6 +237,13 @@ void main() {
           'trace_21',
           frames: 30,
         );
+        await go(AppRoutes.toy(ToyKind.kidoRoom), 'kido_room', frames: 30);
+        final roomContainer = ProviderScope.containerOf(
+          tester.element(find.byType(KidoraApp)),
+        );
+        await roomContainer.read(kidoRoomControllerProvider.notifier).nextHat();
+        await settle(tester, frames: 20);
+        await shoot(tester, size, '${level}_kido_room_hat');
         await go(AppRoutes.games, 'games');
         for (final kind in GameKind.values) {
           await go(AppRoutes.game(kind), 'game_${kind.name}', frames: 30);
