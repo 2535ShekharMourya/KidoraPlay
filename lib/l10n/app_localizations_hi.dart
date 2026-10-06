@@ -251,4 +251,10 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get toyTapPlay => 'छुओ और खेलो';
+
+  @override
+  String get toyMemory => 'जोड़ी';
+
+  @override
+  String get memoryCard => 'कार्ड';
 }

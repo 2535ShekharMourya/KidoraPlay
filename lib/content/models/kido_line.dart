@@ -54,6 +54,9 @@ abstract final class KidoEvent {
 
   /// Tap & Play: "Tap anywhere, and see who comes to play!".
   static const tapPlay = 'tap_play';
+
+  /// Memory match: "Find two the same!".
+  static const memoryStart = 'memory_start';
   static const tryAgain = 'try_again';
   static const sectionDone = 'section_done';
   static const goodbye = 'goodbye';
@@ -100,6 +103,7 @@ abstract final class KidoEvent {
     countStars,
     howManyStars,
     tapPlay,
+    memoryStart,
     tryAgain,
     sectionDone,
     goodbye,

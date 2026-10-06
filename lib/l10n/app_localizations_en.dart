@@ -253,4 +253,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get toyTapPlay => 'Tap & Play';
+
+  @override
+  String get toyMemory => 'Pairs';
+
+  @override
+  String get memoryCard => 'Card';
 }

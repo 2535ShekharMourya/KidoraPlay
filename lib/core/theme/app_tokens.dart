@@ -121,6 +121,10 @@ abstract final class AppDurations {
 
   /// Tap & Play: how long a popped-up friend stays before floating off.
   static const tapPlayLife = Duration(milliseconds: 3200);
+
+  /// Memory match: how long two different cards stay up, and a flip.
+  static const memoryLook = Duration(milliseconds: 1300);
+  static const cardFlip = Duration(milliseconds: 260);
   static const balloonParty = Duration(seconds: 15);
   static const balloonLastPop = Duration(milliseconds: 1400);
   static const traceDemo = Duration(milliseconds: 1800);

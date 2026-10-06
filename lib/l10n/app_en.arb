@@ -121,5 +121,7 @@
   "sectionDays": "Days",
   "sectionMonths": "Months",
   "sectionOpposites": "Opposites",
-  "toyTapPlay": "Tap & Play"
+  "toyTapPlay": "Tap & Play",
+  "toyMemory": "Pairs",
+  "memoryCard": "Card"
 }

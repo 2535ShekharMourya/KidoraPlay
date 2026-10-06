@@ -559,6 +559,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Tap & Play'**
   String get toyTapPlay;
+
+  /// No description provided for @toyMemory.
+  ///
+  /// In en, this message translates to:
+  /// **'Pairs'**
+  String get toyMemory;
+
+  /// No description provided for @memoryCard.
+  ///
+  /// In en, this message translates to:
+  /// **'Card'**
+  String get memoryCard;
 }
 
 class _AppLocalizationsDelegate

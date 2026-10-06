@@ -739,5 +739,23 @@
         ]
       }
     ]
+  },
+  "memory_start": {
+    "en": [
+      {
+        "text": "Find two the same! Tap a card.",
+        "audio": [
+          "assets/audio/en/kido/memory_start.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "एक जैसी दो तस्वीरें ढूँढो! कोई कार्ड छुओ।",
+        "audio": [
+          "assets/audio/hi/kido/memory_start.m4a"
+        ]
+      }
+    ]
   }
 }

@@ -10,6 +10,7 @@ import '../../features/home/home_screen.dart';
 import '../../features/learn_card/learn_card_screen.dart';
 import '../../features/numbers/number_rows_screen.dart';
 import '../../features/parent/parent_area_screen.dart';
+import '../../features/play/memory_screen.dart';
 import '../../features/play/tap_play_screen.dart';
 import '../../features/play/toys.dart';
 import '../../features/progress/sticker_book_screen.dart';
@@ -135,6 +136,7 @@ final appRouterProvider = Provider<GoRouter>((ref) {
                     _playfulPage(state, switch (ToyKind.values
                         .asNameMap()[state.pathParameters['toy']]!) {
                       ToyKind.tapPlay => const TapPlayScreen(),
+                      ToyKind.memory => const MemoryScreen(),
                     }),
               ),
               GoRoute(
