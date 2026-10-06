@@ -45,6 +45,9 @@ flutter:
     - assets/images/colours/
     - assets/images/vegetables/
     - assets/images/fruits/
+    - assets/images/stories/
+    - assets/audio/en/stories/
+    - assets/audio/hi/stories/
     - assets/images/body/
     - assets/images/family/
     - assets/images/days/

@@ -11,6 +11,7 @@ import '../../features/learn_card/learn_card_screen.dart';
 import '../../features/numbers/number_rows_screen.dart';
 import '../../features/parent/parent_area_screen.dart';
 import '../../features/path/path_screen.dart';
+import '../../features/stories/story_screens.dart';
 import '../../features/play/memory_screen.dart';
 import '../../features/play/music_screen.dart';
 import '../../features/play/tap_play_screen.dart';
@@ -31,6 +32,9 @@ abstract final class AppRoutes {
   static const parent = '/home/parent';
   static const games = '/home/games';
   static const path = '/home/path';
+  static const stories = '/home/stories';
+
+  static String story(String id) => '$stories/$id';
 
   static String game(GameKind kind) => '$games/${kind.name}';
 
@@ -156,6 +160,23 @@ final appRouterProvider = Provider<GoRouter>((ref) {
                     key: ValueKey('game/${state.pathParameters['kind']}'),
                     kind: GameKind.values
                         .asNameMap()[state.pathParameters['kind']]!,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          GoRoute(
+            path: 'stories',
+            pageBuilder: (context, state) =>
+                _playfulPage(state, const StoriesScreen()),
+            routes: [
+              GoRoute(
+                path: ':storyId',
+                pageBuilder: (context, state) => _playfulPage(
+                  state,
+                  StoryReaderScreen(
+                    key: ValueKey('story/${state.pathParameters['storyId']}'),
+                    storyId: state.pathParameters['storyId']!,
                   ),
                 ),
               ),

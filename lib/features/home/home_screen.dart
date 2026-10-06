@@ -25,6 +25,7 @@ import '../kido/kido_memory.dart';
 import '../kido/kido_voice.dart';
 import '../kido/kido_widget.dart';
 import '../path/path_tile.dart';
+import '../stories/stories_tile.dart';
 import '../progress/progress_controller.dart';
 import '../progress/sticker_book_screen.dart';
 import '../progress/sticker_widgets.dart';
@@ -76,8 +77,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       context.go(AppRoutes.section(id));
     }
 
-    final sections = <SectionId?>[
-      null, // Today's path, always first.
+    final sections = <Object>[
+      HomeExtra.path, // Today's path, always first.
+      HomeExtra.stories,
       for (final s
           in catalog?.sectionsFor(ref.watch(settingsProvider).level) ??
               const <Section>[])
@@ -206,6 +208,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   }
 }
 
+/// Home tiles that aren't sections.
+enum HomeExtra { path, stories }
+
 /// Child-facing name of a section, in the app language.
 String sectionLabel(AppLocalizations l10n, SectionId id) => switch (id) {
   SectionId.numbers => l10n.sectionNumbers,
@@ -239,8 +244,8 @@ class _SectionGrid extends StatelessWidget {
 
   final TileLayout layout;
 
-  /// Sections in order; null is the "Today's path" tile.
-  final List<SectionId?> sections;
+  /// Tiles in order: a [HomeExtra] or a [SectionId].
+  final List<Object> sections;
   final String Function(SectionId) labelOf;
   final String? Function(SectionId) imageOf;
   final void Function(SectionId) onOpen;
@@ -276,14 +281,17 @@ class _SectionGrid extends StatelessWidget {
                         index: index++,
                         child: IdleFloat(
                           phase: (index * 0.37) % 1,
-                          child: id == null
-                              ? const PathTile()
-                              : _SectionTile(
-                                  id: id,
-                                  label: labelOf(id),
-                                  image: imageOf(id),
-                                  onPressed: () => onOpen(id),
-                                ),
+                          child: switch (id) {
+                            HomeExtra.path => const PathTile(),
+                            HomeExtra.stories => const StoriesTile(),
+                            final SectionId s => _SectionTile(
+                              id: s,
+                              label: labelOf(s),
+                              image: imageOf(s),
+                              onPressed: () => onOpen(s),
+                            ),
+                            _ => const SizedBox.shrink(),
+                          },
                         ),
                       ),
                     ),

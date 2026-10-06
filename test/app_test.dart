@@ -13,10 +13,12 @@ import 'package:kidoraplay/features/splash/splash_screen.dart';
 import 'helpers/fake_audio.dart';
 import 'helpers/pump_app.dart';
 
-// The default class (LKG): Today's path first, then its sections over
+// The default class (LKG): Today's path and Stories first, then its
+// sections over
 // two pages of Home.
 const firstPage = [
   'Today',
+  'Stories',
   'Numbers',
   'ABC',
   'Hindi',
@@ -25,9 +27,8 @@ const firstPage = [
   'Fruits',
   'Vegetables',
   'Colours',
-  'Shapes',
 ];
-const secondPage = ['Vehicles', 'Body', 'Family', 'Days'];
+const secondPage = ['Shapes', 'Vehicles', 'Body', 'Family', 'Days'];
 
 late ContentCatalog _catalog;
 

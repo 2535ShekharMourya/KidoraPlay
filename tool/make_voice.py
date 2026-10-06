@@ -86,6 +86,16 @@ def collect():
             if it.get("sound"):
                 jobs[it["sound"]] = ("en", SOUND_TEXT[it["id"]])
 
+    # Picture stories: titles and every page, in both languages.
+    stories = CONTENT / "stories.json"
+    if stories.exists():
+        for st in json.loads(stories.read_text(encoding="utf-8")):
+            jobs[st["voice_title_en"]] = ("en", st["title_en"])
+            jobs[st["voice_title_hi"]] = ("hi", st["title_hi"])
+            for page in st["pages"]:
+                jobs[page["voice_en"]] = ("en", page["text_en"])
+                jobs[page["voice_hi"]] = ("hi", page["text_hi"])
+
     for event in load("kido_lines.json").values():
         for lang, variants in event.items():
             for v in variants:

@@ -625,6 +625,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Step {n}'**
   String pathStep(int n);
+
+  /// No description provided for @stories.
+  ///
+  /// In en, this message translates to:
+  /// **'Stories'**
+  String get stories;
+
+  /// No description provided for @storyTheEnd.
+  ///
+  /// In en, this message translates to:
+  /// **'The End'**
+  String get storyTheEnd;
+
+  /// No description provided for @storyAgain.
+  ///
+  /// In en, this message translates to:
+  /// **'Read again'**
+  String get storyAgain;
 }
 
 class _AppLocalizationsDelegate

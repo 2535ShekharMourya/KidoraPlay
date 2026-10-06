@@ -27,6 +27,7 @@ import 'package:kidoraplay/features/home/home_screen.dart';
 import 'package:kidoraplay/features/learn_card/learn_card_controller.dart';
 import 'package:kidoraplay/features/parent/progress_report_screen.dart';
 import 'package:kidoraplay/features/rewards/balloon_party.dart';
+import 'package:kidoraplay/features/stories/story.dart';
 import 'package:kidoraplay/features/tracing/trace_logic.dart';
 
 import '../helpers/fake_audio.dart';
@@ -56,9 +57,11 @@ Future<void> loadFonts() async {
 void main() {
   late ContentCatalog catalog;
   late TraceGuides guides;
+  late List<Story> stories;
   setUpAll(() async {
     catalog = await loadTestCatalog();
     guides = await loadTraceGuides(rootBundle);
+    stories = await loadStories(rootBundle);
     await loadFonts();
   });
 
@@ -145,6 +148,7 @@ void main() {
                 }),
               ),
               traceGuidesProvider.overrideWith((ref) async => guides),
+              storiesProvider.overrideWith((ref) async => stories),
             ],
             child: RepaintBoundary(key: boundary, child: const KidoraApp()),
           ),
@@ -166,6 +170,8 @@ void main() {
           await shoot(tester, size, '${level}_home_page2');
         }
         await go(AppRoutes.path, 'path', frames: 30);
+        await go(AppRoutes.stories, 'stories', frames: 25);
+        await go(AppRoutes.story('thirsty_crow'), 'story', frames: 30);
         await go(AppRoutes.section(SectionId.animals), 'grid_animals');
         await go(AppRoutes.section(SectionId.numbers), 'numbers_rows');
         await go(AppRoutes.numberRow(3), 'numbers_row3');

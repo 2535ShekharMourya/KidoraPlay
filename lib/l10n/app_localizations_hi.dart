@@ -293,4 +293,13 @@ class AppLocalizationsHi extends AppLocalizations {
   String pathStep(int n) {
     return 'कदम $n';
   }
+
+  @override
+  String get stories => 'कहानियाँ';
+
+  @override
+  String get storyTheEnd => 'कहानी ख़त्म';
+
+  @override
+  String get storyAgain => 'फिर से पढ़ो';
 }

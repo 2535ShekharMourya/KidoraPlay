@@ -166,5 +166,8 @@
         "type": "int"
       }
     }
-  }
+  },
+  "stories": "Stories",
+  "storyTheEnd": "The End",
+  "storyAgain": "Read again"
 }

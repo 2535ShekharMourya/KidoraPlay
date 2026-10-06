@@ -27,6 +27,9 @@ abstract final class AppColors {
   static const pathAccent = Color(0xFF7B5CFF);
   static const pathVeil = Color(0x99FFFFFF);
 
+  /// Stories (shelf, covers, page arrows).
+  static const storyAccent = Color(0xFF2FA3A8);
+
   /// Toy cards in the Games area.
   static const toyAccent = Color(0xFFFF6FA8);
 

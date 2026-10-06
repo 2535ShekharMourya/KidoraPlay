@@ -1,0 +1,505 @@
+[
+  {
+    "id": "thirsty_crow",
+    "levels": [
+      "baby",
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "title_en": "The Thirsty Crow",
+    "title_hi": "प्यासा कौआ",
+    "cover": "assets/images/stories/thirsty_crow_cover.webp",
+    "voice_title_en": "assets/audio/en/stories/thirsty_crow_title.m4a",
+    "voice_title_hi": "assets/audio/hi/stories/thirsty_crow_title.m4a",
+    "pages": [
+      {
+        "image": "assets/images/stories/thirsty_crow_1.webp",
+        "text_en": "It was a hot, hot day. A crow was very thirsty.",
+        "text_hi": "बहुत गरम दिन था। एक कौआ बहुत प्यासा था।",
+        "voice_en": "assets/audio/en/stories/thirsty_crow_1.m4a",
+        "voice_hi": "assets/audio/hi/stories/thirsty_crow_1.m4a"
+      },
+      {
+        "image": "assets/images/stories/thirsty_crow_2.webp",
+        "text_en": "He found a pot. But the water was at the very bottom!",
+        "text_hi": "उसे एक मटका मिला। पर पानी बहुत नीचे था!",
+        "voice_en": "assets/audio/en/stories/thirsty_crow_2.m4a",
+        "voice_hi": "assets/audio/hi/stories/thirsty_crow_2.m4a"
+      },
+      {
+        "image": "assets/images/stories/thirsty_crow_3.webp",
+        "text_en": "The crow thought and thought. Then he saw some pebbles.",
+        "text_hi": "कौए ने सोचा, और सोचा। फिर उसे कुछ कंकड़ दिखे।",
+        "voice_en": "assets/audio/en/stories/thirsty_crow_3.m4a",
+        "voice_hi": "assets/audio/hi/stories/thirsty_crow_3.m4a"
+      },
+      {
+        "image": "assets/images/stories/thirsty_crow_4.webp",
+        "text_en": "One by one, he dropped the pebbles into the pot. Plop! Plop!",
+        "text_hi": "उसने एक-एक करके कंकड़ मटके में डाले। टप! टप!",
+        "voice_en": "assets/audio/en/stories/thirsty_crow_4.m4a",
+        "voice_hi": "assets/audio/hi/stories/thirsty_crow_4.m4a"
+      },
+      {
+        "image": "assets/images/stories/thirsty_crow_5.webp",
+        "text_en": "The water came up, up, up! The crow drank and said, thank you!",
+        "text_hi": "पानी ऊपर आ गया! कौए ने पानी पिया, और खुश हो गया!",
+        "voice_en": "assets/audio/en/stories/thirsty_crow_5.m4a",
+        "voice_hi": "assets/audio/hi/stories/thirsty_crow_5.m4a"
+      }
+    ]
+  },
+  {
+    "id": "lion_mouse",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "title_en": "The Lion and the Mouse",
+    "title_hi": "शेर और चूहा",
+    "cover": "assets/images/stories/lion_mouse_cover.webp",
+    "voice_title_en": "assets/audio/en/stories/lion_mouse_title.m4a",
+    "voice_title_hi": "assets/audio/hi/stories/lion_mouse_title.m4a",
+    "pages": [
+      {
+        "image": "assets/images/stories/lion_mouse_1.webp",
+        "text_en": "A big lion was sleeping under a tree.",
+        "text_hi": "एक बड़ा शेर पेड़ के नीचे सो रहा था।",
+        "voice_en": "assets/audio/en/stories/lion_mouse_1.m4a",
+        "voice_hi": "assets/audio/hi/stories/lion_mouse_1.m4a"
+      },
+      {
+        "image": "assets/images/stories/lion_mouse_2.webp",
+        "text_en": "A tiny mouse ran over his nose. The lion woke up. Grrr!",
+        "text_hi": "एक छोटा चूहा उसकी नाक पर दौड़ गया। शेर जाग गया। ग्रर्र!",
+        "voice_en": "assets/audio/en/stories/lion_mouse_2.m4a",
+        "voice_hi": "assets/audio/hi/stories/lion_mouse_2.m4a"
+      },
+      {
+        "image": "assets/images/stories/lion_mouse_3.webp",
+        "text_en": "Please let me go, said the mouse. One day I will help you!",
+        "text_hi": "चूहे ने कहा, मुझे जाने दो। एक दिन मैं तुम्हारी मदद करूँगा!",
+        "voice_en": "assets/audio/en/stories/lion_mouse_3.m4a",
+        "voice_hi": "assets/audio/hi/stories/lion_mouse_3.m4a"
+      },
+      {
+        "image": "assets/images/stories/lion_mouse_4.webp",
+        "text_en": "One day, the lion got stuck in a big net.",
+        "text_hi": "एक दिन, शेर एक बड़े जाल में फँस गया।",
+        "voice_en": "assets/audio/en/stories/lion_mouse_4.m4a",
+        "voice_hi": "assets/audio/hi/stories/lion_mouse_4.m4a"
+      },
+      {
+        "image": "assets/images/stories/lion_mouse_5.webp",
+        "text_en": "The mouse cut the net with his little teeth. Now they were friends!",
+        "text_hi": "चूहे ने अपने छोटे दाँतों से जाल काट दिया। अब वे दोस्त बन गए!",
+        "voice_en": "assets/audio/en/stories/lion_mouse_5.m4a",
+        "voice_hi": "assets/audio/hi/stories/lion_mouse_5.m4a"
+      }
+    ]
+  },
+  {
+    "id": "hare_tortoise",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "title_en": "The Hare and the Tortoise",
+    "title_hi": "खरगोश और कछुआ",
+    "cover": "assets/images/stories/hare_tortoise_cover.webp",
+    "voice_title_en": "assets/audio/en/stories/hare_tortoise_title.m4a",
+    "voice_title_hi": "assets/audio/hi/stories/hare_tortoise_title.m4a",
+    "pages": [
+      {
+        "image": "assets/images/stories/hare_tortoise_1.webp",
+        "text_en": "The hare said, I am so fast! Let's have a race!",
+        "text_hi": "खरगोश बोला, मैं बहुत तेज़ हूँ! चलो दौड़ लगाते हैं!",
+        "voice_en": "assets/audio/en/stories/hare_tortoise_1.m4a",
+        "voice_hi": "assets/audio/hi/stories/hare_tortoise_1.m4a"
+      },
+      {
+        "image": "assets/images/stories/hare_tortoise_2.webp",
+        "text_en": "Off they went! The hare ran far, far ahead.",
+        "text_hi": "दौड़ शुरू हुई! खरगोश बहुत आगे निकल गया।",
+        "voice_en": "assets/audio/en/stories/hare_tortoise_2.m4a",
+        "voice_hi": "assets/audio/hi/stories/hare_tortoise_2.m4a"
+      },
+      {
+        "image": "assets/images/stories/hare_tortoise_3.webp",
+        "text_en": "The hare thought, I have time. He took a nap under a tree.",
+        "text_hi": "खरगोश ने सोचा, अभी समय है। वह पेड़ के नीचे सो गया।",
+        "voice_en": "assets/audio/en/stories/hare_tortoise_3.m4a",
+        "voice_hi": "assets/audio/hi/stories/hare_tortoise_3.m4a"
+      },
+      {
+        "image": "assets/images/stories/hare_tortoise_4.webp",
+        "text_en": "The tortoise walked slowly, slowly. He never stopped.",
+        "text_hi": "कछुआ धीरे-धीरे चलता रहा। वह कभी नहीं रुका।",
+        "voice_en": "assets/audio/en/stories/hare_tortoise_4.m4a",
+        "voice_hi": "assets/audio/hi/stories/hare_tortoise_4.m4a"
+      },
+      {
+        "image": "assets/images/stories/hare_tortoise_5.webp",
+        "text_en": "The tortoise won the race! Slow and steady wins!",
+        "text_hi": "कछुआ जीत गया! धीरे-धीरे चलने वाला भी जीतता है!",
+        "voice_en": "assets/audio/en/stories/hare_tortoise_5.m4a",
+        "voice_hi": "assets/audio/hi/stories/hare_tortoise_5.m4a"
+      }
+    ]
+  },
+  {
+    "id": "monkey_crocodile",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "title_en": "The Monkey and the Crocodile",
+    "title_hi": "बंदर और मगरमच्छ",
+    "cover": "assets/images/stories/monkey_crocodile_cover.webp",
+    "voice_title_en": "assets/audio/en/stories/monkey_crocodile_title.m4a",
+    "voice_title_hi": "assets/audio/hi/stories/monkey_crocodile_title.m4a",
+    "pages": [
+      {
+        "image": "assets/images/stories/monkey_crocodile_1.webp",
+        "text_en": "A monkey lived in a tree full of sweet fruits, near a river.",
+        "text_hi": "नदी के पास एक पेड़ पर एक बंदर रहता था। पेड़ पर मीठे फल थे।",
+        "voice_en": "assets/audio/en/stories/monkey_crocodile_1.m4a",
+        "voice_hi": "assets/audio/hi/stories/monkey_crocodile_1.m4a"
+      },
+      {
+        "image": "assets/images/stories/monkey_crocodile_2.webp",
+        "text_en": "Every day, he gave fruits to his friend, the crocodile.",
+        "text_hi": "वह रोज़ अपने दोस्त मगरमच्छ को फल देता था।",
+        "voice_en": "assets/audio/en/stories/monkey_crocodile_2.m4a",
+        "voice_hi": "assets/audio/hi/stories/monkey_crocodile_2.m4a"
+      },
+      {
+        "image": "assets/images/stories/monkey_crocodile_3.webp",
+        "text_en": "One day, the crocodile said, come for a ride on my back!",
+        "text_hi": "एक दिन मगरमच्छ बोला, आओ, मेरी पीठ पर बैठकर घूमो!",
+        "voice_en": "assets/audio/en/stories/monkey_crocodile_3.m4a",
+        "voice_hi": "assets/audio/hi/stories/monkey_crocodile_3.m4a"
+      },
+      {
+        "image": "assets/images/stories/monkey_crocodile_4.webp",
+        "text_en": "In the river, the monkey thought fast. Let's go back to my tree!",
+        "text_hi": "नदी में बंदर ने जल्दी सोचा। चलो, वापस मेरे पेड़ पर चलें!",
+        "voice_en": "assets/audio/en/stories/monkey_crocodile_4.m4a",
+        "voice_hi": "assets/audio/hi/stories/monkey_crocodile_4.m4a"
+      },
+      {
+        "image": "assets/images/stories/monkey_crocodile_5.webp",
+        "text_en": "He jumped back on his tree, safe and happy. Clever monkey!",
+        "text_hi": "वह कूदकर अपने पेड़ पर पहुँच गया। होशियार बंदर!",
+        "voice_en": "assets/audio/en/stories/monkey_crocodile_5.m4a",
+        "voice_hi": "assets/audio/hi/stories/monkey_crocodile_5.m4a"
+      }
+    ]
+  },
+  {
+    "id": "ant_dove",
+    "levels": [
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "title_en": "The Ant and the Dove",
+    "title_hi": "चींटी और कबूतर",
+    "cover": "assets/images/stories/ant_dove_cover.webp",
+    "voice_title_en": "assets/audio/en/stories/ant_dove_title.m4a",
+    "voice_title_hi": "assets/audio/hi/stories/ant_dove_title.m4a",
+    "pages": [
+      {
+        "image": "assets/images/stories/ant_dove_1.webp",
+        "text_en": "A little ant fell into the water. Help! Help!",
+        "text_hi": "एक छोटी चींटी पानी में गिर गई। बचाओ! बचाओ!",
+        "voice_en": "assets/audio/en/stories/ant_dove_1.m4a",
+        "voice_hi": "assets/audio/hi/stories/ant_dove_1.m4a"
+      },
+      {
+        "image": "assets/images/stories/ant_dove_2.webp",
+        "text_en": "A kind dove dropped a leaf. The ant climbed on and was safe.",
+        "text_hi": "एक दयालु कबूतर ने पत्ता गिराया। चींटी उस पर चढ़कर बच गई।",
+        "voice_en": "assets/audio/en/stories/ant_dove_2.m4a",
+        "voice_hi": "assets/audio/hi/stories/ant_dove_2.m4a"
+      },
+      {
+        "image": "assets/images/stories/ant_dove_3.webp",
+        "text_en": "Later, a cat crept up to catch the dove.",
+        "text_hi": "बाद में, एक बिल्ली कबूतर को पकड़ने चुपके से आई।",
+        "voice_en": "assets/audio/en/stories/ant_dove_3.m4a",
+        "voice_hi": "assets/audio/hi/stories/ant_dove_3.m4a"
+      },
+      {
+        "image": "assets/images/stories/ant_dove_4.webp",
+        "text_en": "The ant tickled the cat's nose. Aaa-choo!",
+        "text_hi": "चींटी ने बिल्ली की नाक में गुदगुदी की। आ-छू!",
+        "voice_en": "assets/audio/en/stories/ant_dove_4.m4a",
+        "voice_hi": "assets/audio/hi/stories/ant_dove_4.m4a"
+      },
+      {
+        "image": "assets/images/stories/ant_dove_5.webp",
+        "text_en": "The dove flew away safely. Friends help friends!",
+        "text_hi": "कबूतर उड़कर बच गया। दोस्त, दोस्तों की मदद करते हैं!",
+        "voice_en": "assets/audio/en/stories/ant_dove_5.m4a",
+        "voice_hi": "assets/audio/hi/stories/ant_dove_5.m4a"
+      }
+    ]
+  },
+  {
+    "id": "kido_sneeze",
+    "levels": [
+      "baby",
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "title_en": "Kido's Big Sneeze",
+    "title_hi": "किडो की बड़ी छींक",
+    "cover": "assets/images/stories/kido_sneeze_cover.webp",
+    "voice_title_en": "assets/audio/en/stories/kido_sneeze_title.m4a",
+    "voice_title_hi": "assets/audio/hi/stories/kido_sneeze_title.m4a",
+    "pages": [
+      {
+        "image": "assets/images/stories/kido_sneeze_1.webp",
+        "text_en": "Kido the little elephant was smelling the flowers.",
+        "text_hi": "छोटा हाथी किडो फूल सूँघ रहा था।",
+        "voice_en": "assets/audio/en/stories/kido_sneeze_1.m4a",
+        "voice_hi": "assets/audio/hi/stories/kido_sneeze_1.m4a"
+      },
+      {
+        "image": "assets/images/stories/kido_sneeze_2.webp",
+        "text_en": "His trunk began to tickle. Aaa... aaa...",
+        "text_hi": "उसकी सूँड में गुदगुदी होने लगी। आ... आ...",
+        "voice_en": "assets/audio/en/stories/kido_sneeze_2.m4a",
+        "voice_hi": "assets/audio/hi/stories/kido_sneeze_2.m4a"
+      },
+      {
+        "image": "assets/images/stories/kido_sneeze_3.webp",
+        "text_en": "AAA-CHOO! Flowers flew up into the sky!",
+        "text_hi": "आ-छू! फूल उड़कर आसमान में चले गए!",
+        "voice_en": "assets/audio/en/stories/kido_sneeze_3.m4a",
+        "voice_hi": "assets/audio/hi/stories/kido_sneeze_3.m4a"
+      },
+      {
+        "image": "assets/images/stories/kido_sneeze_4.webp",
+        "text_en": "His friends laughed and laughed. Ha ha ha!",
+        "text_hi": "उसके दोस्त खूब हँसे। हा हा हा!",
+        "voice_en": "assets/audio/en/stories/kido_sneeze_4.m4a",
+        "voice_hi": "assets/audio/hi/stories/kido_sneeze_4.m4a"
+      },
+      {
+        "image": "assets/images/stories/kido_sneeze_5.webp",
+        "text_en": "Kido laughed too. What a funny sneeze!",
+        "text_hi": "किडो भी हँसने लगा। कितनी मज़ेदार छींक थी!",
+        "voice_en": "assets/audio/en/stories/kido_sneeze_5.m4a",
+        "voice_hi": "assets/audio/hi/stories/kido_sneeze_5.m4a"
+      }
+    ]
+  },
+  {
+    "id": "kido_mangoes",
+    "levels": [
+      "baby",
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "title_en": "Kido Shares Mangoes",
+    "title_hi": "किडो ने आम बाँटे",
+    "cover": "assets/images/stories/kido_mangoes_cover.webp",
+    "voice_title_en": "assets/audio/en/stories/kido_mangoes_title.m4a",
+    "voice_title_hi": "assets/audio/hi/stories/kido_mangoes_title.m4a",
+    "pages": [
+      {
+        "image": "assets/images/stories/kido_mangoes_1.webp",
+        "text_en": "Kido found lots of sweet mangoes.",
+        "text_hi": "किडो को बहुत सारे मीठे आम मिले।",
+        "voice_en": "assets/audio/en/stories/kido_mangoes_1.m4a",
+        "voice_hi": "assets/audio/hi/stories/kido_mangoes_1.m4a"
+      },
+      {
+        "image": "assets/images/stories/kido_mangoes_2.webp",
+        "text_en": "His friend the monkey looked hungry.",
+        "text_hi": "उसका दोस्त बंदर भूखा लग रहा था।",
+        "voice_en": "assets/audio/en/stories/kido_mangoes_2.m4a",
+        "voice_hi": "assets/audio/hi/stories/kido_mangoes_2.m4a"
+      },
+      {
+        "image": "assets/images/stories/kido_mangoes_3.webp",
+        "text_en": "Kido gave him a mango. Here you go, friend!",
+        "text_hi": "किडो ने उसे एक आम दिया। यह लो, दोस्त!",
+        "voice_en": "assets/audio/en/stories/kido_mangoes_3.m4a",
+        "voice_hi": "assets/audio/hi/stories/kido_mangoes_3.m4a"
+      },
+      {
+        "image": "assets/images/stories/kido_mangoes_4.webp",
+        "text_en": "Then he shared with the rabbit, the bear and the parrot too.",
+        "text_hi": "फिर उसने खरगोश, भालू और तोते के साथ भी आम बाँटे।",
+        "voice_en": "assets/audio/en/stories/kido_mangoes_4.m4a",
+        "voice_hi": "assets/audio/hi/stories/kido_mangoes_4.m4a"
+      },
+      {
+        "image": "assets/images/stories/kido_mangoes_5.webp",
+        "text_en": "Everyone was happy. Sharing is caring!",
+        "text_hi": "सब खुश हो गए। बाँटने में ही खुशी है!",
+        "voice_en": "assets/audio/en/stories/kido_mangoes_5.m4a",
+        "voice_hi": "assets/audio/hi/stories/kido_mangoes_5.m4a"
+      }
+    ]
+  },
+  {
+    "id": "little_seed",
+    "levels": [
+      "baby",
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "title_en": "The Little Seed",
+    "title_hi": "छोटा सा बीज",
+    "cover": "assets/images/stories/little_seed_cover.webp",
+    "voice_title_en": "assets/audio/en/stories/little_seed_title.m4a",
+    "voice_title_hi": "assets/audio/hi/stories/little_seed_title.m4a",
+    "pages": [
+      {
+        "image": "assets/images/stories/little_seed_1.webp",
+        "text_en": "A tiny seed was sleeping in the soil.",
+        "text_hi": "मिट्टी में एक छोटा सा बीज सो रहा था।",
+        "voice_en": "assets/audio/en/stories/little_seed_1.m4a",
+        "voice_hi": "assets/audio/hi/stories/little_seed_1.m4a"
+      },
+      {
+        "image": "assets/images/stories/little_seed_2.webp",
+        "text_en": "The rain said, drink, little seed! Pitter patter!",
+        "text_hi": "बारिश बोली, पानी पियो, छोटे बीज! टप टप!",
+        "voice_en": "assets/audio/en/stories/little_seed_2.m4a",
+        "voice_hi": "assets/audio/hi/stories/little_seed_2.m4a"
+      },
+      {
+        "image": "assets/images/stories/little_seed_3.webp",
+        "text_en": "The sun said, grow, little seed! And a green shoot came up.",
+        "text_hi": "सूरज बोला, बड़े हो जाओ, छोटे बीज! और एक हरा पौधा निकल आया।",
+        "voice_en": "assets/audio/en/stories/little_seed_3.m4a",
+        "voice_hi": "assets/audio/hi/stories/little_seed_3.m4a"
+      },
+      {
+        "image": "assets/images/stories/little_seed_4.webp",
+        "text_en": "It grew and grew into a big, tall tree.",
+        "text_hi": "वह बढ़ता गया, और एक बड़ा, ऊँचा पेड़ बन गया।",
+        "voice_en": "assets/audio/en/stories/little_seed_4.m4a",
+        "voice_hi": "assets/audio/hi/stories/little_seed_4.m4a"
+      },
+      {
+        "image": "assets/images/stories/little_seed_5.webp",
+        "text_en": "Now it gives us fruits and shade, and birds sing in it!",
+        "text_hi": "अब वह हमें फल और छाया देता है, और चिड़िया उसमें गाती हैं!",
+        "voice_en": "assets/audio/en/stories/little_seed_5.m4a",
+        "voice_hi": "assets/audio/hi/stories/little_seed_5.m4a"
+      }
+    ]
+  },
+  {
+    "id": "kido_brushes",
+    "levels": [
+      "baby",
+      "nursery",
+      "lkg",
+      "ukg"
+    ],
+    "title_en": "Kido Brushes His Teeth",
+    "title_hi": "किडो ब्रश करता है",
+    "cover": "assets/images/stories/kido_brushes_cover.webp",
+    "voice_title_en": "assets/audio/en/stories/kido_brushes_title.m4a",
+    "voice_title_hi": "assets/audio/hi/stories/kido_brushes_title.m4a",
+    "pages": [
+      {
+        "image": "assets/images/stories/kido_brushes_1.webp",
+        "text_en": "Good morning! Kido woke up with a big smile.",
+        "text_hi": "सुप्रभात! किडो बड़ी सी मुस्कान के साथ उठा।",
+        "voice_en": "assets/audio/en/stories/kido_brushes_1.m4a",
+        "voice_hi": "assets/audio/hi/stories/kido_brushes_1.m4a"
+      },
+      {
+        "image": "assets/images/stories/kido_brushes_2.webp",
+        "text_en": "First, he took his toothbrush and toothpaste.",
+        "text_hi": "पहले उसने अपना टूथब्रश और टूथपेस्ट लिया।",
+        "voice_en": "assets/audio/en/stories/kido_brushes_2.m4a",
+        "voice_hi": "assets/audio/hi/stories/kido_brushes_2.m4a"
+      },
+      {
+        "image": "assets/images/stories/kido_brushes_3.webp",
+        "text_en": "Brush, brush, brush! Up and down, round and round.",
+        "text_hi": "ब्रश, ब्रश, ब्रश! ऊपर-नीचे, गोल-गोल।",
+        "voice_en": "assets/audio/en/stories/kido_brushes_3.m4a",
+        "voice_hi": "assets/audio/hi/stories/kido_brushes_3.m4a"
+      },
+      {
+        "image": "assets/images/stories/kido_brushes_4.webp",
+        "text_en": "Then he rinsed his mouth with clean water.",
+        "text_hi": "फिर उसने साफ़ पानी से कुल्ला किया।",
+        "voice_en": "assets/audio/en/stories/kido_brushes_4.m4a",
+        "voice_hi": "assets/audio/hi/stories/kido_brushes_4.m4a"
+      },
+      {
+        "image": "assets/images/stories/kido_brushes_5.webp",
+        "text_en": "Shiny clean teeth! Brush in the morning and at night!",
+        "text_hi": "चमकते साफ़ दाँत! सुबह और रात को ब्रश करो!",
+        "voice_en": "assets/audio/en/stories/kido_brushes_5.m4a",
+        "voice_hi": "assets/audio/hi/stories/kido_brushes_5.m4a"
+      }
+    ]
+  },
+  {
+    "id": "greedy_dog",
+    "levels": [
+      "lkg",
+      "ukg"
+    ],
+    "title_en": "The Greedy Dog",
+    "title_hi": "लालची कुत्ता",
+    "cover": "assets/images/stories/greedy_dog_cover.webp",
+    "voice_title_en": "assets/audio/en/stories/greedy_dog_title.m4a",
+    "voice_title_hi": "assets/audio/hi/stories/greedy_dog_title.m4a",
+    "pages": [
+      {
+        "image": "assets/images/stories/greedy_dog_1.webp",
+        "text_en": "A dog found a big bone. Yummy!",
+        "text_hi": "एक कुत्ते को एक बड़ी हड्डी मिली। वाह!",
+        "voice_en": "assets/audio/en/stories/greedy_dog_1.m4a",
+        "voice_hi": "assets/audio/hi/stories/greedy_dog_1.m4a"
+      },
+      {
+        "image": "assets/images/stories/greedy_dog_2.webp",
+        "text_en": "He walked over a bridge across a river.",
+        "text_hi": "वह नदी के ऊपर एक पुल से जा रहा था।",
+        "voice_en": "assets/audio/en/stories/greedy_dog_2.m4a",
+        "voice_hi": "assets/audio/hi/stories/greedy_dog_2.m4a"
+      },
+      {
+        "image": "assets/images/stories/greedy_dog_3.webp",
+        "text_en": "In the water, he saw another dog with a bone!",
+        "text_hi": "पानी में उसे एक और कुत्ता दिखा, उसके पास भी हड्डी थी!",
+        "voice_en": "assets/audio/en/stories/greedy_dog_3.m4a",
+        "voice_hi": "assets/audio/hi/stories/greedy_dog_3.m4a"
+      },
+      {
+        "image": "assets/images/stories/greedy_dog_4.webp",
+        "text_en": "He barked to take that bone too. Woof! His bone fell in. Splash!",
+        "text_hi": "उसे भी लेने के लिए वह भौंका। भौं! उसकी हड्डी पानी में गिर गई। छपाक!",
+        "voice_en": "assets/audio/en/stories/greedy_dog_4.m4a",
+        "voice_hi": "assets/audio/hi/stories/greedy_dog_4.m4a"
+      },
+      {
+        "image": "assets/images/stories/greedy_dog_5.webp",
+        "text_en": "It was only his own picture in the water. Be happy with what you have!",
+        "text_hi": "पानी में तो उसकी अपनी परछाईं थी। जो है, उसमें खुश रहो!",
+        "voice_en": "assets/audio/en/stories/greedy_dog_5.m4a",
+        "voice_hi": "assets/audio/hi/stories/greedy_dog_5.m4a"
+      }
+    ]
+  }
+]

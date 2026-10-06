@@ -87,5 +87,8 @@
   "progressNext": "अगला आज़माएँ: {section}",
   "progressPrivacy": "प्रगति सिर्फ़ इसी फ़ोन में सेव होती है। कुछ भी कहीं नहीं भेजा जाता।",
   "todayPath": "आज",
-  "pathStep": "कदम {n}"
+  "pathStep": "कदम {n}",
+  "stories": "कहानियाँ",
+  "storyTheEnd": "कहानी ख़त्म",
+  "storyAgain": "फिर से पढ़ो"
 }

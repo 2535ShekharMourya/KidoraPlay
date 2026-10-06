@@ -811,5 +811,23 @@
         ]
       }
     ]
+  },
+  "story_end": {
+    "en": [
+      {
+        "text": "The end! Did you like the story?",
+        "audio": [
+          "assets/audio/en/kido/story_end.m4a"
+        ]
+      }
+    ],
+    "hi": [
+      {
+        "text": "कहानी ख़त्म! तुम्हें कहानी कैसी लगी?",
+        "audio": [
+          "assets/audio/hi/kido/story_end.m4a"
+        ]
+      }
+    ]
   }
 }

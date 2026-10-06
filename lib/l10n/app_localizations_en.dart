@@ -295,4 +295,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String pathStep(int n) {
     return 'Step $n';
   }
+
+  @override
+  String get stories => 'Stories';
+
+  @override
+  String get storyTheEnd => 'The End';
+
+  @override
+  String get storyAgain => 'Read again';
 }
