@@ -2,7 +2,7 @@ name: kidoraplay
 description: "Kidoraplay: a playful preschool learning app with Kido the elephant."
 publish_to: 'none'
 
-version: 1.0.3+4
+version: 1.1.0+5
 
 environment:
   sdk: ^3.13.0
