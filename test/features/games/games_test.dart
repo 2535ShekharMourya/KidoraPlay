@@ -25,10 +25,10 @@ void main() {
       for (final level in Level.values) {
         test('${kind.name} at ${level.name}', () {
           final rounds = buildQuiz(kind, catalog, level, Random(3));
-          expect(rounds, hasLength(roundsPerGame));
+          expect(rounds, hasLength(roundsFor(level)));
           expect(
             rounds.map((r) => r.answer.id).toSet(),
-            hasLength(roundsPerGame),
+            hasLength(roundsFor(level)),
             reason: 'answers do not repeat in a game',
           );
           for (final r in rounds) {

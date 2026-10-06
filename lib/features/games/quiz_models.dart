@@ -31,6 +31,9 @@ enum GameKind {
 
 const roundsPerGame = 5;
 
+/// Rounds in one game: shorter for babies (1–3), who count to three.
+int roundsFor(Level level) => level == Level.baby ? 3 : roundsPerGame;
+
 /// Choices per round grow with the class: Nursery 2, LKG 3, UKG 4.
 int choicesFor(Level level) => switch (level) {
   Level.baby || Level.nursery => 2,
@@ -105,10 +108,11 @@ List<QuizRound> buildQuiz(
   ContentCatalog catalog,
   Level level,
   math.Random random, {
-  int rounds = roundsPerGame,
+  int? rounds,
   int? maxChoices,
 }) {
   // Fewer choices on screens too narrow for big cards.
+  final roundCount = rounds ?? roundsFor(level);
   final choiceCount = math.max(
     2,
     math.min(choicesFor(level), maxChoices ?? choicesFor(level)),
@@ -137,7 +141,7 @@ List<QuizRound> buildQuiz(
       final pool = items.map(pictureChoice).toList();
       final answers = [...pool]..shuffle(random);
       return [
-        for (final answer in answers.take(rounds))
+        for (final answer in answers.take(roundCount))
           QuizRound(
             kind: kind,
             answer: answer,
@@ -167,7 +171,7 @@ List<QuizRound> buildQuiz(
       ]..shuffle(random);
       final answers = [...pool]..shuffle(random);
       return [
-        for (final (i, answer) in answers.take(rounds).indexed)
+        for (final (i, answer) in answers.take(roundCount).indexed)
           QuizRound(
             kind: kind,
             answer: answer,
@@ -179,7 +183,12 @@ List<QuizRound> buildQuiz(
 
     case GameKind.letters:
       final pool = [
-        for (final i in catalog.itemsFor(SectionId.abc, level: level))
+        // Letters aren't in the baby class; if the game is opened anyway,
+        // use the Nursery letters rather than an empty game.
+        for (final i in catalog.itemsFor(
+          SectionId.abc,
+          level: level == Level.baby ? Level.nursery : level,
+        ))
           if (i.letter != null)
             QuizChoice(
               id: 'l${i.letter}',
@@ -191,7 +200,7 @@ List<QuizRound> buildQuiz(
       ];
       final answers = [...pool]..shuffle(random);
       return [
-        for (final answer in answers.take(rounds))
+        for (final answer in answers.take(roundCount))
           QuizRound(
             kind: kind,
             answer: answer,
