@@ -430,9 +430,14 @@ class _LearnCardScreenState extends ConsumerState<LearnCardScreen> {
                   Positioned.fill(
                     child: BalloonParty(
                       items: party,
-                      onDone: () {
+                      onDone: () async {
                         setState(() => _party = null);
-                        unawaited(_controller.partyOver());
+                        // The party's end is a natural break: maybe an ad
+                        // (the manager's timing rules usually say no).
+                        await ref
+                            .read(adManagerProvider)
+                            .maybeShowBreak(context, reason: 'party_done');
+                        if (mounted) unawaited(_controller.partyOver());
                       },
                     ),
                   ),

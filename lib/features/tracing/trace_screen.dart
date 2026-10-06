@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
@@ -17,6 +18,7 @@ import '../../core/widgets/particle_burst.dart';
 import '../../core/widgets/pop_in.dart';
 import '../../core/widgets/section_background.dart';
 import '../../l10n/app_localizations.dart';
+import '../ads/ad_manager.dart';
 import '../kido/kido_controller.dart';
 import '../kido/kido_widget.dart';
 import '../section_grid/section_items.dart';
@@ -41,6 +43,7 @@ class _TraceScreenState extends ConsumerState<TraceScreen> {
   final _confetti = BurstController();
   final _boardKey = GlobalKey();
   bool _started = false;
+  Timer? _adBreak;
 
   TraceController get _controller =>
       ref.read(traceControllerProvider(widget.itemId).notifier);
@@ -48,6 +51,7 @@ class _TraceScreenState extends ConsumerState<TraceScreen> {
 
   @override
   void dispose() {
+    _adBreak?.cancel();
     _sparkle.dispose();
     _confetti.dispose();
     super.dispose();
@@ -71,6 +75,16 @@ class _TraceScreenState extends ConsumerState<TraceScreen> {
     if (next.celebrations > (prev?.celebrations ?? 0)) {
       _confetti.fire();
       _kido.act(KidoAction.trumpet);
+      // A finished letter is a natural break: maybe an ad after the cheer.
+      _adBreak?.cancel();
+      _adBreak = Timer(AppDurations.celebration, () {
+        if (!mounted) return;
+        unawaited(
+          ref
+              .read(adManagerProvider)
+              .maybeShowBreak(context, reason: 'trace_done'),
+        );
+      });
     } else if (next.strokesDone > (prev?.strokesDone ?? 0)) {
       _sparkle.fire();
       _kido.act(KidoAction.clap);

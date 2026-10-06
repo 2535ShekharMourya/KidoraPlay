@@ -24,14 +24,19 @@ abstract interface class AdGateway {
 /// Ad unit and app IDs come from the build, never from the repo:
 /// `--dart-define=ADMOB_INTERSTITIAL_ID=...` (the app ID goes in
 /// `android/local.properties` as `admobAppId=...`). Debug builds fall back
-/// to Google's test IDs; release builds without IDs show no ads at all.
+/// to Google's test IDs; release builds without IDs show no ads at all,
+/// unless built with `--dart-define=ADS_TEST=true`.
 abstract final class AdConfig {
   static const _testInterstitial = 'ca-app-pub-3940256099942544/1033173712';
   static const _interstitial = String.fromEnvironment('ADMOB_INTERSTITIAL_ID');
 
+  /// `--dart-define=ADS_TEST=true`: Google's test ads in a release build
+  /// (to see where ads appear on a real phone; never earns money).
+  static const _forceTest = bool.fromEnvironment('ADS_TEST');
+
   static String? get interstitialId => _interstitial.isNotEmpty
       ? _interstitial
-      : (kReleaseMode ? null : _testInterstitial);
+      : (kReleaseMode && !_forceTest ? null : _testInterstitial);
 }
 
 /// Google Mobile Ads (AdMob) in child-directed mode, interstitials only.
